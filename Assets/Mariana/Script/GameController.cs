@@ -5,8 +5,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
-
+namespace MarianaVampireSurvivors
+{
     public class GameController : MonoBehaviour
     {
         private float gameTime = 0;
@@ -40,4 +40,4 @@ using UnityEngine.UI;
             return string.Format("{0:00}:{1:00}", minutes, seconds);
         }
     }
-
+}
