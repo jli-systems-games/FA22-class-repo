@@ -1,4 +1,4 @@
-<h1>[Pull Request Title]</h1>
+[Link to check-in or debrief if applicable](link to google doc goes here)
 
 <h2>Summary</h2>
  
