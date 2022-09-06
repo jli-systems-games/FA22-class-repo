@@ -6,6 +6,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
+namespace MunroHoberman{
 public class GameController : MonoBehaviour
 {
     private float gameTime = 0;
@@ -38,4 +40,5 @@ public class GameController : MonoBehaviour
         int seconds = (int) time - 60 * minutes;
         return string. Format("{0:00}:{1:00}", minutes, seconds  );
     }
+}
 }
