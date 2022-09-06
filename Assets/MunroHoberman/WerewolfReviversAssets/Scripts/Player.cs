@@ -1,5 +1,6 @@
 using UnityEngine;
 
+namespace MunroHoberman{
     public class Player : MonoBehaviour
     {
         
@@ -16,4 +17,4 @@ using UnityEngine;
         }
     }
 
-
+}
