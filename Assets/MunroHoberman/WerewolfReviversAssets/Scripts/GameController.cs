@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour
     [SerializeField]private float surviveTime=60f;
 
     private string winScene="WerewolfReviversWin";
-    private string loseScene="WerewolfReviversLose";
+    //private string loseScene="WerewolfReviversLose";
     
 
     [SerializeField]private TextMeshProUGUI timerText;
