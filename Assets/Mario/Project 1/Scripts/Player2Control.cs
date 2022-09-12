@@ -16,7 +16,7 @@ namespace MarioAirHockey
             rb = GetComponent<Rigidbody2D>();
         }
 
-        void Update()
+        void FixedUpdate()
         {
             Vector3 pos = transform.position;
 
