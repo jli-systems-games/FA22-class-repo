@@ -14,19 +14,25 @@ public class Fighting : MonoBehaviour
         public SpriteRenderer spriterenderer;
         public int state = 0;
         public GameObject shield;
-
+        public int rotationDegrees;
         public List<KeyCode> keycodes;
+        public GameObject winNote;
+
+        public bool isAlive;
 
         //public KeyCode[] keycodes;
 
         private void Start()
         {
            health= gameObject.GetComponent<Health>();
+
+            isAlive = true;
         }
 
         // Update is called once per frame
         void Update()
         {
+            if (isAlive == true) { 
 
             transform.position = new Vector2(playerposition.position.x, positions[state].position.y);
 
@@ -76,12 +82,24 @@ public class Fighting : MonoBehaviour
 
             }
 
-            //shooting
+                //shooting
+
+            }
 
 
-            
 
 
+            if (health.health <= 0)
+            {
+                Debug.Log("Dead");
+                isAlive = false;
+                spriterenderer.sprite = sprites[3];
+                transform.position = new Vector2(playerposition.position.x, positions[2].position.y);
+                //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(transform.eulerAngles + new Vector3(0, 0, 90f)), 0.8f);
+                Vector3 newRotation = new Vector3(0, 0, rotationDegrees);
+                transform.eulerAngles = newRotation;
+                winNote.SetActive(true);
+            }
         }
 }
 }
