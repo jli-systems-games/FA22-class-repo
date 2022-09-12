@@ -11,16 +11,17 @@ namespace JasonLi
 
         void OnEnable()
         {
-            _inputs.TildeButton += Reset;
+            _inputs.BackspaceButton += Reset;
         }
 
         void OnDisable()
         {
-            _inputs.TildeButton -= Reset;
+            _inputs.BackspaceButton -= Reset;
         }
 
         void Reset()
         {
+            Debug.Log("Attempting Reset");
             SceneManager.LoadScene("JasonLi/ARCADE/BasicScene");
         }
     }

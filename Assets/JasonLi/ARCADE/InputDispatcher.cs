@@ -9,7 +9,7 @@ namespace JasonLi
     {
         public Action PrimaryButton;
 
-        public Action TildeButton;
+        public Action BackspaceButton;
         // Update is called once per frame
         void Update()
         {
@@ -18,9 +18,9 @@ namespace JasonLi
                 PrimaryButton?.Invoke();
             }
 
-            if (Input.GetKeyDown(KeyCode.Tilde))
+            if (Input.GetKeyDown(KeyCode.Backspace))
             {
-                TildeButton?.Invoke();
+                BackspaceButton?.Invoke();
             }
         }
     }
