@@ -15,7 +15,7 @@ namespace SharedAssets
     /// </remarks>
     public static class SceneListExporter
     {
-        [DidReloadScripts]
+        //[DidReloadScripts]
         [MenuItem("Assets/Generate Scene List")]
         private static void GenerateSceneList()
         {
