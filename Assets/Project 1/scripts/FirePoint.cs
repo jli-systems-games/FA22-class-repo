@@ -17,7 +17,7 @@ public class FirePoint : MonoBehaviour
     {
 
         float rotationAngle = -30f;
-        for (int i=0;i<2;i++)
+        for (int i=0;i<100;i++)
         {
             for(int j=0;j<3;j++)
             {
@@ -42,7 +42,7 @@ public class FirePoint : MonoBehaviour
                 }
             }
 
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1f);
 
 
         }
