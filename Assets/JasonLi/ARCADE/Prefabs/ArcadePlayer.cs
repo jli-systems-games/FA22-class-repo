@@ -17,6 +17,8 @@ namespace JasonLi
         [SerializeField] private FloatParameter _spinStrength;
         [SerializeField] private Transform _jumpTarget;
 
+        [SerializeField] private bool ShouldResetBeforeJumps; 
+
         private Rigidbody _rigidbody;
         private Collider _collider;
 
@@ -38,15 +40,26 @@ namespace JasonLi
         void Jump()
         {
             Debug.Log($"Jump is called for {_jumpHeight.Value}");
+
+            //Reset parameters for a new jump
+            if (ShouldResetBeforeJumps) ResetVelocities();
+            
             // update direction of jump
             Vector3 directionToJump = _jumpTarget.position - transform.position;
-
             directionToJump = Vector3.Normalize(directionToJump) * _jumpHeight;
 
+            // calculate spin
             Vector3 jumpSpin = Vector3.Cross(directionToJump,Vector3.right) * _spinStrength;
             
+            // Apply forces
             _rigidbody.AddForce(directionToJump);
             _rigidbody.AddTorque(jumpSpin);
+        }
+
+        void ResetVelocities()
+        {
+            _rigidbody.velocity = Vector3.zero;
+            _rigidbody.angularVelocity = Vector3.zero;
         }
     }
 }
