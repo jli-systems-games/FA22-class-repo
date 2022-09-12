@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using SharedAssets;
 using Unity.VisualScripting;
 using UnityEngine;
+using Vector3 = UnityEngine.Vector3;
 
 
 namespace JasonLi
@@ -13,6 +15,7 @@ namespace JasonLi
         [SerializeField] private InputDispatcher _inputs;
         [SerializeField] private FloatParameter _jumpHeight;
         [SerializeField] private FloatParameter _spinStrength;
+        [SerializeField] private Transform _jumpTarget;
 
         private Rigidbody _rigidbody;
         private Collider _collider;
@@ -35,8 +38,15 @@ namespace JasonLi
         void Jump()
         {
             Debug.Log($"Jump is called for {_jumpHeight.Value}");
-            _rigidbody.AddForce(Vector3.up * _jumpHeight);
-            _rigidbody.AddTorque(-Vector3.forward * _jumpHeight);
+            // update direction of jump
+            Vector3 directionToJump = _jumpTarget.position - transform.position;
+
+            directionToJump = Vector3.Normalize(directionToJump) * _jumpHeight;
+
+            Vector3 jumpSpin = Vector3.Cross(directionToJump,Vector3.right) * _spinStrength;
+            
+            _rigidbody.AddForce(directionToJump);
+            _rigidbody.AddTorque(jumpSpin);
         }
     }
 }
