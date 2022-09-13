@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
-/*
+[RequireComponent(typeof(Collider2D))]
 public class Pellet : MonoBehaviour
 {
     public int points = 10;
@@ -10,10 +9,9 @@ public class Pellet : MonoBehaviour
 
     protected virtual void Drink()
     {
-        public int points = 10;
 
-    protected virtul void Drink();
-    {
+        FindObjectOfType<GameManager>().DrinkPellet(this);
+    
     }
 
 
@@ -24,4 +22,3 @@ public class Pellet : MonoBehaviour
         }
     }
 }
-*/

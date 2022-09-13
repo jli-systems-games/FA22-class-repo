@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public Transform pellets;
 
 
+    public int fireballMultiplier { get; private set; } = 1;
+
     public int score { get; private set; }
 
     public int lives { get; private set; }
@@ -84,6 +86,7 @@ public class GameManager : MonoBehaviour
     public void FireBallDeath(Fireball fireball)
     {
         SetScore(this.score + fireball.points);
+        this.fireballMultiplier++;
     }
 
     public void CactusDeath()
@@ -101,36 +104,43 @@ public class GameManager : MonoBehaviour
             GameOver();
         }
     }
-}
-    /*
+
     public void DrinkPellet(Pellet pellet)
     {
+
         pellet.gameObject.SetActive(false);
 
         SetScore(this.score + pellet.points);
 
-        if(HasRemainingPellet())
+        if (!HasRemainingPellet())
         {
-
+            this.cactus.gameObject.SetActive(false);
+            Invoke(nameof(NewRound), 3.0f);
         }
+
     }
 
-    public void PowerPellet(PowerPellet pellet)
+    public void DrinkPowerPellet(PowerPellet pellet)
     {
         DrinkPellet(pellet);
+        CancelInvoke(nameof(ResetfireballMultiplier));
+        Invoke(nameof(ResetfireballMultiplier), pellet.duration);
+
     }
 
     private bool HasRemainingPellet()
     {
         foreach (Transform pellet in this.pellets)
         {
-            if (pellet.gameObject.activeSelf)
-            {
+            if (pellet.gameObject.activeSelf){
                 return true;
             }
         }
 
         return false;
-
+    }
+    private void ResetfireballMultiplier()
+    {
+        this.fireballMultiplier = 1;
+    }
 }
-*/
