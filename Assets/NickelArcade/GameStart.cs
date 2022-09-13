@@ -31,7 +31,7 @@ public class GameStart : MonoBehaviour
         }
         else if (timer1<=0)
         {
-            player1Controller.GetComponent<CharacterController>().enabled = true;
+            player1Controller.GetComponent<Player>().enabled = true;
             player2Controller.GetComponent<CharacterController>().enabled = true;
             startTiming.SetActive(true);
         }
