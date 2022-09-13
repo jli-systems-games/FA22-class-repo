@@ -10,7 +10,7 @@ public class PrintScore : MonoBehaviour
     public GameObject printPlayer2Score;
     void Start()
     {
-        printPlayer1Score.GetComponent<TextMeshPro>().text = "";
+        
     }
 
     // Update is called once per frame

@@ -20,7 +20,7 @@ public class TerritoryChangeColor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(player1Score);
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
