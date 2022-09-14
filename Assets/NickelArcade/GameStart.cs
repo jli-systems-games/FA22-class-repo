@@ -7,9 +7,9 @@ public class GameStart : MonoBehaviour
 {
     public List<string> subtitles;
     public GameObject subtBox;
-    public float time;
+   
 
-    private float timer1=8;
+
     public GameObject player1Controller;
     public GameObject player2Controller;
     public GameObject startTiming;
@@ -19,29 +19,23 @@ public class GameStart : MonoBehaviour
     {
         this.GetComponent<TMP_Text>().text = " ";
         StartCoroutine(LoadSubtitles());
+        player1Controller.GetComponent<NickelArcade.Player>().enabled = false;
+        player2Controller.GetComponent<NickelArcade.Player>().enabled = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(timer1);
-        if (timer1 > 0)
-        {
-            timer1 -= Time.deltaTime;
-        }
-        else if (timer1<=0)
-        {
-            player1Controller.GetComponent<Player>().enabled = true;
-            player2Controller.GetComponent<CharacterController>().enabled = true;
-            startTiming.SetActive(true);
-        }
+        
 
 
     }
 
     IEnumerator LoadSubtitles()
     {
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(1);
+
         for (int i = 0; i < subtitles.Count; i++)
         {
 
@@ -53,6 +47,32 @@ public class GameStart : MonoBehaviour
             subtBox.SetActive(false);
 
         }
+        player1Controller.GetComponent<NickelArcade.Player>().enabled = true;
+        player2Controller.GetComponent<NickelArcade.Player>().enabled = true;
+        startTiming.SetActive(true);
+
+        yield return new WaitForSeconds(60);
+        this.GetComponent<TMP_Text>().text = "Time's Up!";
+        startTiming.SetActive(false);
+        player1Controller.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+        player2Controller.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+
+        yield return new WaitForSeconds(2);
+        if (TerritoryChangeColor.player1Score > TerritoryChangeColor.player2Score)
+        {
+            this.GetComponent<TMP_Text>().text = "Player1 Wins!";
+        }
+        else if (TerritoryChangeColor.player1Score < TerritoryChangeColor.player2Score)
+        {
+            this.GetComponent<TMP_Text>().text = "Player2 Wins!";
+
+        }
+        else
+        {
+            this.GetComponent<TMP_Text>().text = "Draw!";
+        }
+        
+
 
 
     }
