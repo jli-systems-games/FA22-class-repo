@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
+    public float fireRate = 0.2f;
+    public Transform firingPoint;
+    public GameObject bulletPrefab;
+
+    float timeUnitFire;
+    NickelArcade.Player pm;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        pm = gameObject.GetComponent<NickelArcade.Player>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetMouseButton(0) && timeUnitFire < Time.time)
+        {
+            Shoot();
+            timeUnitFire = Time.time + fireRate;
+        }
+    }
+
+    void Shoot()
+    {
+        float angle = pm.p1isFacingRight ? 0f : 180f;
+        Instantiate(bulletPrefab, firingPoint.position, Quaternion.Euler(new Vector3(0f, 0f, angle)));
     }
 }
