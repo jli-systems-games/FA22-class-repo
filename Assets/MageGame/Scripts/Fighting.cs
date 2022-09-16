@@ -88,7 +88,7 @@ public class Fighting : MonoBehaviour
 
                 //shooting
                 timer--;
-                Debug.Log(timer);
+                //Debug.Log(timer);
 
             }
 

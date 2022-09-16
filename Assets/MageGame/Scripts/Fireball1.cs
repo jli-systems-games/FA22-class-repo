@@ -10,6 +10,7 @@ namespace maiproject
         public Rigidbody2D rigidbody;
         public GameObject impacteffect;
         public Health enemyHealth;
+        public bool cheeseBall;
         
         // Start is called before the first frame update
         void Start()
@@ -33,13 +34,14 @@ namespace maiproject
                 enemyHealth.takeDamage(7);
                 Instantiate(impacteffect, transform.position, Quaternion.identity);
                 Destroy(gameObject);
-                Debug.Log(enemyHealth.health);
+                //Debug.Log(enemyHealth.health);
             }
             if (collision.gameObject.CompareTag("Enemy"))
-            {
-               // Destroy(gameObject);
-            }
+           {
+             Destroy(gameObject);
+             }
 
+           
 
             //var enemyComponent = GetComponent<EnemyHealth>();
         }
