@@ -37,7 +37,7 @@ namespace maiproject
             }
             if (collision.gameObject.CompareTag("Enemy"))
             {
-                Destroy(gameObject);
+               // Destroy(gameObject);
             }
 
 
