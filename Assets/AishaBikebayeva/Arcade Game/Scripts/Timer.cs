@@ -12,7 +12,7 @@ namespace Aisha
         public TMP_Text textdisplay;
         public Image bardisplay;
 
-        public float timerDuration = 30;
+        public float timerDuration = 100;
         float timer = 0f;
         // Start is called before the first frame update
         void Start()
@@ -24,7 +24,7 @@ namespace Aisha
         void Update()
         {
             timer -= Time.deltaTime;
-            textdisplay.text = "Time left: " + timer.ToString("0.0") + "secs";
+            textdisplay.text = "Time left: " + timer.ToString("0") + " secs";
             bardisplay.fillAmount = timer / timerDuration;
 
             if (timer < 0)
