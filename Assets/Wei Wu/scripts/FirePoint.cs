@@ -16,7 +16,7 @@ public class FirePoint : MonoBehaviour
     IEnumerator FireShotgun()
     {
 
-        float rotationAngle = -30f;
+        float rotationAngle = -45f;
         for (int i=0;i<10000;i++)
         {
             for(int j=0;j<3;j++)
@@ -25,24 +25,24 @@ public class FirePoint : MonoBehaviour
                 {
                     case 0:
                         CreatBullet(rotationAngle, firePoint.transform.position);
-                        rotationAngle += 30f;
+                        rotationAngle += 45f;
                         break;
 
                     case 1:
                         CreatBullet(rotationAngle, firePoint.transform.position);
-                        rotationAngle += 30f;
+                        rotationAngle += 45f;
                         break;
 
                     case 2:
                         CreatBullet(rotationAngle, firePoint.transform.position);
-                        rotationAngle = -30f;
+                        rotationAngle = -45f;
                         break;
 
 
                 }
             }
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(6f);
 
 
         }

@@ -36,6 +36,16 @@ public class AppleController : MonoBehaviour
 
             Destroy(gameObject, 0f);
         }
+
+        if (other.gameObject.tag == "Finish")
+        {
+            _meshRenderer.enabled = false;
+            _Collider.enabled = false;
+
+            //collectedEffect.SetActive(true);
+
+            Destroy(gameObject, 0f);
+        }
     }
 
 
