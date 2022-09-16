@@ -18,6 +18,9 @@ public class Fighting : MonoBehaviour
         public List<KeyCode> keycodes;
         public GameObject winNote;
 
+        private float timer;
+        public float timerAmount;
+
         public bool isAlive;
 
         //public KeyCode[] keycodes;
@@ -71,10 +74,11 @@ public class Fighting : MonoBehaviour
                 health.shieldRate = 0;
                 shield.SetActive(false);
 
-                if (Input.GetKeyDown(keycodes[2]))
+                if (Input.GetKeyDown(keycodes[2]) && timer <= 0)
                 {
 
                     Instantiate(projectile, firePosition.position, firePosition.rotation);
+                        timer = timerAmount;
 
                 }
 
@@ -83,15 +87,17 @@ public class Fighting : MonoBehaviour
             }
 
                 //shooting
+                timer--;
+                Debug.Log(timer);
 
             }
 
 
-
+            
 
             if (health.health <= 0)
             {
-                Debug.Log("Dead");
+               // Debug.Log("Dead");
                 isAlive = false;
                 spriterenderer.sprite = sprites[3];
                 transform.position = new Vector2(playerposition.position.x, positions[2].position.y);
