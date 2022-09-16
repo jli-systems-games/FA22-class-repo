@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerCollisionWEnemy : MonoBehaviour
+namespace Mariana
 {
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public class PlayerCollisionWEnemy : MonoBehaviour
     {
 
-        if(collision.transform.tag == "Enemy")
+        private void OnCollisionEnter2D(Collision2D collision)
         {
-            SceneManager.LoadScene(2);
+
+            if (collision.transform.tag == "Enemy")
+            {
+                SceneManager.LoadScene(2);
+            }
         }
     }
+
 }

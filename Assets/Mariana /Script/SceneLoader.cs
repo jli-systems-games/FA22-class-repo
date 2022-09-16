@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-namespace MarianaVampireSurvivors
+namespace Mariana
 {
     public class SceneLoader : MonoBehaviour
     {
