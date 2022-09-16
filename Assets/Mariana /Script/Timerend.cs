@@ -5,8 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-namespace MarianaVampireSurvivors
-{
+namespace Mariana
+{ 
     public class Timerend : MonoBehaviour
         
 

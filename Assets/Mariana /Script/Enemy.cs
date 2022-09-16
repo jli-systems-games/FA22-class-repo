@@ -1,7 +1,7 @@
 using UnityEngine;
 namespace MarianaVampireSurvivors
 {
-    namespace MarianaVampireSurvivors
+    namespace Mariana
     {
 
         public class Enemy : MonoBehaviour

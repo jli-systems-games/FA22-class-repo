@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace MarianaVampireSurvivors
+namespace Mariana
 {
 
     public class Spawner : MonoBehaviour
