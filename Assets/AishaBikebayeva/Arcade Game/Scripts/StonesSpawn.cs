@@ -12,6 +12,11 @@ namespace Aisha
         public float ySpawnPosMin; //up most spawn point
         public float ySpawnPosMax; //down most spawn point
         public float xSpawnPos; //width of spawn
+        public float spawnInterval = 3;
+        public float currentSpawnTime = 0;
+        public float bigCountdown = 30; 
+        public float currentBigTime = 0;
+
 
         //private variables can't be accessed by other scripts
         private float timeUntilSpawn;
@@ -32,6 +37,18 @@ namespace Aisha
                 Spawn();
                 //then we reset timeUntilSpawn to the timeBetweenSpawns & start all over again
                 timeUntilSpawn = timeBetweenSpawns;
+            }
+            currentSpawnTime += Time.deltaTime;
+            currentBigTime += Time.deltaTime;
+        
+            if(currentSpawnTime >= spawnInterval){
+                Spawn();
+                currentSpawnTime = 0;
+            }
+        
+            if(currentBigTime >= bigCountdown){
+                spawnInterval -= .1f;
+                currentBigTime = 0;
             }
         }
 
