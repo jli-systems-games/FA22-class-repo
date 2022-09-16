@@ -11,8 +11,8 @@ namespace Aisha
         public TMP_Text textdisplay;
         public Image bardisplay;
 
-        public float timerDuration = 5f;//f;
-        float timer = 0f;//f;
+        public float timerDuration = 30;
+        float timer = 0f;
         // Start is called before the first frame update
         void Start()
         {

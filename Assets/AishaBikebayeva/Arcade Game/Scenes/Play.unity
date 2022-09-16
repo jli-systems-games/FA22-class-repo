@@ -235,15 +235,15 @@ TextMesh:
   m_GameObject: {fileID: 469908433}
   m_Text: Score
   m_OffsetZ: 0
-  m_CharacterSize: 0.04
+  m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 0
-  m_Alignment: 0
+  m_Alignment: 1
   m_TabSize: 4
   m_FontSize: 105
   m_FontStyle: 1
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: 8a76546043f064f27815d3a794356961, type: 3}
+  m_Font: {fileID: 12800000, guid: e006d6c7441a04248b5ced6bca95c4c5, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
@@ -267,7 +267,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: e006d6c7441a04248b5ced6bca95c4c5, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -566,10 +566,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 7374620430643813190, guid: e2bc437cf77c7495da8cbb2736884fc5, type: 3}
-  timeBetweenSpawns: 1
+  timeBetweenSpawns: 5
   ySpawnPosMin: -7
   ySpawnPosMax: 5
   xSpawnPos: 11
+  spawnInterval: 3
+  currentSpawnTime: 0
+  bigCountdown: 30
+  currentBigTime: 0
 --- !u!4 &670857667
 Transform:
   m_ObjectHideFlags: 0
@@ -616,7 +620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textdisplay: {fileID: 1472255990}
   bardisplay: {fileID: 1087876359}
-  timerDuration: 5
+  timerDuration: 30
 --- !u!4 &829490317
 Transform:
   m_ObjectHideFlags: 0
@@ -827,7 +831,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1087876358
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1075,7 +1079,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1337522524}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.4608, y: -0.0642, z: -0.07626327}
+  m_LocalPosition: {x: -11.71, y: -0.0642, z: -0.07626327}
   m_LocalScale: {x: 1.7384, y: 5.947775, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1138,8 +1142,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 140, y: -124.8}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 175, y: -198}
+  m_SizeDelta: {x: 269.5305, y: 90.4247}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1472255990
 MonoBehaviour:
@@ -1163,8 +1167,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'time left:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: aa991bceb43c94fb3993d647aa490b87, type: 2}
+  m_sharedMaterial: {fileID: -5295672738876245564, guid: aa991bceb43c94fb3993d647aa490b87, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1188,21 +1192,21 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 18.9
+  m_fontSizeBase: 18.9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 11.64
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: 6.91
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
@@ -1224,7 +1228,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -94.913055, w: 0}
+  m_margin: {x: -260.33487, y: 0.000030569227, z: 76.487366, w: 35.573727}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1413,7 +1417,7 @@ TextMesh:
   m_FontSize: 10
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: 583deec994054436f9a92fe56a75eb9b, type: 3}
+  m_Font: {fileID: 12800000, guid: e006d6c7441a04248b5ced6bca95c4c5, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
@@ -1437,7 +1441,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: e006d6c7441a04248b5ced6bca95c4c5, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1534,7 +1538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  rb: {fileID: 0}
+  rb: {fileID: 1900819351}
   movement: {x: 0, y: 0}
 --- !u!212 &1900819349
 SpriteRenderer:

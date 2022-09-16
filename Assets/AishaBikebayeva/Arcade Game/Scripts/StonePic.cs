@@ -32,16 +32,8 @@ namespace Aisha
         {
                 Destroy(this.gameObject);
                 this.gameObject.SetActive(false);
-                Debug.Log("Oh no!");
+                Debug.Log("Oh no! Objects collided");
                 SceneManager.LoadScene("GameOver");
-            //customImage.enabled = true;
-            //scenesToLoad.Add(SceneManager.LoadSceneAsync("gameOverScreen"));
-
-            //void LoadScene()
-            //{
-            //    //load lost game scene
-            //}
-            //}
         }
         public void StoneHit()
         {
