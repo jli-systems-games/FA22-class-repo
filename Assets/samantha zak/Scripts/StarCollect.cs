@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class StarCollect : MonoBehaviour
 {
-
+   
     private int star = 0;
-
+    
+   
     [SerializeField] private Text starText;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,6 +17,8 @@ public class StarCollect : MonoBehaviour
             Destroy(collision.gameObject);
             star++;
             starText.text = "Stars: " + star;
+            
+            
         }
         
     }
