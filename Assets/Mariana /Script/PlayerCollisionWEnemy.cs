@@ -14,7 +14,7 @@ namespace Mariana
 
             if (collision.transform.tag == "Enemy")
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene("EndBad");
             }
         }
     }

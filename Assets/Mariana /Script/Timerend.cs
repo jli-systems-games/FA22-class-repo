@@ -28,7 +28,7 @@ namespace Mariana
             timerSeconds.text = timer.ToString("f2");
             if (timer <= 0)
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene("EndBad");
 
             }
         }
