@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Snakemovement : MonoBehaviour
 {
@@ -22,9 +23,7 @@ public class Snakemovement : MonoBehaviour
         _meshRenderer = transform.GetComponent<MeshRenderer>();
         _Collider = transform.GetComponent<Collider>();
 
-        GrowSnake();
-        GrowSnake();
-        GrowSnake();
+       
 
     }
 
@@ -75,6 +74,16 @@ public class Snakemovement : MonoBehaviour
 
 
         }
+
+        if (other.gameObject.tag == "Finish")
+        {
+            SceneManager.LoadScene(01);
+
+            //collectedEffect.SetActive(true);
+
+
+        }
+
     }
 
     }
