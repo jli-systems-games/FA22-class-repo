@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -30,6 +31,7 @@ namespace Aisha
             {
                 timer = timerDuration;
                 Debug.Log("Time has ended!");
+                SceneManager.LoadScene("Win");
             }
 
         }

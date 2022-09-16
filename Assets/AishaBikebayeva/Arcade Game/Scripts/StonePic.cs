@@ -30,10 +30,13 @@ namespace Aisha
 
         void OnTriggerEnter2D(Collider2D otherCollider)
         {
+            if(otherCollider.gameObject.tag == "Obstacle")
+            {
                 Destroy(this.gameObject);
                 this.gameObject.SetActive(false);
                 Debug.Log("Oh no! Objects collided");
                 SceneManager.LoadScene("GameOver");
+            }
         }
         public void StoneHit()
         {
