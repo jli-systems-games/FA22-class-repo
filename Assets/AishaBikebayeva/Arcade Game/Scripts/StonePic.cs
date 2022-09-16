@@ -30,7 +30,7 @@ namespace Aisha
 
         void OnTriggerEnter2D(Collider2D otherCollider)
         {
-            if(otherCollider.gameObject.tag == "Obstacle")
+            if(otherCollider.gameObject.tag == "Player")
             {
                 Destroy(this.gameObject);
                 this.gameObject.SetActive(false);

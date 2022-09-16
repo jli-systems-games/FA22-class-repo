@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 namespace Aisha
@@ -16,6 +17,7 @@ namespace Aisha
         public float currentSpawnTime = 0;
         public float bigCountdown = 30; 
         public float currentBigTime = 0;
+        public float difficultyModifier = .5f;
 
 
         //private variables can't be accessed by other scripts
@@ -37,20 +39,31 @@ namespace Aisha
                 Spawn();
                 //then we reset timeUntilSpawn to the timeBetweenSpawns & start all over again
                 timeUntilSpawn = timeBetweenSpawns;
+                timeBetweenSpawns -= difficultyModifier;
             }
             currentSpawnTime += Time.deltaTime;
             currentBigTime += Time.deltaTime;
         
-            if(currentSpawnTime >= spawnInterval){
-                Spawn();
-                currentSpawnTime = 0;
-            }
+            // if(currentSpawnTime >= spawnInterval){
+            //     Spawn();
+            //     currentSpawnTime = 0;
+            // }
         
             if(currentBigTime >= bigCountdown){
                 spawnInterval -= .1f;
                 currentBigTime = 0;
             }
         }
+        // void OnTriggerEnter2D(Collider2D otherCollider)
+        // {
+        //     if(otherCollider.gameObject.tag == "Obstacle")
+        //     {
+        //         Destroy(this.gameObject);
+        //         this.gameObject.SetActive(false);
+        //         Debug.Log("Oh no! Objects collided");
+        //         SceneManager.LoadScene("GameOver");
+        //     }
+        // }
 
         private void Spawn()
         {
