@@ -10,6 +10,10 @@ namespace Aisha
         public float speed = 1;//0.0f;
         public Rigidbody2D rb;
         public Vector2 movement;
+        float rightEdge = 10f; //the right edge of the screen in world coordinates
+        float leftEdge = -10f;
+        float upEdge = 7f;
+        float downEdge = -5f;
     
         // Start is called before the first frame update
         void Start()
@@ -41,10 +45,7 @@ namespace Aisha
                 transform.position += new Vector3(0,-speed * Time.deltaTime);
             }
 
-            float rightEdge = 10f; //the right edge of the screen in world coordinates
-            float leftEdge = -10f;
-            float upEdge = 7f;
-            float downEdge = -5f;
+        
             if (transform.position.x > rightEdge)
             {
                 transform.position = new Vector2(rightEdge, transform.position.y);

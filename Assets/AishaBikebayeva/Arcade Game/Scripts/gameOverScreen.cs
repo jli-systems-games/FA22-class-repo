@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 namespace Aisha
 {
-    public class gameOverScreen : MonoBehaviour
+    public class GameOverScreen : MonoBehaviour
     {
         public Text pointsText;
 
