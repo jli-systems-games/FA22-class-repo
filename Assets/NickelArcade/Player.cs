@@ -43,12 +43,12 @@ namespace NickelArcade
             {
                 if (p2direction > 0f)
                 {
-                    transform.localScale = new Vector2(-3.88172626f, 3.88172626f);
+                    transform.localScale = new Vector2(3.88172626f, 3.88172626f);
                     p2isFacingRight = true;
                 }
                 else if (p2direction < 0f)
                 {
-                    transform.localScale = new Vector2(3.88172626f, 3.88172626f);
+                    transform.localScale = new Vector2(-3.88172626f, 3.88172626f);
                     p2isFacingRight = false;
                 }
             }

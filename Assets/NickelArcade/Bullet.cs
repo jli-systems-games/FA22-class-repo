@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = Vector2.right * bulletSpeed;
+        rb.velocity = transform.right * bulletSpeed;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

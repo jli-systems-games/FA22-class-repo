@@ -20,16 +20,36 @@ public class PlayerShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButton(0) && timeUnitFire < Time.time)
+        if (this.gameObject.CompareTag("Player1"))
         {
-            Shoot();
-            timeUnitFire = Time.time + fireRate;
+            if (Input.GetKeyDown(KeyCode.E) && timeUnitFire < Time.time)
+            {
+                Shoot();
+                timeUnitFire = Time.time + fireRate;
+            }
+        }else if (this.gameObject.CompareTag("Player2"))
+        {
+            if(Input.GetKeyDown(KeyCode.RightShift) && timeUnitFire < Time.time)
+            {
+                Shoot();
+                timeUnitFire = Time.time + fireRate;
+            }
         }
+
+
     }
 
     void Shoot()
     {
-        float angle = pm.p1isFacingRight ? 0f : 180f;
+        //float angle = pm.p1isFacingRight ? 0f : 180f;
+        float angle = 0;
+        if (transform.localScale.x < 0)
+        {
+            angle = 180;
+        }else if (transform.localScale.x > 0)
+        {
+            angle = 0;
+        }
         Instantiate(bulletPrefab, firingPoint.position, Quaternion.Euler(new Vector3(0f, 0f, angle)));
     }
 }
