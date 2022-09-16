@@ -6,19 +6,20 @@ public class AppleController : MonoBehaviour
 {
 
     public float speed;
-    public GameObject collectedEffect;
+    //public GameObject collectedEffect;
 
     private SpriteRenderer _spriteRenderer;
-    private BoxCollider2D _boxCollider2D;
+    private Collider2D _Collider2D;
 
-    // Start is called before the first frame update
+   
     void Start()
-    {   
-
+    {
+        _spriteRenderer = transform.GetComponent <SpriteRenderer> ();
+        _Collider2D = transform.GetComponent<Collider2D>();
        // public GameObject snake;
     }
 
-    // Update is called once per frame
+  
     void Update()
     {
         transform.Translate(Vector3.down * Time.deltaTime * speed, Space.Self); 
@@ -29,24 +30,14 @@ public class AppleController : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             _spriteRenderer.enabled = false;
-            _boxCollider2D.enabled = false;
+            _Collider2D.enabled = false;
 
-            collectedEffect.SetActive(true);
+            //collectedEffect.SetActive(true);
 
-            Destroy(gameObject, 0.3f);
+            Destroy(gameObject, 0f);
         }
     }
-    //private void OnTriggerEnter(Collider col)
-    //{
-    //   if (col.name == "Head")
-    //   {
-    //      snake.GetComponent<SnakeController>().getApple();
-    //    }
-    //   else if(col.name =="Body Clone")
-    //    {
 
-    //    }
-    //}
 
 
 

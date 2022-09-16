@@ -75,7 +75,9 @@ public class SnakeController : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        
+
+        if (other.gameObject.tag == "Enemy")
         {
             GameObject body = Instantiate(bodyprefab, transform);
             body.transform.position = transform.GetChild(length - 1).position;
@@ -86,6 +88,7 @@ public class SnakeController : MonoBehaviour
             }
         }
     }
+
 
 
 
