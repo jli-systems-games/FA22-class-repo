@@ -4,18 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class gameOverScreen : MonoBehaviour
+namespace Aisha
 {
-    public Text pointsText;
-
-    public void SetUp (int score)
+    public class gameOverScreen : MonoBehaviour
     {
-        gameObject.SetActive(true);
-        pointsText.text = score.ToString() + " POINTS";
-    }
+        public Text pointsText;
 
-    public void Exit()
-    {
-        SceneManager.LoadScene("GameOver");
-    }
+        public void SetUp (int score)
+        {
+            gameObject.SetActive(true);
+            pointsText.text = score.ToString() + " POINTS";
+        }
+
+        public void Exit()
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+    }  
 }
