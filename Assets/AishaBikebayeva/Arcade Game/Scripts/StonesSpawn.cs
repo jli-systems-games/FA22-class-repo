@@ -17,7 +17,7 @@ namespace Aisha
         public float currentSpawnTime = 0;
         public float bigCountdown = 30; 
         public float currentBigTime = 0;
-        public float difficultyModifier = .5f;
+        // public float difficultyModifier = .5f;
 
 
         //private variables can't be accessed by other scripts
@@ -39,7 +39,7 @@ namespace Aisha
                 Spawn();
                 //then we reset timeUntilSpawn to the timeBetweenSpawns & start all over again
                 timeUntilSpawn = timeBetweenSpawns;
-                timeBetweenSpawns -= difficultyModifier;
+                // timeBetweenSpawns -= difficultyModifier;
             }
             currentSpawnTime += Time.deltaTime;
             currentBigTime += Time.deltaTime;
