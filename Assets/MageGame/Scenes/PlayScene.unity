@@ -159,7 +159,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.082352936, g: 0.24300659, b: 0.3019608, a: 0}
+  m_BackGroundColor: {r: 0.2733179, g: 0.5843288, b: 0.6981132, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -364,8 +364,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 820de0c5ba276487c8e3cdd0bcbbe6c5, type: 3}
-  m_Color: {r: 1, g: 0.84948546, b: 0.6179246, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 1837c342c414e4d559a3bafe9791309a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -465,7 +465,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.035294116, g: 0.20489818, b: 0.21960784, a: 1}
+  m_Color: {r: 0.08926664, g: 0.30105358, b: 0.3207547, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1419,7 +1419,7 @@ GameObject:
   - component: {fileID: 686412128}
   - component: {fileID: 686412129}
   m_Layer: 0
-  m_Name: FighterLeft
+  m_Name: FighterRightt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1579,9 +1579,9 @@ MonoBehaviour:
   health: {fileID: 2067053804}
   shielding: 0
   sprites:
-  - {fileID: 21300000, guid: 820de0c5ba276487c8e3cdd0bcbbe6c5, type: 3}
-  - {fileID: 21300000, guid: 25bdbab5661c54c2c811c01ec7e7dc82, type: 3}
-  - {fileID: 21300000, guid: 726c7fd066e8e482c94cec118107c154, type: 3}
+  - {fileID: 21300000, guid: 1837c342c414e4d559a3bafe9791309a, type: 3}
+  - {fileID: 21300000, guid: c4933ce09f5a548f5a94d10dac6460b2, type: 3}
+  - {fileID: 21300000, guid: eeb3fed9aeffe4e61b34f823e4e7be89, type: 3}
   - {fileID: 21300000, guid: f15543fa0016a4fbb9b50ede2b84eea3, type: 3}
   spriterenderer: {fileID: 163334816}
   state: 0
@@ -1672,8 +1672,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f9cb379b0b06b4bdba7bd73d5d0fd076, type: 3}
-  m_Color: {r: 0.61865896, g: 0.5518868, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 6fa4d5b4b3af54aa3b7336f74ba0ff66, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1732,7 +1732,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.76, y: 0.88}
+    oldSize: {x: 1.76, y: 0.8}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3019,7 +3019,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Eyelidya
+  m_text: Sand Witch
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3052,7 +3052,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -3230,7 +3230,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Eyelex Balldwin
+  m_text: Garry Goudini
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3263,7 +3263,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -3293,7 +3293,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 34.335045, y: 0, z: 68.670105, w: 0}
+  m_margin: {x: 14.033485, y: 0, z: 68.670105, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3365,8 +3365,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 820de0c5ba276487c8e3cdd0bcbbe6c5, type: 3}
-  m_Color: {r: 0.8575296, g: 0.7783019, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: d90ff95b02eac47e088008e041030b44, type: 3}
+  m_Color: {r: 0.8897716, g: 0.8254717, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3615,8 +3615,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f9cb379b0b06b4bdba7bd73d5d0fd076, type: 3}
-  m_Color: {r: 1, g: 0.7118666, b: 0.6084906, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 8a49e4893f73c4c7490c8ba8ee36fcd3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
@@ -3837,7 +3837,7 @@ GameObject:
   - component: {fileID: 2067053799}
   - component: {fileID: 2067053804}
   m_Layer: 0
-  m_Name: FighterRight
+  m_Name: FighterLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3865,9 +3865,9 @@ MonoBehaviour:
   health: {fileID: 2067053804}
   shielding: 5
   sprites:
-  - {fileID: 21300000, guid: 820de0c5ba276487c8e3cdd0bcbbe6c5, type: 3}
-  - {fileID: 21300000, guid: 25bdbab5661c54c2c811c01ec7e7dc82, type: 3}
-  - {fileID: 21300000, guid: 726c7fd066e8e482c94cec118107c154, type: 3}
+  - {fileID: 21300000, guid: d90ff95b02eac47e088008e041030b44, type: 3}
+  - {fileID: 21300000, guid: ac7c55715f6f14061a1a4502a043df0e, type: 3}
+  - {fileID: 21300000, guid: 8f62031aa0dd9490e978780d251a6d8d, type: 3}
   - {fileID: 21300000, guid: f15543fa0016a4fbb9b50ede2b84eea3, type: 3}
   spriterenderer: {fileID: 1825434871}
   state: 0
