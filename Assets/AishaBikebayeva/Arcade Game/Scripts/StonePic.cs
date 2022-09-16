@@ -3,52 +3,55 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine.UI;
 
-public class StonePic : MonoBehaviour
+namespace Aisha
 {
-    Score Score;
-    boat boat;
-    //gameOverScreen gameOverScreen;
-
-    private SpriteRenderer sr;
-    private float fallSpeed = 5; //f;
-    //private Image customImage;
-
-    void Start()
+    public class StonePic : MonoBehaviour
     {
+        Score Score;
+        boat boat;
+        //gameOverScreen gameOverScreen;
 
-        sr = this.GetComponent<SpriteRenderer>();
-        Score = GameObject.Find("Score").GetComponent<Score>();//fill the scoreManager variable with a reference to the Score Manager
-        boat = GameObject.Find("Boat").GetComponent<boat>(); //fill player Variable with reference to Player
-    }
+        private SpriteRenderer sr;
+        private float fallSpeed = 5; //f;
+        //private Image customImage;
 
-    void Update()
-    {
-       transform.position += new Vector3(-fallSpeed * Time.deltaTime, 0, 0);
-    }
+        void Start()
+        {
 
-    void OnTriggerEnter2D(Collider2D otherCollider)
-    {
-            Destroy(this.gameObject);
-            this.gameObject.SetActive(false);
-            Debug.Log("Oh no!");
-            SceneManager.LoadScene("GameOver");
-        //customImage.enabled = true;
-        //scenesToLoad.Add(SceneManager.LoadSceneAsync("gameOverScreen"));
+            sr = this.GetComponent<SpriteRenderer>();
+            Score = GameObject.Find("Score").GetComponent<Score>();//fill the scoreManager variable with a reference to the Score Manager
+            boat = GameObject.Find("Boat").GetComponent<boat>(); //fill player Variable with reference to Player
+        }
 
-        //void LoadScene()
-        //{
-        //    //load lost game scene
-        //}
-        //}
-    }
-    public void StoneHit()
-    {
-        //sr.sprite = Explosion;
-        //changes the sprite on the SpriteRenderer component
-    }
+        void Update()
+        {
+        transform.position += new Vector3(-fallSpeed * Time.deltaTime, 0, 0);
+        }
 
-    public void StoneMissed()
-    {
+        void OnTriggerEnter2D(Collider2D otherCollider)
+        {
+                Destroy(this.gameObject);
+                this.gameObject.SetActive(false);
+                Debug.Log("Oh no!");
+                SceneManager.LoadScene("GameOver");
+            //customImage.enabled = true;
+            //scenesToLoad.Add(SceneManager.LoadSceneAsync("gameOverScreen"));
 
+            //void LoadScene()
+            //{
+            //    //load lost game scene
+            //}
+            //}
+        }
+        public void StoneHit()
+        {
+            //sr.sprite = Explosion;
+            //changes the sprite on the SpriteRenderer component
+        }
+
+        public void StoneMissed()
+        {
+
+        }
     }
 }
