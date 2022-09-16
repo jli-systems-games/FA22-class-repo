@@ -8,29 +8,29 @@ public class AppleController : MonoBehaviour
     public float speed;
     //public GameObject collectedEffect;
 
-    private SpriteRenderer _spriteRenderer;
-    private Collider2D _Collider2D;
+    private MeshRenderer _meshRenderer;
+    private Collider _Collider;
 
    
     void Start()
     {
-        _spriteRenderer = transform.GetComponent <SpriteRenderer> ();
-        _Collider2D = transform.GetComponent<Collider2D>();
+        _meshRenderer = transform.GetComponent <MeshRenderer> ();
+        _Collider = transform.GetComponent<Collider>();
        // public GameObject snake;
     }
 
   
     void Update()
     {
-        transform.Translate(Vector3.down * Time.deltaTime * speed, Space.Self); 
+        transform.position += transform.forward * speed * Time.deltaTime;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            _spriteRenderer.enabled = false;
-            _Collider2D.enabled = false;
+            _meshRenderer.enabled = false;
+            _Collider.enabled = false;
 
             //collectedEffect.SetActive(true);
 

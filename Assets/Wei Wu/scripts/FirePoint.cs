@@ -17,7 +17,7 @@ public class FirePoint : MonoBehaviour
     {
 
         float rotationAngle = -30f;
-        for (int i=0;i<100;i++)
+        for (int i=0;i<10000;i++)
         {
             for(int j=0;j<3;j++)
             {
@@ -53,7 +53,7 @@ public class FirePoint : MonoBehaviour
 
     private void CreatBullet (float rotationAngle,Vector3 firePosition)
     {
-        Instantiate(bullet, firePosition, Quaternion.AngleAxis(rotationAngle, Vector3.forward));
+        Instantiate(bullet, firePosition, Quaternion.AngleAxis(rotationAngle, Vector3.up));
     }
 
 
