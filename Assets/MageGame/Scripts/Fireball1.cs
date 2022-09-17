@@ -11,7 +11,9 @@ namespace maiproject
         public GameObject impacteffect;
         public Health enemyHealth;
         public bool cheeseBall;
-        
+        public float DeathTime;
+      
+
         // Start is called before the first frame update
         void Start()
         {
@@ -23,7 +25,7 @@ namespace maiproject
         // Update is called once per frame
         void Update()
         {
-
+            
         }
         private void OnTriggerEnter2D(Collider2D collision)
         {
@@ -31,17 +33,26 @@ namespace maiproject
             {
                 //attack
 
-                enemyHealth.takeDamage(7);
+                enemyHealth.takeDamage();
                 Instantiate(impacteffect, transform.position, Quaternion.identity);
+                
                 Destroy(gameObject);
                 //Debug.Log(enemyHealth.health);
             }
-            if (collision.gameObject.CompareTag("Enemy"))
-           {
-             Destroy(gameObject);
-             }
+           // if (collision.gameObject.CompareTag("Enemy"))
+           //{
+             //Destroy(gameObject);
+            // }
 
-           
+            if (collision.GetComponent<Fireball1>() != null)
+            {
+                if (collision.gameObject.GetComponent<Fireball1>().cheeseBall != cheeseBall)
+                {
+                    Destroy(gameObject);
+                }
+            }
+
+
 
             //var enemyComponent = GetComponent<EnemyHealth>();
         }
