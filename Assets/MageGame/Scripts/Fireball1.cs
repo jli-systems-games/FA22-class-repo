@@ -33,7 +33,7 @@ namespace maiproject
             {
                 //attack
 
-                enemyHealth.takeDamage();
+                enemyHealth.takeDamage(7);
                 Instantiate(impacteffect, transform.position, Quaternion.identity);
                 
                 Destroy(gameObject);
