@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AppleController : MonoBehaviour
+public class bullet2 : MonoBehaviour
 {
 
     public float speed;
@@ -11,15 +11,15 @@ public class AppleController : MonoBehaviour
     private MeshRenderer _meshRenderer;
     private Collider _Collider;
 
-   
+
     void Start()
     {
-        _meshRenderer = transform.GetComponent <MeshRenderer> ();
+        _meshRenderer = transform.GetComponent<MeshRenderer>();
         _Collider = transform.GetComponent<Collider>();
-       // public GameObject snake;
+        // public GameObject snake;
     }
 
-  
+
     void Update()
     {
         transform.position += transform.up * speed * Time.deltaTime;

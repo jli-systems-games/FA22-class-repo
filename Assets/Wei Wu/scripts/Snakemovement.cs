@@ -30,14 +30,14 @@ public class Snakemovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += transform.forward * MoveSpeed * Time.deltaTime;
+        transform.position += transform.up * MoveSpeed * Time.deltaTime;
 
         
 
 
 
         float steerDirection = Input.GetAxis("Horizontal");
-        transform.Rotate(Vector3.up * steerDirection * SteerSpeed * Time.deltaTime);
+        transform.Rotate(Vector3.forward * steerDirection * SteerSpeed * Time.deltaTime);
 
 
         PositionsHistory.Insert(0, transform.position);
@@ -64,6 +64,14 @@ public class Snakemovement : MonoBehaviour
 
     }
 
+    private void ReduceSnake()
+    {
+        GameObject tail = BodyParts[0];
+        BodyParts.RemoveAt(index: 0);
+
+        Destroy(tail);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Enemy")
@@ -78,6 +86,15 @@ public class Snakemovement : MonoBehaviour
         if (other.gameObject.tag == "Finish")
         {
             SceneManager.LoadScene(01);
+
+            //collectedEffect.SetActive(true);
+
+
+        }
+
+        if (other.gameObject.tag == "Respawn")
+        {
+            ReduceSnake();
 
             //collectedEffect.SetActive(true);
 
