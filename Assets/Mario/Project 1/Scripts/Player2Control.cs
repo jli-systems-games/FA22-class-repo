@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace MarioAirHockey
+namespace MarioArcadeSoccer
 {
 
     public class Player2Control : MonoBehaviour
