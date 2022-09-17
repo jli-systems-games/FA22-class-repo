@@ -10,8 +10,8 @@ public class Cactus : MonoBehaviour
 
     private void Awake()
     {
-        this.movement = GetComponent<Movement>();
-            collider = GetComponent<Collider2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        collider = GetComponent<Collider2D>();
         movement = GetComponent<Movement>();
     }
 

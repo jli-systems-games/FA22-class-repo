@@ -8,10 +8,8 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public float speed = 8.0f;
-
-    public float speedMultiplier = 1.0f;
-
-    public Vector2 initialDirection;
+public float speedMultiplier = 1.0f;
+public Vector2 initialDirection;
 
     public LayerMask obstacleLayer;
 
@@ -50,6 +48,16 @@ public class Movement : MonoBehaviour
         Vector2 position = this.rigidbody.position;
         Vector2 translation = this.direction * this.speed * this.speedMultiplier * Time.fixedDeltaTime;
             this.rigidbody.MovePosition(position + translation);
+    }
+
+    private void Update()
+    {
+        // Try to move in the next direction while it's queued to make movements
+        // more responsive
+        if (nextDirection != Vector2.zero)
+        {
+            SetDirection(nextDirection);
+        }
     }
 
     public void SetDirection(Vector2 direction, bool forced = false)

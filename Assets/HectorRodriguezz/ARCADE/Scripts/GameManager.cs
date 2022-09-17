@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
 
     public void CactusDeath()
     {
-        this.cactus.gameObject.SetActive(false);
+        cactus.DeathSequence();
 
         SetLives(this.lives - 1);
 
