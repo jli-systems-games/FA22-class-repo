@@ -25,24 +25,24 @@ public class FirePoint : MonoBehaviour
                 {
                     case 0:
                         CreatBullet(rotationAngle, firePoint.transform.position);
-                        rotationAngle += 45f;
+                        rotationAngle += -225f;
                         break;
 
                     case 1:
                         CreatBullet(rotationAngle, firePoint.transform.position);
-                        rotationAngle += 45f;
+                        rotationAngle += -45f;
                         break;
 
                     case 2:
                         CreatBullet(rotationAngle, firePoint.transform.position);
-                        rotationAngle = -45f;
+                        rotationAngle = 45f;
                         break;
 
 
                 }
             }
 
-            yield return new WaitForSeconds(6f);
+            yield return new WaitForSeconds(3f);
 
 
         }
