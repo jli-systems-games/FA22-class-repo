@@ -11,7 +11,7 @@ public class MenuButtons : MonoBehaviour
    //private int level = 0;
    public void PlayGame()
    {
-      SceneManager.LoadScene("SamPinballWorkshop");
+      SceneManager.LoadScene("Level1");
    }
 
    public void Exit()

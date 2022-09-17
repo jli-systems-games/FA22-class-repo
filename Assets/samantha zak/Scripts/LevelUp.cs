@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelUp : MonoBehaviour
 {
 
-    private void OnTriggerEnter2D(Collider2D collision)
+     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("LevelUp"))
         {
@@ -17,18 +17,10 @@ public class LevelUp : MonoBehaviour
     }
 
     public void LoadLevel()
-        {
-            SceneManager.LoadScene("Level2");
-        }
-
-
-       /* IEnumerator LoadLeveller()
-        {
-            //wait time
-            yield return new WaitForSeconds(1);
-            LoadLevel();
-        }
-        
-    */
+    {
+        SceneManager.LoadScene("Level2");
+    }
+	
+     
 }
 
