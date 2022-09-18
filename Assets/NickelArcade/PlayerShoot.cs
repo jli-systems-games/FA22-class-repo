@@ -11,6 +11,8 @@ public class PlayerShoot : MonoBehaviour
     float timeUnitFire;
     NickelArcade.Player pm;
 
+    public AudioSource shootSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,5 +53,7 @@ public class PlayerShoot : MonoBehaviour
             angle = 0;
         }
         Instantiate(bulletPrefab, firingPoint.position, Quaternion.Euler(new Vector3(0f, 0f, angle)));
+
+        shootSound.Play();
     }
 }
