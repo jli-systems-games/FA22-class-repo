@@ -10,6 +10,8 @@ public class Snakemovement : MonoBehaviour
     public float SteerSpeed = 180;
     public float BodySpeed = 5;
     public int Gap = 10;
+    public GameObject collectedEffect;
+    public GameObject collectedEffect2;
 
     public GameObject BodyPrefab;
     private List<GameObject> BodyParts = new List<GameObject>();
@@ -64,6 +66,11 @@ public class Snakemovement : MonoBehaviour
 
     }
 
+    
+
+    
+
+
     private void ReduceSnake()
     {
         GameObject tail = BodyParts[0];
@@ -77,6 +84,9 @@ public class Snakemovement : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             GrowSnake();
+
+            Instantiate(collectedEffect2);
+
 
             //collectedEffect.SetActive(true);
 
@@ -96,7 +106,8 @@ public class Snakemovement : MonoBehaviour
         {
             ReduceSnake();
 
-            //collectedEffect.SetActive(true);
+
+            Instantiate(collectedEffect);
 
 
         }
