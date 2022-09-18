@@ -13,6 +13,7 @@ public class GameStart : MonoBehaviour
     public GameObject player1Controller;
     public GameObject player2Controller;
     public GameObject startTiming;
+    public GameObject restartButton;
 
     // Start is called before the first frame update
     void Start()
@@ -60,18 +61,20 @@ public class GameStart : MonoBehaviour
         yield return new WaitForSeconds(2);
         if (TerritoryChangeColor.player1Score > TerritoryChangeColor.player2Score)
         {
-            this.GetComponent<TMP_Text>().text = "Player1 Wins!";
+            this.GetComponent<TMP_Text>().text = "Pink Wins!";
         }
         else if (TerritoryChangeColor.player1Score < TerritoryChangeColor.player2Score)
         {
-            this.GetComponent<TMP_Text>().text = "Player2 Wins!";
+            this.GetComponent<TMP_Text>().text = "Blue Wins!";
 
         }
         else
         {
             this.GetComponent<TMP_Text>().text = "Draw!";
         }
-        
+
+        yield return new WaitForSeconds(2);
+        restartButton.SetActive(true);
 
 
 

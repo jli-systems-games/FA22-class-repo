@@ -17,7 +17,7 @@ public class PrintScore : MonoBehaviour
     void Update()
     {
         
-        printPlayer1Score.GetComponent<TMP_Text>().text = "Red--" +TerritoryChangeColor.player1Score.ToString(); 
-        printPlayer2Score.GetComponent<TMP_Text>().text = "Blue--" +TerritoryChangeColor.player2Score.ToString();
+        printPlayer1Score.GetComponent<TMP_Text>().text = "Pink-" +TerritoryChangeColor.player1Score.ToString(); 
+        printPlayer2Score.GetComponent<TMP_Text>().text = "Blue-" +TerritoryChangeColor.player2Score.ToString();
     }
 }

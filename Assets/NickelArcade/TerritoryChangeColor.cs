@@ -12,6 +12,9 @@ public class TerritoryChangeColor : MonoBehaviour
 
     private bool player1GetScore=false;
     private bool player2GetScore=false;
+
+    public Sprite newSpriteP1;
+    public Sprite newSpriteP2;
     void Start()
     {
         
@@ -28,7 +31,8 @@ public class TerritoryChangeColor : MonoBehaviour
         
         if (collision.gameObject.CompareTag("Player1")&& !player1GetScore)
         {
-            transform.GetComponent<SpriteRenderer>().color = Color.red;
+            transform.GetComponent<SpriteRenderer>().sprite = newSpriteP1;
+            transform.GetComponent<SpriteRenderer>().color = Color.white;
 
             player1GetScore = true;
             player2GetScore = false;
@@ -50,7 +54,8 @@ public class TerritoryChangeColor : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Player2") && !player2GetScore)
         {
-            transform.GetComponent<SpriteRenderer>().color = Color.blue;
+            transform.GetComponent<SpriteRenderer>().sprite = newSpriteP2;
+            transform.GetComponent<SpriteRenderer>().color = new Color(0f, 114f/255f, 212f/255f); ;
 
             player2GetScore = true;
             player1GetScore = false;

@@ -42,7 +42,8 @@ public class PlayerGotHit : MonoBehaviour
 
         yield return new WaitForSeconds(2);
         this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-        
+        this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+
 
 
     }
