@@ -39,10 +39,10 @@ namespace maiproject
                 Destroy(gameObject);
                 //Debug.Log(enemyHealth.health);
             }
-           // if (collision.gameObject.CompareTag("Enemy"))
-           //{
-             //Destroy(gameObject);
-            // }
+           if (collision.gameObject.CompareTag("Enemy"))
+           {
+             Destroy(gameObject);
+            }
 
             if (collision.GetComponent<Fireball1>() != null)
             {
