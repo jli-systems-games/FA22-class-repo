@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 namespace maiproject
 {
-    public class SceneManager : MonoBehaviour
+    public class SceneMango : MonoBehaviour
     {
+        public Scene sampleScene;
         // Start is called before the first frame update
         void Start()
         {
@@ -19,9 +20,9 @@ namespace maiproject
 
         }
 
-        public void Reload()
+        public void PlayBtn(string game)
         {
-            //SceneManager.LoadScene();
+            SceneManager.LoadScene(game);
         }
     }
 }
