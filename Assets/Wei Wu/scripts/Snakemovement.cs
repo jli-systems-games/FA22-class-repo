@@ -95,7 +95,7 @@ public class Snakemovement : MonoBehaviour
 
         if (other.gameObject.tag == "Finish")
         {
-            SceneManager.LoadScene(01);
+            SceneManager.LoadScene(02);
 
             //collectedEffect.SetActive(true);
 
