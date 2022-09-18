@@ -136,9 +136,9 @@ public class GameManager : MonoBehaviour {
     /// Start game
     public void StartGame()
     {
-        Score = 0;
+        Score = 00;
         Level = 1;
-        scoreText.text = "0";
+        scoreText.text = "00";
 
 
         StartCoroutine(StartFlippersBehaviour());
