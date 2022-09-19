@@ -2,20 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+namespace NickelArcade
 {
-    // Start is called before the first frame update
-    public float bulletSpeed = 15f;
-    public float bulletDamage = 10f;
-    public Rigidbody2D rb;
-
-    private void FixedUpdate()
+    public class Bullet : MonoBehaviour
     {
-        rb.velocity = transform.right * bulletSpeed;
-    }
+        // Start is called before the first frame update
+        public float bulletSpeed = 15f;
+        public float bulletDamage = 10f;
+        public Rigidbody2D rb;
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Destroy(gameObject);
+        private void FixedUpdate()
+        {
+            rb.velocity = transform.right * bulletSpeed;
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            Destroy(gameObject);
+        }
     }
 }
+

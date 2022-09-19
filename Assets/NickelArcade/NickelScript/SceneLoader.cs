@@ -3,44 +3,48 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneLoader : MonoBehaviour
+namespace NickelArcade
 {
-
-    public float time;
-    public int sceneNum;
-
-    public GameObject blackout;
- 
-    // Start is called before the first frame update
-    void Start()
+    public class SceneLoader : MonoBehaviour
     {
-        
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.Log(PlayerReadyDetect.player1Ready);
-        if (PlayerReadyDetect.player1Ready && PlayerReadyDetect.player2Ready)
+        public float time;
+        public int sceneNum;
+
+        public GameObject blackout;
+
+        // Start is called before the first frame update
+        void Start()
         {
-            blackout.SetActive(true);
-            StartCoroutine(LoadLevelAfterDelay(time));
-            
-            
 
 
         }
+
+        // Update is called once per frame
+        void Update()
+        {
+            Debug.Log(NickelArcade.PlayerReadyDetect.player1Ready);
+            if (NickelArcade.PlayerReadyDetect.player1Ready && NickelArcade.PlayerReadyDetect.player2Ready)
+            {
+                blackout.SetActive(true);
+                StartCoroutine(LoadLevelAfterDelay(time));
+
+
+
+
+            }
+        }
+
+
+
+        IEnumerator LoadLevelAfterDelay(float time)
+        {
+            yield return new WaitForSeconds(time);
+            SceneManager.LoadScene("ArcadeMain");
+
+        }
+
+
     }
-
-
-
-    IEnumerator LoadLevelAfterDelay(float time)
-    {
-        yield return new WaitForSeconds(time);
-        SceneManager.LoadScene("ArcadeMain");
-        
-    }
-
-
 }
+

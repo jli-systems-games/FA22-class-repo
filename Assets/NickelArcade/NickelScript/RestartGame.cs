@@ -3,18 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class RestartGame : MonoBehaviour
+namespace NickelArcade
 {
-    
-    // Start is called before the first frame update
-    void Start()
+    public class RestartGame : MonoBehaviour
     {
-        SceneManager.LoadScene("StartPage");
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Start is called before the first frame update
+        void Start()
+        {
+            SceneManager.LoadScene("StartPage");
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
     }
 }
+
+

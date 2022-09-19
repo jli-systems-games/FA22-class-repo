@@ -3,44 +3,49 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Timer : MonoBehaviour
+namespace NickelArcade
 {
-    // Start is called before the first frame update
-    public float TimeLeft;
-    public bool TimerOn = false;
-
-    public TMP_Text timeText;
-    void Start()
+    public class Timer : MonoBehaviour
     {
-        TimerOn = true;
-    }
+        // Start is called before the first frame update
+        public float TimeLeft;
+        public bool TimerOn = false;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (TimerOn)
+        public TMP_Text timeText;
+        void Start()
         {
-            if (TimeLeft > 0)
+            TimerOn = true;
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (TimerOn)
             {
-                TimeLeft -= Time.deltaTime;
-                updateTimer(TimeLeft);
-            }
-            else
-            {
-                Debug.Log("time is up");
-                TimeLeft = 0;
-                TimerOn = false;
+                if (TimeLeft > 0)
+                {
+                    TimeLeft -= Time.deltaTime;
+                    updateTimer(TimeLeft);
+                }
+                else
+                {
+                    Debug.Log("time is up");
+                    TimeLeft = 0;
+                    TimerOn = false;
+                }
             }
         }
-    }
 
-    void updateTimer(float currentTime)
-    {
-        currentTime += 1;
+        void updateTimer(float currentTime)
+        {
+            currentTime += 1;
 
-        float minutes = Mathf.FloorToInt(currentTime / 60);
-        float seconds = Mathf.FloorToInt(currentTime % 60);
+            float minutes = Mathf.FloorToInt(currentTime / 60);
+            float seconds = Mathf.FloorToInt(currentTime % 60);
 
-        timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+            timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        }
     }
 }
+
+
