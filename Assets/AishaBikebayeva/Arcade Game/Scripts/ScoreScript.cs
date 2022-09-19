@@ -22,7 +22,7 @@ namespace Aisha
         // Update is called once per frame
         void Update()
         {
-            // scoreNum = Score.score;
+            // scoreNum = Score.scoreText;
 
             WinScore.text = "Final Score: " + scoreNum;
         }
