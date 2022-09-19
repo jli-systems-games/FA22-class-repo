@@ -7,7 +7,7 @@ public class WeiGo03 : MonoBehaviour
 {
     public void GoPlotPage()
     {
-        SceneManager.LoadScene(03);
+        SceneManager.LoadScene("Wei_Plotpage");
 
 
 

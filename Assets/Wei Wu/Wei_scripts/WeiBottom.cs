@@ -8,7 +8,7 @@ public class WeiBottom : MonoBehaviour
     
     public  void Restart()
     {
-        SceneManager.LoadScene(01);
+        SceneManager.LoadScene("Wei_Main Game");
 
 
 

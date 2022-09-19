@@ -73,10 +73,20 @@ public class WeiSnakemovement : MonoBehaviour
 
     private void ReduceSnake()
     {
-        GameObject tail = BodyParts[0];
-        BodyParts.RemoveAt(index: 0);
+      
 
-        Destroy(tail);
+        if (BodyParts.Count > 0)
+        {
+            GameObject tail = BodyParts[0];
+            BodyParts.RemoveAt (0);
+            Destroy(tail); 
+        }
+
+    else
+        {
+            SceneManager.LoadScene("Wei_End");
+        }
+      
     }
 
     private void OnTriggerEnter(Collider other)
@@ -95,7 +105,7 @@ public class WeiSnakemovement : MonoBehaviour
 
         if (other.gameObject.tag == "Finish")
         {
-            SceneManager.LoadScene(02);
+            SceneManager.LoadScene("Wei_End");
 
             //collectedEffect.SetActive(true);
 
