@@ -11,7 +11,7 @@ namespace Aisha
     {
         private bool isLoading;
         public TMP_Text text;
-        public AudioSource playSound;
+        // public AudioSource playSound;
         //private void Start()
         //{
         //    Cursor.lockState = CursorLockMode.None;
@@ -33,7 +33,7 @@ namespace Aisha
             // You could also load the Scene by using sceneBuildIndex. In this case Scene2 has
             // a sceneBuildIndex of 1 as shown in Build Settings.
 
-            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("StartScene");
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Play");
 
             // Wait until the asynchronous scene fully loads
             while (!asyncLoad.isDone)
