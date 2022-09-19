@@ -14,13 +14,13 @@ namespace Aisha
         //private SpriteRenderer sr;
 
         //private variables have to be set in code
-        public int score;
+        public float score;
     
 
         //Start is called at game start, sets the score to 0
         void Start()
         {
-            float score = 0;
+            score = 0;
         }
 
         // Update is called once per frame

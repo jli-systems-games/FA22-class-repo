@@ -37,7 +37,7 @@ namespace Aisha
             {
                 Spawn();
                 //then we reset timeUntilSpawn to the timeBetweenSpawns & start all over again
-                timeUntilSpawn += timeBetweenSpawns;
+                timeUntilSpawn = timeBetweenSpawns;
                 // timeBetweenSpawns -= difficultyModifier;
             }
             currentSpawnTime += Time.deltaTime;
