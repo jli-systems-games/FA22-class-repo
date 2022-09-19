@@ -10,10 +10,10 @@ namespace Aisha
         public float speed = 1;//0.0f;
         public Rigidbody2D rb;
         public Vector2 movement;
-        float rightEdge = 10f; //the right edge of the screen in world coordinates
-        float leftEdge = -10f;
-        float upEdge = 7f;
-        float downEdge = -5f;
+        float rightEdge = 7f; //the right edge of the screen in world coordinates
+        float leftEdge = -7f;
+        float upEdge = 4f;
+        float downEdge = -4f;
     
         // Start is called before the first frame update
         void Start()
