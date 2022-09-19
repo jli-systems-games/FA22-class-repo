@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bullet2 : MonoBehaviour
+public class Weibullet2 : MonoBehaviour
 {
 
     public float speed;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Bottom : MonoBehaviour
+public class WeiBottom : MonoBehaviour
 {
     
     public  void Restart()

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Go03 : MonoBehaviour
+public class WeiGo03 : MonoBehaviour
 {
     public void GoPlotPage()
     {

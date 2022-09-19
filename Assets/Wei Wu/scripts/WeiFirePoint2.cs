@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FirePoint : MonoBehaviour
+public class WeiFirePoint2 : MonoBehaviour
 {
-
     public GameObject firePoint;
     public GameObject bullet;
 
@@ -16,33 +15,33 @@ public class FirePoint : MonoBehaviour
     IEnumerator FireShotgun()
     {
 
-        float rotationAngle = -225f;
-        for (int i=0;i<10000;i++)
+        float rotationAngle = -30f;
+        for (int i = 0; i < 10000; i++)
         {
-            for(int j=0;j<3;j++)
+            for (int j = 0; j < 3; j++)
             {
-                switch(j)
+                switch (j)
                 {
                     case 0:
                         CreatBullet(rotationAngle, firePoint.transform.position);
-                        rotationAngle += -225f;
+                        rotationAngle += 265f;
                         break;
 
                     case 1:
                         CreatBullet(rotationAngle, firePoint.transform.position);
-                        rotationAngle += -45f;
+                        rotationAngle += 240f;
                         break;
 
                     case 2:
                         CreatBullet(rotationAngle, firePoint.transform.position);
-                        rotationAngle = 45f;
+                        rotationAngle = 55f;
                         break;
 
 
                 }
             }
 
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(5f);
 
 
         }
@@ -51,12 +50,14 @@ public class FirePoint : MonoBehaviour
 
     }
 
-    private void CreatBullet (float rotationAngle,Vector3 firePosition)
+    private void CreatBullet(float rotationAngle, Vector3 firePosition)
     {
         Instantiate(bullet, firePosition, Quaternion.AngleAxis(rotationAngle, Vector3.forward));
     }
 
-
-
-   
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }

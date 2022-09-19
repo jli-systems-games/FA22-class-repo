@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Snakemovement : MonoBehaviour
+public class WeiSnakemovement : MonoBehaviour
 {
 
     public float MoveSpeed = 5;
