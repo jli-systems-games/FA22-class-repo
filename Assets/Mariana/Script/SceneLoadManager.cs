@@ -13,6 +13,10 @@ namespace Mariana
         {
             SceneManager.LoadScene("Game");
         }
+        public void PlayToSurvive()
+        {
+            SceneManager.LoadScene("Survive");
+        }
 
 
     }

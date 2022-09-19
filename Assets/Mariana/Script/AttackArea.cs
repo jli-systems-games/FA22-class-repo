@@ -9,7 +9,7 @@ namespace Mariana
     {
 
 
-        private int damage = -3;
+        private int damage = -50;
 
         private void OnTriggerEnter2D(Collider2D collider)
         {
@@ -17,6 +17,7 @@ namespace Mariana
             {
                 Health health = collider.GetComponent<Health>();
                 health.Damage(damage);
+                Debug.Log("ouch");
             }
         }
         

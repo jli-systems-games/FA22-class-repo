@@ -11,7 +11,6 @@ namespace Mariana
 
         private int MAX_HEALTH = 100;
 
-        public bool isPlayerDead;
 
         private GameObject Player;
 
@@ -31,6 +30,12 @@ namespace Mariana
             this.health = health;
         }
 
+        //private IEnumerable VisualIndicator(Color color)
+        //{
+         //   GetComponent<SpriteRenderer>().color = color;
+         //   yield return new WaitForSeconds(0.15f);
+         //   GetComponent<SpriteRenderer>().color = Color.white
+       // }
         public void Damage(int amount)
         {
             if (amount < 0)
@@ -39,6 +44,8 @@ namespace Mariana
 
             }
             this.health -= amount;
+
+            //StartCoroutine(VisualIndicator(Color.red));
 
             if (health <= 0)
             {
