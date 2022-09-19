@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Mariana
 {
@@ -30,11 +31,11 @@ namespace Mariana
             this.health = health;
         }
 
-        //private IEnumerable VisualIndicator(Color color)
-        //{
+       // private IEnumerable VisualIndicator(Color color)
+       // {
          //   GetComponent<SpriteRenderer>().color = color;
-         //   yield return new WaitForSeconds(0.15f);
-         //   GetComponent<SpriteRenderer>().color = Color.white
+           //yield return new WaitForSeconds(0.15f);
+           // GetComponent<SpriteRenderer>().color = Color.white
        // }
         public void Damage(int amount)
         {
@@ -45,7 +46,7 @@ namespace Mariana
             }
             this.health -= amount;
 
-            //StartCoroutine(VisualIndicator(Color.red));
+          // StartCoroutine(VisualIndicator(Color.red));
 
             if (health <= 0)
             {

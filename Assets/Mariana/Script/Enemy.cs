@@ -32,6 +32,10 @@ namespace Mariana
 
                 _rb = transform.GetComponent<Rigidbody2D>();
                 SetEnemyValues();
+                Vector2 direction = Vector2.MoveTowards(transform.position, player.position, speed);
+
+                direction -= (Vector2)transform.position;
+                _rb.velocity = direction;
             }
             else
             {
@@ -39,10 +43,9 @@ namespace Mariana
             }
 
 
-            Vector2 direction = Vector2.MoveTowards(transform.position, player.position, speed);
+          
 
-            direction -= (Vector2)transform.position;
-            _rb.velocity = direction;
+         
         }
 
         private void SetEnemyValues()
@@ -51,13 +54,13 @@ namespace Mariana
             damage = data.damage;
         }
 
-        private void OnTriggerEnter2D(Collider2D collider)
+        private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collider.CompareTag("Player"))
+            if (collision.transform.CompareTag("Player"))
             {
-                if (collider.GetComponent<Health>() != null)
+                if (collision.transform.GetComponent<Health>() != null)
                 {
-                    collider.GetComponent<Health>().Damage(damage);
+                    collision.transform.GetComponent<Health>().Damage(damage);
                     this.GetComponent<Health>().Damage(10000);
                     Debug.Log("health");
                 }
