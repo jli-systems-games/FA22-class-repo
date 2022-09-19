@@ -17,7 +17,7 @@ public class Fighting : MonoBehaviour
         public int rotationDegrees;
         public List<KeyCode> keycodes;
         public GameObject winNote;
-
+        public AudioSource SFX;
         private float timer;
         public float timerAmount;
 
@@ -76,9 +76,10 @@ public class Fighting : MonoBehaviour
 
                 if (Input.GetKeyDown(keycodes[2]) && timer <= 0)
                 {
-
+                        SFX.Play();
                     Instantiate(projectile, firePosition.position, firePosition.rotation);
                         timer = timerAmount;
+                        
 
                 }
 
