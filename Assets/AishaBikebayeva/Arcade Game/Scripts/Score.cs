@@ -14,7 +14,7 @@ namespace Aisha
         //private SpriteRenderer sr;
 
         //private variables have to be set in code
-        public float score;
+        public static float score;
     
 
         //Start is called at game start, sets the score to 0
@@ -31,18 +31,5 @@ namespace Aisha
             score += 1;                                                             
                                                                       
         }
-
-        // public void StoneHit()
-        // {
-        //     Debug.Log("player died"); //Print a useful message in the debug console
-        //     score -= 0;
-            
-        // }
-
-        // public void StoneMissed()
-        // {
-        //     Debug.Log("player is doing well"); //Print a useful message in the debug console
-        //     score += 1;
-        // }
     }
 }

@@ -8,31 +8,31 @@ namespace Aisha
 {
     public class ScoreScript : MonoBehaviour
     {
-        Score score;
-        public TMP_Text pointsText;
+        // Score score;
+        // public TMP_Text pointsText;
 
-        public void SetUp (int score)
-        {
-            gameObject.SetActive(true);
-            // Score.score = score.ToString() + " POINTS";
-        }
+        // public void SetUp (int score)
+        // {
+        //     gameObject.SetActive(true);
+        //     // Score.score = score.ToString() + " POINTS";
+        // }
         // Score score;
         // [SerializeField] GameObject ScoreNumber;
-        // public static float scoreFinal;
-        // public Text Feedback;
-        // public TextMeshProUGUI WinScore;
+        public static float scoreFinal;
+        public TextMeshProUGUI WinScore;
 
-        // // Start is called before the first frame update
-        // void Start()
-        // {
+        // Start is called before the first frame update
+        void Start()
+        {
 
-        // }
+        }
 
-        // // Update is called once per frame
-        // void Update()
-        // {
-        //     GameObject.Find("Score").GetComponent<Score>().score = scoreFinal;
-        //     WinScore.text = "Score: " + scoreFinal;
-        // }
+        // Update is called once per frame
+        void Update()
+        {
+            // GameObject.Find("Score").GetComponent<Score>().score = scoreFinal;
+            scoreFinal = Aisha.Score.score;
+            WinScore.text = "Score: " + scoreFinal;
+        }
     }
 }
