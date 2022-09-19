@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Ekaterina {
+
+
 public class Wall : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -15,4 +18,5 @@ public class Wall : MonoBehaviour
     {
         
     }
+}
 }

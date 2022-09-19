@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 29923695}
   - component: {fileID: 29923694}
+  - component: {fileID: 29923696}
   m_Layer: 0
   m_Name: background
   m_TagString: Untagged
@@ -207,6 +208,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &29923696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29923693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 764356079e65d49bd9bf0ea05cb18da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &774808091
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +380,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game over :(
+  m_text: 'Game over
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 559cd351052d1466aa70c9fec94673c9, type: 2}
   m_sharedMaterial: {fileID: 4175262002735813927, guid: 559cd351052d1466aa70c9fec94673c9, type: 2}
@@ -759,7 +774,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Press any button
+  m_text: 'Press space
 
     to restart'
   m_isRightToLeft: 0

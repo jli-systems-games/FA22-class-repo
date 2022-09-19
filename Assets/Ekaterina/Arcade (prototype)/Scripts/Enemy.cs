@@ -1,5 +1,8 @@
 using UnityEngine;
 
+namespace Ekaterina {
+
+
 public class Enemy : MonoBehaviour
 {
     private float dirX;
@@ -47,4 +50,5 @@ public class Enemy : MonoBehaviour
 
         transform.localScale = localScale;
     }
+}
 }

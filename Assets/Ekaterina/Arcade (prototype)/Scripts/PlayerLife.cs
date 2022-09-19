@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+namespace Ekaterina {
+
+
 
 public class PlayerLife : MonoBehaviour
 {
@@ -31,7 +34,8 @@ public class PlayerLife : MonoBehaviour
     
     private void RestartLevel() 
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("Lose");
     }
 
+}
 }
