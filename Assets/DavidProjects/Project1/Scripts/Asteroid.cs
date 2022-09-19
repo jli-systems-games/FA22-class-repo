@@ -7,7 +7,8 @@ public class Asteroid : MonoBehaviour
     public new Rigidbody2D rigidbody { get; private set; }
     public SpriteRenderer spriteRenderer { get; private set; }
     public Sprite[] sprites;
-
+    public AudioSource audioPlayer;
+    
     public float size = 1f;
     public float minSize = 0.35f;
     public float maxSize = 1.65f;
@@ -40,6 +41,8 @@ public class Asteroid : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
+             audioPlayer.Play();
+
             if ((size * 0.5f) >= minSize)
             {
                 CreateSplit();
