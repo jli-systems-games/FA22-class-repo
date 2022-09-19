@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 namespace Ekaterina {
 
 
-public class Loose : MonoBehaviour
+public class Lose : MonoBehaviour
 {
  void Update ()
     {
