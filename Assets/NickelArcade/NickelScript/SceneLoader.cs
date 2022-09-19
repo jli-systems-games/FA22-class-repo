@@ -25,16 +25,11 @@ public class SceneLoader : MonoBehaviour
         if (PlayerReadyDetect.player1Ready && PlayerReadyDetect.player2Ready)
         {
             blackout.SetActive(true);
-            if (time > 0)
-            {
-                StartCoroutine(LoadLevelAfterDelay(time));
-
-            }
-            else if (time == 0)
-            {
-                SceneManager.LoadScene(sceneNum);
-            }
+            StartCoroutine(LoadLevelAfterDelay(time));
             
+            
+
+
         }
     }
 
@@ -44,6 +39,7 @@ public class SceneLoader : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         SceneManager.LoadScene(sceneNum);
+        
     }
 
 

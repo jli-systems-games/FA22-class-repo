@@ -20,7 +20,7 @@ public class PlayerReadyDetect : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player" + playerId))
         {
@@ -28,8 +28,7 @@ public class PlayerReadyDetect : MonoBehaviour
             if (playerId == 1)
             {
                 player1Ready = true;
-                
-                
+   
             }
             else if(playerId == 2)
             {
@@ -38,4 +37,6 @@ public class PlayerReadyDetect : MonoBehaviour
             
         }
     }
+
+   
 }

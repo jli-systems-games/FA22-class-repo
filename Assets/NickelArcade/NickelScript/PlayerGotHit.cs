@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerGotHit : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject stunned;
     void Start()
     {
         
@@ -31,8 +32,10 @@ public class PlayerGotHit : MonoBehaviour
         if (collision.gameObject.CompareTag("bullet"))
         {
             Debug.Log("Hit!");
+            stunned.SetActive(true);
             this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
             StartCoroutine(Stuntime());
+
         }
     }
 
@@ -43,8 +46,10 @@ public class PlayerGotHit : MonoBehaviour
         yield return new WaitForSeconds(2);
         this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
         this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
-
+        stunned.SetActive(false);
 
 
     }
+
+
 }

@@ -15,6 +15,8 @@ public class GameStart : MonoBehaviour
     public GameObject startTiming;
     public GameObject restartButton;
 
+    public AudioSource winBell;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,6 +61,8 @@ public class GameStart : MonoBehaviour
         player2Controller.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
 
         yield return new WaitForSeconds(2);
+        winBell.Play();
+
         if (TerritoryChangeColor.player1Score > TerritoryChangeColor.player2Score)
         {
             this.GetComponent<TMP_Text>().text = "Pink Wins!";
