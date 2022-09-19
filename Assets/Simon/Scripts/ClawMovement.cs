@@ -20,6 +20,7 @@ namespace Simon
         {
 
             _rb.velocity = new Vector3(Input.GetAxis("Horizontal"), 0 ,Input.GetAxis("Vertical")) * -speed;
+            
 
         }
     }
