@@ -38,7 +38,7 @@ public class SceneLoader : MonoBehaviour
     IEnumerator LoadLevelAfterDelay(float time)
     {
         yield return new WaitForSeconds(time);
-        SceneManager.LoadScene(sceneNum);
+        SceneManager.LoadScene("ArcadeMain");
         
     }
 
