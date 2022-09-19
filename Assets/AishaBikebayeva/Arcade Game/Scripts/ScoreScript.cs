@@ -6,10 +6,11 @@ using TMPro;
 
 namespace Aisha
 {
-    
     public class ScoreScript : MonoBehaviour
     {
-        public static float scoreNum;
+        Score score;
+        [SerializeField] GameObject ScoreNumber;
+        public static float scoreFinal;
         public Text Feedback;
         public TextMeshProUGUI WinScore;
 
@@ -22,10 +23,9 @@ namespace Aisha
         // Update is called once per frame
         void Update()
         {
-            // scoreNum = Score.scoreText;
+            // scoreFinal = Score.score;
 
-            WinScore.text = "Final Score: " + scoreNum;
+            WinScore.text = "Score: " + scoreFinal;
         }
     }
-
 }
