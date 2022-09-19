@@ -2,83 +2,85 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-[RequireComponent(typeof(Rigidbody2D))]
-
-public class Movement : MonoBehaviour
+namespace Hector
 {
-    public float speed = 8.0f;
-public float speedMultiplier = 1.0f;
-public Vector2 initialDirection;
+    [RequireComponent(typeof(Rigidbody2D))]
 
-    public LayerMask obstacleLayer;
-
-    public new Rigidbody2D rigidbody { get; private set; }
-
-    public Vector2 direction { get; private set; }
-
-    public Vector2 nextDirection { get; private set; }
-
-    public Vector3 startingPosition { get; private set; }
-
-    private void Awake()
+    public class Movement : MonoBehaviour
     {
-        this.rigidbody = GetComponent<Rigidbody2D>();
-        this.startingPosition = this.transform.position;
-    }
+        public float speed = 8.0f;
+        public float speedMultiplier = 1.0f;
+        public Vector2 initialDirection;
 
-    private void Start()
-    {
-        ResetState();
+        public LayerMask obstacleLayer;
 
-    }
+        public new Rigidbody2D rigidbody { get; private set; }
 
-    public void ResetState()
-    {
-        this.speedMultiplier = 1.0f;
-        this.direction = this.initialDirection;
-        this.nextDirection = Vector2.zero;
-        this.transform.position = this.startingPosition;
-        this.rigidbody.isKinematic = false;
-        this.enabled = true;
-    }
+        public Vector2 direction { get; private set; }
 
-    private void FixedUpdate()
-    {
-        Vector2 position = this.rigidbody.position;
-        Vector2 translation = this.direction * this.speed * this.speedMultiplier * Time.fixedDeltaTime;
+        public Vector2 nextDirection { get; private set; }
+
+        public Vector3 startingPosition { get; private set; }
+
+        private void Awake()
+        {
+            this.rigidbody = GetComponent<Rigidbody2D>();
+            this.startingPosition = this.transform.position;
+        }
+
+        private void Start()
+        {
+            ResetState();
+
+        }
+
+        public void ResetState()
+        {
+            this.speedMultiplier = 1.0f;
+            this.direction = this.initialDirection;
+            this.nextDirection = Vector2.zero;
+            this.transform.position = this.startingPosition;
+            this.rigidbody.isKinematic = false;
+            this.enabled = true;
+        }
+
+        private void FixedUpdate()
+        {
+            Vector2 position = this.rigidbody.position;
+            Vector2 translation = this.direction * this.speed * this.speedMultiplier * Time.fixedDeltaTime;
             this.rigidbody.MovePosition(position + translation);
-    }
+        }
 
-    private void Update()
-    {
-        // Try to move in the next direction while it's queued to make movements
-        // more responsive
-        if (nextDirection != Vector2.zero)
+        private void Update()
         {
-            SetDirection(nextDirection);
+            // Try to move in the next direction while it's queued to make movements
+            // more responsive
+            if (nextDirection != Vector2.zero)
+            {
+                SetDirection(nextDirection);
+            }
         }
-    }
 
-    public void SetDirection(Vector2 direction, bool forced = false)
-    {
-        // Only set the direction if the tile in that direction is available
-        // otherwise we set it as the next direction so it'll automatically be
-        // set when it does become available
-        if (forced || !Occupied(direction))
+        public void SetDirection(Vector2 direction, bool forced = false)
         {
-            this.direction = direction;
-            nextDirection = Vector2.zero;
+            // Only set the direction if the tile in that direction is available
+            // otherwise we set it as the next direction so it'll automatically be
+            // set when it does become available
+            if (forced || !Occupied(direction))
+            {
+                this.direction = direction;
+                nextDirection = Vector2.zero;
+            }
+            else
+            {
+                nextDirection = direction;
+            }
         }
-        else
+        public bool Occupied(Vector2 direction)
         {
-            nextDirection = direction;
+            // If no collider is hit then there is no obstacle in that direction
+            RaycastHit2D hit = Physics2D.BoxCast(transform.position, Vector2.one * 0.75f, 0f, direction, 1.5f, obstacleLayer);
+            return hit.collider != null;
         }
     }
-    public bool Occupied(Vector2 direction)
-    {
-        // If no collider is hit then there is no obstacle in that direction
-        RaycastHit2D hit = Physics2D.BoxCast(transform.position, Vector2.one * 0.75f, 0f, direction, 1.5f, obstacleLayer);
-        return hit.collider != null;
-    }    
 }

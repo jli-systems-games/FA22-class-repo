@@ -3,38 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-public class SceneLoader : MonoBehaviour
+namespace Hector
 {
-    // Start is called before the first frame update
-    void Start()
+    public class SceneLoader : MonoBehaviour
     {
-        
-    }
-
-    float timer = 2f;
-
-    // Update is called once per frame
-    void Update()
-    {
-        timer = -Time.deltaTime;
-
-        if(timer <= 0)
+        // Start is called before the first frame update
+        void Start()
         {
-            timer = 2f;
-        }
-    }
 
-    public void SwitchScenes()
-    {
-        if (SceneManager.GetActiveScene().name == "LoadingScreen")
-        {
-            LoadScene("cactus 2");
         }
 
-        void LoadScene(string name)
+        float timer = 2f;
+
+        // Update is called once per frame
+        void Update()
         {
-            SceneManager.LoadScene(name);
+            timer = -Time.deltaTime;
+
+            if (timer <= 0)
+            {
+                timer = 2f;
+            }
+        }
+
+        public void SwitchScenes()
+        {
+            if (SceneManager.GetActiveScene().name == "LoadingScreen")
+            {
+                LoadScene("cactus 2");
+            }
+
+            void LoadScene(string name)
+            {
+                SceneManager.LoadScene(name);
+            }
         }
     }
 }

@@ -2,37 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Fireball))]
-public class FireballBehavior : MonoBehaviour
+namespace Hector
 {
-    
-    public Fireball fireball { get; private set; }
-    public float duration;
-
-    private void Awake()
+    [RequireComponent(typeof(Fireball))]
+    public class FireballBehavior : MonoBehaviour
     {
-        fireball = GetComponent<Fireball>();
-    }
 
-    public void Enable()
-    {
-        Enable(duration);
-    }
+        public Fireball fireball { get; private set; }
+        public float duration;
 
-    public virtual void Enable(float duration)
-    {
-        enabled = true;
+        private void Awake()
+        {
+            fireball = GetComponent<Fireball>();
+        }
 
-        CancelInvoke();
-        Invoke(nameof(Disable), duration);
-    }
+        public void Enable()
+        {
+            Enable(duration);
+        }
 
-    public virtual void Disable()
-    {
-        enabled = false;
+        public virtual void Enable(float duration)
+        {
+            enabled = true;
 
-        CancelInvoke();
+            CancelInvoke();
+            Invoke(nameof(Disable), duration);
+        }
+
+        public virtual void Disable()
+        {
+            enabled = false;
+
+            CancelInvoke();
+        }
+
     }
 
 }
-

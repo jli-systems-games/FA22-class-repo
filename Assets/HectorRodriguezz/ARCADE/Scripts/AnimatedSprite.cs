@@ -2,59 +2,61 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(SpriteRenderer))]
-
-public class AnimatedSprite : MonoBehaviour
+namespace Hector
 {
-   
-    public SpriteRenderer spriteRenderer { get; private set; }
-
-    public Sprite[] sprites;
-
-    public float animationTime = 0.25f;
-    public int animationFrame { get; private set; }
-
-    public bool loop = true;
-
-    private void Awake()
+    [RequireComponent(typeof(SpriteRenderer))]
+    public class AnimatedSprite : MonoBehaviour
     {
-        this.spriteRenderer = GetComponent<SpriteRenderer>();
 
-    }
+        public SpriteRenderer spriteRenderer { get; private set; }
 
+        public Sprite[] sprites;
 
-    private void Start()
-    {
-        InvokeRepeating(nameof(Advance), animationTime, animationTime);
-    }
+        public float animationTime = 0.25f;
+        public int animationFrame { get; private set; }
 
+        public bool loop = true;
 
-    private void Advance()
-    {
-        if (!spriteRenderer.enabled)
+        private void Awake()
         {
-            return;
+            this.spriteRenderer = GetComponent<SpriteRenderer>();
 
         }
-        animationFrame++;
 
-        if (animationFrame >= sprites.Length && loop)
+
+        private void Start()
         {
-            animationFrame = 0;
+            InvokeRepeating(nameof(Advance), animationTime, animationTime);
         }
 
-        if (animationFrame >= 0 && animationFrame < sprites.Length)
+
+        private void Advance()
         {
-            spriteRenderer.sprite = sprites[animationFrame];
+            if (!spriteRenderer.enabled)
+            {
+                return;
+
+            }
+            animationFrame++;
+
+            if (animationFrame >= sprites.Length && loop)
+            {
+                animationFrame = 0;
+            }
+
+            if (animationFrame >= 0 && animationFrame < sprites.Length)
+            {
+                spriteRenderer.sprite = sprites[animationFrame];
 
 
+            }
         }
-    }
 
-    public void Restart()
-    {
-        animationFrame = -1;
+        public void Restart()
+        {
+            animationFrame = -1;
 
-        Advance();
+            Advance();
+        }
     }
 }

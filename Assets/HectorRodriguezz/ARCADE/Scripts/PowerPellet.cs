@@ -1,11 +1,14 @@
 using UnityEngine;
 
-public class PowerPellet : Pellet
+namespace Hector
 {
-    public float duration = 8.0f;
-
-    protected override void Drink()
+    public class PowerPellet : Pellet
     {
-        FindObjectOfType<GameManager>().DrinkPowerPellet(this);
+        public float duration = 8.0f;
+
+        protected override void Drink()
+        {
+            FindObjectOfType<GameManager>().DrinkPowerPellet(this);
+        }
     }
 }
