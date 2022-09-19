@@ -24,5 +24,10 @@ namespace maiproject
         {
             SceneManager.LoadScene(game);
         }
+
+        public void closeApp()
+        {
+            Application.Quit();
+        }
     }
 }
