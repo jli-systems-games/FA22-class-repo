@@ -27,4 +27,4 @@ How did you go about making what you did?
 
 <h2>Attribution</h2>
 
-If you used outside resources, give a url link to the resource! Such as tutorials, sprites, scripts, sounds, etc.
+- If you used outside resources, give a url link to the resource! Such as tutorials, sprites, scripts, sounds, etc.
