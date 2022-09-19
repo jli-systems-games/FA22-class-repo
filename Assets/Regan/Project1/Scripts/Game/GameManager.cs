@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Regan {
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -86,4 +88,5 @@ public class GameManager : MonoBehaviour
         player = playerObject.GetComponent<SpaceShipController>();
 
     }
+}
 }

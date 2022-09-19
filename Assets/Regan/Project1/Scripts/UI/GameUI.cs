@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class GameUI : MonoBehaviour
+namespace Regan
 {
-    [SerializeField]
-    private TextMeshProUGUI scoreText;
 
-    private void Update()
+    public class GameUI : MonoBehaviour
     {
-        scoreText.text = GameManager.instance.score.ToString();
+        [SerializeField] private TextMeshProUGUI scoreText;
+
+        private void Update()
+        {
+            scoreText.text = GameManager.instance.score.ToString();
+        }
     }
 }
