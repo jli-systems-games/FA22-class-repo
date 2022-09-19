@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Regan {
+
 public class DestroyTimeout : MonoBehaviour
 {
     [SerializeField] float lifeTime = 2;
@@ -12,4 +14,5 @@ public class DestroyTimeout : MonoBehaviour
         if (lifeTime > 0) { return; }
         Destroy(gameObject);
     }
+}
 }

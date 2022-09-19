@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+namespace Regan {
 public class GameUI : MonoBehaviour
 {
     [SerializeField]
@@ -57,4 +58,5 @@ public class GameUI : MonoBehaviour
         blinkTimeLeft -= Time.deltaTime;
     }
     
+}
 }

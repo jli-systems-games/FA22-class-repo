@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Regan {
+
 public class AsteroidSpawner : MonoBehaviour
 {
     [SerializeField]
@@ -72,4 +74,5 @@ public class AsteroidSpawner : MonoBehaviour
 
         return position;
     }
+}
 }

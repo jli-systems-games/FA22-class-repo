@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+namespace Regan {
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -123,4 +125,5 @@ public class GameManager : MonoBehaviour
 
         SceneManager.LoadScene(0);
     }
+}
 }

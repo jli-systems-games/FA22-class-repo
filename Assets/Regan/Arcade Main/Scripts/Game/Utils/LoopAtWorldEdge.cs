@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Regan {
+
 public class LoopAtWorldEdge : MonoBehaviour
 {
     Vector2 _worldBounds;
@@ -36,4 +38,5 @@ public class LoopAtWorldEdge : MonoBehaviour
     }
 
 
+}
 }

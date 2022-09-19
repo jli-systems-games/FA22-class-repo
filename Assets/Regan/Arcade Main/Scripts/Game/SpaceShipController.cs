@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Regan {
+
 [RequireComponent(typeof(Rigidbody))]
 public class SpaceShipController : MonoBehaviour
 {
@@ -130,4 +132,5 @@ public class SpaceShipController : MonoBehaviour
         grace = false;
     }
 
+}
 }

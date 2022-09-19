@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Regan {
+
 [RequireComponent(typeof(Rigidbody)),RequireComponent(typeof(Obstacle))]
 public class Asteroid : MonoBehaviour
 {
@@ -62,4 +64,5 @@ public class Asteroid : MonoBehaviour
 
     }
 
+}
 }
