@@ -9,11 +9,10 @@ namespace Aisha
     {
         public GameObject Prefab;
         public float timeBetweenSpawns; //interval of time to wait between spawn in seconds
-
         public float ySpawnPosMin; //up most spawn point
         public float ySpawnPosMax; //down most spawn point
         public float xSpawnPos; //width of spawn
-        public float spawnInterval = 3;
+        public float spawnInterval = 1;
         public float currentSpawnTime = 0;
         public float bigCountdown = 30; 
         public float currentBigTime = 0;
@@ -38,7 +37,7 @@ namespace Aisha
             {
                 Spawn();
                 //then we reset timeUntilSpawn to the timeBetweenSpawns & start all over again
-                timeUntilSpawn = timeBetweenSpawns;
+                timeUntilSpawn += timeBetweenSpawns;
                 // timeBetweenSpawns -= difficultyModifier;
             }
             currentSpawnTime += Time.deltaTime;

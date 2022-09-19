@@ -566,7 +566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 7374620430643813190, guid: e2bc437cf77c7495da8cbb2736884fc5, type: 3}
-  timeBetweenSpawns: 5
+  timeBetweenSpawns: 0.5
   ySpawnPosMin: -3
   ySpawnPosMax: 5
   xSpawnPos: 11
@@ -1492,7 +1492,7 @@ SpriteRenderer:
   m_Size: {x: 11.46, y: 16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1726349335
@@ -1527,6 +1527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 469908434}
+  score: 0
 --- !u!102 &1726349337
 TextMesh:
   serializedVersion: 3
