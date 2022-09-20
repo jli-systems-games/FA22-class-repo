@@ -116,8 +116,8 @@ GameObject:
   - component: {fileID: 3064484739788444994}
   - component: {fileID: 3064484739788444997}
   - component: {fileID: 3064484739788444995}
-  - component: {fileID: 3520077194651961083}
   - component: {fileID: 1210762699184307127}
+  - component: {fileID: 7726101913761578451}
   m_Layer: 0
   m_Name: EnemyRed
   m_TagString: Enemy
@@ -173,19 +173,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.12017031
---- !u!114 &3520077194651961083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3064484739788444996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8cac4d343bd4483dba4d257af5edcf8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 8
 --- !u!50 &1210762699184307127
 Rigidbody2D:
   serializedVersion: 4
@@ -207,3 +194,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7726101913761578451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3064484739788444996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8cac4d343bd4483dba4d257af5edcf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  healthBar: {fileID: 0}

@@ -378,6 +378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 423338464}
   - component: {fileID: 423338465}
+  - component: {fileID: 423338466}
   m_Layer: 0
   m_Name: AttackArea
   m_TagString: Untagged
@@ -400,8 +401,8 @@ Transform:
   m_Father: {fileID: 641387739}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &423338465
-PolygonCollider2D:
+--- !u!58 &423338465
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -410,35 +411,24 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0, y: 0.7285331}
-      - {x: -0.6960422, y: 0.1527178}
-      - {x: -0.4890699, y: -0.5951341}
-      - {x: 0.3411039, y: -0.6540811}
-      - {x: 0.25295156, y: -0.34867653}
-      - {x: -0.104943074, y: -0.35473478}
-      - {x: -0.37011153, y: -0.2036809}
-      - {x: -0.18548405, y: 0.3097561}
-      - {x: 0.24932513, y: 0.31609127}
-      - {x: 0.3364827, y: -0.13913971}
-      - {x: 0.23603202, y: -0.32865992}
-      - {x: 0.34843805, y: -0.6548343}
-      - {x: 0.6046421, y: -0.49447328}
-      - {x: 0.67958945, y: 0.20207557}
+  m_Offset: {x: 0.10127436, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.6012743
+--- !u!114 &423338466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423338463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86b76c536ca084a4ab83775a246c07fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &473978684
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,6 +459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  MAX_HEALTH: 100
 --- !u!4 &473978686
 Transform:
   m_ObjectHideFlags: 0
@@ -656,7 +647,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -721,6 +712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  MAX_HEALTH: 100
 --- !u!1 &1241459755
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,8 +740,8 @@ RectTransform:
   m_GameObject: {fileID: 1241459755}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.59, y: 1.59, z: 1.59}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 239224155}
   m_RootOrder: 0
@@ -779,7 +771,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: c3a1a11edb3c7405ca5d0552aaaeaf12, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -993,6 +985,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1274027085}
   - component: {fileID: 1274027086}
+  - component: {fileID: 1274027087}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -1020,7 +1013,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -320, y: 302.6029}
+  m_AnchoredPosition: {x: -12, y: 282.7}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1274027086
@@ -1042,13 +1035,13 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1068,12 +1061,38 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1241459756}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: a8cac4d343bd4483dba4d257af5edcf8, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1274027087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274027084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8cac4d343bd4483dba4d257af5edcf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  MAX_HEALTH: 100
 --- !u!1 &1276168359
 GameObject:
   m_ObjectHideFlags: 0
@@ -1370,7 +1389,8 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 641387739}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: a4c11af18908b4973812ab49b6615356, type: 3}
 --- !u!1 &1447942995
 GameObject:
@@ -1471,7 +1491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.040005345, g: 0.2924528, b: 0.0743265, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

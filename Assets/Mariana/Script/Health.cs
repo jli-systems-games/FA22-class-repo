@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 
 namespace Mariana
 {
@@ -10,18 +12,23 @@ namespace Mariana
     {
         [SerializeField] private int health = 100;
 
-        private int MAX_HEALTH = 100;
+        public int MAX_HEALTH = 100;
 
+   
+        private Slider healthBar;
 
         private GameObject Player;
 
+        
         private void Start()
         {
             Player = GameObject.FindGameObjectWithTag("Player");
+            healthBar = GetComponent<Slider>();
         }
         // Update is called once per frame
         void Update()
         {
+            Debug.Log(health);
 
         }
 
@@ -29,6 +36,8 @@ namespace Mariana
         {
             this.MAX_HEALTH = maxHealth;
             this.health = health;
+          // = (int) healthBar.value;
+           
         }
 
        // private IEnumerable VisualIndicator(Color color)
@@ -42,6 +51,7 @@ namespace Mariana
             if (amount < 0)
             {
                 throw new System.ArgumentOutOfRangeException("Cannot have negative Damage");
+                
 
             }
             this.health -= amount;
@@ -56,30 +66,14 @@ namespace Mariana
            
         }
 
-        public void Heal(int amount)
-        {
-            if (amount < 0)
-            {
-                throw new System.ArgumentOutOfRangeException("Cannot have negative healing");
-
-            }
-
-            bool wouldBeOverMaxHealth = health + amount > MAX_HEALTH;
-
-            if(health + amount > MAX_HEALTH)
-            {
-                this.health += MAX_HEALTH;
-
-            }
-            else
-            {
-                this.health += amount;
-            }
-        }
-
         private void Die()
         {
             Destroy(gameObject);
+        }
+
+        public static implicit operator float(Health v)
+        {
+            throw new NotImplementedException();
         }
     }
 }

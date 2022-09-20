@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 3064484739788444997}
   - component: {fileID: 3064484739788444992}
   - component: {fileID: 3064484739788444995}
-  - component: {fileID: 3520077194651961083}
+  - component: {fileID: -7032182657361126378}
   m_Layer: 0
   m_Name: EnemyPurple
   m_TagString: Enemy
@@ -194,7 +194,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.12017031
---- !u!114 &3520077194651961083
+--- !u!114 &-7032182657361126378
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -206,4 +206,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8cac4d343bd4483dba4d257af5edcf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 8
+  health: 100
+  healthBar: {fileID: 0}
