@@ -43,8 +43,7 @@ namespace Mariana
             }
 
 
-          
-
+   
          
         }
 
@@ -62,13 +61,13 @@ namespace Mariana
                 {
                     collision.transform.GetComponent<Health>().Damage(damage);
                     this.GetComponent<Health>().Damage(10000);
-                    Debug.Log("health");
+                    
                 }
 
-                Debug.Log("help");
+              
 
             }
-            Debug.Log("sos");
+          
         }
 
 
