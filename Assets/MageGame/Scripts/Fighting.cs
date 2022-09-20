@@ -20,7 +20,7 @@ public class Fighting : MonoBehaviour
         public AudioSource SFX;
         private float timer;
         public float timerAmount;
-
+        public AudioSource shieldSound;
         public bool isAlive;
 
         //public KeyCode[] keycodes;
@@ -69,6 +69,7 @@ public class Fighting : MonoBehaviour
             {
                 health.shieldRate = shielding;
                 shield.SetActive(true);
+                    shieldSound.Play();
             } else
             {
                 health.shieldRate = 0;

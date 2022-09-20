@@ -8,6 +8,9 @@ namespace maiproject
     public class SceneMango : MonoBehaviour
     {
         public Scene sampleScene;
+        public AudioSource Click;
+        public float timer = 0.1f;
+        public string switchSceneWhenSoundIsOver = "";
         // Start is called before the first frame update
         void Start()
         {
@@ -18,16 +21,30 @@ namespace maiproject
         void Update()
         {
 
+            if( (switchSceneWhenSoundIsOver!="") && !Click.isPlaying) {
+                SceneManager.LoadScene(switchSceneWhenSoundIsOver);
+                switchSceneWhenSoundIsOver = "";
+            }
         }
 
         public void PlayBtn(string game)
         {
-            SceneManager.LoadScene(game);
+
+
+            Click.Play();
+            switchSceneWhenSoundIsOver = game;
+            
+           
         }
 
         public void closeApp()
         {
-            Application.Quit();
+            
+            Click.Play();
+            if (!Click.isPlaying)
+            {
+                Application.Quit();
+            }
         }
     }
 }
