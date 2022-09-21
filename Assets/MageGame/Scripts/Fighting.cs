@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace maiproject { 
+namespace godzillabanana
+{ 
 public class Fighting : MonoBehaviour
 {
         public Transform playerposition;
