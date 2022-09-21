@@ -1,19 +1,22 @@
 ﻿using UnityEngine;
 
-public class Ball : MonoBehaviour
+namespace MaxArcade
 {
-    private GameManager gameManager;
-
-    private void Awake()
+    public class Ball : MonoBehaviour
     {
-        gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
-    }    
+        private GameManager gameManager;
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.name == "Spikes")
+        private void Awake()
         {
-            gameManager.DestroyBall(gameObject);
+            gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.name == "Spikes")
+            {
+                gameManager.DestroyBall(gameObject);
+            }
         }
     }
 }

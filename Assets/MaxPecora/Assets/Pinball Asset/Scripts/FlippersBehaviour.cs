@@ -1,30 +1,33 @@
 ﻿using UnityEngine;
 
-public class FlippersBehaviour : MonoBehaviour
+namespace MaxArcade
 {
 
-    [SerializeField]
-    private float tourque;
-
-    private float width;
-
-    [SerializeField]
-    private Rigidbody2D leftFlipperRigidbody;
-    [SerializeField]
-    private Rigidbody2D rightFlipperRigidbody;
-
-
-    // Use this for initialization
-    void Awake()
-    {
-        width = Screen.width / 2.0f;
-    }
-
-    // Update is called once per frame
-    private void Update()
+    public class FlippersBehaviour : MonoBehaviour
     {
 
-        #region UNITY_EDITOR
+        [SerializeField]
+        private float tourque;
+
+        private float width;
+
+        [SerializeField]
+        private Rigidbody2D leftFlipperRigidbody;
+        [SerializeField]
+        private Rigidbody2D rightFlipperRigidbody;
+
+
+        // Use this for initialization
+        void Awake()
+        {
+            width = Screen.width / 2.0f;
+        }
+
+        // Update is called once per frame
+        private void Update()
+        {
+
+            #region UNITY_EDITOR
 
 #if UNITY_EDITOR
 
@@ -64,38 +67,39 @@ public class FlippersBehaviour : MonoBehaviour
             }
         }
 #endif
-        #endregion
+            #endregion
 
-        #region TOUCH
+            #region TOUCH
 
 #if !UNITY_EDITOR
-        if (Input.touchCount > 0)
-        {
-            for (int i = 0; i < Input.touchCount; i++)
+            if (Input.touchCount > 0)
             {
-                Touch touch = Input.GetTouch(i);
-
-                /* RIGHT Flip detect */
-                if (touch.position.x >= width)
+                for (int i = 0; i < Input.touchCount; i++)
                 {
-                    Flip(rightFlipperRigidbody, -tourque);
-                }
+                    Touch touch = Input.GetTouch(i);
 
-                /* LEFT Flip detect */
-                if (touch.position.x < width)
-                {
-                    Flip(leftFlipperRigidbody, tourque);
+                    /* RIGHT Flip detect */
+                    if (touch.position.x >= width)
+                    {
+                        Flip(rightFlipperRigidbody, -tourque);
+                    }
+
+                    /* LEFT Flip detect */
+                    if (touch.position.x < width)
+                    {
+                        Flip(leftFlipperRigidbody, tourque);
+                    }
                 }
             }
-        }
 
 #endif
-        #endregion
+            #endregion
 
-    }
+        }
 
-    private void Flip(Rigidbody2D rigidbody, float force)
-    {
-        rigidbody.AddTorque(force);
+        private void Flip(Rigidbody2D rigidbody, float force)
+        {
+            rigidbody.AddTorque(force);
+        }
     }
 }
