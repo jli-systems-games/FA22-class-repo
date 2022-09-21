@@ -1,50 +1,54 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class Diamond : MonoBehaviour
+namespace MaxArcade
 {
-    private GameManager gameManager;
-    private SoundManager soundManager;
 
-    [SerializeField]
-    private Image Loader;
-
-    private float timeToEnd = 10.0f;
-
-    private void Awake()
+    public class Diamond : MonoBehaviour
     {
-        gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
-        soundManager = GameObject.FindWithTag("SoundManager").GetComponent<SoundManager>();
-    }
+        private GameManager gameManager;
+        private SoundManager soundManager;
 
-    // Use this for initialization
-    private void Start()
-    {
-        timeToEnd = 10.0f;
-    }
+        [SerializeField]
+        private Image Loader;
 
-    // Update is called once per frame
-    private void Update()
-    {
-        if (timeToEnd > 0)
+        private float timeToEnd = 10.0f;
+
+        private void Awake()
         {
-            timeToEnd -= Time.deltaTime;
-            Loader.fillAmount = 1 - timeToEnd / 10.0f;
+            gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
+            soundManager = GameObject.FindWithTag("SoundManager").GetComponent<SoundManager>();
         }
-        else
-        {
-            gameManager.gameState = GameManager.GameState.GameOver;
-        }
-    }
 
-    /* Check if ball enter in */
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Ball")
+        // Use this for initialization
+        private void Start()
         {
-            soundManager.DiamondCollect();
-            gameManager.diamondsCount++;
-            gameManager.NewDiamond(gameObject);
+            timeToEnd = 10.0f;
+        }
+
+        // Update is called once per frame
+        private void Update()
+        {
+            if (timeToEnd > 0)
+            {
+                timeToEnd -= Time.deltaTime;
+                Loader.fillAmount = 1 - timeToEnd / 10.0f;
+            }
+            else
+            {
+                gameManager.gameState = GameManager.GameState.GameOver;
+            }
+        }
+
+        /* Check if ball enter in */
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.tag == "Ball")
+            {
+                soundManager.DiamondCollect();
+                gameManager.diamondsCount++;
+                gameManager.NewDiamond(gameObject);
+            }
         }
     }
 }

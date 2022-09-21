@@ -1,19 +1,23 @@
 ﻿using UnityEngine;
 
-public class Bouncer : MonoBehaviour
+namespace MaxArcade
 {
-    [SerializeField]
-    private Animation hitAnim;
 
-    [SerializeField]
-    private SoundManager soundManager;
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    public class Bouncer : MonoBehaviour
     {
-        if (collision.gameObject.tag == "Ball")
+        [SerializeField]
+        private Animation hitAnim;
+
+        [SerializeField]
+        private SoundManager soundManager;
+
+        private void OnCollisionEnter2D(Collision2D collision)
         {
-            soundManager.BouncerHit();
-            hitAnim.Play();
+            if (collision.gameObject.tag == "Ball")
+            {
+                soundManager.BouncerHit();
+                hitAnim.Play();
+            }
         }
     }
 }
