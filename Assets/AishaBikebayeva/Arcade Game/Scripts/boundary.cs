@@ -2,18 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class boundary : MonoBehaviour
+namespace Aisha
 {
-   private Vector2 boundaries;
-   // Start is called before the first frame update
-   void Start()
+   public class boundary : MonoBehaviour
    {
-    //    boundaries = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z))
-   }
+      private Vector2 boundaries;
+      // Start is called before the first frame update
+      void Start()
+      {
+      //    boundaries = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z))
+      }
 
-   // Update is called once per frame
-   void Update()
-   {
-        
+      // Update is called once per frame
+      void Update()
+      {
+         
+      }
    }
 }
