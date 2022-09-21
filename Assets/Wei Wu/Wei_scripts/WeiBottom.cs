@@ -3,21 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class WeiBottom : MonoBehaviour
+
+namespace WeiGame
+
 {
-    
-    public  void Restart()
+    public class WeiBottom : MonoBehaviour
     {
-        SceneManager.LoadScene("Wei_Main Game");
+
+        public void Restart()
+        {
+            SceneManager.LoadScene("Wei_Main Game");
+
+
+
+
+        }
+
+
 
 
 
 
     }
-
-
-
-
-
 
 }
