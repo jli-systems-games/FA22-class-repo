@@ -3,15 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class WeiGo03 : MonoBehaviour
+
+namespace WeiGame
+
 {
-    public void GoPlotPage()
+
+    public class WeiGo03 : MonoBehaviour
     {
-        SceneManager.LoadScene("Wei_Plotpage");
+        public void GoPlotPage()
+        {
+            SceneManager.LoadScene("Wei_Plotpage");
 
 
 
+
+        }
 
     }
-
 }
