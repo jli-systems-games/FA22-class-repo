@@ -1,9 +1,10 @@
 name: Auto assign PR and request review
 
 on:
-  pull_request:
-    types: [opened, ready_for_review, reopened]
-
+  # pull_request:
+  #  types: []
+  workflow_dispatch:
+  
 jobs:
   assign-reviewrs:
     runs-on: ubuntu-latest
