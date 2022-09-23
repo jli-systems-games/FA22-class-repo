@@ -9,13 +9,14 @@ namespace godzillabanana
         public Camera mainCamera;
         public GameObject brush;
         LineRenderer currentLineRenderer;
-        Vector2 lastpos;
+        Vector3 lastpos;
 
         
       
        void Update()
         {
             Draw();
+            //Debug.Log(Input.mousePosition);
         }
 
 
@@ -28,8 +29,9 @@ namespace godzillabanana
             }
             if (Input.GetKey(KeyCode.Mouse0))
             {
-                
-                Vector2 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+                //
+
+                Vector3 mousePos = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 500.0f)); 
                 if (mousePos != lastpos)
                 {
                     Debug.Log("aaa" + mousePos+" != "+lastpos);
