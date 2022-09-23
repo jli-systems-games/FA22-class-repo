@@ -11,7 +11,7 @@ namespace godzillabanana
         LineRenderer currentLineRenderer;
         Vector3 lastpos;
         public SpriteRenderer unicorn;
-        
+        public Color uniColor;
       
        void Update()
         {
@@ -25,7 +25,7 @@ namespace godzillabanana
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 createBrush();
-                currentLineRenderer.material.color = unicorn.color;
+                currentLineRenderer.material.color = uniColor;
 
                
             }
@@ -36,7 +36,7 @@ namespace godzillabanana
                 Vector3 mousePos = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 500.0f)); 
                 if (mousePos != lastpos)
                 {
-                    Debug.Log("aaa" + mousePos+" != "+lastpos);
+                    //Debug.Log("aaa" + mousePos+" != "+lastpos);
                     AddAPoint(mousePos);
                     lastpos = mousePos;
                 } else Debug.Log("ooo" + mousePos + " == " + lastpos);
@@ -65,8 +65,14 @@ namespace godzillabanana
             currentLineRenderer.positionCount++;
             int positionIndex = currentLineRenderer.positionCount - 1;
             currentLineRenderer.SetPosition(positionIndex, pointPos);
-            Debug.Log("positionIndex:" + positionIndex + ", pointpos:" + pointPos);
+            //Debug.Log("positionIndex:" + positionIndex + ", pointpos:" + pointPos);
 
+        }
+
+        public void colorpick(SpriteRenderer selectedUnicorn)
+        {
+            uniColor = selectedUnicorn.color;
+            Debug.Log(unicorn);
         }
     }
 
