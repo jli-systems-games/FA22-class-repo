@@ -12,11 +12,16 @@ namespace godzillabanana
         Vector3 lastpos;
         public SpriteRenderer unicorn;
         public Color uniColor;
+        
       
        void Update()
         {
-            Draw();
-            //Debug.Log(Input.mousePosition);
+            if (Input.mousePosition.x> 500 && Input.mousePosition.x < 1414)
+            {
+                Draw();
+                //Debug.Log(Input.mousePosition);
+            }
+          
         }
 
         
@@ -29,6 +34,7 @@ namespace godzillabanana
 
                
             }
+           
             if (Input.GetKey(KeyCode.Mouse0))
             {
                 
@@ -39,7 +45,8 @@ namespace godzillabanana
                     //Debug.Log("aaa" + mousePos+" != "+lastpos);
                     AddAPoint(mousePos);
                     lastpos = mousePos;
-                } else Debug.Log("ooo" + mousePos + " == " + lastpos);
+                }
+                //else Debug.Log("ooo" + mousePos + " == " + lastpos);
 
             }
             else
