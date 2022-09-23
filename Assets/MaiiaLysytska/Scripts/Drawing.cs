@@ -10,7 +10,7 @@ namespace godzillabanana
         public GameObject brush;
         LineRenderer currentLineRenderer;
         Vector3 lastpos;
-
+        public SpriteRenderer unicorn;
         
       
        void Update()
@@ -19,17 +19,19 @@ namespace godzillabanana
             //Debug.Log(Input.mousePosition);
         }
 
-
+        
         void Draw()
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 createBrush();
+                currentLineRenderer.material.color = unicorn.color;
+
                
             }
             if (Input.GetKey(KeyCode.Mouse0))
             {
-                //
+                
 
                 Vector3 mousePos = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 500.0f)); 
                 if (mousePos != lastpos)
