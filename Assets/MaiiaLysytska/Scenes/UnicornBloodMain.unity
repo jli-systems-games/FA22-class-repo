@@ -209,9 +209,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 354416857}
+      - m_Target: {fileID: 354416856}
         m_TargetAssemblyTypeName: godzillabanana.Drawing, Assembly-CSharp
-        m_MethodName: colorpick
+        m_MethodName: 
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 15934243}
@@ -233,6 +233,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df679f4da04c40b9a9046655c547cd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstPos: {fileID: 0}
+  recentPos: {fileID: 0}
   unicornType: 
   isClicked: 0
   poop: 0
@@ -692,6 +694,7 @@ MonoBehaviour:
   brush: {fileID: 5111910972455309598, guid: 652ea2aad9fa345dda3b193ad8b58b84, type: 3}
   unicorn: {fileID: 498811443}
   uniColor: {r: 0, g: 0, b: 0, a: 0}
+  currentUnicorn: {fileID: 0}
 --- !u!4 &354416858
 Transform:
   m_ObjectHideFlags: 0
@@ -990,7 +993,6 @@ GameObject:
   - component: {fileID: 498811442}
   - component: {fileID: 498811444}
   - component: {fileID: 498811443}
-  - component: {fileID: 498811446}
   m_Layer: 5
   m_Name: UnicornB
   m_TagString: Untagged
@@ -1030,6 +1032,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df679f4da04c40b9a9046655c547cd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstPos: {fileID: 0}
+  recentPos: {fileID: 0}
   unicornType: 
   isClicked: 0
   poop: 0
@@ -1077,9 +1081,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 354416857}
+      - m_Target: {fileID: 354416856}
         m_TargetAssemblyTypeName: godzillabanana.Drawing, Assembly-CSharp
-        m_MethodName: colorpick
+        m_MethodName: 
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 498811443}
@@ -1179,35 +1183,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &498811446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 498811439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2063006280}
-          m_TargetAssemblyTypeName: godzillabanana.CraftManager, Assembly-CSharp
-          m_MethodName: OnMouseDownItem
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 498811441}
-            m_ObjectArgumentAssemblyTypeName: godzillabanana.Unicode, Assembly-CSharp
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &680634217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1598,9 +1573,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 354416857}
+      - m_Target: {fileID: 354416856}
         m_TargetAssemblyTypeName: godzillabanana.Drawing, Assembly-CSharp
-        m_MethodName: colorpick
+        m_MethodName: 
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 744586559}
@@ -1622,6 +1597,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df679f4da04c40b9a9046655c547cd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstPos: {fileID: 0}
+  recentPos: {fileID: 0}
   unicornType: 
   isClicked: 0
   poop: 0
@@ -1876,7 +1853,6 @@ GameObject:
   - component: {fileID: 1120977260}
   - component: {fileID: 1120977259}
   - component: {fileID: 1120977261}
-  - component: {fileID: 1120977262}
   m_Layer: 5
   m_Name: UnicornY
   m_TagString: Untagged
@@ -1916,6 +1892,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df679f4da04c40b9a9046655c547cd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstPos: {fileID: 0}
+  recentPos: {fileID: 0}
   unicornType: 
   isClicked: 0
   poop: 0
@@ -1963,10 +1941,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 354416857}
+      - m_Target: {fileID: 354416856}
         m_TargetAssemblyTypeName: godzillabanana.Drawing, Assembly-CSharp
-        m_MethodName: colorpick
-        m_Mode: 2
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 1120977260}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
@@ -2065,35 +2043,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1120977262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1120977255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2063006280}
-          m_TargetAssemblyTypeName: godzillabanana.CraftManager, Assembly-CSharp
-          m_MethodName: OnMouseDownItem
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 1120977257}
-            m_ObjectArgumentAssemblyTypeName: godzillabanana.Unicode, Assembly-CSharp
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1634513489
 GameObject:
   m_ObjectHideFlags: 0
@@ -2112,7 +2061,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1634513490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2406,7 +2355,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2063006279
 Transform:
   m_ObjectHideFlags: 0
