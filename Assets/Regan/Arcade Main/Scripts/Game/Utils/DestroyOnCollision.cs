@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Regan {
-
-public class DestroyOnCollision : MonoBehaviour
+namespace Regan
 {
-    private void OnTriggerEnter(Collider other)
+    public class DestroyOnCollision : MonoBehaviour
     {
-        Destroy(gameObject);
+        private void OnTriggerEnter(Collider other)
+        {
+            Destroy(gameObject);
+        }
     }
-}
 }
