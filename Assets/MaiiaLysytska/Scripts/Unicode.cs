@@ -16,9 +16,11 @@ namespace godzillabanana
         public string unicornType;
         public bool isClicked;
         public int poop;
+        public Color color;
         // Start is called before the first frame update
         void Start()
         {
+            color = gameObject.GetComponent<SpriteRenderer>().color;
             //rectTransform = GetComponent<RectTransform>();
             // canvasgroup = GetComponent<CanvasGroup>();
         }

@@ -79,10 +79,10 @@ namespace godzillabanana
         }
 
 
-        public void colorpick(SpriteRenderer selectedUnicorn, Unicode unicorn)
+        public void colorpick(Unicode selectedUnicorn)
         {
             uniColor = selectedUnicorn.color;
-            currentUnicorn = unicorn;
+            currentUnicorn = selectedUnicorn;
             // Debug.Log(unicorn);
         }
 
