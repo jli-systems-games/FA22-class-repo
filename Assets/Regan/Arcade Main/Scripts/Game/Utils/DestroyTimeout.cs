@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Regan {
-
-public class DestroyTimeout : MonoBehaviour
+namespace Regan
 {
-    [SerializeField] float lifeTime = 2;
-
-    void Update()
+    public class DestroyTimeout : MonoBehaviour
     {
-        lifeTime -= Time.deltaTime;
-        if (lifeTime > 0) { return; }
-        Destroy(gameObject);
+        [SerializeField] float lifeTime = 2;
+
+        void Update()
+        {
+            lifeTime -= Time.deltaTime;
+            if (lifeTime > 0) { return; }
+            Destroy(gameObject);
+        }
     }
-}
 }

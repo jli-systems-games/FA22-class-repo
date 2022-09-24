@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6753616391291089519}
   - component: {fileID: 8817306014030874277}
   - component: {fileID: 3657858130431525807}
-  - component: {fileID: 7608390996511276315}
   - component: {fileID: 5452192312847179492}
   - component: {fileID: 6659114572468338335}
   - component: {fileID: 2434137138757797737}
@@ -45,7 +44,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7015941274315679600}
-  m_Mesh: {fileID: -7445099610986950344, guid: 50bdd50db667bd24ba3f6a507238fc40, type: 3}
+  m_Mesh: {fileID: -7445099610986950344, guid: 72debea2db0fd714bb62822e91adfe1b, type: 3}
 --- !u!23 &8817306014030874277
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -66,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -104,18 +103,6 @@ Rigidbody:
   m_Interpolate: 2
   m_Constraints: 8
   m_CollisionDetection: 0
---- !u!114 &7608390996511276315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7015941274315679600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2196c541712f7124892b985016f179ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5452192312847179492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,8 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   astroidStage: 2
-  explosionPrefab: {fileID: 7862493540275160251, guid: 662df8602d3e48a42a14777be32e13c0,
-    type: 3}
+  explosionPrefab: {fileID: 7862493540275160251, guid: 662df8602d3e48a42a14777be32e13c0, type: 3}
 --- !u!64 &6659114572468338335
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -144,7 +130,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: -7445099610986950344, guid: 50bdd50db667bd24ba3f6a507238fc40, type: 3}
+  m_Mesh: {fileID: -7445099610986950344, guid: 72debea2db0fd714bb62822e91adfe1b, type: 3}
 --- !u!114 &2434137138757797737
 MonoBehaviour:
   m_ObjectHideFlags: 0
