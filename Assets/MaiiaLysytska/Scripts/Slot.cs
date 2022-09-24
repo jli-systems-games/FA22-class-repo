@@ -5,6 +5,8 @@ using UnityEngine;
 namespace godzillabanana { 
 public class Slot : MonoBehaviour
 {
+public Unicode item;
+        public int index;
     // Start is called before the first frame update
     void Start()
     {

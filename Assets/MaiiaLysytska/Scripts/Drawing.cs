@@ -16,7 +16,7 @@ namespace godzillabanana
       
        void Update()
         {
-            if (Input.mousePosition.x> 500 && Input.mousePosition.x < 1414)
+            if (Input.mousePosition.x> 500)
             {
                 Draw();
                 //Debug.Log(Input.mousePosition);
