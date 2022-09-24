@@ -12,7 +12,7 @@ namespace godzillabanana
         Vector3 lastpos;
         public SpriteRenderer unicorn;
         public Color uniColor;
-        
+        public Unicode currentUnicorn;
       
        void Update()
         {
@@ -72,14 +72,17 @@ namespace godzillabanana
             currentLineRenderer.positionCount++;
             int positionIndex = currentLineRenderer.positionCount - 1;
             currentLineRenderer.SetPosition(positionIndex, pointPos);
+            currentUnicorn.bleed();
             //Debug.Log("positionIndex:" + positionIndex + ", pointpos:" + pointPos);
+            
 
         }
 
-        public void colorpick(SpriteRenderer selectedUnicorn)
+        public void colorpick(SpriteRenderer selectedUnicorn, Unicode unicorn)
         {
             uniColor = selectedUnicorn.color;
-            Debug.Log(unicorn);
+            currentUnicorn = unicorn;
+           // Debug.Log(unicorn);
         }
     }
 

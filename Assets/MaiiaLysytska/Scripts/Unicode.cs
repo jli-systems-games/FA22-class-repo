@@ -31,6 +31,11 @@ namespace godzillabanana
 
         }
 
+        public void bleed()
+        {
+            poop -= 5;
+        }
+
         private void OnMouseDown()
         {
             gameObject.transform.position = Input.mousePosition;
