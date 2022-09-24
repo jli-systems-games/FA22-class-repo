@@ -3,60 +3,60 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-namespace Regan {
-public class GameUI : MonoBehaviour
+namespace Regan
 {
-    [SerializeField]
-    private TextMeshPro scoreText;
-    [SerializeField]
-    private TextMeshPro livesText;
-    [SerializeField]
-    private TextMeshPro highScoreText;
-    [SerializeField]
-    private TextMeshPro gameOverText;
-
-    [SerializeField]
-    private float blinkPeriod = 1;
-    private float blinkTimeLeft = 1;
-
-    private void Update()
+    public class GameUI : MonoBehaviour
     {
-        UpdateScore();
-        UpdateLives();
-        UpdateGameOver();
-        UpdateHighScore();
-    }
+        [SerializeField]
+        private TextMeshPro scoreText;
+        [SerializeField]
+        private TextMeshPro livesText;
+        [SerializeField]
+        private TextMeshPro highScoreText;
+        [SerializeField]
+        private TextMeshPro gameOverText;
 
-    private void UpdateHighScore()
-    {
-        highScoreText.text = GameManager.instance.highScore.ToString();
-    }
+        [SerializeField]
+        private float blinkPeriod = 1;
+        private float blinkTimeLeft = 1;
 
-    private void UpdateScore()
-    {
-        scoreText.text = GameManager.instance.score.ToString();
-    }
-
-    private void UpdateLives()
-    {
-        string livesString = "";
-        for (int i = 0; i < GameManager.instance.lives; i++)
+        private void Update()
         {
-            livesString += 'X';
+            UpdateScore();
+            UpdateLives();
+            UpdateGameOver();
+            UpdateHighScore();
         }
-        livesText.text = livesString;
-    }
 
-    private void UpdateGameOver()
-    {
-        if (blinkTimeLeft <= 0)
+        private void UpdateHighScore()
         {
-            blinkTimeLeft = blinkPeriod;
-
-            gameOverText.enabled = !gameOverText.enabled && GameManager.instance.gameover;
+            highScoreText.text = ArcadeManager.instance.highScore.ToString();
         }
-        blinkTimeLeft -= Time.deltaTime;
+
+        private void UpdateScore()
+        {
+            scoreText.text = ArcadeManager.instance.score.ToString();
+        }
+
+        private void UpdateLives()
+        {
+            string livesString = "";
+            for (int i = 0; i < ArcadeManager.instance.lives; i++)
+            {
+                livesString += 'X';
+            }
+            livesText.text = livesString;
+        }
+
+        private void UpdateGameOver()
+        {
+            if (blinkTimeLeft <= 0)
+            {
+                blinkTimeLeft = blinkPeriod;
+
+                gameOverText.enabled = !gameOverText.enabled && ArcadeManager.instance.gameover;
+            }
+            blinkTimeLeft -= Time.deltaTime;
+        }
     }
-    
-}
 }
