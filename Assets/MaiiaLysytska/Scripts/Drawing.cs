@@ -67,7 +67,7 @@ namespace godzillabanana
 
         }
 
-        void AddAPoint(Vector2 pointPos)
+        void AddAPoint(Vector3 pointPos)
         {
             currentLineRenderer.positionCount++;
             int positionIndex = currentLineRenderer.positionCount - 1;

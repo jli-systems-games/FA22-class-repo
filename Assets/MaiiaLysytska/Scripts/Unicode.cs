@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
+using TMPro;
 namespace godzillabanana
 {
 
@@ -11,10 +11,11 @@ namespace godzillabanana
     {
         public Transform firstPos;
         public Transform recentPos;
-
-
+        public TMP_Text text;
+        public int poopValue;
         public string unicornType;
-        public bool isClicked;
+        private float Timer = 5;
+        public float TimerValue;
         public int poop;
         public Color color;
         // Start is called before the first frame update
@@ -28,7 +29,14 @@ namespace godzillabanana
         // Update is called once per frame
         void Update()
         {
-            poop += 1;
+            if(Timer<= 0) { 
+            poop += poopValue;
+                Timer = TimerValue;
+               
+            }
+
+            Timer -= Time.deltaTime;
+            text.text = poop.ToString();
             // Debug.Log(poop + "resource produced");
 
         }
