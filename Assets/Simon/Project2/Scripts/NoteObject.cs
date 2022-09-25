@@ -12,7 +12,9 @@ namespace Simon.Project2.Scripts
         public bool canBePressed;
 
         public KeyCode keyToPress;
-        
+
+        public GameObject hitEffect, goodEffect, perfectEffect, missEffect;
+
         void Start()
         {
             
@@ -30,15 +32,20 @@ namespace Simon.Project2.Scripts
                     {
                         Debug.Log("Hit");
                         GameManager.instance.NormalHit();
-                    } else if (Mathf.Abs(transform.position.y) > 0.10f)
+                        Instantiate(hitEffect, transform.position, hitEffect.transform.rotation);
+                    } else if (Mathf.Abs(transform.position.y) > 0.075f)
                     {
                         Debug.Log("Good");
                         GameManager.instance.GoodHit();
+                        Instantiate(goodEffect, transform.position, hitEffect.transform.rotation);
+
                     }
                     else
                     {
                         Debug.Log("Perfect");
                         GameManager.instance.PerfectHit();
+                        Instantiate(perfectEffect, transform.position, hitEffect.transform.rotation);
+
                     }
                     
                     //GameManager.instance.NoteHit();
@@ -61,6 +68,8 @@ namespace Simon.Project2.Scripts
                 canBePressed = false;
                 
                 GameManager.instance.NoteMissed();
+                Instantiate(missEffect, transform.position, hitEffect.transform.rotation);
+
             }
         }
     }

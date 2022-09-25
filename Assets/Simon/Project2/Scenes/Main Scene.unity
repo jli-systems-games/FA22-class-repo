@@ -150,7 +150,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6180174}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.25, y: -19.5, z: 0}
+  m_LocalPosition: {x: 7.25, y: -24.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -170,7 +170,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.05}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
 --- !u!114 &6180177
@@ -187,6 +187,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 303
+  hitEffect: {fileID: 2154950958939269322, guid: 4759c6e38fe86464386240be0a612361, type: 3}
+  goodEffect: {fileID: 7777494154705062133, guid: ba4b5b187e6897f4d8cd21d7abe818b9, type: 3}
+  perfectEffect: {fileID: 1194891118627403515, guid: 14fa4b76f7c90844a82d69a51c50cf59, type: 3}
+  missEffect: {fileID: 5788733026788640757, guid: 3a2452bd3a773494aa82f5206a135b01, type: 3}
 --- !u!212 &6180178
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -299,7 +303,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121071007}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5, y: -2.5, z: 0}
+  m_LocalPosition: {x: 2.5, y: -7.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -319,7 +323,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.05}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
 --- !u!114 &121071010
@@ -336,6 +340,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 32
+  hitEffect: {fileID: 2154950958939269322, guid: 4759c6e38fe86464386240be0a612361, type: 3}
+  goodEffect: {fileID: 7777494154705062133, guid: ba4b5b187e6897f4d8cd21d7abe818b9, type: 3}
+  perfectEffect: {fileID: 1194891118627403515, guid: 14fa4b76f7c90844a82d69a51c50cf59, type: 3}
+  missEffect: {fileID: 5788733026788640757, guid: 3a2452bd3a773494aa82f5206a135b01, type: 3}
 --- !u!212 &121071011
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -415,7 +423,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 125994263}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5, y: -0.5, z: 0}
+  m_LocalPosition: {x: 2.5, y: -5.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -487,7 +495,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.05}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
 --- !u!114 &125994267
@@ -504,6 +512,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 32
+  hitEffect: {fileID: 2154950958939269322, guid: 4759c6e38fe86464386240be0a612361, type: 3}
+  goodEffect: {fileID: 7777494154705062133, guid: ba4b5b187e6897f4d8cd21d7abe818b9, type: 3}
+  perfectEffect: {fileID: 1194891118627403515, guid: 14fa4b76f7c90844a82d69a51c50cf59, type: 3}
+  missEffect: {fileID: 5788733026788640757, guid: 3a2452bd3a773494aa82f5206a135b01, type: 3}
 --- !u!1 &126899676
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,6 +550,8 @@ MonoBehaviour:
   theBS: {fileID: 2114078959}
   currentScore: 0
   scorePerNote: 100
+  scorePerGoodNote: 125
+  scorePerPerfectNote: 150
   currentMultiplier: 1
   multiplierTracker: 0
   multiplierThresholds: 040000000800000010000000
@@ -586,7 +600,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 253949717}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5, y: -18.5, z: 0}
+  m_LocalPosition: {x: 2.5, y: -23.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -606,7 +620,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.05}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
 --- !u!114 &253949720
@@ -623,6 +637,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 32
+  hitEffect: {fileID: 2154950958939269322, guid: 4759c6e38fe86464386240be0a612361, type: 3}
+  goodEffect: {fileID: 7777494154705062133, guid: ba4b5b187e6897f4d8cd21d7abe818b9, type: 3}
+  perfectEffect: {fileID: 1194891118627403515, guid: 14fa4b76f7c90844a82d69a51c50cf59, type: 3}
+  missEffect: {fileID: 5788733026788640757, guid: 3a2452bd3a773494aa82f5206a135b01, type: 3}
 --- !u!212 &253949721
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -702,7 +720,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383867932}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5, y: -17.5, z: 0}
+  m_LocalPosition: {x: 2.5, y: -22.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -722,7 +740,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.05}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
 --- !u!114 &383867935
@@ -739,6 +757,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 32
+  hitEffect: {fileID: 2154950958939269322, guid: 4759c6e38fe86464386240be0a612361, type: 3}
+  goodEffect: {fileID: 7777494154705062133, guid: ba4b5b187e6897f4d8cd21d7abe818b9, type: 3}
+  perfectEffect: {fileID: 1194891118627403515, guid: 14fa4b76f7c90844a82d69a51c50cf59, type: 3}
+  missEffect: {fileID: 5788733026788640757, guid: 3a2452bd3a773494aa82f5206a135b01, type: 3}
 --- !u!212 &383867936
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -818,7 +840,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679959907}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5, y: -14.5, z: 0}
+  m_LocalPosition: {x: 2.5, y: -19.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -838,7 +860,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.05}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
 --- !u!114 &679959910
@@ -855,6 +877,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 32
+  hitEffect: {fileID: 2154950958939269322, guid: 4759c6e38fe86464386240be0a612361, type: 3}
+  goodEffect: {fileID: 7777494154705062133, guid: ba4b5b187e6897f4d8cd21d7abe818b9, type: 3}
+  perfectEffect: {fileID: 1194891118627403515, guid: 14fa4b76f7c90844a82d69a51c50cf59, type: 3}
+  missEffect: {fileID: 5788733026788640757, guid: 3a2452bd3a773494aa82f5206a135b01, type: 3}
 --- !u!212 &679959911
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -942,7 +968,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -800, y: 450}
+  m_AnchoredPosition: {x: -800, y: -450}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &713444974
@@ -1028,7 +1054,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -490.65277, w: -117.95594}
+  m_margin: {x: 0, y: 0, z: -573.0441, w: -48.000946}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1069,7 +1095,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 772646446}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.25, y: -12.5, z: 0}
+  m_LocalPosition: {x: 7.25, y: -17.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1089,7 +1115,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.05}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
 --- !u!114 &772646449
@@ -1106,6 +1132,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 303
+  hitEffect: {fileID: 2154950958939269322, guid: 4759c6e38fe86464386240be0a612361, type: 3}
+  goodEffect: {fileID: 7777494154705062133, guid: ba4b5b187e6897f4d8cd21d7abe818b9, type: 3}
+  perfectEffect: {fileID: 1194891118627403515, guid: 14fa4b76f7c90844a82d69a51c50cf59, type: 3}
+  missEffect: {fileID: 5788733026788640757, guid: 3a2452bd3a773494aa82f5206a135b01, type: 3}
 --- !u!212 &772646450
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1185,7 +1215,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 814063161}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.25, y: -15.5, z: 0}
+  m_LocalPosition: {x: 7.25, y: -20.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1205,7 +1235,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.05}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
 --- !u!114 &814063164
@@ -1222,6 +1252,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 303
+  hitEffect: {fileID: 2154950958939269322, guid: 4759c6e38fe86464386240be0a612361, type: 3}
+  goodEffect: {fileID: 7777494154705062133, guid: ba4b5b187e6897f4d8cd21d7abe818b9, type: 3}
+  perfectEffect: {fileID: 1194891118627403515, guid: 14fa4b76f7c90844a82d69a51c50cf59, type: 3}
+  missEffect: {fileID: 5788733026788640757, guid: 3a2452bd3a773494aa82f5206a135b01, type: 3}
 --- !u!212 &814063165
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1301,7 +1335,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845517184}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5, y: -8.5, z: 0}
+  m_LocalPosition: {x: 2.5, y: -13.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1321,7 +1355,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.05}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
 --- !u!114 &845517187
@@ -1338,6 +1372,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 32
+  hitEffect: {fileID: 2154950958939269322, guid: 4759c6e38fe86464386240be0a612361, type: 3}
+  goodEffect: {fileID: 7777494154705062133, guid: ba4b5b187e6897f4d8cd21d7abe818b9, type: 3}
+  perfectEffect: {fileID: 1194891118627403515, guid: 14fa4b76f7c90844a82d69a51c50cf59, type: 3}
+  missEffect: {fileID: 5788733026788640757, guid: 3a2452bd3a773494aa82f5206a135b01, type: 3}
 --- !u!212 &845517188
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1417,7 +1455,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874182099}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5, y: -10.5, z: 0}
+  m_LocalPosition: {x: 2.5, y: -15.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1437,7 +1475,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.05}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
 --- !u!114 &874182102
@@ -1454,6 +1492,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 32
+  hitEffect: {fileID: 2154950958939269322, guid: 4759c6e38fe86464386240be0a612361, type: 3}
+  goodEffect: {fileID: 7777494154705062133, guid: ba4b5b187e6897f4d8cd21d7abe818b9, type: 3}
+  perfectEffect: {fileID: 1194891118627403515, guid: 14fa4b76f7c90844a82d69a51c50cf59, type: 3}
+  missEffect: {fileID: 5788733026788640757, guid: 3a2452bd3a773494aa82f5206a135b01, type: 3}
 --- !u!212 &874182103
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1635,7 +1677,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892231086}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5, y: -22.5, z: 0}
+  m_LocalPosition: {x: 2.5, y: -27.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1655,7 +1697,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.05}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
 --- !u!114 &892231089
@@ -1672,6 +1714,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 32
+  hitEffect: {fileID: 2154950958939269322, guid: 4759c6e38fe86464386240be0a612361, type: 3}
+  goodEffect: {fileID: 7777494154705062133, guid: ba4b5b187e6897f4d8cd21d7abe818b9, type: 3}
+  perfectEffect: {fileID: 1194891118627403515, guid: 14fa4b76f7c90844a82d69a51c50cf59, type: 3}
+  missEffect: {fileID: 5788733026788640757, guid: 3a2452bd3a773494aa82f5206a135b01, type: 3}
 --- !u!212 &892231090
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1752,7 +1798,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058589418}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.25, y: 5, z: 0}
+  m_LocalPosition: {x: 7.25, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1900,7 +1946,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1088774989}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5, y: -6.5, z: 0}
+  m_LocalPosition: {x: 2.5, y: -11.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1920,7 +1966,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.05}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
 --- !u!114 &1088774992
@@ -1937,6 +1983,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 32
+  hitEffect: {fileID: 2154950958939269322, guid: 4759c6e38fe86464386240be0a612361, type: 3}
+  goodEffect: {fileID: 7777494154705062133, guid: ba4b5b187e6897f4d8cd21d7abe818b9, type: 3}
+  perfectEffect: {fileID: 1194891118627403515, guid: 14fa4b76f7c90844a82d69a51c50cf59, type: 3}
+  missEffect: {fileID: 5788733026788640757, guid: 3a2452bd3a773494aa82f5206a135b01, type: 3}
 --- !u!212 &1088774993
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2016,7 +2066,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1281317849}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.25, y: -4.5, z: 0}
+  m_LocalPosition: {x: 7.25, y: -9.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2088,7 +2138,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.05}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
 --- !u!114 &1281317853
@@ -2105,6 +2155,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 303
+  hitEffect: {fileID: 2154950958939269322, guid: 4759c6e38fe86464386240be0a612361, type: 3}
+  goodEffect: {fileID: 7777494154705062133, guid: ba4b5b187e6897f4d8cd21d7abe818b9, type: 3}
+  perfectEffect: {fileID: 1194891118627403515, guid: 14fa4b76f7c90844a82d69a51c50cf59, type: 3}
+  missEffect: {fileID: 5788733026788640757, guid: 3a2452bd3a773494aa82f5206a135b01, type: 3}
 --- !u!1 &1357806830
 GameObject:
   m_ObjectHideFlags: 0
@@ -2132,7 +2186,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1357806830}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.25, y: -20.5, z: 0}
+  m_LocalPosition: {x: 7.25, y: -25.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2152,7 +2206,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.05}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
 --- !u!114 &1357806833
@@ -2169,6 +2223,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 303
+  hitEffect: {fileID: 2154950958939269322, guid: 4759c6e38fe86464386240be0a612361, type: 3}
+  goodEffect: {fileID: 7777494154705062133, guid: ba4b5b187e6897f4d8cd21d7abe818b9, type: 3}
+  perfectEffect: {fileID: 1194891118627403515, guid: 14fa4b76f7c90844a82d69a51c50cf59, type: 3}
+  missEffect: {fileID: 5788733026788640757, guid: 3a2452bd3a773494aa82f5206a135b01, type: 3}
 --- !u!212 &1357806834
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2316,7 +2374,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573447846}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.25, y: -16.5, z: 0}
+  m_LocalPosition: {x: 7.25, y: -21.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2336,7 +2394,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.05}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
 --- !u!114 &1573447849
@@ -2353,6 +2411,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 303
+  hitEffect: {fileID: 2154950958939269322, guid: 4759c6e38fe86464386240be0a612361, type: 3}
+  goodEffect: {fileID: 7777494154705062133, guid: ba4b5b187e6897f4d8cd21d7abe818b9, type: 3}
+  perfectEffect: {fileID: 1194891118627403515, guid: 14fa4b76f7c90844a82d69a51c50cf59, type: 3}
+  missEffect: {fileID: 5788733026788640757, guid: 3a2452bd3a773494aa82f5206a135b01, type: 3}
 --- !u!212 &1573447850
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2482,7 +2544,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660149519}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: -4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2516,7 +2578,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1674745709}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5, y: -21.5, z: 0}
+  m_LocalPosition: {x: 2.5, y: -26.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2536,7 +2598,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.05}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
 --- !u!114 &1674745712
@@ -2553,6 +2615,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBePressed: 0
   keyToPress: 32
+  hitEffect: {fileID: 2154950958939269322, guid: 4759c6e38fe86464386240be0a612361, type: 3}
+  goodEffect: {fileID: 7777494154705062133, guid: ba4b5b187e6897f4d8cd21d7abe818b9, type: 3}
+  perfectEffect: {fileID: 1194891118627403515, guid: 14fa4b76f7c90844a82d69a51c50cf59, type: 3}
+  missEffect: {fileID: 5788733026788640757, guid: 3a2452bd3a773494aa82f5206a135b01, type: 3}
 --- !u!212 &1674745713
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2734,7 +2800,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -800, y: 350}
+  m_AnchoredPosition: {x: -800, y: -350}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1832285617
@@ -2978,7 +3044,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2114078958
 Transform:
   m_ObjectHideFlags: 0
@@ -3052,7 +3118,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2142215754}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5, y: 5, z: 0}
+  m_LocalPosition: {x: 2.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
