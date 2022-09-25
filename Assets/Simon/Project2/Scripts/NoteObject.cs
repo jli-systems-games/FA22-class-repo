@@ -30,7 +30,7 @@ namespace Simon.Project2.Scripts
                     {
                         Debug.Log("Hit");
                         GameManager.instance.NormalHit();
-                    } else if (Mathf.Abs(transform.position.y) > 0.05f)
+                    } else if (Mathf.Abs(transform.position.y) > 0.10f)
                     {
                         Debug.Log("Good");
                         GameManager.instance.GoodHit();
