@@ -9,8 +9,11 @@ namespace godzillabanana
 
     public class Unicode : MonoBehaviour
     {
-        public Transform firstPos;
+        public Camera mainCamera;
+        //public Vector3 mousePos;
+        public Drawing drawing;
         public Transform recentPos;
+        public Transform ponyPos;
         public TMP_Text text;
         public int poopValue;
         public string unicornType;
@@ -18,19 +21,25 @@ namespace godzillabanana
         public float TimerValue;
         public int poop;
         public Color color;
+        
         // Start is called before the first frame update
         void Start()
         {
+           
             color = gameObject.GetComponent<SpriteRenderer>().color;
             //rectTransform = GetComponent<RectTransform>();
             // canvasgroup = GetComponent<CanvasGroup>();
+            ponyPos = GetComponent<Transform>();
+
         }
 
         // Update is called once per frame
         void Update()
         {
-            if(Timer<= 0) { 
+            Vector3 mousePos = Input.mousePosition;
             poop += poopValue;
+            if (Timer<= 0) { 
+           
                 Timer = TimerValue;
                
             }
@@ -48,18 +57,25 @@ namespace godzillabanana
 
         private void OnMouseDown()
         {
-            gameObject.transform.position = Input.mousePosition;
-            recentPos.position = Input.mousePosition;
+            Debug.Log("isClicked");
+           // ponyPos.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
+            drawing.colorpick(this);
+
+
+            //recentPos.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
         }
         private void OnMouseDrag()
         {
-            gameObject.transform.position = Input.mousePosition;
-            recentPos.position = Input.mousePosition;
-        }
-        private void OnMouseUp()
-        {
-            gameObject.transform.position = recentPos.position;
+            Debug.Log("isDragged");
+
+
+
+
+
+           ponyPos.position = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 500.0f));  
+
 
         }
+
     }
 }

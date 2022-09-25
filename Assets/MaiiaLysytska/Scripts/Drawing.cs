@@ -60,7 +60,7 @@ namespace godzillabanana
 
             GameObject brushInstance = Instantiate(brush);
             currentLineRenderer = brushInstance.GetComponent<LineRenderer>();
-            Vector2 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             currentLineRenderer.SetPosition(0, mousePos);
             currentLineRenderer.SetPosition(1, mousePos);
             
@@ -85,6 +85,7 @@ namespace godzillabanana
             currentUnicorn = selectedUnicorn;
             // Debug.Log(unicorn);
         }
+
 
 
     }
