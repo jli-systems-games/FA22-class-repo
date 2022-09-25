@@ -14,7 +14,7 @@ namespace godzillabanana
         public Drawing drawing;
         public Transform recentPos;
         public Transform ponyPos;
-        public TMP_Text text;
+   public TMP_Text text;
         public int poopValue;
         public string unicornType;
         private float Timer = 5;
@@ -25,10 +25,10 @@ namespace godzillabanana
         // Start is called before the first frame update
         void Start()
         {
-           
+
+            text =  GetComponentInChildren(typeof(TMP_Text)) as TMP_Text;
+            mainCamera = FindObjectOfType(typeof(Camera)) as Camera;
             color = gameObject.GetComponent<SpriteRenderer>().color;
-            //rectTransform = GetComponent<RectTransform>();
-            // canvasgroup = GetComponent<CanvasGroup>();
             ponyPos = GetComponent<Transform>();
 
         }
@@ -45,8 +45,9 @@ namespace godzillabanana
             }
 
             Timer -= Time.deltaTime;
-            text.text = poop.ToString();
-            // Debug.Log(poop + "resource produced");
+
+            text.SetText(poop.ToString());
+          
 
         }
 

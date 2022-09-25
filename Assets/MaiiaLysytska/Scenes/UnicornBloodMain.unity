@@ -132,7 +132,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 15934239}
-  - component: {fileID: 15934244}
   - component: {fileID: 15934241}
   - component: {fileID: 15934243}
   - component: {fileID: 15934242}
@@ -179,11 +178,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 834260605}
-  mousePos: {x: 0, y: 0, z: 0}
   drawing: {fileID: 354416857}
   recentPos: {fileID: 0}
   ponyPos: {fileID: 15934239}
-  text: {fileID: 454347611}
   poopValue: 1
   unicornType: 
   TimerValue: 5
@@ -249,36 +246,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &15934244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 15934238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d5a7fce16148d4843913826886a4a07d, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!114 &15934245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1236,7 +1203,6 @@ GameObject:
   m_Component:
   - component: {fileID: 498811440}
   - component: {fileID: 498811441}
-  - component: {fileID: 498811445}
   - component: {fileID: 498811444}
   - component: {fileID: 498811443}
   - component: {fileID: 498811446}
@@ -1281,11 +1247,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 834260605}
-  mousePos: {x: 0, y: 0, z: 0}
   drawing: {fileID: 354416857}
   recentPos: {fileID: 0}
   ponyPos: {fileID: 498811440}
-  text: {fileID: 1828668918}
   poopValue: 1
   unicornType: 
   TimerValue: 5
@@ -1351,36 +1315,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 498811439}
   m_CullTransparentMesh: 1
---- !u!114 &498811445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 498811439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d5a7fce16148d4843913826886a4a07d, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!61 &498811446
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1660,7 +1594,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 744586557}
-  - component: {fileID: 744586562}
   - component: {fileID: 744586558}
   - component: {fileID: 744586561}
   - component: {fileID: 744586559}
@@ -1767,46 +1700,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 834260605}
-  mousePos: {x: 0, y: 0, z: 0}
   drawing: {fileID: 354416857}
   recentPos: {fileID: 0}
   ponyPos: {fileID: 744586557}
-  text: {fileID: 151478161}
   poopValue: 1
   unicornType: 
   TimerValue: 5
   poop: 0
   color: {r: 0, g: 0, b: 0, a: 0}
---- !u!114 &744586562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 744586556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.011764707, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d5a7fce16148d4843913826886a4a07d, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!114 &744586563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2008,7 +1909,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -2052,7 +1953,6 @@ GameObject:
   - component: {fileID: 1120977257}
   - component: {fileID: 1120977260}
   - component: {fileID: 1120977259}
-  - component: {fileID: 1120977261}
   - component: {fileID: 1120977262}
   m_Layer: 5
   m_Name: UnicornY
@@ -2095,11 +1995,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 834260605}
-  mousePos: {x: 0, y: 0, z: 0}
   drawing: {fileID: 354416857}
   recentPos: {fileID: 0}
   ponyPos: {fileID: 1120977256}
-  text: {fileID: 1554786133}
   poopValue: 1
   unicornType: 
   TimerValue: 5
@@ -2165,36 +2063,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1120977261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1120977255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d5a7fce16148d4843913826886a4a07d, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!61 &1120977262
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2534,8 +2402,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1828668917}
-  - component: {fileID: 1828668919}
   - component: {fileID: 1828668918}
+  - component: {fileID: 1828668919}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
