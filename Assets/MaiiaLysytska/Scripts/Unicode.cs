@@ -20,10 +20,10 @@ namespace godzillabanana
         public string unicornType;
         private float Timer = 5;
         public float TimerValue;
-        public float poop;
+        public float blood;
         public Color color;
         public Color FriendColor;
-        public float maxpoop;
+        public float maxBlood;
         public Color babyColor;
         
 
@@ -45,17 +45,22 @@ namespace godzillabanana
         void Update()
         {
             Vector3 mousePos = Input.mousePosition;
-            poop += poopValue;
+            blood += poopValue;
 
-            maxpoop = Mathf.Round(poop * 10.0f) * 0.1f;
-            text.SetText(maxpoop.ToString());
+            maxBlood = Mathf.Round(blood * 10.0f) * 0.1f;
+            text.SetText(maxBlood.ToString());
+
+            if (blood <= 0)
+            {
+                Destroy(this);
+            }
           
 
         }
 
         public void bleed()
         {
-            poop -= 5;
+            blood -= 5;
         }
 
         private void OnMouseDown()
