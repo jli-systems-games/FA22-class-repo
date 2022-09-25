@@ -87,7 +87,7 @@ namespace godzillabanana
             {
                 Debug.Log("yay");
                 
-                GameObject babyunicorn = GameObject.Instantiate(unicornGene, Vector3.zero, Quaternion.identity, GameObject.FindGameObjectWithTag("Canvas").transform);
+                GameObject babyunicorn = GameObject.Instantiate(unicornGene, new Vector3 (100, 100, 0), Quaternion.identity);
                 babyunicorn.GetComponent<SpriteRenderer>().color = babyColor;
 
             }
