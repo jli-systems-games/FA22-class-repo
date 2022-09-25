@@ -6,8 +6,10 @@ using Cinemachine;
 namespace Max
 {
 
-    public class ParkourMovement : MonoBehaviour
+    public class PlayerController : MonoBehaviour
     {
+        public Transform keyFollowPoint;
+
         [Header("Movement")]
         public float moveSpeed;
         public float acceleration;
@@ -59,6 +61,7 @@ namespace Max
         bool crouch;
 
         private bool camZooming;
+
 
         private void Start()
         {
