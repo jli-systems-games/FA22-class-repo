@@ -19,10 +19,10 @@ namespace Simon.Project2.Scripts
         {
             if (!hasStarted)
             {
-                if (Input.anyKeyDown)
-                {
-                    hasStarted = true;
-                }
+               // if (Input.anyKeyDown)
+               // {
+               //     hasStarted = true;
+               // }
             }
             else
             {
