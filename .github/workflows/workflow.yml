@@ -6,14 +6,17 @@ on:
   workflow_dispatch:
 
 jobs:
-  assign-reviewrs:
+  activation:
+    name: Request manual activation file 🔑
     runs-on: ubuntu-latest
     steps:
-      - name: Assign reviewers from team
-        uses: dc-ag/auto-assign-reviewers-from-team@v1.1.0
+      # Request manual activation file
+      - name: Request manual activation file
+        id: getManualLicenseFile
+        uses: game-ci/unity-request-activation-file@v2
+      # Upload artifact (Unity_v20XX.X.XXXX.alf)
+      - name: Expose as artifact
+        uses: actions/upload-artifact@v2
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          admin-repo-token: ${{ secrets.JASON_GITHUB_TOKEN }}
-          team: "FA22-Students"
-          amount: 2
-          use-team-reviewer-settings: false
+          name: ${{ steps.getManualLicenseFile.outputs.filePath }}
+          path: ${{ steps.getManualLicenseFile.outputs.filePath }}
