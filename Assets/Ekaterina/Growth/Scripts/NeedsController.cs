@@ -9,10 +9,18 @@ namespace Ekaterina
         {
                 public int food, happiness, energy;
                 public int foodTickRate, happinessTickRate, energyTickRate;
+                
+                Animator animator;
+                
+                void Start()
+                {
+                        animator = gameObject.GetComponent<Animator>();
+                }
+
 
                 private void Awake()
                 {
-                        Initialize(100, 100, 100,5, 15, 7);
+                        Initialize(100, 100, 100,30, 30, 30);
                 }
                 
                 public void Initialize(int food, int happiness, int energy, int foodTickRate, int happinessTickRate,
@@ -36,6 +44,18 @@ namespace Ekaterina
 
                 private void Update()
                 {
+                        if (food < 80)
+                        {
+                                animator.SetTrigger("Sad");
+                        }
+                        
+                        if (food > 80)
+                        {
+                                animator.SetTrigger("Happy");
+                        }
+                        
+                     
+                        
                         if (TimingManager.gameHourTimer < 0)
                         {
                                 ChangeFood(-foodTickRate);
