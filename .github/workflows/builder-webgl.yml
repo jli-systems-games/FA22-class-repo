@@ -2,18 +2,7 @@ name: Build for WebGL
 
 on: [push]
 
-env:
-  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-
 jobs:
-  checkLicense:
-    name: Check for the license
-    runs-on: ubuntu-latest
-    steps:
-      - name: Fail - no license
-        if: ${{ !startsWith(env.UNITY_LICENSE, '<') }}
-        run: exit 1
-
   #  testRunner:
   #    name: Tests all modes
   #    runs-on: ubuntu-latest
