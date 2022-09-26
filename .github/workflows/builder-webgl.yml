@@ -45,10 +45,6 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix:
-        # - StandaloneOSX # Build a macOS standalone (Intel 64-bit).
-        # - StandaloneWindows # Build a Windows standalone.
-        - WebGL
     steps:
       # Check out the appropriate branch
       - name: Checkout the branch
