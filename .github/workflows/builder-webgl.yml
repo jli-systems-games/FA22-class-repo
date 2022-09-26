@@ -2,22 +2,53 @@ name: Build for WebGL
 
 on: [push]
 
+env:
+  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+
 jobs:
+  checkLicense:
+    name: Check the unity license
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail, no license
+        if: ${{ !startsWith(env.UNITY_LICENSE, '<') }}
+        run: exit 1
+
   buildForWebGL:
     name: Build for WebGL
     runs-on: ubuntu-latest
-    - uses: game-ci/unity-builder@v2
-      env:
-        UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-        UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
-        UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-      with:
-        targetPlatform: WebGL
-        customParameters:
-        versioning: Semantic
-    name: Upload Build
-    - uses: actions/upload-artifact@v2
-      with:
-        name: Build
-        path: build
-      
+    strategy:
+      fail-fast: false
+      matrix:
+        # - StandaloneOSX # Build a macOS standalone (Intel 64-bit).
+        # - StandaloneWindows # Build a Windows standalone.
+        - WebGL
+    steps:
+      # Check out the appropriate branch
+      - name: Checkout the branch
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          lfs: true
+      # Cache the library folder
+      - name: Cache the library
+        uses: actions/cache@v2
+        with:
+          path: Library
+          key: Library-${{ matrix.targetPlatform }}
+          restore-keys: Library-
+      - name: Build the project
+        uses: game-ci/unity-builder@v2
+        env:
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+          targetPlatform: WebGL
+          # customParameters:
+          versioning: Semantic
+      - name: Upload Build
+        uses: actions/upload-artifact@v2
+        with:
+          name: Build
+          path: build
