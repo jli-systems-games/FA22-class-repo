@@ -2,8 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewTorch : MonoBehaviour
+namespace nickelGrowth
 {
+
+    public class NewTorch : MonoBehaviour
+    {
+        private float RefreshTime;
+       
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +23,22 @@ public class NewTorch : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
-        Torch.torchTime += 15;
-        this.gameObject.SetActive(false);
+            
+            Torch.torchTime += 15;
+            this.GetComponent<MeshRenderer>().enabled = false;
+            this.GetComponent<BoxCollider>().enabled = false;
+            StartCoroutine(propRefresh());
     }
+
+        IEnumerator propRefresh()
+        {
+            yield return new WaitForSeconds(30);
+            this.GetComponent<MeshRenderer>().enabled = true;
+            this.GetComponent<BoxCollider>().enabled = true;
+        }
+
+
+    }
+
 }
+
