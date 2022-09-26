@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Ekaterina
+{
+
 public class ShrinkBehaviour : MonoBehaviour
 {
      void Update ()
@@ -10,6 +13,7 @@ public class ShrinkBehaviour : MonoBehaviour
  
        //  transform.localScale = vec;
      }
+}
 }
 
 
