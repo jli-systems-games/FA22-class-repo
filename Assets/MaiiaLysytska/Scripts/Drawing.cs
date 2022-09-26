@@ -20,6 +20,12 @@ namespace godzillabanana
             {
                 Draw();
                 //Debug.Log(Input.mousePosition);
+                if (currentUnicorn == null)
+                {
+                    currentUnicorn = FindObjectOfType(typeof(Unicode)) as Unicode;
+                    colorpick(currentUnicorn);
+
+                }
             }
           
         }
@@ -27,6 +33,7 @@ namespace godzillabanana
         
         void Draw()
         {
+            if (currentUnicorn != null) { 
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 createBrush();
@@ -53,6 +60,8 @@ namespace godzillabanana
             {
                 currentLineRenderer = null;
             }
+
+            }
         }
 
         void createBrush()
@@ -73,6 +82,7 @@ namespace godzillabanana
             int positionIndex = currentLineRenderer.positionCount - 1;
             currentLineRenderer.SetPosition(positionIndex, pointPos);
             currentUnicorn.bleed();
+
             //Debug.Log("positionIndex:" + positionIndex + ", pointpos:" + pointPos);
             
 

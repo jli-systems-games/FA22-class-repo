@@ -37,11 +37,13 @@ namespace godzillabanana
             color = gameObject.GetComponent<SpriteRenderer>().color;
             ponyPos = GetComponent<Transform>();
             herd = GameObject.Find("Unicorns");
+            drawing = FindObjectOfType(typeof(Drawing)) as Drawing;
 
-            
 
         }
 
+
+       
         // Update is called once per frame
         void Update()
         {
@@ -56,7 +58,42 @@ namespace godzillabanana
             {
                 Destroy(gameObject);
             }
-          
+
+
+
+
+
+
+            if (text == null)
+            {
+                text = GetComponentInChildren(typeof(TMP_Text)) as TMP_Text;
+                
+            }
+            if (mainCamera == null)
+            {
+                mainCamera = FindObjectOfType(typeof(Camera)) as Camera;
+                
+            }
+
+            if (color == null)
+            {
+                color = gameObject.GetComponent<SpriteRenderer>().color;
+            }
+            if (ponyPos== null)
+            {
+                ponyPos = GetComponent<Transform>();
+            }
+           if (drawing == null)
+            {
+                drawing = FindObjectOfType(typeof(Drawing)) as Drawing;
+            }
+            if (herd == null) { herd = GameObject.Find("Unicorns"); }
+            if (!unicornGene)
+            {
+                unicornGene = GameObject.Find("UnicornB");
+            }
+            
+
 
         }
 
@@ -97,6 +134,7 @@ namespace godzillabanana
                 GameObject babyunicorn = Instantiate(unicornGene, new Vector3 (-500, -400, 0), Quaternion.identity) as GameObject;
                 babyunicorn.GetComponent<SpriteRenderer>().color = babyColor;
                 babyunicorn.transform.SetParent(herd.transform, false);
+                
 
             }
         }
