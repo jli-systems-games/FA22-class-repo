@@ -7,7 +7,7 @@ namespace Simon.Project2.Scripts
 {
     public class GameManager : MonoBehaviour
     {
-
+        
         public AudioSource theMusic;
 
         public bool startPlaying;
