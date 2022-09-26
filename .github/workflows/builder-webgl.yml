@@ -1,4 +1,4 @@
-name: Build for WebGL
+name: Build and Deploy for WebGL
 
 on: [push]
 
@@ -101,12 +101,13 @@ jobs:
           name: build-WebGL
           path: build
 
-      - name: Display structure of root files
-        run: ls -R
-        working-directory: build/WebGL
+      #- name: Display structure of root files
+      #  run: ls -R
+      #  working-directory: build/WebGL
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
-          folder: build/
+          folder: build
+          target-folder: .
