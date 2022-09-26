@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Ekaterina
 {
 
-public class ShrinkBehaviour : MonoBehaviour
+public class ShrinkBehavior : MonoBehaviour
 {
      void Update ()
      {
