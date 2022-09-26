@@ -1,10 +1,10 @@
-name: Auto assign PR and request review
+name: Central Workflow
 
 on:
   # pull_request:
   #  types: []
   workflow_dispatch:
-  
+
 jobs:
   assign-reviewrs:
     runs-on: ubuntu-latest
