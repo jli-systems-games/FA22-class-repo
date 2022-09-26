@@ -7,11 +7,21 @@ using UnityEngine.UI;
 namespace Ekaterina {
 
     public class PetUIController : MonoBehaviour
-{
-    public Image foodImage, happinessImage, energyImage;
-    public static PetUIController instance;
+    { 
+        public Slider healthSlider;
+        public int petFood = 1;
+        
+        public float needBar = 1;
+    
+       public Image foodImage, happinessImage, energyImage;
+        public static PetUIController instance;
 
-    private void Awake()
+        private void Start()
+        {
+            healthSlider.value = 100;
+        }
+
+        private void Awake()
     {
         if (instance == null)
         {
@@ -27,7 +37,18 @@ namespace Ekaterina {
         energyImage.fillAmount = (float) energy / 100;
     }
 
+    public void Update()
+    {
+        healthSlider.value -= .01f;
+    }
 
-}
+    public void ChangeSomething()
+    {
+        if (petFood > 0)
+        {
+        healthSlider.value += needBar;
+        }
+    }
+    }
 }
 

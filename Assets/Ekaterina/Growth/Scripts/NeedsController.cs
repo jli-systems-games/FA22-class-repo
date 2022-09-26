@@ -54,6 +54,11 @@ namespace Ekaterina
                                 animator.SetTrigger("Happy");
                         }
                         
+                        /*if (energy < 50)
+                        {
+                                animator.SetFloat(energy);
+                        }*/
+                        
                      
                         
                         if (TimingManager.gameHourTimer < 0)
