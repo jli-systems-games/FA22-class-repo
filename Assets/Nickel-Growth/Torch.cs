@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Torch : MonoBehaviour
 {
-    public static float torchTime = 10;
+    public static float torchTime = 15;
     private float torchTimeLocal;
     public Light torchLight;
     private float speed;
