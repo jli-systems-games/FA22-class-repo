@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewTorch : MonoBehaviour
+public class LightUp : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Light frame;
     void Start()
     {
         
@@ -18,8 +19,6 @@ public class NewTorch : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
-        Torch.torchTime += 15;
-        this.gameObject.SetActive(false);
+        frame.enabled = true;
     }
 }
