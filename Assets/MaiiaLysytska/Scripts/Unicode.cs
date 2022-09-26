@@ -9,7 +9,7 @@ namespace godzillabanana
 
     public class Unicode : MonoBehaviour
     {
-        public bool colided = false;
+        public bool collided = false;
         public Camera mainCamera;
         //public Vector3 mousePos;
         public Drawing drawing;
@@ -25,7 +25,7 @@ namespace godzillabanana
         public Color FriendColor;
         public float maxBlood;
         public Color babyColor;
-        
+        public GameObject herd;
 
 
         public GameObject unicornGene;
@@ -38,6 +38,7 @@ namespace godzillabanana
             mainCamera = FindObjectOfType(typeof(Camera)) as Camera;
             color = gameObject.GetComponent<SpriteRenderer>().color;
             ponyPos = GetComponent<Transform>();
+            herd = GameObject.Find("Unicorns");
 
         }
 
@@ -88,12 +89,13 @@ namespace godzillabanana
 
         private void OnMouseUp()
         {
-            if (colided)
+            if (collided)
             {
-                Debug.Log("yay");
+               
                 
-                GameObject babyunicorn = Instantiate(unicornGene, new Vector3 (100, 100, 0), Quaternion.identity);
+                GameObject babyunicorn = Instantiate(unicornGene, new Vector3 (100, 100, 0), Quaternion.identity) as GameObject;
                 babyunicorn.GetComponent<SpriteRenderer>().color = babyColor;
+                babyunicorn.transform.SetParent(herd.transform, false);
 
             }
         }
@@ -101,6 +103,8 @@ namespace godzillabanana
 
         private void OnTriggerEnter2D(Collider2D obj)
         {
+            collided = true;
+
             FriendColor = obj.GetComponent<SpriteRenderer>().color;
             babyColor = new Color(Mathf.Sqrt(color.r * FriendColor.r), Mathf.Sqrt(color.g * FriendColor.g), Mathf.Sqrt(color.b * FriendColor.b), 1.0f);
 
@@ -108,7 +112,7 @@ namespace godzillabanana
         }
         private void OnTriggerExit2D()
         {
-            colided = false;
+            collided = false;
         }
     }
 }
