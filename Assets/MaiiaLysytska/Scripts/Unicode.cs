@@ -16,10 +16,7 @@ namespace godzillabanana
         public Transform recentPos;
         public Transform ponyPos;
    public TMP_Text text;
-        public float poopValue;
-        public string unicornType;
-        private float Timer = 5;
-        public float TimerValue;
+        public float bloodValue = 0.1f;
         public float blood;
         public Color color;
         public Color FriendColor;
@@ -33,27 +30,31 @@ namespace godzillabanana
         // Start is called before the first frame update
         void Start()
         {
-
+            
+            
             text =  GetComponentInChildren(typeof(TMP_Text)) as TMP_Text;
             mainCamera = FindObjectOfType(typeof(Camera)) as Camera;
             color = gameObject.GetComponent<SpriteRenderer>().color;
             ponyPos = GetComponent<Transform>();
             herd = GameObject.Find("Unicorns");
 
+            
+
         }
 
         // Update is called once per frame
         void Update()
         {
+            color = gameObject.GetComponent<SpriteRenderer>().color;
             Vector3 mousePos = Input.mousePosition;
-            blood += poopValue;
+            blood += bloodValue;
 
             maxBlood = Mathf.Round(blood * 10.0f) * 0.1f;
             text.SetText(maxBlood.ToString());
 
-            if (blood <= 0)
+            if (blood <= -1)
             {
-                Destroy(this);
+                Destroy(gameObject);
             }
           
 
@@ -93,7 +94,7 @@ namespace godzillabanana
             {
                
                 
-                GameObject babyunicorn = Instantiate(unicornGene, new Vector3 (100, 100, 0), Quaternion.identity) as GameObject;
+                GameObject babyunicorn = Instantiate(unicornGene, new Vector3 (-500, -400, 0), Quaternion.identity) as GameObject;
                 babyunicorn.GetComponent<SpriteRenderer>().color = babyColor;
                 babyunicorn.transform.SetParent(herd.transform, false);
 
@@ -106,8 +107,8 @@ namespace godzillabanana
             collided = true;
 
             FriendColor = obj.GetComponent<SpriteRenderer>().color;
-            babyColor = new Color(Mathf.Sqrt(color.r * FriendColor.r), Mathf.Sqrt(color.g * FriendColor.g), Mathf.Sqrt(color.b * FriendColor.b), 1.0f);
-
+            //babyColor = new Color(Mathf.Sqrt(color.r * FriendColor.r), Mathf.Sqrt(color.g * FriendColor.g), Mathf.Sqrt(color.b * FriendColor.b), 1.0f);
+            babyColor = new Color((color.r + FriendColor.r)/2, (color.g + FriendColor.g)/2, (color.b + FriendColor.b)/2, 1.0f);
 
         }
         private void OnTriggerExit2D()

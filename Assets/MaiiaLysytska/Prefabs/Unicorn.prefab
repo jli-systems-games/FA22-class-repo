@@ -188,16 +188,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df679f4da04c40b9a9046655c547cd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collided: 0
   mainCamera: {fileID: 0}
   drawing: {fileID: 0}
   recentPos: {fileID: 0}
   ponyPos: {fileID: 1219020367686144611}
   text: {fileID: 0}
-  poopValue: 0.1
-  unicornType: 
-  TimerValue: 5
-  poop: 0
+  bloodValue: 0.1
+  blood: 0
   color: {r: 0, g: 0, b: 0, a: 0}
+  FriendColor: {r: 0, g: 0, b: 0, a: 0}
+  maxBlood: 0
+  babyColor: {r: 0, g: 0, b: 0, a: 0}
+  herd: {fileID: 0}
+  unicornGene: {fileID: 0}
+  babyunicorn: {fileID: 0}
 --- !u!222 &1219020367686144615
 CanvasRenderer:
   m_ObjectHideFlags: 0
