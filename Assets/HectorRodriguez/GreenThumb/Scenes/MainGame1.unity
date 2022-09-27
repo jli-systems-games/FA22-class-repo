@@ -620,7 +620,7 @@ GameObject:
   - component: {fileID: 472843523}
   - component: {fileID: 472843522}
   m_Layer: 5
-  m_Name: Metal Score  (2)
+  m_Name: Book Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -666,7 +666,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Metal: 0'
+  m_text: Book:0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -998,7 +998,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 261, y: 66}
+  m_AnchoredPosition: {x: 285, y: -79}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &587446424
@@ -1343,20 +1343,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plasticAmount: 0
   metalAmount: 0
+  electronicAmount: 0
+  bookAmount: 0
   amountText: {fileID: 287234824}
   amountText2: {fileID: 1039403228}
+  amountText3: {fileID: 873251944}
+  amountText4: {fileID: 472843522}
   plastics: 0
   metals: 0
-  metalPrice: 0
-  metalBasePrice: 10
-  metalPriceMultiplier: 1.1
-  metalProduction: 0.1
+  electronics: 0
+  books: 0
   plasticPrice: 0
   plasticBasePrice: 10
   plasticPriceMultiplier: 1.1
   plasticProduction: 0.1
+  metalPrice: 0
+  metalBasePrice: 10
+  metalPriceMultiplier: 1.1
+  metalProduction: 0.1
+  electronicPrice: 0
+  electronicBasePrice: 10
+  electronicPriceMultiplier: 1.1
+  electronicProduction: 0.1
+  bookPrice: 0
+  bookBasePrice: 10
+  bookPriceMultiplier: 1.1
+  bookProduction: 0.1
   buildText: {fileID: 911053699}
   buildText2: {fileID: 2000504853}
+  buildText3: {fileID: 2055448599}
+  buildText4: {fileID: 112201299}
 --- !u!1 &873251942
 GameObject:
   m_ObjectHideFlags: 0
