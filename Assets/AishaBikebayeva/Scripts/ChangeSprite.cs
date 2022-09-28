@@ -26,7 +26,7 @@ namespace AishaGrowth
         if (clicks > 4)
         {
             text.enabled = true;
-            buttonPlay.enabled = true;
+            buttonPlay.gameObject.SetActive(true);
             Button.gameObject.SetActive(false);
         }
         // clicks = clicks % sprites.length; 
