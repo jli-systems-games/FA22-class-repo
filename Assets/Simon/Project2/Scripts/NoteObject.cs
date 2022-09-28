@@ -33,7 +33,7 @@ namespace Simon.Project2.Scripts
                         Debug.Log("Hit");
                         GameManager.instance.NormalHit();
                         Instantiate(hitEffect, transform.position, hitEffect.transform.rotation);
-                    } else if (Mathf.Abs(transform.position.y) > 0.075f)
+                    } else if (Mathf.Abs(transform.position.y) > 0.090f)
                     {
                         Debug.Log("Good");
                         GameManager.instance.GoodHit();
