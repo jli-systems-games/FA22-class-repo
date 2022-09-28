@@ -11,11 +11,12 @@ namespace AishaGrowth
 
         public TMP_InputField nameField;
 
-        public Slider healthSlider;
+        // public Slider healthSlider;
         
         public void saveData()
         {
-            DataFile data = new DataFile(nameField.text,(int)healthSlider.value);
+            DataFile data = new DataFile(nameField.text); 
+            // (int)healthSlider.value
             string json = JsonUtility.ToJson(data);
             System.IO.File.WriteAllText(Application.persistentDataPath + "save.json", json);
             Debug.Log(Application.persistentDataPath);
@@ -26,7 +27,7 @@ namespace AishaGrowth
             string json = System.IO.File.ReadAllText(Application.persistentDataPath+"/save.json");
             DataFile data = JsonUtility.FromJson<DataFile>(json);
             nameField.text = data.name;
-            healthSlider.value = data.health;
+            // healthSlider.value = data.health;
         }
     }
 }
