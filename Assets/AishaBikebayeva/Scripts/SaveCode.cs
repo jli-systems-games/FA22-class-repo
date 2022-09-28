@@ -18,7 +18,7 @@ namespace AishaGrowth
             DataFile data = new DataFile(nameField.text); 
             // (int)healthSlider.value
             string json = JsonUtility.ToJson(data);
-            System.IO.File.WriteAllText(Application.persistentDataPath + "save.json", json);
+            System.IO.File.WriteAllText(Application.persistentDataPath + "/save.json", json);
             Debug.Log(Application.persistentDataPath);
         }
         
