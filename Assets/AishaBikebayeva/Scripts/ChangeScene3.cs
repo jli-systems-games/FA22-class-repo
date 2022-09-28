@@ -46,8 +46,8 @@ namespace AishaGrowth
                 if (isLoading == false)
                 {
                     Debug.Log("Loading");
-                    isLoading = true;
-                    text.enabled = true;
+                    // isLoading = true;
+                    // text.enabled = true;
                 }
 
                 yield return null;
