@@ -27,6 +27,7 @@ namespace AishaGrowth
         void Awake()
         {
             Button.onClick.AddListener(OnButtonClick);
+            Debug.Log("Ended")
         }
         // Update is called once per frame
         void Update()
