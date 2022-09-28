@@ -11,6 +11,7 @@ namespace AishaGrowth
     {
         public Button Button;
         public TMP_Text text;
+        public Button buttonPlay;
         int clicks = 0;
         public List<Sprite> sprites;
         // Start is called before the first frame update
@@ -25,6 +26,8 @@ namespace AishaGrowth
         if (clicks > 4)
         {
             text.enabled = true;
+            buttonPlay.enabled = true;
+            Button.gameObject.SetActive(false);
         }
         // clicks = clicks % sprites.length; 
         //to ensure the clicks dont go over your sprite count
