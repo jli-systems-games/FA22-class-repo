@@ -12,10 +12,10 @@ public class PotMove : MonoBehaviour
     Vector2 movement;
     void Update()
     {
-        //Input will go here
+        //Input only go horizontal
 
         movement.x = Input.GetAxisRaw("Horizontal");
-        //movement.y = Input.GetAxisRaw("Vertical");
+        
         
     }
 
