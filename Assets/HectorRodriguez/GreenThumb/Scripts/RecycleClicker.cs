@@ -57,10 +57,10 @@ public TextMeshProUGUI buildText2;
         bookPrice = bookBasePrice;
 
 
-        amountText.text = "0";
-        amountText2.text = "0";
-        amountText3.text = "0";
-        amountText4.text = "0";
+        amountText.text = "Plastic:0";
+        amountText2.text = "Metal:0";
+        amountText3.text = "Electronic:0";
+        amountText4.text = "Book:0";
 
         buildText.text = $"Buy Plastic Upgrade${plasticPrice}";
         buildText2.text = $"Buy Metal Upgrade${metalPrice}";
@@ -79,10 +79,10 @@ public TextMeshProUGUI buildText2;
 
       void Update()
         {
-            amountText.text = plasticAmount.ToString("0");
-        amountText2.text = metalAmount.ToString("0");
-        amountText3.text = electronicAmount.ToString("0");
-        amountText4.text = bookAmount.ToString("0");
+            amountText.text = plasticAmount.ToString("Plastic:0");
+        amountText2.text = metalAmount.ToString("Metal:0");
+        amountText3.text = electronicAmount.ToString("Electronic:0");
+        amountText4.text = bookAmount.ToString("Book:0");
     }
 
     public void IncreaseNumber()
