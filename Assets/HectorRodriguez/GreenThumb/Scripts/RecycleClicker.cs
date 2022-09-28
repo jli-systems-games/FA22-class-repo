@@ -57,15 +57,15 @@ public TextMeshProUGUI buildText2;
         bookPrice = bookBasePrice;
 
 
-        amountText.text = "Plastic:0";
-        amountText2.text = "Metal:0";
-        amountText3.text = "Electronic:0";
-        amountText4.text = "Book:0";
+        amountText.text = "Plastics:0";
+        amountText2.text = "Metals:0";
+        amountText3.text = "Electronics:0";
+        amountText4.text = "Books:0";
 
-        buildText.text = $"Buy Plastic Upgrade${plasticPrice}";
-        buildText2.text = $"Buy Metal Upgrade${metalPrice}";
-        buildText3.text = $"Buy Electronic Upgrade${electronicPrice}";
-        buildText4.text = $"Buy Book Upgrade${bookPrice}";
+        buildText.text = $"Plastic${plasticPrice}";
+        buildText2.text = $"Plastic${plasticPrice} Metal${metalPrice}";
+        buildText3.text = $"Plastic${plasticPrice} Metal${metalPrice} Electronics${electronicPrice}";
+        buildText4.text = $"Plastic${plasticPrice} Metal${metalPrice} Electronic${electronicPrice}Book${bookPrice}";
         InvokeRepeating("MainLoop", 0f, .1f);
         }
 
@@ -79,10 +79,10 @@ public TextMeshProUGUI buildText2;
 
       void Update()
         {
-            amountText.text = plasticAmount.ToString("Plastic:0");
-        amountText2.text = metalAmount.ToString("Metal:0");
-        amountText3.text = electronicAmount.ToString("Electronic:0");
-        amountText4.text = bookAmount.ToString("Book:0");
+            amountText.text = plasticAmount.ToString("Plastics:0");
+        amountText2.text = metalAmount.ToString("Metals:0");
+        amountText3.text = electronicAmount.ToString("Electronics:0");
+        amountText4.text = bookAmount.ToString("Books:0");
     }
 
     public void IncreaseNumber()
@@ -110,7 +110,7 @@ public TextMeshProUGUI buildText2;
     }
 
 
-    public void CollectPlastic()
+    public void PlasticUpgrade()
         {
             if (plasticAmount >= plasticPrice)
             {
@@ -122,7 +122,46 @@ public TextMeshProUGUI buildText2;
             }
         }
 
-    public void CollectMetal()
+    public void PlasticUpgrade1()
+    {
+        if (plasticAmount>= plasticPrice && metalAmount >= metalPrice)
+        {
+            plastics++;
+            plasticAmount -= plasticPrice;
+            metalAmount -= metalPrice;
+            metalPrice = Mathf.Floor(metalBasePrice * Mathf.Pow(metalPriceMultiplier, metals));
+            buildText2.text = $"Plastic${plasticPrice}Metal${metalPrice}";
+        }
+    }
+
+    
+    public void PlasticUpgrade2()
+    {
+        if (plasticAmount >= plasticPrice && metalAmount >= metalPrice && electronicAmount >= electronicPrice)
+        {
+            plastics++;
+            metalAmount -= metalPrice;
+            plasticAmount -= plasticPrice;
+            electronicAmount -= electronicPrice;
+            metalPrice = Mathf.Floor(metalBasePrice * Mathf.Pow(metalPriceMultiplier, metals));
+            buildText3.text = $"Plastic${plasticPrice}Metal:${metalPrice}Electronics${electronicPrice}";
+        }
+    }
+
+    public void PlasticUpgrade3()
+    {
+        if (plasticAmount >= plasticPrice && metalAmount >= metalPrice && electronicAmount >= electronicPrice && bookAmount >= bookPrice)
+        {
+            plastics++;
+            metalAmount -= metalPrice;
+            plasticAmount -= plasticPrice;
+            electronicAmount -= electronicPrice;
+            bookAmount -= bookPrice;
+            metalPrice = Mathf.Floor(metalBasePrice * Mathf.Pow(metalPriceMultiplier, metals));
+            buildText4.text = $"Plastic${plasticPrice}Metal${metalPrice}Electronic${electronicPrice}Book${bookPrice}";
+        }
+    }
+        public void MetalUpgrade()
     {
         if (metalAmount >= metalPrice)
         {
@@ -130,9 +169,12 @@ public TextMeshProUGUI buildText2;
             metals++;
             metalAmount -= metalPrice;
             metalPrice = Mathf.Floor(metalBasePrice * Mathf.Pow(metalPriceMultiplier, metals));
-            buildText2.text = $"Buy Metal Upgrade ${metalPrice}";
+            buildText.text = $"Buy Metal Upgrade ${metalPrice}";
         }
     }
+
+
+
     public void CollectElectronic()
     {
         if (electronicAmount >= electronicPrice)
@@ -141,7 +183,7 @@ public TextMeshProUGUI buildText2;
             electronics++;
             electronicAmount -= electronicPrice;
             electronicPrice = Mathf.Floor(electronicBasePrice * Mathf.Pow(electronicPriceMultiplier, electronics));
-            buildText3.text = $"Buy Electronic Upgrade ${electronicPrice}";
+            buildText2.text = $"Buy Electronic Upgrade ${electronicPrice}";
         }
 
     }
@@ -153,7 +195,7 @@ public TextMeshProUGUI buildText2;
            books++;
             bookAmount -= bookPrice;
             bookPrice = Mathf.Floor(bookBasePrice * Mathf.Pow(bookPriceMultiplier, books));
-            buildText4.text = $"Buy Book Upgrade ${bookPrice}";
+            buildText2.text = $"Buy Book Upgrade ${bookPrice}";
         }
 
     }
