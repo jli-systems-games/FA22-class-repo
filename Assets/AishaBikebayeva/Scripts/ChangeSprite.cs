@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace AishaGrowth
 {
@@ -9,7 +10,7 @@ namespace AishaGrowth
     public class ChangeSprite : MonoBehaviour
     {
         public Button Button;
-        public Sprite image;
+        public TMP_Text text;
         int clicks = 0;
         public List<Sprite> sprites;
         // Start is called before the first frame update
@@ -21,6 +22,10 @@ namespace AishaGrowth
         {
         GetComponent<SpriteRenderer>().sprite = sprites[clicks];
         clicks++;
+        if (clicks > 4)
+        {
+            text.enabled = true;
+        }
         // clicks = clicks % sprites.length; 
         //to ensure the clicks dont go over your sprite count
         }
