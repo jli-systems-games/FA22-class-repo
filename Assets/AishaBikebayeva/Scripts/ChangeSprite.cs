@@ -9,6 +9,7 @@ namespace AishaGrowth
     public class ChangeSprite : MonoBehaviour
     {
         public Button Button;
+        public Sprite image;
         int clicks = 0;
         public List<Sprite> sprites;
         // Start is called before the first frame update
@@ -27,7 +28,9 @@ namespace AishaGrowth
         void Awake()
         {
             Button.onClick.AddListener(OnButtonClick);
-            Debug.Log("Ended")
+            Debug.Log("Ended");
+            // image.enabled = !image.enabled;
+            // Button.SetActive(false); 
         }
         // Update is called once per frame
         void Update()
