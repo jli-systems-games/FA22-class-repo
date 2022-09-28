@@ -2,24 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeadStage : GrowthStageBase
+namespace Regan
 {
-    public DeadStage(CreatureManager creatureManager) : base(creatureManager)
-    {
-    }
 
-    public override void Tick()
+    [CreateAssetMenu(menuName = "Regan/GrowthStages/DeadStage")]
+    public class DeadStage : GrowthStageBase
     {
-        
-    }
+        public override void Tick()
+        {
 
-    public override void StageStart()
-    {
+        }
 
-    }
+        public override void StageStart(CreatureManager creatureManager)
+        {
+            base.StageStart(creatureManager);
+        }
 
-    public override void UpdateAge()
-    {
-        
+        public override void UpdateAge()
+        {
+
+        }
     }
 }

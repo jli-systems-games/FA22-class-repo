@@ -2,19 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BabyStage : GrowthStageBase
+namespace Regan
 {
-    public BabyStage(CreatureManager creatureManager) : base(creatureManager)
-    {
-    }
 
-    public override void UpdateAge()
+    [CreateAssetMenu(menuName = "Regan/GrowthStages/BabyStage")]
+    public class BabyStage : GrowthStageBase
     {
-        base.UpdateAge();
-
-        if (_creatureManager.age > 50)
+        public override void UpdateAge()
         {
-            _creatureManager.ChangeStage(new TeenStage(_creatureManager));
+            base.UpdateAge();
         }
     }
 }
