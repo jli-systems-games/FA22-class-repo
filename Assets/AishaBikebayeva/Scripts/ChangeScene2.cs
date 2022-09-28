@@ -38,7 +38,7 @@ namespace AishaGrowth
             // You could also load the Scene by using sceneBuildIndex. In this case Scene2 has
             // a sceneBuildIndex of 1 as shown in Build Settings.
 
-            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("TakeCare");
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("NameCreature");
 
             // Wait until the asynchronous scene fully loads
             while (!asyncLoad.isDone)
@@ -46,8 +46,8 @@ namespace AishaGrowth
                 if (isLoading == false)
                 {
                     Debug.Log("Loading");
-                    isLoading = true;
-                    text.enabled = true;
+                    // isLoading = true;
+                    // text.enabled = true;
                 }
 
                 yield return null;
