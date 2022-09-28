@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-namespace Hector
+namespace HectorRodriguez
 {
     public class TrashClicker : MonoBehaviour
     {
