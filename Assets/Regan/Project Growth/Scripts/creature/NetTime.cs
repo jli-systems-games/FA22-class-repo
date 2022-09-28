@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.Networking;
 using System;
 
+namespace Regan {
+
 public class NetTime : MonoBehaviour
 {
     public void getInternetTime(Action<string> onReceiveTime)
@@ -19,4 +21,5 @@ public class NetTime : MonoBehaviour
         string netTime = myHttpWebRequest.GetResponseHeader("date");
         onReceiveTime(netTime);
     }
+}
 }

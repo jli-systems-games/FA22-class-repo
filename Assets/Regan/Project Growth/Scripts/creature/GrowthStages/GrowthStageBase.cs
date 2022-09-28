@@ -2,68 +2,77 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrowthStageBase
+namespace Regan
 {
-    private float _healHungerThreshold = 0.3f;
 
-    protected readonly CreatureManager _creatureManager;
-    public float stageStartTime;
-
-    public GrowthStageBase(CreatureManager creatureManager)
+    public abstract class GrowthStageBase : ScriptableObject
     {
-        _creatureManager = creatureManager;
-    }
+        [SerializeField, Range(0f, 1.1f)] private float _healHungerThreshold = 0.3f;
+        [SerializeField] private int _nextStageThreshold = 200;
+        [SerializeField] private GrowthStageBase _nextStage;
+        [SerializeField] private Sprite _creatureSprite;
 
-    public virtual void StageStart()
-    {
+        public bool canFeed = true;
 
-    }
+        protected CreatureManager _creatureManager;
 
-    public virtual void Tick()
-    {
-        UpdateAge();
-        UpdateHealth();
-        UpdateHunger();
-        
-    }
-
-    public virtual void UpdateHunger()
-    {
-
-        if (_creatureManager.hunger <= 0) { return; }
-
-        ChangeHunger(-1);
-    }
-
-    public virtual void UpdateHealth()
-    {
-        if (_creatureManager.hunger > _creatureManager.maxHunger * _healHungerThreshold )
+        public virtual void StageStart(CreatureManager creatureManager)
         {
-            ChangeHealth(1);
-            return;
+            _creatureManager = creatureManager;
+            _creatureManager.ChangeSprite(_creatureSprite);
         }
 
-        if (_creatureManager.hunger > 0) { return; }
+        public virtual void Tick()
+        {
+            UpdateAge();
+            UpdateHealth();
+            UpdateHunger();
+        }
 
-        ChangeHealth(-1);
+        public virtual void UpdateHunger()
+        {
 
-        if (_creatureManager.health > 0) { return; }
+            if (_creatureManager.hunger <= 0)
+            {
+                return;
+            }
 
-        _creatureManager.ChangeStage(new DeadStage(_creatureManager));
-    }
+            _creatureManager.ChangeHunger(-1);
+        }
 
-    public virtual void UpdateAge()
-    {
-        _creatureManager.age++;
-    }
+        public virtual void UpdateHealth()
+        {
+            if (_creatureManager.hunger > _creatureManager.maxHunger * _healHungerThreshold)
+            {
+                _creatureManager.ChangeHealth(1);
+                return;
+            }
 
-    protected void ChangeHealth(int amount)
-    {
-        _creatureManager.health = Mathf.Clamp(_creatureManager.health + amount, 0, _creatureManager.maxHealth);
-    }
+            if (_creatureManager.hunger > 0)
+            {
+                return;
+            }
 
-    protected void ChangeHunger(int amount)
-    {
-        _creatureManager.hunger = Mathf.Clamp(_creatureManager.hunger + amount, 0, _creatureManager.maxHunger);
+            _creatureManager.ChangeHealth(-1);
+
+            if (_creatureManager.health > 0)
+            {
+                return;
+            }
+
+            _creatureManager.Die();
+        }
+
+        public virtual void UpdateAge()
+        {
+            _creatureManager.age++;
+
+            if (_creatureManager.age > _nextStageThreshold)
+            {
+                _creatureManager.ChangeStage(_nextStage);
+            }
+        }
+
+
     }
 }
