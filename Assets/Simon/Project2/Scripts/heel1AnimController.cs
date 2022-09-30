@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Simon.Project2.Scripts
+namespace Simon.Project2.Scripts 
 {
-    public class CameraAnimator : MonoBehaviour
+
+    public class heel1AnimController : MonoBehaviour
     {
 
         public Animator anim;
@@ -15,12 +16,12 @@ namespace Simon.Project2.Scripts
 
         void Update()
         {
-            if (Input.GetKeyDown("space") || Input.GetKeyDown(KeyCode.RightShift) )
+            if (Input.GetKeyDown("space"))
             {
-                anim.Play("cameraBump");
+                anim.Play("size1fight");
             }
         }
     }
+
+    
 }
-
-
