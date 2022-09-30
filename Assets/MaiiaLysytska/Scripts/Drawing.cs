@@ -13,8 +13,14 @@ namespace godzillabanana
         public SpriteRenderer unicorn;
         public Color uniColor;
         public Unicode currentUnicorn;
-      
-       void Update()
+        public GameObject canvas;
+
+
+        private void Start()
+        {
+            canvas = GameObject.Find("Canvas");
+        }
+        void Update()
         {
             if (Input.mousePosition.x> 500)
             {
@@ -68,6 +74,7 @@ namespace godzillabanana
         {
 
             GameObject brushInstance = Instantiate(brush);
+           brushInstance.transform.SetParent(canvas.transform, false);
             currentLineRenderer = brushInstance.GetComponent<LineRenderer>();
             Vector3 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             currentLineRenderer.SetPosition(0, mousePos);
