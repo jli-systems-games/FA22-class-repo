@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-namespace Hector
+namespace HectorRodriguez
 {
 
     public class SceneLoader : MonoBehaviour
