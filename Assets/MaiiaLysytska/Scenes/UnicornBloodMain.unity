@@ -191,6 +191,8 @@ MonoBehaviour:
   maxBlood: 0
   babyColor: {r: 0, g: 0, b: 0, a: 0}
   herd: {fileID: 0}
+  u: 0.05
+  spriteRepo: {fileID: 0}
   unicornGene: {fileID: 1219020367686144636, guid: fad5da6fccb804dcf8ba08f4df2260bf,
     type: 3}
   babyunicorn: {fileID: 0}
@@ -644,9 +646,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -460, y: -341}
+  m_AnchoredPosition: {x: -475, y: -426}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5000006, y: 0.49999964}
 --- !u!114 &422723883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -831,6 +833,7 @@ GameObject:
   - component: {fileID: 462980419}
   - component: {fileID: 462980421}
   - component: {fileID: 462980420}
+  - component: {fileID: 462980422}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -855,8 +858,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: 0.00011702}
-  m_SizeDelta: {x: 500, y: 635.34}
+  m_AnchoredPosition: {x: 250, y: -0.0010834}
+  m_SizeDelta: {x: 500, y: 803.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &462980420
 MonoBehaviour:
@@ -896,6 +899,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 462980418}
   m_CullTransparentMesh: 1
+--- !u!114 &462980422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462980418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30ff39b0249be4a34a1ce9ea31556c97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniSPrites:
+  - {fileID: 0}
 --- !u!1 &580683705
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,6 +1087,8 @@ MonoBehaviour:
   maxBlood: 0
   babyColor: {r: 0, g: 0, b: 0, a: 0}
   herd: {fileID: 0}
+  u: 0.05
+  spriteRepo: {fileID: 0}
   unicornGene: {fileID: 1219020367686144636, guid: fad5da6fccb804dcf8ba08f4df2260bf,
     type: 3}
   babyunicorn: {fileID: 0}
@@ -1309,6 +1328,8 @@ MonoBehaviour:
   maxBlood: 0
   babyColor: {r: 0, g: 0, b: 0, a: 0}
   herd: {fileID: 0}
+  u: 0.05
+  spriteRepo: {fileID: 0}
   unicornGene: {fileID: 1219020367686144636, guid: fad5da6fccb804dcf8ba08f4df2260bf,
     type: 3}
   babyunicorn: {fileID: 0}
@@ -1388,6 +1409,61 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!1 &764663524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 764663525}
+  - component: {fileID: 764663526}
+  m_Layer: 0
+  m_Name: SpriteManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &764663525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764663524}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1913152499}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &764663526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764663524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30ff39b0249be4a34a1ce9ea31556c97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniSPrites:
+  - {fileID: 21300000, guid: d5a7fce16148d4843913826886a4a07d, type: 3}
+  - {fileID: 21300000, guid: 04ec22f768c664c0ab56a66cc900b7ed, type: 3}
+  - {fileID: 21300000, guid: 24192d33d3bd04549a5927214bfb80a0, type: 3}
+  - {fileID: 21300000, guid: 55eaa8f14e4bb4cf79e80c895ec3c0f1, type: 3}
+  - {fileID: 21300000, guid: d5a7fce16148d4843913826886a4a07d, type: 3}
+  - {fileID: 21300000, guid: d5a7fce16148d4843913826886a4a07d, type: 3}
+  - {fileID: 21300000, guid: d5a7fce16148d4843913826886a4a07d, type: 3}
+  - {fileID: 21300000, guid: 24192d33d3bd04549a5927214bfb80a0, type: 3}
+  - {fileID: 21300000, guid: 24192d33d3bd04549a5927214bfb80a0, type: 3}
+  - {fileID: 21300000, guid: 04ec22f768c664c0ab56a66cc900b7ed, type: 3}
 --- !u!1 &811720067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1804,6 +1880,8 @@ MonoBehaviour:
   maxBlood: 0
   babyColor: {r: 0, g: 0, b: 0, a: 0}
   herd: {fileID: 0}
+  u: 0.05
+  spriteRepo: {fileID: 0}
   unicornGene: {fileID: 1219020367686144636, guid: fad5da6fccb804dcf8ba08f4df2260bf,
     type: 3}
   babyunicorn: {fileID: 0}
@@ -2291,6 +2369,8 @@ MonoBehaviour:
   maxBlood: 0
   babyColor: {r: 0, g: 0, b: 0, a: 0}
   herd: {fileID: 0}
+  u: 0.05
+  spriteRepo: {fileID: 0}
   unicornGene: {fileID: 1219020367686144636, guid: fad5da6fccb804dcf8ba08f4df2260bf,
     type: 3}
   babyunicorn: {fileID: 0}
@@ -2552,6 +2632,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 354416858}
+  - {fileID: 764663525}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

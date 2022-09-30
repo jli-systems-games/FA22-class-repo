@@ -23,8 +23,8 @@ namespace godzillabanana
         public float maxBlood;
         public Color babyColor;
         public GameObject herd;
-
-
+        public float u = 0.06f;
+        public SpriteMango spriteRepo;
         public GameObject unicornGene;
         public GameObject babyunicorn;
         // Start is called before the first frame update
@@ -65,36 +65,27 @@ namespace godzillabanana
 
 
 
-            if (text == null)
+            if (!text)
             {
                 text = GetComponentInChildren(typeof(TMP_Text)) as TMP_Text;
-                
-            }
-            if (mainCamera == null)
-            {
                 mainCamera = FindObjectOfType(typeof(Camera)) as Camera;
-                
-            }
-
-            if (color == null)
-            {
                 color = gameObject.GetComponent<SpriteRenderer>().color;
-            }
-            if (ponyPos== null)
-            {
                 ponyPos = GetComponent<Transform>();
-            }
-           if (drawing == null)
-            {
                 drawing = FindObjectOfType(typeof(Drawing)) as Drawing;
+                herd = GameObject.Find("Unicorns");
             }
-            if (herd == null) { herd = GameObject.Find("Unicorns"); }
+           
+            
             if (!unicornGene)
             {
                 unicornGene = GameObject.Find("UnicornB");
             }
             
-
+            if (!spriteRepo)
+            {
+                spriteRepo = FindObjectOfType(typeof(SpriteMango)) as SpriteMango;
+                GetComponent<SpriteRenderer>().sprite = spriteRepo.uniSPrites[Random.Range(0, 9)];
+            }
 
         }
 
@@ -147,7 +138,7 @@ namespace godzillabanana
 
             FriendColor = obj.GetComponent<SpriteRenderer>().color;
             //babyColor = new Color(Mathf.Sqrt(color.r * FriendColor.r), Mathf.Sqrt(color.g * FriendColor.g), Mathf.Sqrt(color.b * FriendColor.b), 1.0f);
-            babyColor = new Color((color.r + FriendColor.r)/2+Random.Range(-0.1f, 0.1f), (color.g + FriendColor.g)/2 + Random.Range(-0.1f, 0.1f), (color.b + FriendColor.b)/2 + Random.Range(-0.1f, 0.1f), 1.0f);
+            babyColor = new Color((color.r + FriendColor.r)/2+Random.Range(-u, u), (color.g + FriendColor.g)/2 + Random.Range(-u, u), (color.b + FriendColor.b)/2 + Random.Range(-u, u), 1.0f);
 
         }
         private void OnTriggerExit2D()
