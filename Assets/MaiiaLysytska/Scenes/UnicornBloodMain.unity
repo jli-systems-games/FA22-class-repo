@@ -191,7 +191,8 @@ MonoBehaviour:
   maxBlood: 0
   babyColor: {r: 0, g: 0, b: 0, a: 0}
   herd: {fileID: 0}
-  unicornGene: {fileID: 1219020367686144636, guid: fad5da6fccb804dcf8ba08f4df2260bf, type: 3}
+  unicornGene: {fileID: 1219020367686144636, guid: fad5da6fccb804dcf8ba08f4df2260bf,
+    type: 3}
   babyunicorn: {fileID: 0}
 --- !u!222 &15934242
 CanvasRenderer:
@@ -243,7 +244,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: d5a7fce16148d4843913826886a4a07d, type: 3}
-  m_Color: {r: 1, g: 0, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 1, a: 0.78431374}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -329,6 +330,100 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!1 &20501103
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 20501105}
+  - component: {fileID: 20501104}
+  m_Layer: 0
+  m_Name: Spot Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &20501104
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20501103}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 0
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 300000
+  m_Range: 10
+  m_SpotAngle: 83.891174
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &20501105
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20501103}
+  m_LocalRotation: {x: -0.07526054, y: -0, z: -0, w: 0.99716395}
+  m_LocalPosition: {x: -0.44, y: -0.6, z: -413.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: -8.632, y: 0, z: 0}
 --- !u!1 &151478159
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,6 +593,7 @@ MonoBehaviour:
   unicorn: {fileID: 0}
   uniColor: {r: 0, g: 0, b: 0, a: 0}
   currentUnicorn: {fileID: 0}
+  canvas: {fileID: 0}
 --- !u!4 &354416858
 Transform:
   m_ObjectHideFlags: 0
@@ -548,7 +644,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -500, y: -400}
+  m_AnchoredPosition: {x: -460, y: -341}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &422723883
@@ -759,8 +855,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: 0}
-  m_SizeDelta: {x: 500, y: 800}
+  m_AnchoredPosition: {x: 250, y: 0.00011702}
+  m_SizeDelta: {x: 500, y: 635.34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &462980420
 MonoBehaviour:
@@ -939,7 +1035,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: d5a7fce16148d4843913826886a4a07d, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.78431374}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -969,12 +1065,13 @@ MonoBehaviour:
   text: {fileID: 0}
   bloodValue: 0.1
   blood: 0
-  color: {r: 0, g: 0, b: 0, a: 0}
+  color: {r: 0.1981132, g: 0.1981132, b: 0.1981132, a: 0}
   FriendColor: {r: 0, g: 0, b: 0, a: 0}
   maxBlood: 0
   babyColor: {r: 0, g: 0, b: 0, a: 0}
   herd: {fileID: 0}
-  unicornGene: {fileID: 1219020367686144636, guid: fad5da6fccb804dcf8ba08f4df2260bf, type: 3}
+  unicornGene: {fileID: 1219020367686144636, guid: fad5da6fccb804dcf8ba08f4df2260bf,
+    type: 3}
   babyunicorn: {fileID: 0}
 --- !u!1 &680634217
 GameObject:
@@ -1177,7 +1274,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: d5a7fce16148d4843913826886a4a07d, type: 3}
-  m_Color: {r: 0, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 1, a: 0.78431374}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1212,7 +1309,8 @@ MonoBehaviour:
   maxBlood: 0
   babyColor: {r: 0, g: 0, b: 0, a: 0}
   herd: {fileID: 0}
-  unicornGene: {fileID: 1219020367686144636, guid: fad5da6fccb804dcf8ba08f4df2260bf, type: 3}
+  unicornGene: {fileID: 1219020367686144636, guid: fad5da6fccb804dcf8ba08f4df2260bf,
+    type: 3}
   babyunicorn: {fileID: 0}
 --- !u!114 &744586563
 MonoBehaviour:
@@ -1706,7 +1804,8 @@ MonoBehaviour:
   maxBlood: 0
   babyColor: {r: 0, g: 0, b: 0, a: 0}
   herd: {fileID: 0}
-  unicornGene: {fileID: 1219020367686144636, guid: fad5da6fccb804dcf8ba08f4df2260bf, type: 3}
+  unicornGene: {fileID: 1219020367686144636, guid: fad5da6fccb804dcf8ba08f4df2260bf,
+    type: 3}
   babyunicorn: {fileID: 0}
 --- !u!222 &1120977259
 CanvasRenderer:
@@ -1758,7 +1857,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: d5a7fce16148d4843913826886a4a07d, type: 3}
-  m_Color: {r: 1, g: 0.9813726, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.9813726, b: 0, a: 0.78431374}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2157,7 +2256,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: d5a7fce16148d4843913826886a4a07d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2192,7 +2291,8 @@ MonoBehaviour:
   maxBlood: 0
   babyColor: {r: 0, g: 0, b: 0, a: 0}
   herd: {fileID: 0}
-  unicornGene: {fileID: 1219020367686144636, guid: fad5da6fccb804dcf8ba08f4df2260bf, type: 3}
+  unicornGene: {fileID: 1219020367686144636, guid: fad5da6fccb804dcf8ba08f4df2260bf,
+    type: 3}
   babyunicorn: {fileID: 0}
 --- !u!1 &1790177312
 GameObject:

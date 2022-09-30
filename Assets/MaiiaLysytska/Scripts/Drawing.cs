@@ -98,8 +98,9 @@ namespace godzillabanana
 
         public void colorpick(Unicode selectedUnicorn)
         {
-            uniColor = selectedUnicorn.color;
             currentUnicorn = selectedUnicorn;
+            uniColor = new Color(selectedUnicorn.color.r, selectedUnicorn.color.g, selectedUnicorn.color.b, 0.7f);
+            
             // Debug.Log(unicorn);
         }
 

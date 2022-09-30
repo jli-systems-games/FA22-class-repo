@@ -146,7 +146,7 @@ namespace godzillabanana
 
             FriendColor = obj.GetComponent<SpriteRenderer>().color;
             //babyColor = new Color(Mathf.Sqrt(color.r * FriendColor.r), Mathf.Sqrt(color.g * FriendColor.g), Mathf.Sqrt(color.b * FriendColor.b), 1.0f);
-            babyColor = new Color((color.r + FriendColor.r)/2, (color.g + FriendColor.g)/2, (color.b + FriendColor.b)/2, 1.0f);
+            babyColor = new Color((color.r + FriendColor.r)/2+Random.Range(0f, 0.1f), (color.g + FriendColor.g)/2 + Random.Range(0f,0.1f), (color.b + FriendColor.b)/2 + Random.Range(0f, 0.1f), 1.0f);
 
         }
         private void OnTriggerExit2D()
