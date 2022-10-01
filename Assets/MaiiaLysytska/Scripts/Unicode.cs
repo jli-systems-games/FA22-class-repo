@@ -16,7 +16,7 @@ namespace godzillabanana
         public Transform recentPos;
         public Transform ponyPos;
    public TMP_Text text;
-        public float bloodValue = 0.1f;
+        public float bloodValue = 0.05f;
         public float blood;
         public Color color;
         public Color FriendColor;
@@ -27,6 +27,11 @@ namespace godzillabanana
         public SpriteMango spriteRepo;
         public GameObject unicornGene;
         public GameObject babyunicorn;
+        public TextMango txtMan;
+        public float bloodLost = 30;
+
+
+
         // Start is called before the first frame update
         void Start()
         {
@@ -38,7 +43,7 @@ namespace godzillabanana
             ponyPos = GetComponent<Transform>();
             herd = GameObject.Find("Unicorns");
             drawing = FindObjectOfType(typeof(Drawing)) as Drawing;
-
+            txtMan = FindObjectOfType(typeof(TextMango)) as TextMango;
 
         }
 
@@ -57,6 +62,7 @@ namespace godzillabanana
 
             if (blood <= -1)
             {
+                txtMan.killMessage();
                 Destroy(gameObject);
             }
 
@@ -93,7 +99,8 @@ namespace godzillabanana
 
         public void bleed()
         {
-            blood -= 5;
+            blood -= bloodLost;
+            txtMan.bleedMessage(bloodLost);
         }
 
         private void OnMouseDown()
@@ -128,7 +135,8 @@ namespace godzillabanana
                 GameObject babyunicorn = Instantiate(unicornGene, new Vector3 (-500, -400, 0), Quaternion.identity) as GameObject;
                 babyunicorn.GetComponent<SpriteRenderer>().color = babyColor;
                 babyunicorn.transform.SetParent(herd.transform, false);
-                
+                txtMan.cloneMessage();
+
 
             }
         }

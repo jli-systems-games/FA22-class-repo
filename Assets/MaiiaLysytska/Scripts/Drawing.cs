@@ -14,7 +14,7 @@ namespace godzillabanana
         public Color uniColor;
         public Unicode currentUnicorn;
         public GameObject canvas;
-
+       
 
         private void Start()
         {
@@ -26,6 +26,7 @@ namespace godzillabanana
 
             if (currentUnicorn == null)
             {
+                 
                 currentUnicorn = FindObjectOfType(typeof(Unicode)) as Unicode;
                 colorpick(currentUnicorn);
 
