@@ -60,16 +60,16 @@ namespace godzillabanana
             {
                 spriteNumber = 5;
             }
-            if (randomNum >= 86 && randomNum <= 90)
+            if (randomNum >= 86 && randomNum <= 92)
             {
                 spriteNumber = 6;
             }
-            if (randomNum >= 91 && randomNum <= 95)
+            if (randomNum >= 93 && randomNum <= 98)
             {
                 spriteNumber = 7;
             }
 
-            if (randomNum > 95) { spriteNumber = 8; }
+            if (randomNum > 98) { spriteNumber = 8; }
 
             currentSprite = uniSPrites[spriteNumber];
         }
