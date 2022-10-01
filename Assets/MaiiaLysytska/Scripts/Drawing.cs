@@ -22,16 +22,19 @@ namespace godzillabanana
         }
         void Update()
         {
-            if (Input.mousePosition.x> 500)
+            // Debug.Log(Input.mousePosition.x);
+
+            if (currentUnicorn == null)
+            {
+                currentUnicorn = FindObjectOfType(typeof(Unicode)) as Unicode;
+                colorpick(currentUnicorn);
+
+            }
+            if (Input.mousePosition.x> 665)
             {
                 Draw();
                 //Debug.Log(Input.mousePosition);
-                if (currentUnicorn == null)
-                {
-                    currentUnicorn = FindObjectOfType(typeof(Unicode)) as Unicode;
-                    colorpick(currentUnicorn);
-
-                }
+               
             }
           
         }
@@ -52,15 +55,15 @@ namespace godzillabanana
             {
                 
 
-                Vector3 mousePos = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 500.0f)); 
+                Vector3 mousePos = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 500.0f));
+                  
                 if (mousePos != lastpos)
                 {
-                    //Debug.Log("aaa" + mousePos+" != "+lastpos);
+                    
                     AddAPoint(mousePos);
                     lastpos = mousePos;
                 }
-                //else Debug.Log("ooo" + mousePos + " == " + lastpos);
-
+              
             }
             else
             {
@@ -90,7 +93,7 @@ namespace godzillabanana
             currentLineRenderer.SetPosition(positionIndex, pointPos);
             currentUnicorn.bleed();
 
-            //Debug.Log("positionIndex:" + positionIndex + ", pointpos:" + pointPos);
+          
             
 
         }
@@ -101,7 +104,7 @@ namespace godzillabanana
             currentUnicorn = selectedUnicorn;
             uniColor = new Color(selectedUnicorn.color.r, selectedUnicorn.color.g, selectedUnicorn.color.b, 0.7f);
             
-            // Debug.Log(unicorn);
+           
         }
 
 

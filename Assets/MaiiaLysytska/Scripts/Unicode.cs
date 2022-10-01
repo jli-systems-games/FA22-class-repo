@@ -84,7 +84,9 @@ namespace godzillabanana
             if (!spriteRepo)
             {
                 spriteRepo = FindObjectOfType(typeof(SpriteMango)) as SpriteMango;
-                GetComponent<SpriteRenderer>().sprite = spriteRepo.uniSPrites[Random.Range(0, 9)];
+
+                spriteRepo.spritePick();
+                GetComponent<SpriteRenderer>().sprite = spriteRepo.currentSprite;
             }
 
         }
