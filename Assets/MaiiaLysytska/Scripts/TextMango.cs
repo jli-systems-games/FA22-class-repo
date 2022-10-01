@@ -10,7 +10,7 @@ public class TextMango : MonoBehaviour
         public TMP_Text clonedText;
         public TMP_Text DeadText;
         public TMP_Text bloodCOunt;
-        public float dead = -1;
+        public float dead = 0;
         public int cloned = 0;
         public float blood = 0;
         // Start is called before the first frame update
@@ -29,9 +29,10 @@ public class TextMango : MonoBehaviour
             dead+= 1;
             DeadText.SetText("Unicorns killed: " + cloned.ToString());
         }
-        public void bleedMessage(float n)
+        public void bleedMessage()
         {
-            blood += n;
+            
+            blood += 5;
             bloodCOunt.SetText("Blood used: " + blood.ToString());
         }
 

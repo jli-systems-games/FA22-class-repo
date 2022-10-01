@@ -28,8 +28,8 @@ namespace godzillabanana
         public GameObject unicornGene;
         public GameObject babyunicorn;
         public TextMango txtMan;
-        public float bloodLost = 30;
-
+        public bool delay = false;
+        public float countdown = 5;
 
 
         // Start is called before the first frame update
@@ -63,11 +63,20 @@ namespace godzillabanana
             if (blood <= -1)
             {
                 txtMan.killMessage();
-                Destroy(gameObject);
+                delay = true;
+                
+
             }
 
 
-
+           if (delay)
+            {
+                countdown--;
+                if (countdown<= 0)
+                {
+                    Destroy(gameObject);
+                }
+            }
 
 
 
@@ -79,6 +88,7 @@ namespace godzillabanana
                 ponyPos = GetComponent<Transform>();
                 drawing = FindObjectOfType(typeof(Drawing)) as Drawing;
                 herd = GameObject.Find("Unicorns");
+                text.fontSize = 30;
             }
            
             
@@ -99,8 +109,8 @@ namespace godzillabanana
 
         public void bleed()
         {
-            blood -= bloodLost;
-            txtMan.bleedMessage(bloodLost);
+            blood -= 5;
+            txtMan.bleedMessage();
         }
 
         private void OnMouseDown()
