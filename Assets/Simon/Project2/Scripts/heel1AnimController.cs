@@ -20,6 +20,11 @@ namespace Simon.Project2.Scripts
             {
                 anim.Play("size1fight");
             }
+
+            if (Input.GetKeyDown(KeyCode.RightShift))
+            {
+                anim.Play("size1flex");
+            }
         }
     }
 
