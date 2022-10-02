@@ -7,13 +7,15 @@ namespace Ekaterina
 {
         public class AnimationController : MonoBehaviour
         {
-                Animator animator;
+                private Animator thisAnim;
                 void Start()
                 {
-                        animator = gameObject.GetComponent<Animator>();
+                        thisAnim = gameObject.GetComponent<Animator>();
                 }
                 private void Update()
                 {
+                        
+                        
                        /* if (food < 80)
                         {
                                 animator.SetTrigger("Sad");
@@ -23,14 +25,13 @@ namespace Ekaterina
                         {
                                 animator.SetTrigger("Happy");
                         }
-                        
-                        if (energy < 50)
-                        {
-                                animator.SetFloat(energy);
-                        }
-                        
-                        
                         */
+                        
+                        
+                        
+                        
+                        
+                        
                         
                        
                 }
