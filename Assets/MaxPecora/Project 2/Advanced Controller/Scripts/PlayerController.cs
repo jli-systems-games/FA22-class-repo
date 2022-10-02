@@ -107,6 +107,11 @@ namespace Max
                 Time.timeScale = 0;
             }
 
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Application.LoadLevel(0); //or whatever number your scene is
+            }
+
             GrappleManager();
             CrouchManager();
         }
@@ -282,6 +287,8 @@ namespace Max
                 StartCoroutine(camCorrection());
             }
         }
+
+
 
     }
 }
