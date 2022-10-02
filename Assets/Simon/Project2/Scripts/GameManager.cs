@@ -32,6 +32,9 @@ namespace Simon.Project2.Scripts
         
         //retrieves the note holder to set it active upon game start
         public GameObject noteHolder;
+        
+        //retrieves the start screen to set it inactive
+        public GameObject startScreen;
 
         //retrieves the heel's parent game object
         public GameObject heelParent;
@@ -53,6 +56,7 @@ namespace Simon.Project2.Scripts
                     startPlaying = true;
                     theBS.hasStarted = true;
                     noteHolder.SetActive(true);
+                    startScreen.SetActive(false);
                     theMusic.Play();
                 }
             }
