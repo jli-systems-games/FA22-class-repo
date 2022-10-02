@@ -17,11 +17,11 @@ namespace Simon.Project2.Scripts
         public static GameManager instance;
 
         public int currentScore;
-        public int scorePerNote = 80;
+        public int scorePerNote = 150;
         public int scorePerGoodNote = 150;
         public int scorePerPerfectNote = 150;
 
-        public int maxScore = 66250;
+        public int maxScore = 70000;
 
         public int currentMultiplier;
         public int multiplierTracker;
@@ -48,7 +48,7 @@ namespace Simon.Project2.Scripts
         {
             if (!startPlaying)
             {
-                if (Input.anyKeyDown)
+                if (Input.GetKey("space") && Input.GetKey(KeyCode.RightShift))
                 {
                     startPlaying = true;
                     theBS.hasStarted = true;
