@@ -312,7 +312,7 @@ RectTransform:
   - {fileID: 542097295}
   - {fileID: 805223346}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -483,8 +483,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   needsSlider: {fileID: 658894786}
-  petPoint: 1
-  needsBar: 10
+  petFood: 1
+  needBar: 10
+  foodImage: {fileID: 0}
+  happinessImage: {fileID: 0}
+  energyImage: {fileID: 0}
 --- !u!1 &351458801
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,7 +591,7 @@ GameObject:
   - component: {fileID: 369370193}
   - component: {fileID: 369370192}
   m_Layer: 0
-  m_Name: Background
+  m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -936,8 +939,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   needsSlider: {fileID: 542097296}
-  petPoint: 1
-  needsBar: 1
+  petFood: 1
+  needBar: 10
+  foodImage: {fileID: 0}
+  happinessImage: {fileID: 0}
+  energyImage: {fileID: 0}
 --- !u!114 &595442382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1182,6 +1188,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 608970850}
   m_CullTransparentMesh: 1
+--- !u!1 &654375000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 654375002}
+  - component: {fileID: 654375003}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &654375002
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654375000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.501345, y: -0.0851212, z: -1.9021186}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &654375003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654375000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ba8d2a4921114395ae1239367277f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pet: {fileID: 2041983184}
+  needsController: {fileID: 2041983185}
 --- !u!1 &658894784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1420,8 +1472,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   needsSlider: {fileID: 805223347}
-  petPoint: 1
-  needsBar: 1
+  petFood: 1
+  needBar: 10
+  foodImage: {fileID: 0}
+  happinessImage: {fileID: 0}
+  energyImage: {fileID: 0}
 --- !u!114 &742055810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2499,7 +2554,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1580783069
 GameObject:
@@ -2776,8 +2831,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   needsSlider: {fileID: 0}
-  petPoint: 1
-  needsBar: 1
+  petFood: 1
+  needBar: 1
+  foodImage: {fileID: 0}
+  happinessImage: {fileID: 0}
+  energyImage: {fileID: 0}
 --- !u!1 &1797864257
 GameObject:
   m_ObjectHideFlags: 0
@@ -3207,9 +3265,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2041983183}
+  - component: {fileID: 2041983184}
   - component: {fileID: 2041983185}
   - component: {fileID: 2041983187}
   - component: {fileID: 2041983188}
+  - component: {fileID: 2041983189}
   - component: {fileID: 2041983190}
   m_Layer: 0
   m_Name: Pet
@@ -3231,8 +3291,21 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2041983184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041983182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09d366785ee834bf791e1a0aa06085ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petAnimator: {fileID: 2041983187}
 --- !u!114 &2041983185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3245,6 +3318,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb28274879e845dba05cec3153b21c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  food: 100
+  happiness: 100
+  energy: 100
+  foodTickRate: 30
+  happinessTickRate: 30
+  energyTickRate: 30
 --- !u!95 &2041983187
 Animator:
   serializedVersion: 4
@@ -3317,6 +3396,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &2041983189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041983182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29d16389a375f4131941d42839f42409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hourLength: 5
 --- !u!114 &2041983190
 MonoBehaviour:
   m_ObjectHideFlags: 0
