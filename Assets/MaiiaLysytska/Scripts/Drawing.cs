@@ -31,7 +31,7 @@ namespace godzillabanana
                 colorpick(currentUnicorn);
 
             }
-            if (Input.mousePosition.x> 665)
+            if (Input.mousePosition.x> 665 && currentUnicorn != null)
             {
                 Draw();
                 //Debug.Log(Input.mousePosition);
@@ -43,7 +43,7 @@ namespace godzillabanana
         
         void Draw()
         {
-            if (currentUnicorn != null) { 
+             
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 createBrush();
@@ -71,7 +71,7 @@ namespace godzillabanana
                 currentLineRenderer = null;
             }
 
-            }
+            
         }
 
         void createBrush()

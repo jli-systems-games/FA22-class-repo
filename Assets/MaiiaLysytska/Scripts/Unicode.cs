@@ -29,7 +29,7 @@ namespace godzillabanana
         public GameObject babyunicorn;
         public TextMango txtMan;
         public bool delay = false;
-        public float countdown = 5;
+        public float countdown = 20f;
 
 
         // Start is called before the first frame update
@@ -55,28 +55,19 @@ namespace godzillabanana
             color = gameObject.GetComponent<SpriteRenderer>().color;
             Vector3 mousePos = Input.mousePosition;
             blood += bloodValue;
-
+            
             maxBlood = Mathf.Round(blood * 10.0f) * 0.1f;
             text.SetText(maxBlood.ToString()+" blood");
+
+         
+
+
+
+            if (blood <= 0)
+            {
+                StartCoroutine(selfDestruct());
+            }
             
-
-            if (blood <= -1)
-            {
-                txtMan.killMessage();
-                delay = true;
-                
-
-            }
-
-
-           if (delay)
-            {
-                countdown--;
-                if (countdown<= 0)
-                {
-                    Destroy(gameObject);
-                }
-            }
 
 
 
@@ -115,7 +106,7 @@ namespace godzillabanana
 
         private void OnMouseDown()
         {
-            Debug.Log("isClicked");
+            //Debug.Log("isClicked");
            // ponyPos.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
             drawing.colorpick(this);
 
@@ -124,7 +115,7 @@ namespace godzillabanana
         }
         private void OnMouseDrag()
         {
-            Debug.Log("isDragged");
+            //Debug.Log("isDragged");
 
 
 
@@ -164,6 +155,19 @@ namespace godzillabanana
         private void OnTriggerExit2D()
         {
             collided = false;
+        }
+
+
+
+        IEnumerator selfDestruct()
+        {
+            txtMan.killMessage();
+            Debug.Log("bebe");
+            yield return new WaitForEndOfFrame();
+           // Debug.Log("pikpik");
+            Destroy(gameObject);
+            
+
         }
     }
 }

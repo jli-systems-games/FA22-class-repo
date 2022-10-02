@@ -26,8 +26,11 @@ public class TextMango : MonoBehaviour
 
         public void killMessage()
         {
+             //Debug.Log("worked");
             dead+= 1;
-            DeadText.SetText("Unicorns killed: " + cloned.ToString());
+
+            DeadText.SetText("Unicorns slayed: " + (dead+1).ToString());
+        
         }
         public void bleedMessage()
         {
