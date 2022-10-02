@@ -12,10 +12,24 @@ namespace AishaGrowth
             
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-            
-        }
+        // void Update()
+        // {
+        //     if(TimingManager.gameHourTimer < 0)
+        //     {
+        //         ChangeFood()
+        //     }
+        // }
+        // public void ChangeHappiness(int amount)
+        // {
+        //     happiness += amount;
+        // }
+        // public void ChangeEnergy(int amount)
+        // {
+        //     energy += amount;
+        // }
+        // public void ChangeFood(int amount)
+        // {
+        //     food += amount;
+        // }
     }
 }

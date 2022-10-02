@@ -35,14 +35,29 @@ namespace AishaGrowth
         public void ChangeFood(int amount)
         {
             food += amount;
+            if(food < 0)
+            {
+                PetManager.Die();
+            }
+            else if (food > 100) food = 100;
         }
             public void ChangeHappiness(int amount)
         {
             happiness += amount;
+            if(happiness < 0)
+            {
+                PetManager.Die();
+            }
+            else if (happiness > 100) happiness = 100;
         }
             public void ChangeEnergy(int amount)
         {
             energy += amount;
+            if(energy < 0)
+            {
+                PetManager.Die();
+            }
+            else if (energy > 100) energy = 100;
         }
     }
 }
