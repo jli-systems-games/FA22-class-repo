@@ -8,7 +8,7 @@ namespace Ekaterina {
 
     public class PetUIController : MonoBehaviour
     { 
-        public Slider healthSlider;
+        public Slider needsSlider;
         public int petFood = 1;
         
         public float needBar = 1;
@@ -18,7 +18,7 @@ namespace Ekaterina {
 
         private void Start()
         {
-            healthSlider.value = 100;
+            needsSlider.value = 100;
         }
 
         private void Awake()
@@ -39,14 +39,14 @@ namespace Ekaterina {
 
     public void Update()
     {
-        healthSlider.value -= .01f;
+        needsSlider.value -= .01f;
     }
 
     public void ChangeSomething()
     {
         if (petFood > 0)
         {
-        healthSlider.value += needBar;
+            needsSlider.value += needBar;
         }
     }
     }
