@@ -19,7 +19,7 @@ namespace nickelGrowth
         {
             if (Torch.torchTime > 15)
             {
-                transform.localScale = new Vector3(0.6f,0.6f,0.6f);
+                transform.localScale = new Vector3(1f,1f,1f);
             }
             else if(Torch.torchTime<15)
                 transform.localScale = new Vector3(Torch.torchTime*factor, Torch.torchTime*factor, Torch.torchTime*factor);
