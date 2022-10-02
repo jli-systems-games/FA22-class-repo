@@ -18,7 +18,7 @@ namespace Ekaterina {
         }
         public void Update()
     {
-        needsSlider.value -= .001f;
+        needsSlider.value -= .01f;
     }
 
     public void ChangeSomething()
