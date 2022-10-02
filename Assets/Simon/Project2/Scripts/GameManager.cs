@@ -17,8 +17,8 @@ namespace Simon.Project2.Scripts
         public static GameManager instance;
 
         public int currentScore;
-        public int scorePerNote = 150;
-        public int scorePerGoodNote = 150;
+        public int scorePerNote = 80;
+        public int scorePerGoodNote = 120;
         public int scorePerPerfectNote = 150;
 
         public int maxScore = 70000;
