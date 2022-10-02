@@ -115,25 +115,31 @@ public class RecycleClicker : MonoBehaviour
         amountText4.text = bookAmount.ToString("Books:0");
     }
 
-    public void IncreaseNumber()
+    public void Substractplastic()
+    {
+       
+        plasticAmount -= 10;
+    }
+
+    public void IncreasePlastic()
     {
         plasticAmount += 1;
 
     }
 
-    public void IncreaseNumber1()
+    public void IncreaseMetal()
     {
 
         metalAmount += 1;
     }
 
-    public void IncreaseNumber2()
+    public void IncreaseElectronic()
     {
 
         electronicAmount += 1;
     }
 
-    public void IncreaseNumber3()
+    public void IncreaseBook ()
     {
 
         bookAmount += 1;
