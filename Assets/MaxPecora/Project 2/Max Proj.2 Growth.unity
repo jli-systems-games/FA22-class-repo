@@ -477,7 +477,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &467809962
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -689,6 +689,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1309056033}
+  - {fileID: 886482798}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -909,7 +910,7 @@ Transform:
   - {fileID: 201804600}
   - {fileID: 1270383161}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &641007642
 MonoBehaviour:
@@ -923,7 +924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4dfb0211729e9246a47713c2790f03f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyFollowPoint: {fileID: 0}
+  keyFollowPoint: {fileID: 1270383161}
   moveSpeed: 9
   acceleration: 7
   decceleration: 7
@@ -1089,7 +1090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followSpeed: 3
-  followTarget: {fileID: 1270383161}
+  followTarget: {fileID: 0}
 --- !u!61 &736001798
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1177,12 +1178,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736001796}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.9539, y: -1.403538, z: 0}
+  m_LocalPosition: {x: 11.41, y: 1.48, z: 0}
   m_LocalScale: {x: 0.4277, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &766158925
 GameObject:
@@ -1339,7 +1340,7 @@ Transform:
   - {fileID: 586840303}
   - {fileID: 766158928}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &870971965
 GameObject:
@@ -1448,7 +1449,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1459,17 +1460,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886482794}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: -0.075963125, y: -0.075963125, z: -0.075963125}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 519420032}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 27.5, y: 9.3}
+  m_AnchoredPosition: {x: 29.3077, y: 10.6011}
   m_SizeDelta: {x: 1244, y: 639}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &937016891
@@ -1614,7 +1615,7 @@ Transform:
   - {fileID: 1609861378}
   - {fileID: 467809963}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1065185598
 GameObject:
@@ -2099,7 +2100,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1232240761
 GameObject:
@@ -3197,7 +3198,7 @@ GameObject:
   - component: {fileID: 1895545243}
   - component: {fileID: 1895545246}
   m_Layer: 0
-  m_Name: Level Move
+  m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -3256,7 +3257,7 @@ Transform:
   m_Children:
   - {fileID: 275372902}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1895545246
 SpriteRenderer:
@@ -3605,7 +3606,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45.134003}
 --- !u!96 &2114310631
 TrailRenderer:

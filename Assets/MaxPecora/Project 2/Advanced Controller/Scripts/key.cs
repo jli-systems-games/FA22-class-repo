@@ -43,7 +43,6 @@ namespace Max
 
                     isFollowing = true;
 
-
                 }
             }
         }
