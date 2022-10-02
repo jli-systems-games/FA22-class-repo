@@ -13,7 +13,7 @@ namespace Ekaterina {
         
         public float needBar = 1;
     
-       public Image foodImage, happinessImage, energyImage;
+        public Image foodImage, happinessImage, energyImage;
         public static PetUIController instance;
 
         private void Start()
@@ -39,7 +39,7 @@ namespace Ekaterina {
 
     public void Update()
     {
-        needsSlider.value -= .01f;
+        needsSlider.value -= .001f;
     }
 
     public void ChangeSomething()
