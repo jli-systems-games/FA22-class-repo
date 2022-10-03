@@ -14,12 +14,12 @@ namespace Ekaterina {
         public static PetUIController instance;
         private void Start()
         {
-            needsSlider.value = 100;
+            needsSlider.value = 0;
         }
-        public void Update()
-    {
-        needsSlider.value -= .01f;
-    }
+    //    public void Update()
+   // {
+    //    needsSlider.value -= .01f;
+   // }
 
     public void ChangeSomething()
     {
