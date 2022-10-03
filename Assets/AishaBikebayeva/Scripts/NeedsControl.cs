@@ -14,7 +14,7 @@ namespace AishaGrowth
 
         private void Awake()
         {
-            Initialize(100,100,100,5,7,15);
+            Initialize(100,100,100,40,7,15);
         }
 
         public void Initialize(int food, int happiness, int energy, int foodTickRate, int happinessTickRate, int energyTickRate)
