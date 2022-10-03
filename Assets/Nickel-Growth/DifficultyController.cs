@@ -11,12 +11,16 @@ namespace nickelGrowth
         public GameObject player;
         public GameObject guideParticles;
         public TMP_Text debuffShown;
+        public TMP_Text timer;
 
         private float timeleft = 120;
+
+
 
         void Start()
         {
             debuffShown.text = " ";
+            timer.text = " ";
         }
 
         // Update is called once per frame
@@ -55,6 +59,7 @@ namespace nickelGrowth
             if(timeleft >0 && Torch.torchTime>0)
             {
                 timeleft -= Time.deltaTime;
+                updateTimer(timeleft);
             }
             if(timeleft >0 && Torch.torchTime <= 0)
             {
@@ -69,6 +74,16 @@ namespace nickelGrowth
             Torch.torchTime += 20;
             //Debug.Log("give!");
             timeleft = 120;
+        }
+
+        void updateTimer(float currentTime)
+        {
+            currentTime += 1;
+
+            float minutes = Mathf.FloorToInt(currentTime / 60);
+            float seconds = Mathf.FloorToInt(currentTime % 60);
+
+            timer.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         }
 
     }
