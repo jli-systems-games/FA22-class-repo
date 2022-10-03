@@ -14,6 +14,9 @@ namespace AishaGrowth
             this.food=food;
             this.happiness=happiness;
             this.energy=energy;
+            this.foodTickRate=foodTickRate;
+            this.happinessTickRate=happinessTickRate;
+            this.energyTickRate=energyTickRate;
         }
         // Start is called before the first frame update
         void Start()
