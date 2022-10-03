@@ -2,11 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Ekaterina
 {
         public class AnimationController : MonoBehaviour
         {
+                public Slider FoodBar;
+                public Slider EnergyBar;
+                public Slider HappinessBar;
+
+
                 Animator animator;
                 void Start()
                 {
@@ -14,25 +20,29 @@ namespace Ekaterina
                 }
                 private void Update()
                 {
-                       /* if (food < 80)
+                        
+                        if (FoodBar.value < 80)
                         {
                                 animator.SetTrigger("Sad");
                         }
                         
-                        if (food > 80)
+                        
+                        if (EnergyBar.value < 80)
+                        {
+                                animator.SetTrigger("Sad");
+                        }
+
+                        if (HappinessBar.value < 80)
+                        {
+                                animator.SetTrigger("Sad");
+                        }
+                        
+                        if (FoodBar.value > 80 && EnergyBar.value > 80 && HappinessBar.value > 80)
                         {
                                 animator.SetTrigger("Happy");
                         }
-                        
-                        if (energy < 50)
-                        {
-                                animator.SetFloat(energy);
-                        }
-                        
-                        
-                        */
-                        
-                       
+
                 }
+       
         }
 }

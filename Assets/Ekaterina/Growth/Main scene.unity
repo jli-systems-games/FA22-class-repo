@@ -485,9 +485,6 @@ MonoBehaviour:
   needsSlider: {fileID: 658894786}
   petFood: 1
   needBar: 10
-  foodImage: {fileID: 0}
-  happinessImage: {fileID: 0}
-  energyImage: {fileID: 0}
 --- !u!1 &351458801
 GameObject:
   m_ObjectHideFlags: 0
@@ -941,9 +938,6 @@ MonoBehaviour:
   needsSlider: {fileID: 542097296}
   petFood: 1
   needBar: 10
-  foodImage: {fileID: 0}
-  happinessImage: {fileID: 0}
-  energyImage: {fileID: 0}
 --- !u!114 &595442382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1010,9 +1004,21 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
-          m_FloatArgument: 10
+          m_IntArgument: 0
+          m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2041983187}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Sleep
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &595442384
@@ -1232,8 +1238,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba8d2a4921114395ae1239367277f7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pet: {fileID: 2041983184}
-  needsController: {fileID: 2041983185}
 --- !u!1 &658894784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1474,9 +1478,6 @@ MonoBehaviour:
   needsSlider: {fileID: 805223347}
   petFood: 1
   needBar: 10
-  foodImage: {fileID: 0}
-  happinessImage: {fileID: 0}
-  energyImage: {fileID: 0}
 --- !u!114 &742055810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2833,9 +2834,6 @@ MonoBehaviour:
   needsSlider: {fileID: 0}
   petFood: 1
   needBar: 1
-  foodImage: {fileID: 0}
-  happinessImage: {fileID: 0}
-  energyImage: {fileID: 0}
 --- !u!1 &1797864257
 GameObject:
   m_ObjectHideFlags: 0
@@ -3269,7 +3267,6 @@ GameObject:
   - component: {fileID: 2041983185}
   - component: {fileID: 2041983187}
   - component: {fileID: 2041983188}
-  - component: {fileID: 2041983189}
   - component: {fileID: 2041983190}
   m_Layer: 0
   m_Name: Pet
@@ -3305,7 +3302,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d366785ee834bf791e1a0aa06085ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  petAnimator: {fileID: 2041983187}
 --- !u!114 &2041983185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3318,12 +3314,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb28274879e845dba05cec3153b21c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food: 100
-  happiness: 100
-  energy: 100
-  foodTickRate: 30
-  happinessTickRate: 30
-  energyTickRate: 30
+  FoodBar: {fileID: 658894786}
+  EnergyBar: {fileID: 542097296}
+  HappinessBar: {fileID: 805223347}
 --- !u!95 &2041983187
 Animator:
   serializedVersion: 4
@@ -3396,19 +3389,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!114 &2041983189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041983182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29d16389a375f4131941d42839f42409, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hourLength: 5
 --- !u!114 &2041983190
 MonoBehaviour:
   m_ObjectHideFlags: 0
