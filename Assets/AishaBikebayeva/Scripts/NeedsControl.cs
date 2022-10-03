@@ -69,7 +69,7 @@ namespace AishaGrowth
             }
             else if (food > 100) food = 100;
         }
-            public void ChangeHappiness(int amount)
+        public void ChangeHappiness(int amount)
         {
             happiness += amount;
             if(happiness < 0)
@@ -79,7 +79,7 @@ namespace AishaGrowth
             }
             else if (happiness > 100) happiness = 100;
         }
-            public void ChangeEnergy(int amount)
+        public void ChangeEnergy(int amount)
         {
             energy += amount;
             if(energy < 0)
