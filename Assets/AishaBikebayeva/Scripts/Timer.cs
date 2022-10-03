@@ -24,7 +24,7 @@ namespace AishaGrowth
         void Update()
         {
             timer -= Time.deltaTime;
-            textdisplay.text = "Time left: " + timer.ToString("0") + " secs";
+            textdisplay.text = "Lifetime left: " + timer.ToString("0") + " secs";
             // bardisplay.fillAmount = timer / timerDuration;
 
             if (timer < 0)
