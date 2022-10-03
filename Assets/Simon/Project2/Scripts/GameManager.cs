@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using Simon.Project2.Scripts;
 
 namespace Simon.Project2.Scripts
 {
@@ -13,6 +14,7 @@ namespace Simon.Project2.Scripts
         public bool startPlaying;
 
         public BeatScroller theBS;
+        public EnemyScroller theES;
         
         public static GameManager instance;
 
@@ -32,6 +34,7 @@ namespace Simon.Project2.Scripts
         
         //retrieves the note holder to set it active upon game start
         public GameObject noteHolder;
+        public GameObject enemyHolder;
         
         //retrieves the start screen to set it inactive
         public GameObject startScreen;
@@ -55,6 +58,7 @@ namespace Simon.Project2.Scripts
                 {
                     startPlaying = true;
                     theBS.hasStarted = true;
+                    theES.hasStarted = true;
                     noteHolder.SetActive(true);
                     startScreen.SetActive(false);
                     theMusic.Play();
