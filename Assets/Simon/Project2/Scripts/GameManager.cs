@@ -59,17 +59,19 @@ namespace Simon.Project2.Scripts
                     startScreen.SetActive(false);
                     theMusic.Play();
                 }
+
+                
             }
 
             float t = (float)currentScore / maxScore;
-            float n = 2;
-            t = (Mathf.Pow(n, t) - 1) / (n - 1);
+            //float n = 2;
+            //t = (Mathf.Pow(n, t) - 1) / (n - 1);
             
             float heelScale = Mathf.Lerp(0.4f, 1.0f, t);
             
             heelParent.transform.localScale = new Vector3(heelScale, heelScale, heelScale);
 
-            float meshScale = Mathf.Lerp(1.0f, 0.001f, t);
+            float meshScale = Mathf.Lerp(1.0f, 0.01f, t);
             
             meshParent.transform.localScale = new Vector3(meshScale, meshScale, meshScale);
         }
