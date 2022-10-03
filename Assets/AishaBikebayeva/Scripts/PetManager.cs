@@ -4,10 +4,12 @@ using UnityEngine;
 
 namespace AishaGrowth
 {
-    public PetController pet;
     // public float petMoveTimer
     public class PetManager : MonoBehaviour
     {
+        public PetController pet;
+        public NeedsControl needscontrol;
+        public static PetManager instance;
         // Start is called before the first frame update
         void Start()
         {
@@ -22,7 +24,7 @@ namespace AishaGrowth
 
         public static void Die()
         {
-            
+            Debug.Log("Pet Died");
         }
     }
 }
