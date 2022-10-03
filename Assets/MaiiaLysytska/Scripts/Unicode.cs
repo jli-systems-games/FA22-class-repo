@@ -133,7 +133,7 @@ namespace godzillabanana
             {
                
                 
-                GameObject babyunicorn = Instantiate(unicornGene, new Vector3 (-500, -400, 0), Quaternion.identity) as GameObject;
+                GameObject babyunicorn = Instantiate(unicornGene, new Vector3 (-380, -480, 0), Quaternion.identity) as GameObject;
                 babyunicorn.GetComponent<SpriteRenderer>().color = babyColor;
                 babyunicorn.transform.SetParent(herd.transform, false);
                 txtMan.cloneMessage();
