@@ -11,6 +11,7 @@ namespace nickelGrowth
         public Light frame;
         public int lightHouseOrderID;
         public static int finishedLH = 0;
+        public GameObject lightBall;
 
         public GameObject textBox;
         public string[] lightHouseAnnounce;
@@ -44,7 +45,10 @@ namespace nickelGrowth
                 textBox.GetComponent<TMP_Text>().text = " ";
                 yield return new WaitForSeconds(1);
             }
-            
+            yield return new WaitForSeconds(1);
+            lightBall.SetActive(true);
+
+
         }
     }
 

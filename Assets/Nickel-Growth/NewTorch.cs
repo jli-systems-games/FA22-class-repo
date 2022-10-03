@@ -24,7 +24,7 @@ namespace nickelGrowth
     private void OnTriggerEnter(Collider other)
     {
             
-            Torch.torchTime += 15;
+            Torch.torchTime += 20;
             this.GetComponent<MeshRenderer>().enabled = false;
             this.GetComponent<BoxCollider>().enabled = false;
             StartCoroutine(propRefresh());

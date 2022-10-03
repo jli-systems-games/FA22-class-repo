@@ -6,7 +6,7 @@ namespace nickelGrowth
 {
     public class Torch : MonoBehaviour
     {
-        public static float torchTime = 15;
+        public static float torchTime = 20;
         private float torchTimeLocal;
         public Light torchLight;
         private float speed;

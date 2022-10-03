@@ -17,11 +17,11 @@ namespace nickelGrowth
         // Update is called once per frame
         void Update()
         {
-            if (Torch.torchTime > 15)
+            if (Torch.torchTime > 20)
             {
                 transform.localScale = new Vector3(1f,1f,1f);
             }
-            else if(Torch.torchTime<15)
+            else if(Torch.torchTime<20)
                 transform.localScale = new Vector3(Torch.torchTime*factor, Torch.torchTime*factor, Torch.torchTime*factor);
         }
     }
