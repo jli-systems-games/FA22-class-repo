@@ -22,9 +22,17 @@ namespace nickelGrowth
         // Update is called once per frame
         void Update()
         {
-            Debug.Log(torchTime);
+            
+            TorchStartTiming();
+            //Debug.Log(torchTime);
             //StartCoroutine(LoadSubtitles());
 
+            
+
+        }
+
+        void TorchStartTiming()
+        {
             if (torchTime > 0)
             {
 
@@ -44,7 +52,6 @@ namespace nickelGrowth
             {
                 //Debug.Log("Game Over");
             }
-
         }
 
 

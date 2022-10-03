@@ -24,7 +24,7 @@ namespace nickelGrowth
             torchLight.range = 45;
             StartCoroutine(TorchWider());
             this.GetComponent<MeshRenderer>().enabled = false;
-            this.GetComponent<BoxCollider>().enabled = false;
+            this.GetComponent<CapsuleCollider>().enabled = false;
             StartCoroutine(propRefresh());
         }
 
@@ -38,7 +38,7 @@ namespace nickelGrowth
         {
             yield return new WaitForSeconds(30);
             this.GetComponent<MeshRenderer>().enabled = true;
-            this.GetComponent<BoxCollider>().enabled = true;
+            this.GetComponent<CapsuleCollider>().enabled = true;
         }
     }
 

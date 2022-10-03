@@ -29,7 +29,7 @@ namespace TheFirstPerson
         public bool movementEnabled = true;
         public bool extensionsEnabled = false;
         public bool slopeSlideEnabled = true;
-        public bool sprintEnabled = true;
+        public static bool sprintEnabled = true;
         public bool momentumEnabled = true;
         public bool crouchEnabled = true;
         public bool jumpEnabled = true;

@@ -11,10 +11,11 @@ namespace nickelGrowth
         public Light frame;
         public int lightHouseOrderID;
         public static int finishedLH = 0;
+        public static int currentTemple=0;
         public GameObject lightBall;
 
         public GameObject textBox;
-        public string[] lightHouseAnnounce;
+        private string[] lightHouseAnnounce= {" ","Eye","Leg","Body" };
         void Start()
         {
             textBox.GetComponent<TMP_Text>().text = " ";
@@ -32,21 +33,35 @@ namespace nickelGrowth
             frame.enabled = true;
             this.GetComponent<BoxCollider>().enabled = false;
             StartCoroutine(ShowLightHouseText());
+            currentTemple = lightHouseOrderID;
             
         }
 
         IEnumerator ShowLightHouseText()
         {
-            yield return new WaitForSeconds(1);
-            for(int i = 0; i < lightHouseAnnounce.Length; i++)
+            if (finishedLH < 4)
             {
-                textBox.GetComponent<TMP_Text>().text = lightHouseAnnounce[i];
-                yield return new WaitForSeconds(3);
+                yield return new WaitForSeconds(1);
+
+                textBox.GetComponent<TMP_Text>().text = "To bring the light back to the world, offer your "
+                                                         + lightHouseAnnounce[finishedLH] + " to the God of Light.";
+                yield return new WaitForSeconds(4);
                 textBox.GetComponent<TMP_Text>().text = " ";
                 yield return new WaitForSeconds(1);
+                textBox.GetComponent<TMP_Text>().text = "May the God of Light bless you";
+                yield return new WaitForSeconds(3);
+                textBox.GetComponent<TMP_Text>().text = " ";
+
+                yield return new WaitForSeconds(1);
+                lightBall.SetActive(true);
+            }else if (finishedLH == 4)
+            {
+                yield return new WaitForSeconds(1);
+                textBox.GetComponent<TMP_Text>().text = "All lighthouses have been lit. Please release our power at the altar.";
+                yield return new WaitForSeconds(2);
+                lightBall.SetActive(true);
             }
-            yield return new WaitForSeconds(1);
-            lightBall.SetActive(true);
+            
 
 
         }
