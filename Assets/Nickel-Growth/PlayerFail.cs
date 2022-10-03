@@ -6,7 +6,7 @@ namespace nickelGrowth
 {
     public class PlayerFail : MonoBehaviour
     {
-        private bool playerFailed=false;
+        
         public GameObject player;
         public CharacterController palayerController;
 
@@ -25,7 +25,7 @@ namespace nickelGrowth
         void Update()
         {
             
-            if (Torch.torchTime < 0)
+            if (Torch.torchTime <= 0)
             {
                 
                 if (LightUp.currentTemple == 0)
@@ -65,7 +65,7 @@ namespace nickelGrowth
         {
             yield return new WaitForSeconds(3);
             Torch.torchTime += 20;
-            Debug.Log("give!");
+            //Debug.Log("give!");
         }
     }
 

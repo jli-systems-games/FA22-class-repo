@@ -11,6 +11,8 @@ namespace nickelGrowth
         public Light torchLight;
         private float speed;
 
+        public static bool torchStartTiming = true;
+
 
 
         // Start is called before the first frame update
@@ -33,7 +35,7 @@ namespace nickelGrowth
 
         void TorchStartTiming()
         {
-            if (torchTime > 0)
+            if (torchTime > 0 && torchStartTiming)
             {
 
                 torchTime -= Time.deltaTime;

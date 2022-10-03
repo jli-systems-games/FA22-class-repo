@@ -13,6 +13,9 @@ namespace nickelGrowth
         public static int finishedLH = 0;
         public static int currentTemple=0;
         public GameObject lightBall;
+        public GameObject lightColumn;
+
+        public GameObject distDetect;
 
         public GameObject textBox;
         private string[] lightHouseAnnounce= {" ","Eye","Leg","Body" };
@@ -34,6 +37,7 @@ namespace nickelGrowth
             this.GetComponent<BoxCollider>().enabled = false;
             StartCoroutine(ShowLightHouseText());
             currentTemple = lightHouseOrderID;
+            distDetect.SetActive(true);
             
         }
 
@@ -60,6 +64,7 @@ namespace nickelGrowth
                 textBox.GetComponent<TMP_Text>().text = "All lighthouses have been lit. Please release our power at the altar.";
                 yield return new WaitForSeconds(2);
                 lightBall.SetActive(true);
+                lightColumn.SetActive(true);
             }
             
 
