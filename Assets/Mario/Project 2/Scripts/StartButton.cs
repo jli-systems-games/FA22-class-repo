@@ -10,7 +10,7 @@ namespace MarioGrowth
     {
         public void loadScene()
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("GrowthLevel1");
         }
     }
 }
