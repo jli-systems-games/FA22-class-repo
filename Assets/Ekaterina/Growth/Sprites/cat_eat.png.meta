@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -36,24 +36,24 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -66,6 +66,30 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -78,18 +102,722 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: cat_eat_0
+      rect:
+        serializedVersion: 2
+        x: 2664
+        y: 3936
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce5ef205b1b44d3398fa912e9a773a7
+      internalID: 1412956132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_1
+      rect:
+        serializedVersion: 2
+        x: 3464
+        y: 3936
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cccefde7372c43b58a26127f1306a86
+      internalID: 1216335913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_2
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 3336
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9955b13c9c1b4797950b169b659578a
+      internalID: -1631279441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_3
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 3336
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 969ed23177dcb41abab7bb2f59d25ee6
+      internalID: 414733128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_4
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 3336
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b376ac1b9493d4f53b1e4c88e7df7b33
+      internalID: -1390247337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_5
+      rect:
+        serializedVersion: 2
+        x: 2664
+        y: 3336
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ada34f0a641f84cf8ac83a57a681be37
+      internalID: 40876182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_6
+      rect:
+        serializedVersion: 2
+        x: 3464
+        y: 3336
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4756af8c404834e708a206ad8b88137e
+      internalID: 57549016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_7
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 2736
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24bb52840019145a3963dd4722cd8e7f
+      internalID: -1725080913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_8
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 2736
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108033dcf872042f281e326ed71626fc
+      internalID: 556810949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_9
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 2736
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2283bb9b899142e6bbc616b4e0ae01a
+      internalID: 77712926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_10
+      rect:
+        serializedVersion: 2
+        x: 2664
+        y: 2736
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cacee03a8648149c49d1caf9f61d7d3c
+      internalID: -192790913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_11
+      rect:
+        serializedVersion: 2
+        x: 3464
+        y: 2736
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c5852014becd4488b212f7ae57242bd
+      internalID: 1269689895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_12
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 2136
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edc9ff2efc51044e7932d51aba70d3a1
+      internalID: 1245745105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_13
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 2136
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e03475f80514e7e9579413b8501419
+      internalID: 233154328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_14
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 2136
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4ae4df8bebf4a649c58df652a1b121
+      internalID: 2077834643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_15
+      rect:
+        serializedVersion: 2
+        x: 2664
+        y: 2136
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1701bd3478f4847d681a0c3c31a89e40
+      internalID: 1285946743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_16
+      rect:
+        serializedVersion: 2
+        x: 3464
+        y: 2136
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea1dc2d37915f422aa274635f1c29e25
+      internalID: -2081288028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_17
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 1536
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a545a493f79bd4c8699b68f668ec68dc
+      internalID: 292633237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_18
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 1536
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09306a67a609c4120b72fdf28537cb70
+      internalID: -264108798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_19
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 1536
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d61ab0fd4b564970a07367cf4174199
+      internalID: -1017337819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_20
+      rect:
+        serializedVersion: 2
+        x: 2664
+        y: 1536
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c505348a26f0b419fb4663f2030899fa
+      internalID: -1501638779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_21
+      rect:
+        serializedVersion: 2
+        x: 3464
+        y: 1536
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f915909c633e5418381874d19188f9ea
+      internalID: 2003396067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_22
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 936
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdf920b054c5f4598aa90b72b79a2c91
+      internalID: -1562180411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_23
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 936
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1476d5be11a3348ce8f2750d05ea9b68
+      internalID: -155914646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_24
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 936
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46819bd1cd92c43d886111b4aa426427
+      internalID: 1987574410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_25
+      rect:
+        serializedVersion: 2
+        x: 2664
+        y: 936
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18dab2b78266a44e189d9222fff566c2
+      internalID: -903410785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_26
+      rect:
+        serializedVersion: 2
+        x: 3464
+        y: 936
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11b926de237a9440698caf21a3a6f3c2
+      internalID: -532455285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_27
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 336
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a87963c08d1204a3fab8d30e354b84a7
+      internalID: 174489162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_28
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 336
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a8427da20d69462aa60327262d3680a
+      internalID: 227499375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_29
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 336
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09554abcf42b649b0908fd1a81c95ab2
+      internalID: 1321046335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_30
+      rect:
+        serializedVersion: 2
+        x: 2664
+        y: 336
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ec6cf04ea7247049e6af32754ca557
+      internalID: 1285326417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat_eat_31
+      rect:
+        serializedVersion: 2
+        x: 3464
+        y: 336
+        width: 217
+        height: 146
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26d994862109645aaaf08119cc9a8cdf
+      internalID: 863696438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 38d5c7870304e481596f636d28303af6
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cat_eat_30: 1285326417
+      cat_eat_8: 556810949
+      cat_eat_2: -1631279441
+      cat_eat_1: 1216335913
+      cat_eat_18: -264108798
+      cat_eat_25: -903410785
+      cat_eat_10: -192790913
+      cat_eat_21: 2003396067
+      cat_eat_28: 227499375
+      cat_eat_20: -1501638779
+      cat_eat_29: 1321046335
+      cat_eat_22: -1562180411
+      cat_eat_15: 1285946743
+      cat_eat_5: 40876182
+      cat_eat_12: 1245745105
+      cat_eat_9: 77712926
+      cat_eat_14: 2077834643
+      cat_eat_19: -1017337819
+      cat_eat_0: 1412956132
+      cat_eat_31: 863696438
+      cat_eat_3: 414733128
+      cat_eat_16: -2081288028
+      cat_eat_23: -155914646
+      cat_eat_7: -1725080913
+      cat_eat_11: 1269689895
+      cat_eat_6: 57549016
+      cat_eat_17: 292633237
+      cat_eat_26: -532455285
+      cat_eat_24: 1987574410
+      cat_eat_27: 174489162
+      cat_eat_13: 233154328
+      cat_eat_4: -1390247337
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
