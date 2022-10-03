@@ -60,6 +60,9 @@ public class RecycleClicker : MonoBehaviour
     public TextMeshProUGUI buildTextbook2;
     public TextMeshProUGUI buildTextbook3;
     public TextMeshProUGUI buildTextbook4;
+
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -98,6 +101,11 @@ public class RecycleClicker : MonoBehaviour
 
         InvokeRepeating("MainLoop", 0f, .1f);
     }
+    public static RecycleClicker instance;
+    void Awake()
+    {
+        instance = this;
+    }
 
     void MainLoop()
     {
@@ -113,6 +121,7 @@ public class RecycleClicker : MonoBehaviour
         amountText2.text = metalAmount.ToString("Metals:0");
         amountText3.text = electronicAmount.ToString("Electronics:0");
         amountText4.text = bookAmount.ToString("Books:0");
+
     }
 
     public void Substractplastic()
@@ -123,7 +132,7 @@ public class RecycleClicker : MonoBehaviour
 
     public void IncreasePlastic()
     {
-        plasticAmount += 1;
+        plasticAmount += +1;
 
     }
 
