@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 namespace MarioGrowth
 {
 
-    public class FinalSceneTrigger : MonoBehaviour
+    public class Level5Start : MonoBehaviour
     {
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.gameObject.tag == "Player")
             {
-                SceneManager.LoadScene("FinalGrowthScene");
+                SceneManager.LoadScene("GrowthLevel5");
             }
         }
     }
