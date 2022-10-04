@@ -35,41 +35,41 @@ namespace godzillabanana
 
 
 
-            if (randomNum <= 25)
+            if (randomNum <= 15)
             {
                 spriteNumber = 0;
             }
-            if (randomNum >= 26 && randomNum <= 40)
+            if (randomNum >= 16 && randomNum <= 30)
             {
                 spriteNumber = 1;
             }
-            if (randomNum >= 41 && randomNum <= 55)
+            if (randomNum >= 31 && randomNum <= 45)
             {
                 spriteNumber = 2;
             }
 
-            if (randomNum >= 56 && randomNum <= 65)
+            if (randomNum >= 46 && randomNum <= 55)
             {
                 spriteNumber = 3;
             }
-            if (randomNum >= 66 && randomNum <= 75)
+            if (randomNum >= 56 && randomNum <= 65)
             {
                 spriteNumber = 4;
             }
-            if (randomNum >= 75 && randomNum <= 85)
+            if (randomNum >= 66 && randomNum <= 75)
             {
                 spriteNumber = 5;
             }
-            if (randomNum >= 86 && randomNum <= 92)
+            if (randomNum >= 76 && randomNum <= 85)
             {
                 spriteNumber = 6;
             }
-            if (randomNum >= 93 && randomNum <= 98)
+            if (randomNum >= 86 && randomNum <= 94)
             {
                 spriteNumber = 7;
             }
 
-            if (randomNum > 98) { spriteNumber = 8; }
+            if (randomNum > 95) { spriteNumber = 8; }
 
             currentSprite = uniSPrites[spriteNumber];
         }
