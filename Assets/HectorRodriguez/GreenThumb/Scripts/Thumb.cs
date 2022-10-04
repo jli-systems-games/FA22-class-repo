@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace HectorRodriguez {
 public class Thumb : MonoBehaviour
-{ 
+{
     public GameObject thumbTrailPrefab;
     public float minCuttingVelocity = .001f;
 
@@ -95,3 +96,4 @@ public class Thumb : MonoBehaviour
 
 }
 
+}
