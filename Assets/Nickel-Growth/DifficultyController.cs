@@ -29,19 +29,19 @@ namespace nickelGrowth
             if(LightUp.finishedLH == 1)
             {
                 guideParticles.SetActive(false);
-                debuffShown.text = "Debuff: Unable to see guide light(Permanently)";
+                debuffShown.text = "Debuff: Unable to see guide light";
                 
             }
             else if (LightUp.finishedLH == 2)
             {
                 TheFirstPerson.FPSController.sprintEnabled = false;
-                debuffShown.text = "Debuff: Unable to see guide light(Permanently)"+"\n"+ "Debuff: Unable to sprint(Permanently)";
+                debuffShown.text = "Debuff: Unable to see guide light"+"\n"+ "Debuff: Unable to sprint";
             }
             else if (LightUp.finishedLH == 3)
             {
                 
                 startTiming();
-                debuffShown.text = "Debuff: Unable to see guide light(Permanently)" + "\n" + "Debuff: Unable to sprint(Permanently)" + "\n"+
+                debuffShown.text = "Debuff: Unable to see guide light" + "\n" + "Debuff: Unable to sprint" + "\n"+
                     "Debuff: The body is gradually eroded by darkness, loss of vision. After 2 minutes, unable to move.";
             }
         }
@@ -63,6 +63,7 @@ namespace nickelGrowth
             }
             if(timeleft >0 && Torch.torchTime <= 0)
             {
+                Torch.torchTime = 20;
                 timeleft = 120;
             }
 

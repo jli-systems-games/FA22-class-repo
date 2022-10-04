@@ -18,6 +18,8 @@ namespace nickelGrowth
         public GameObject distDetect;
 
         public GameObject textBox;
+
+        public AudioSource soundEffect;
         private string[] lightHouseAnnounce= {" ","Eye","Leg","Body" };
         void Start()
         {
@@ -38,6 +40,7 @@ namespace nickelGrowth
             StartCoroutine(ShowLightHouseText());
             currentTemple = lightHouseOrderID;
             distDetect.SetActive(true);
+            soundEffect.Play();
             
         }
 
@@ -49,7 +52,7 @@ namespace nickelGrowth
 
                 textBox.GetComponent<TMP_Text>().text = "To bring the light back to the world, offer your "
                                                          + lightHouseAnnounce[finishedLH] + " to the God of Light.";
-                yield return new WaitForSeconds(4);
+                yield return new WaitForSeconds(5);
                 textBox.GetComponent<TMP_Text>().text = " ";
                 yield return new WaitForSeconds(1);
                 textBox.GetComponent<TMP_Text>().text = "May the God of Light bless you";
@@ -62,7 +65,8 @@ namespace nickelGrowth
             {
                 yield return new WaitForSeconds(1);
                 textBox.GetComponent<TMP_Text>().text = "All lighthouses have been lit. Please release our power at the altar.";
-                yield return new WaitForSeconds(2);
+                yield return new WaitForSeconds(5);
+                textBox.GetComponent<TMP_Text>().text = " ";
                 lightBall.SetActive(true);
                 lightColumn.SetActive(true);
             }

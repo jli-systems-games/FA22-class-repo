@@ -23,11 +23,15 @@ namespace nickelGrowth
 
     private void OnTriggerEnter(Collider other)
     {
+            if (Torch.torchTime < 29)
+            {
+                Torch.torchTime += 15;
+                this.GetComponent<MeshRenderer>().enabled = false;
+                this.GetComponent<BoxCollider>().enabled = false;
+                StartCoroutine(propRefresh());
+            }
             
-            Torch.torchTime += 20;
-            this.GetComponent<MeshRenderer>().enabled = false;
-            this.GetComponent<BoxCollider>().enabled = false;
-            StartCoroutine(propRefresh());
+          
     }
 
         IEnumerator propRefresh()

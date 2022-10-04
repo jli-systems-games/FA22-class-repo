@@ -14,6 +14,8 @@ namespace nickelGrowth
         public GameObject newCamera;
         public GameObject newLightAnim;
 
+        public AudioSource bgm;
+
         public GameObject UIs;
         
         void Start()
@@ -35,9 +37,9 @@ namespace nickelGrowth
             }
             else if (LightUp.finishedLH == 4)
             {
-                
-                    
-                
+
+
+                bgm.Play();
                 Torch.torchTime = 999999;
                 StartCoroutine(instruct2());
                 StartCoroutine(endAnim());
@@ -49,7 +51,7 @@ namespace nickelGrowth
 
         IEnumerator endAnim()
         {
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(12);
             currentCamera.SetActive(false);
             newCamera.SetActive(true);
             newLightAnim.SetActive(true);

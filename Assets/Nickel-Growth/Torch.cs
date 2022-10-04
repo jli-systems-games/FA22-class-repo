@@ -6,7 +6,7 @@ namespace nickelGrowth
 {
     public class Torch : MonoBehaviour
     {
-        public static float torchTime = 20;
+        public static float torchTime = 15;
         private float torchTimeLocal;
         public Light torchLight;
         private float speed;
@@ -26,7 +26,7 @@ namespace nickelGrowth
         {
             
             TorchStartTiming();
-            //Debug.Log(torchTime);
+            Debug.Log(torchTime);
             //StartCoroutine(LoadSubtitles());
 
             

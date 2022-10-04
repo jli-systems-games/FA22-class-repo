@@ -61,7 +61,7 @@ namespace nickelGrowth
                 isShielded = false;
                 buffShow.text = " ";
             }
-            Debug.Log(isShielded);
+            //Debug.Log(isShielded);
         }
 
 

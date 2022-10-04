@@ -13,7 +13,7 @@ namespace nickelGrowth
         public TMP_Text descriptionBox;
         public int propID;
         private string[] propName = {"Kindling", "Bard's flute", "Fairy's wings" };
-        private string[] instructionList = { "Prolong the duration of your torch by 20s", "Increase lighting range for 10s", "Increase movement speed by 20s" };
+        private string[] instructionList = { "Prolong the duration of your torch by 20s, you can only take two at a time", "Increase lighting range for 10s", "Increase movement speed by 20s" };
 
         public GameObject textBackground;
         void Start()
@@ -38,7 +38,7 @@ namespace nickelGrowth
             textBackground.SetActive(true);
             nameBox.text = propName[propID];
             descriptionBox.text = instructionList[propID];
-            yield return new WaitForSeconds(4);
+            yield return new WaitForSeconds(3);
             nameBox.text = " ";
             descriptionBox.text = " ";
             textBackground.SetActive(false);

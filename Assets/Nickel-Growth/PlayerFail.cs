@@ -64,7 +64,7 @@ namespace nickelGrowth
         IEnumerator torchTimeReGive()
         {
             yield return new WaitForSeconds(3);
-            Torch.torchTime += 20;
+            Torch.torchTime = 20;
             //Debug.Log("give!");
         }
     }

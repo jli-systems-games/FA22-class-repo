@@ -112,7 +112,7 @@ namespace TheFirstPerson
 
         [Header("Speed Settings")]
         [Tooltip("Base forward speed in units per second.")]
-        public static float moveSpeed = 5;
+        public static float moveSpeed = 4;
         [ConditionalHide("slopeSlideEnabled", true)]
         [Tooltip("Horizontal speed while sliding in units per second.")]
         public float slopeSlideSpeed = 10;

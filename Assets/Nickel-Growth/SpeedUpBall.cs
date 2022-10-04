@@ -29,9 +29,9 @@ namespace nickelGrowth
         IEnumerator speedUp()
         {
 
-            TheFirstPerson.FPSController.moveSpeed += 3;
+            TheFirstPerson.FPSController.moveSpeed += 2;
             yield return new WaitForSeconds(10);
-            TheFirstPerson.FPSController.moveSpeed -= 3;
+            TheFirstPerson.FPSController.moveSpeed -= 2;
         }
 
         IEnumerator propRefresh()
