@@ -93,7 +93,6 @@ namespace Bloom
             if (current > 11000)
             {
                 Photo1.SetActive(true);
-                Destroy(Itself,0.5f);
                 Destroy(Cross1);
                 Destroy(Ceffect1);
                 Destroy(Ceffect2);
@@ -101,6 +100,7 @@ namespace Bloom
                 Destroy(Ceffect6);
                 Destroy(Ceffect4);
                 Destroy(Ceffect5);
+                Destroy(Itself);
 
             }
         }
