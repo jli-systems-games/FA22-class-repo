@@ -22,7 +22,7 @@ namespace Mariana
             if (gameObjects.Length == 0)
             {
                 SceneManager.LoadScene("Island"+index);
-                Debug.Log("now what");
+                //Debug.Log("now what");
             }
             
         }
