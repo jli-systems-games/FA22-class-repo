@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Regan {
+
 public abstract class GrowthStageBase : ScriptableObject
 {
     [SerializeField, Range(0f,1.1f)]
@@ -66,4 +68,5 @@ public abstract class GrowthStageBase : ScriptableObject
     }
 
     
+}
 }

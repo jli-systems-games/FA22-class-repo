@@ -6,6 +6,8 @@ using TMPro;
 using UnityEngine.UI;
 using System.Globalization;
 
+namespace Regan {
+
 [RequireComponent(typeof(NetTime))]
 public class CreatureManager : MonoBehaviour
 {
@@ -212,6 +214,7 @@ public class CreatureManager : MonoBehaviour
     {
         return DateTime.ParseExact(date, "ddd  DD MMM yyyy HH:mm:ss", CultureInfo.CurrentCulture);
     }
+}
 }
 
 

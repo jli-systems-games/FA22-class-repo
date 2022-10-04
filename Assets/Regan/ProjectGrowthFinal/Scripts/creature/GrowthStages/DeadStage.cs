@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Regan {
+
 [CreateAssetMenu(menuName = "Regan/GrowthStages/DeadStage")]
 public class DeadStage : GrowthStageBase
 {
@@ -19,4 +21,5 @@ public class DeadStage : GrowthStageBase
     {
         
     }
+}
 }
