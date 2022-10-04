@@ -26,7 +26,6 @@ namespace Ekaterina
                                 animator.SetTrigger("Sad");
                         }
                         
-                        
                         if (EnergyBar.value < 80)
                         {
                                 animator.SetTrigger("Sad");

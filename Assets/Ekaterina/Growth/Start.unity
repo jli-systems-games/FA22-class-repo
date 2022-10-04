@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 108420126}
   - component: {fileID: 108420131}
   - component: {fileID: 108420130}
+  - component: {fileID: 108420132}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -264,6 +265,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108420125}
   m_CullTransparentMesh: 1
+--- !u!114 &108420132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108420125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f7fc802a90f4bad87418a38625a935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FoodBar: {fileID: 0}
+  EnergyBar: {fileID: 0}
+  HappinessBar: {fileID: 0}
+  Button: {fileID: 1408689115}
 --- !u!1 &369370191
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,7 +584,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1408689116}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1408689116
 MonoBehaviour:
   m_ObjectHideFlags: 0
