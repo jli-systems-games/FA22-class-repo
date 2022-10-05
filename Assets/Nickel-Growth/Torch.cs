@@ -44,7 +44,7 @@ namespace nickelGrowth
             }
             if (torchTime > 3)
             {
-                torchLight.intensity = 1.5f;
+                torchLight.intensity = 1.7f;
             }
             else if (torchTime < 3)
             {

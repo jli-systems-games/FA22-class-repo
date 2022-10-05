@@ -21,7 +21,8 @@ namespace nickelGrowth
 
         private void OnTriggerEnter(Collider other)
         {
-            torchLight.range = 45;
+            torchLight.range = 100;
+            torchLight.intensity = 3f;
             StartCoroutine(TorchWider());
             this.GetComponent<MeshRenderer>().enabled = false;
             this.GetComponent<CapsuleCollider>().enabled = false;
@@ -31,7 +32,8 @@ namespace nickelGrowth
         IEnumerator TorchWider()
         {
             yield return new WaitForSeconds(10);
-            torchLight.range = 20;
+            torchLight.range = 45;
+            torchLight.intensity = 1.7f;
         }
 
         IEnumerator propRefresh()
