@@ -18,12 +18,11 @@ namespace HectorRodriguez
         public TextMeshProUGUI amountText3;
         public TextMeshProUGUI amountText4;
 
+
         public int plastics = 0;
         public int metals = 0;
         public int electronics = 0;
         public int books = 0;
-
-        public Animator scoreAnim;
 
         public float trashBasePrice = 10;
 
@@ -136,7 +135,9 @@ namespace HectorRodriguez
         public void IncreasePlastic()
         {
             plasticAmount += 1;
-            
+
+
+          
         }
 
         public void IncreaseMetal()
