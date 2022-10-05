@@ -23,7 +23,7 @@ namespace HectorRodriguez
         public int electronics = 0;
         public int books = 0;
 
-        public Animator happyEmote;
+        public Animator scoreAnim;
 
         public float trashBasePrice = 10;
 
@@ -86,20 +86,20 @@ namespace HectorRodriguez
             buildTextplastic4.text = $"Plastics${plasticPrice} Metals${metalPrice} Electronics${electronicPrice} Books${bookPrice}";
             //metal
             buildTextmetal.text = $"Metal{metalPrice}";
-            buildTextmetal2.text = $" Metals${metalPrice} Plastics${plasticPrice}";
-            buildTextmetal3.text = $" Metals${metalPrice} Plastics${plasticPrice} Electronics${electronicPrice}";
-            buildTextmetal4.text = $" Metals${metalPrice} Plastic$s{plasticPrice}  Electronics${electronicPrice} Books${bookPrice}";
+            buildTextmetal2.text = $"Metals${metalPrice}Plastics$ {plasticPrice}";
+            buildTextmetal3.text = $"Metals${metalPrice}Plastics$ {plasticPrice}Electronics$ {electronicPrice}";
+            buildTextmetal4.text = $"Metals${metalPrice}Plastic$s {plasticPrice}Electronics$ {electronicPrice}Books$ {bookPrice}";
             //electronic
             buildTextelectronic.text = $"Electronics${electronicPrice}";
-            buildTextelectronic2.text = $"Electronics${electronicPrice} Plastics${plasticPrice}";
-            buildTextelectronic3.text = $"Electronics${electronicPrice} Plastics${plasticPrice} Metals${metalPrice} ";
-            buildTextelectronic4.text = $"Electronics${electronicPrice} Plastics${plasticPrice} Metals${metalPrice} Books${bookPrice}";
+            buildTextelectronic2.text = $"Electronics$ {electronicPrice}Plastics$ {plasticPrice}";
+            buildTextelectronic3.text = $"Electronics$ {electronicPrice}Plastics$ {plasticPrice}Metals$ {metalPrice} ";
+            buildTextelectronic4.text = $"Electronics$ {electronicPrice}Plastics$ {plasticPrice}Metals$ {metalPrice}Books$ {bookPrice}";
 
             //book
             buildTextbook.text = $"Books${bookPrice}";
-            buildTextbook2.text = $"Books${bookPrice} Plastic${plasticPrice}";
-            buildTextbook3.text = $"Books${bookPrice} Plastic${plasticPrice} Metal${metalPrice} ";
-            buildTextbook4.text = $"Books${bookPrice} Plastic${plasticPrice} Metal${metalPrice} Electronics${electronicPrice}";
+            buildTextbook2.text = $"Books$ {bookPrice}Plastic$ {plasticPrice}";
+            buildTextbook3.text = $"Books$ {bookPrice}Plastic$ {plasticPrice}Metal$ {metalPrice} ";
+            buildTextbook4.text = $"Books$ {bookPrice}Plastic$ {plasticPrice}Metal$ {metalPrice}Electronics$ {electronicPrice}";
 
 
             InvokeRepeating("MainLoop", 0f, .1f);
@@ -136,11 +136,7 @@ namespace HectorRodriguez
         public void IncreasePlastic()
         {
             plasticAmount += 1;
-            if(plasticAmount >=500)
-            {
-                happyEmote.Play();
-            }
-
+            
         }
 
         public void IncreaseMetal()
@@ -179,14 +175,15 @@ namespace HectorRodriguez
             if (plasticAmount >= plasticPrice && metalAmount >= metalPrice)
             {
                 plastics++;
+                electronicAmount += 50;
                 plasticAmount -= plasticPrice;
                 metalAmount -= metalPrice;
                 metalPrice = Mathf.Floor(trashBasePrice * Mathf.Pow(metalPriceMultiplier, metals));
-                buildTextplastic2.text = $"Plastic${plasticPrice}Metal${metalPrice}";
+                buildTextplastic2.text = $"Plastic$ {plasticPrice} Metal${metalPrice}";
             }
         }
 
-
+    
         public void PlasticUpgrade2()
         {
             if (plasticAmount >= plasticPrice && metalAmount >= metalPrice && electronicAmount >= electronicPrice)
@@ -195,8 +192,9 @@ namespace HectorRodriguez
                 metalAmount -= metalPrice;
                 plasticAmount -= plasticPrice;
                 electronicAmount -= electronicPrice;
+               bookAmount += 50;
                 metalPrice = Mathf.Floor(trashBasePrice * Mathf.Pow(metalPriceMultiplier, metals));
-                buildTextplastic3.text = $"Plastic${plasticPrice}Metal:${metalPrice}Electronics${electronicPrice}";
+                buildTextplastic3.text = $" Plastic${plasticPrice} Metal:${metalPrice} Electronics${electronicPrice}";
             }
         }
 
@@ -221,7 +219,7 @@ namespace HectorRodriguez
                 metals++;
                 metalAmount -= metalPrice;
                 metalPrice = Mathf.Floor(trashBasePrice * Mathf.Pow(metalPriceMultiplier, metals));
-                buildTextmetal.text = $"Metal${metalPrice}";
+                buildTextmetal.text = $" Metal${metalPrice}";
             }
         }
 
