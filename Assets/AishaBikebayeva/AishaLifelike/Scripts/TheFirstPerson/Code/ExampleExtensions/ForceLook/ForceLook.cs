@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using AishaLifelike;
+using TheFirstPerson;
 using UnityEngine;
 
 //this plugin will force the player to either look at a specific point in space or in a specific direction if isAngle is true
