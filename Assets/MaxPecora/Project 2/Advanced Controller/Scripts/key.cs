@@ -17,7 +17,7 @@ namespace Max
         // Start is called before the first frame update
         void Start()
         {
-            isFollowing = true;
+            isFollowing = false;
         }
 
         // Update is called once per frame
