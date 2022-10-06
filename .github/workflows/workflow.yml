@@ -1,0 +1,19 @@
+name: Central Workflow
+
+on:
+  # pull_request:
+  #  types: []
+  workflow_dispatch:
+
+jobs:
+  assign-reviewrs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assign reviewers from team
+        uses: dc-ag/auto-assign-reviewers-from-team@v1.1.0
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          admin-repo-token: ${{ secrets.JASON_GITHUB_TOKEN }}
+          team: "FA22-Students"
+          amount: 2
+          use-team-reviewer-settings: false
