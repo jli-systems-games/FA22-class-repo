@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 namespace MarioGrowth
 {
 
-    public class Level2Start : MonoBehaviour
+    public class WinSceneTrigger : MonoBehaviour
     {
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.gameObject.tag == "Player")
             {
-                SceneManager.LoadScene("GrowthLevel2");
+                SceneManager.LoadScene("GrowthWinScene");
             }
         }
     }

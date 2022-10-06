@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 namespace MarioGrowth
 {
 
-    public class StartButton : MonoBehaviour
+    public class PlayAgain : MonoBehaviour
     {
         public void loadScene()
         {
-            SceneManager.LoadScene("GrowthLevel1");
+            SceneManager.LoadScene("GrowthTitleScreen");
         }
     }
 }
