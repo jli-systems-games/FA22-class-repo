@@ -16,19 +16,22 @@ namespace Ekaterina
         public Button Button;
         
         void Start () {
-            Button btn = Button.GetComponent<Button>();
-            btn.onClick.AddListener(TaskOnClick);
+            if (SceneManager.GetActiveScene().name == "Ekaterina.Growth.Win")
+            {
+                Button btn = Button.GetComponent<Button>();
+                btn.onClick.AddListener(TaskOnClick);
+            }
         }
 
         void TaskOnClick(){
-            SceneManager.LoadScene("Main Scene 1");
+            SceneManager.LoadScene("Ekaterina.Growth.Main scene 1");
         }
         
         void Update()
         {
-            if (FoodBar.value == 100 && EnergyBar.value == 100 && HappinessBar.value == 100)
+            if (FoodBar?.value == 100 && EnergyBar?.value == 100 && HappinessBar?.value == 100)
             {
-                SceneManager.LoadScene("Win");
+                SceneManager.LoadScene("Ekaterina.Growth.Win");
             }
         }
     }

@@ -14,8 +14,9 @@ namespace Ekaterina
             Button btn = Button.GetComponent<Button>();
             btn.onClick.AddListener(TaskOnClick);
         }
-        void TaskOnClick(){
-            SceneManager.LoadScene("Start");
+        void TaskOnClick()
+        {
+            SceneManager.LoadScene("Ekaterina.Growth.Start");
         }
     }
 }
