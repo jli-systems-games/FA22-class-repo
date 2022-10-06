@@ -12,7 +12,7 @@ namespace MarioGrowth
         {
             if (collision.gameObject.tag == "Player")
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene("GrowthLevel2");
             }
         }
     }
