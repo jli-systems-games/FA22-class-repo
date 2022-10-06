@@ -60,15 +60,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: baba
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b102c93240cfc4889b707a5f96556d3d, type: 2}
+  m_sharedMaterial: {fileID: -1247240475820540067, guid: b102c93240cfc4889b707a5f96556d3d,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -85,13 +86,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -201,8 +202,13 @@ MonoBehaviour:
   maxBlood: 0
   babyColor: {r: 0, g: 0, b: 0, a: 0}
   herd: {fileID: 0}
+  u: 0.06
+  spriteRepo: {fileID: 0}
   unicornGene: {fileID: 0}
   babyunicorn: {fileID: 0}
+  txtMan: {fileID: 0}
+  delay: 0
+  countdown: 20
 --- !u!222 &1219020367686144615
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -253,7 +259,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: d5a7fce16148d4843913826886a4a07d, type: 3}
-  m_Color: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 1}
+  m_Color: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 0.78431374}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
