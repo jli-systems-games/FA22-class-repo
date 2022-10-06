@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TheFirstPerson;
+using AishaLifelike;
 
 //plays a sound when you jump. the simplest example plugin.
 
