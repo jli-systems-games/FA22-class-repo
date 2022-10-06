@@ -17,7 +17,7 @@ namespace AishaLifelike
     }
 
     [RequireComponent(typeof(CharacterController))]
-    public class FPSController : MonoBehaviour
+    public class TFPController : MonoBehaviour
     {
 
         CharacterController controller;
