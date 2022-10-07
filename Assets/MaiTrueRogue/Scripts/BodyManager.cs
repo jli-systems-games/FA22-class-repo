@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Mono.Cecil;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -35,10 +36,10 @@ public class BodyManager : MonoBehaviour
         
     }
 
-    public void SwitchRightArm(int num)
+    public void SwitchRightArm()
     {
         rightHands[rh].GameObject().SetActive(false);
-        rh += num;
+        rh ++;
         if (rh < 0)
         {
             rh = (rightHands.Length-1);
