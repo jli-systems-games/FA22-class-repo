@@ -54,5 +54,24 @@ public class BodyManager : MonoBehaviour
         
         Debug.Log(rh);
     }
+    
+    public void SwitchLeftArm()
+    {
+        bodies[b].GameObject().SetActive(false);
+        b ++;
+        if (b < 0)
+        {
+            b = (bodies.Length-1);
+        }
+
+        if (b > bodies.Length-1)
+        {
+            b = 0;
+        }
+        bodies[b].GameObject().SetActive(true);
+       
+        
+        Debug.Log(b);
+    }
 }
 }
