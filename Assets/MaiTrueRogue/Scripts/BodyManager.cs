@@ -30,11 +30,11 @@ public class BodyManager : MonoBehaviour
 
     public void getBody()
     {
-        hero.limbCheck(leftHands[0]);
-        hero.limbCheck(rightHands[0]);
-        hero.limbCheck(heads[0]);
-        hero.limbCheck(bodies[0]);
-        hero.limbCheck(legs[0]);
+        hero.limbCheck(leftHands[lh]);
+        hero.limbCheck(rightHands[rh]);
+        hero.limbCheck(heads[h]);
+        hero.limbCheck(bodies[b]);
+        hero.limbCheck(legs[l]);
     }
     
     

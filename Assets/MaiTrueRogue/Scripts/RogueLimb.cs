@@ -16,7 +16,7 @@ namespace Bananagodzilla
 
         public int bones;
 
-        public string limbType;
+       
 
         // Start is called before the first frame update
         

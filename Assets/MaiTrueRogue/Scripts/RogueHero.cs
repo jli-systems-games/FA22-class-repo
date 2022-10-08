@@ -4,12 +4,13 @@ using TMPro;
 namespace Bananagodzilla{
 public class RogueHero : MonoBehaviour
 {
+    public GameObject deathScreen;
     public int rage;
     public int bones;
     public int sugar;
-    public int health;
+    public float health = 100;
     public RogueEnemy enemy;
-    public RogueLimb[] limbs;
+    
 
     public TMP_Text[] texts;
     // Start is called before the first frame update
@@ -22,24 +23,28 @@ public class RogueHero : MonoBehaviour
         texts[0].SetText("Sugar: "+sugar.ToString());
         texts[1].SetText("Rage: "+rage.ToString());
         texts[2].SetText("Bones: "+bones.ToString());
-
+        texts[3].SetText("HP: "+health.ToString());
         if (!enemy)
         {
             enemy = FindObjectOfType(typeof(RogueEnemy)) as RogueEnemy;
         }
- 
+
+        if (health <= 0)
+        {
+            deathScreen.SetActive(true);
+        }
         
     }
 
 
     public void Attack()
-    {
+    { 
         enemy.rage -= bones;
         enemy.bones -= sugar;
         enemy.sugar -= rage;
-        if (rage < 0 && sugar < 0 && bones < 0)
+        if (rage < 0 || sugar < 0 || bones < 0)
         {
-            Debug.Log("Hero Dead");
+            health--;
         }
     }
 
