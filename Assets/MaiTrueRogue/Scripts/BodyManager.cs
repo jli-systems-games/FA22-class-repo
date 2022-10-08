@@ -4,8 +4,7 @@ using Mono.Cecil;
 using Unity.VisualScripting;
 using UnityEngine;
 
-namespace Bananagodzilla
-{
+namespace Bananagodzilla{
     
 
 public class BodyManager : MonoBehaviour
@@ -24,16 +23,67 @@ public class BodyManager : MonoBehaviour
     public  int rh;
     public  int lh;
 
-    // Start is called before the first frame update
-    void Start()
+   
+    
+    
+    
+    
+    
+    public void SwitchLeftArm()
     {
+        leftHands[lh].GameObject().SetActive(false);
+        lh ++;
+        if (lh < 0)
+        {
+            lh = (leftHands.Length-1);
+        }
+
+        if (lh > leftHands.Length-1)
+        {
+            lh = 0;
+        }
+        leftHands[lh].GameObject().SetActive(true);
+       
         
+       // Debug.Log(lh);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SwitchHead()
     {
+        heads[h].GameObject().SetActive(false);
+        h ++;
+        if (h < 0)
+        {
+            h = (heads.Length-1);
+        }
+
+        if (h > heads.Length-1)
+        {
+            h = 0;
+        }
+        heads[h].GameObject().SetActive(true);
+       
         
+        //Debug.Log(h);
+    }
+    
+    public void SwitchLegs()
+    {
+        legs[l].GameObject().SetActive(false);
+        l ++;
+        if (l < 0)
+        {
+            l = (legs.Length-1);
+        }
+
+        if (l > legs.Length-1)
+        {
+            l = 0;
+        }
+        legs[l].GameObject().SetActive(true);
+       
+        
+        //Debug.Log(l);
     }
 
     public void SwitchRightArm()
@@ -52,10 +102,10 @@ public class BodyManager : MonoBehaviour
         rightHands[rh].GameObject().SetActive(true);
        
         
-        Debug.Log(rh);
+       // Debug.Log(rh);
     }
     
-    public void SwitchLeftArm()
+    public void SwitchBody()
     {
         bodies[b].GameObject().SetActive(false);
         b ++;
@@ -71,7 +121,12 @@ public class BodyManager : MonoBehaviour
         bodies[b].GameObject().SetActive(true);
        
         
-        Debug.Log(b);
+        //Debug.Log(b);
     }
+    
+    
+    
+    
+    
 }
 }

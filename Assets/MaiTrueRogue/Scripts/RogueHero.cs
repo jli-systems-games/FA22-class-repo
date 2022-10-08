@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 namespace Bananagodzilla{
 public class RogueHero : MonoBehaviour
 {
@@ -12,22 +12,26 @@ public class RogueHero : MonoBehaviour
     public int health;
     public RogueEnemy enemy;
     public RogueLimb[] limbs;
-    
+
+    public TMP_Text[] texts;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  
 
     // Update is called once per frame
     void Update()
     {
+        
+        texts[0].SetText("Sugar: "+sugar.ToString());
+        texts[1].SetText("Rage: "+rage.ToString());
+        texts[2].SetText("Bones: "+bones.ToString());
 
         if (!enemy)
         {
             enemy = FindObjectOfType(typeof(RogueEnemy)) as RogueEnemy;
         }
+       // Debug.Log(bones);
         
+       
         
     }
 
@@ -46,23 +50,29 @@ public class RogueHero : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D col)
     {
+        Debug.Log("entered");
         if (col.GetComponent<RogueLimb>())
         {
+           
             rage += col.GetComponent<RogueLimb>().rage;
             bones += col.GetComponent<RogueLimb>().bones;
             sugar += col.GetComponent<RogueLimb>().sugar;
+            Debug.Log("triggered");
         }
+        
     }
 
-    public void equip()
+    public void OnTriggerExit2D(Collider2D col)
     {
-        foreach (RogueLimb limb in limbs)
+        Debug.Log("Exited");
+        if (col.GetComponent<RogueLimb>())
         {
-            rage += limb.rage;
-            bones += limb.bones;
-            sugar += limb.sugar;
-
+            rage -= col.GetComponent<RogueLimb>().rage;
+            bones -= col.GetComponent<RogueLimb>().bones;
+            sugar -= col.GetComponent<RogueLimb>().sugar;
+            Debug.Log("fjek");
         }
+        
     }
 }
 }
