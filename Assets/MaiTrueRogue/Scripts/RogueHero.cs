@@ -1,6 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using TMPro;
 namespace Bananagodzilla{
@@ -29,9 +27,7 @@ public class RogueHero : MonoBehaviour
         {
             enemy = FindObjectOfType(typeof(RogueEnemy)) as RogueEnemy;
         }
-       // Debug.Log(bones);
-        
-       
+ 
         
     }
 
@@ -48,31 +44,29 @@ public class RogueHero : MonoBehaviour
     }
 
 
-    public void OnTriggerEnter2D(Collider2D col)
+
+
+    public void limbCheck(RogueLimb limb)
     {
-        Debug.Log("entered");
-        if (col.GetComponent<RogueLimb>())
-        {
-           
-            rage += col.GetComponent<RogueLimb>().rage;
-            bones += col.GetComponent<RogueLimb>().bones;
-            sugar += col.GetComponent<RogueLimb>().sugar;
-            Debug.Log("triggered");
-        }
-        
+        rage += limb.rage;
+        sugar += limb.sugar;
+        bones += limb.bones;
     }
 
-    public void OnTriggerExit2D(Collider2D col)
+    public void limbRemove(RogueLimb limb)
     {
-        Debug.Log("Exited");
-        if (col.GetComponent<RogueLimb>())
-        {
-            rage -= col.GetComponent<RogueLimb>().rage;
-            bones -= col.GetComponent<RogueLimb>().bones;
-            sugar -= col.GetComponent<RogueLimb>().sugar;
-            Debug.Log("fjek");
-        }
-        
+        rage -= limb.rage;
+        sugar -= limb.sugar;
+        bones -= limb.bones;
     }
+
+    public void limbReset()
+    {
+        rage = 0;
+        sugar = 0;
+        bones = 0;
+
+    }
+    
 }
 }
