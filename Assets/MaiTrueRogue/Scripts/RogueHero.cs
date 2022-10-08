@@ -39,12 +39,13 @@ public class RogueHero : MonoBehaviour
 
     public void Attack()
     { 
-        enemy.rage -= bones;
-        enemy.bones -= sugar;
-        enemy.sugar -= rage;
+        if (bones > 0){enemy.rage -= bones;}
+        if (sugar>0){enemy.bones -= sugar;}
+        if (rage >0){enemy.sugar -= rage;}
+        
         if (rage < 0 || sugar < 0 || bones < 0)
         {
-            health--;
+            health-= 10;
         }
     }
 
