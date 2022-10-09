@@ -27,13 +27,13 @@ namespace max
             Vector3 viewDir = player.position - new Vector3(transform.position.x, player.position.y, transform.position.z);
             orientation.forward = viewDir.normalized;
 
-            //rotate player object
-            float horizontalInput = Input.GetAxis("Horizontal");
-            float verticleInput = Input.GetAxis("Verticle");
-            Vector3 inputDir = orientation.forward * verticleInput + orientation.right * horizontalInput;
+            ////rotate player object
+            //float horizontalInput = Input.GetAxis("Horizontal");
+            //float verticalInput = Input.GetAxis("vertical");
+            //Vector3 inputDir = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
-            if (inputDir != Vector3.zero)
-                playerObj.forward = Vector3.Slerp(playerObj.forward, inputDir.normalized, Time.deltaTime * rotationSpeed);
+            //if (inputDir != Vector3.zero)
+            //    playerObj.forward = Vector3.Slerp(playerObj.forward, inputDir.normalized, Time.deltaTime * rotationSpeed);
         }
 
     }
