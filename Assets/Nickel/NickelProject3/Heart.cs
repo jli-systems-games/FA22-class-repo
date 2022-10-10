@@ -2,37 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Heart : MonoBehaviour
+namespace nickelLifelike
 {
-
-    private int maxEnemy=0;
-    private float timeLeft=120;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
+    public class Heart : MonoBehaviour
     {
 
-        //Debug.Log(maxEnemy);
-        if (maxEnemy < 5 && timeLeft>0)
+        private int maxEnemy = 0;
+        private float timeLeft = 120;
+        // Start is called before the first frame update
+        void Start()
         {
-            timeLeft -= Time.deltaTime;
-        }else if (maxEnemy > 5 && timeLeft>0)
+
+        }
+
+        // Update is called once per frame
+        void Update()
         {
-            Debug.Log("Game Over");
-        }else if (timeLeft < 0)
+
+            //Debug.Log(maxEnemy);
+            if (maxEnemy < 5 && timeLeft > 0)
+            {
+                timeLeft -= Time.deltaTime;
+            }
+            else if (maxEnemy > 5 && timeLeft > 0)
+            {
+                Debug.Log("Game Over");
+            }
+            else if (timeLeft < 0)
+            {
+                Debug.Log("You win!");
+            }
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-            Debug.Log("You win!");
+            maxEnemy++;
+            Destroy(collision.gameObject);
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        maxEnemy++;
-        Destroy(collision.gameObject);
-    }
 }

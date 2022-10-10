@@ -2,58 +2,63 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlowerShoot : MonoBehaviour
+namespace nickelLifelike
 {
-    // Start is called before the first frame update
-    public Transform firePoint;
-    public GameObject bulletPrefeb;
-
-    private bool shoot = false;
-
-    public float FireRate = 1;
-    private float time;
-    private float nextTimeFire;
-    void Start()
+    public class FlowerShoot : MonoBehaviour
     {
-        
-    }
+        // Start is called before the first frame update
+        public Transform firePoint;
+        public GameObject bulletPrefeb;
 
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.Log(shoot);
-        if (shoot)
+        private bool shoot = false;
+
+        public float FireRate = 1;
+        private float time;
+        private float nextTimeFire;
+        void Start()
         {
-            time += Time.deltaTime;
-            nextTimeFire = 1 / FireRate;
-            if (time >= nextTimeFire)
+
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            Debug.Log(shoot);
+            if (shoot)
             {
-                Instantiate(bulletPrefeb, firePoint.position, Quaternion.identity);
-                time = 0;
+                time += Time.deltaTime;
+                nextTimeFire = 1 / FireRate;
+                if (time >= nextTimeFire)
+                {
+                    Instantiate(bulletPrefeb, firePoint.position, Quaternion.identity);
+                    time = 0;
+                }
             }
+
+
+
         }
 
-
-
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Enemy"))
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-            shoot = true;
-        }
-        
-    }
+            if (collision.CompareTag("Enemy"))
+            {
+                shoot = true;
+            }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Enemy"))
+        }
+
+        private void OnTriggerExit2D(Collider2D collision)
         {
-            shoot = false;
+            if (collision.CompareTag("Enemy"))
+            {
+                shoot = false;
+            }
+
         }
-            
+
+
     }
 
-    
 }
+
