@@ -21,13 +21,13 @@ public class FlowerShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(shoot);
         if (shoot)
         {
             time += Time.deltaTime;
             nextTimeFire = 1 / FireRate;
             if (time >= nextTimeFire)
             {
-
                 Instantiate(bulletPrefeb, firePoint.position, Quaternion.identity);
                 time = 0;
             }
@@ -39,12 +39,20 @@ public class FlowerShoot : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        shoot = true;
+        if (collision.CompareTag("Enemy"))
+        {
+            shoot = true;
+        }
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        shoot = false;
+        if (collision.CompareTag("Enemy"))
+        {
+            shoot = false;
+        }
+            
     }
 
     

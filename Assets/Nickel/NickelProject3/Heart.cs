@@ -17,7 +17,7 @@ public class Heart : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(maxEnemy);
+        //Debug.Log(maxEnemy);
         if (maxEnemy < 5 && timeLeft>0)
         {
             timeLeft -= Time.deltaTime;
