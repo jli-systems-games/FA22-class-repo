@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
+namespace Regan {
+
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovementController : MonoBehaviour
 {
@@ -63,4 +65,5 @@ public class PlayerMovementController : MonoBehaviour
         _rigidbody.velocity = velocity;
     }
 
+}
 }
