@@ -1,23 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 
 public class bullet : MonoBehaviour
 {
+    private Rigidbody2D rb;
     // Start is called before the first frame update
-    public GameObject enemy;
+    private GameObject enemy;
 
-    public float bulletSpeed;
-    private Vector2 enemyPosition;
+    public float bulletSpeed=1;
+   
+    
+   
     void Start()
     {
-        enemyPosition = enemy.transform.position;
+        
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, enemyPosition, bulletSpeed * Time.deltaTime);
+        enemy = GameObject.FindGameObjectWithTag("Enemy");
+        rb = transform.GetComponent<Rigidbody2D>();
+        Vector2 direction = Vector2.MoveTowards(transform.position, enemy.transform.position, bulletSpeed);
+        direction -= (Vector2)transform.position;
+        rb.velocity = direction*5;
+
     }
 }

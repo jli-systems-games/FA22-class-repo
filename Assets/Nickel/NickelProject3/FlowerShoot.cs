@@ -27,11 +27,14 @@ public class FlowerShoot : MonoBehaviour
             nextTimeFire = 1 / FireRate;
             if (time >= nextTimeFire)
             {
-                Instantiate(bulletPrefeb, firePoint.position, Quaternion.Euler(new Vector3(0f, 0f, 0f)));
+
+                Instantiate(bulletPrefeb, firePoint.position, Quaternion.identity);
                 time = 0;
             }
         }
-        
+
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -43,4 +46,6 @@ public class FlowerShoot : MonoBehaviour
     {
         shoot = false;
     }
+
+    
 }
