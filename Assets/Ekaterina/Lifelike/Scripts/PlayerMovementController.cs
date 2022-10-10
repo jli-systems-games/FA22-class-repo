@@ -29,7 +29,7 @@ public class PlayerMovementController : MonoBehaviour
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         if (isGrounded && velocity.y < 0)
         {
-            velocity.y = -2f;
+            velocity.y = -10f;
         }
         
         float x = Input.GetAxis("Horizontal");
