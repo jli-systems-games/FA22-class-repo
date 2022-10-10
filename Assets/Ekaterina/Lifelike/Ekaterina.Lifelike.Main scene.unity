@@ -579,6 +579,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4247441802264095808, guid: abf6335225e9add448b28bf5fcb465cd,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a4205588db411b44f97b7bfbde0398fa, type: 2}
     - target: {fileID: 4247441802271514242, guid: abf6335225e9add448b28bf5fcb465cd,
         type: 3}
       propertyPath: m_Name
@@ -607,22 +612,22 @@ PrefabInstance:
     - target: {fileID: 4247441802271802018, guid: abf6335225e9add448b28bf5fcb465cd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 152.9
+      value: 200.3
       objectReference: {fileID: 0}
     - target: {fileID: 4247441802271802018, guid: abf6335225e9add448b28bf5fcb465cd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 151.1
+      value: 137.87
       objectReference: {fileID: 0}
     - target: {fileID: 4247441802271802018, guid: abf6335225e9add448b28bf5fcb465cd,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 114.5
+      value: 96.5
       objectReference: {fileID: 0}
     - target: {fileID: 4247441802271802018, guid: abf6335225e9add448b28bf5fcb465cd,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5267091
+      value: 0.7296691
       objectReference: {fileID: 0}
     - target: {fileID: 4247441802271802018, guid: abf6335225e9add448b28bf5fcb465cd,
         type: 3}
@@ -632,7 +637,7 @@ PrefabInstance:
     - target: {fileID: 4247441802271802018, guid: abf6335225e9add448b28bf5fcb465cd,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.8500456
+      value: -0.68380046
       objectReference: {fileID: 0}
     - target: {fileID: 4247441802271802018, guid: abf6335225e9add448b28bf5fcb465cd,
         type: 3}
@@ -647,7 +652,7 @@ PrefabInstance:
     - target: {fileID: 4247441802271802018, guid: abf6335225e9add448b28bf5fcb465cd,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -116.433
+      value: -86.283
       objectReference: {fileID: 0}
     - target: {fileID: 4247441802271802018, guid: abf6335225e9add448b28bf5fcb465cd,
         type: 3}
@@ -676,7 +681,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 14
   m_CollisionDetection: 0
 --- !u!1 &1362658607
 GameObject:
