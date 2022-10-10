@@ -169,7 +169,7 @@ public class GunInventory : MonoBehaviour {
 	*/
 	void AssignHandsAnimator(GameObject _currentGun){
 		if(_currentGun.name.Contains("Gun")){
-			currentHAndsAnimator = currentGun.GetComponent<GunScript>().handsAnimator;
+			currentHAndsAnimator = currentGun.GetComponent<AishaLifelike.GunScript>().handsAnimator;
 		}
 	}
 
