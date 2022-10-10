@@ -14,6 +14,8 @@ namespace MarioLifelike
 
         private List<HiddenObjectData> activeHiddenObjectsList;
 
+        public List<Sprite> sprites;
+
         [SerializeField]
         private int maxActiveHiddenObjectsCount = 5;
 
@@ -50,6 +52,7 @@ namespace MarioLifelike
                     hiddenObjectsList[randomVal].hiddenObject.name = "" + k;
                     hiddenObjectsList[randomVal].makeHidden = true;
                     hiddenObjectsList[randomVal].hiddenObject.GetComponent<Collider2D>().enabled = true;
+                    hiddenObjectsList[randomVal].hiddenObject.GetComponent<SpriteRenderer>().sprite = sprites[UnityEngine.Random.Range(0, sprites.Count)];
 
                     activeHiddenObjectsList.Add(hiddenObjectsList[randomVal]);
                     
@@ -68,7 +71,7 @@ namespace MarioLifelike
 
                 if (hit && hit.collider != null)
                 {
-                    //Debug.Log("Object Name:" + hit.collider.gameObject.name);
+                    Debug.Log("Object Name:" + hit.collider.gameObject.name);
 
                     hit.collider.gameObject.SetActive(false);
                     for (int i = 0; i < activeHiddenObjectsList.Count; i++)
