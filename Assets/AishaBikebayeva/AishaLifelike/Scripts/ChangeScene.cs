@@ -13,7 +13,7 @@ namespace AishaLifelike
         {
         if (Input.anyKey)
             {
-            SceneManager.LoadScene("Play");
+            SceneManager.LoadScene("OpeningScene");
             }
         }
     }
