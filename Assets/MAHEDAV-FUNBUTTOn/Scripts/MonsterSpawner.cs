@@ -4,15 +4,34 @@ using UnityEngine;
 
 public class MonsterSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Monster monsterPrefab;
+    public float spawnDistance = 12f;
+    public float spawnRate = 1f;
+    public int amountPerSpawn = 1;
+    [Range(0f, 45f)] public float trajectoryVariance = 15f;
+
+    private void Start()
     {
-        
+        InvokeRepeating(nameof(Spawn), spawnRate, spawnRate);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Spawn()
     {
-        
+        for (int i = 0; i < amountPerSpawn; i++)
+        {
+            Vector2 spawnDirection = Random.insideUnitCircle.normalized;
+            Vector3 spawnPoint = spawnDirection * spawnDistance;
+
+            spawnPoint += transform.position;
+
+            float variance = Random.Range(-trajectoryVariance, trajectoryVariance);
+            Quaternion rotation = Quaternion.AngleAxis(variance, Vector3.forward);
+
+            Monster asteroid = Instantiate(monsterPrefab, spawnPoint, rotation);
+           
+
+            Vector2 trajectory = rotation * -spawnDirection;
+            asteroid.SetTrajectory(trajectory);
+        }
     }
 }
