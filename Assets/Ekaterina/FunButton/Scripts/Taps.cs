@@ -25,7 +25,7 @@ namespace EkaterinaFunButton
         {
             Debug.Log ("You have clicked the button!");
             taps++;
-            // playSound.Play();
+            playSound.Play();
             PlayerPrefs.SetInt("Taps", taps);
             textTaps.text = "Taps: " + taps.ToString();
         }
