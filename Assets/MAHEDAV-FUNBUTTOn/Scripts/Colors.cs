@@ -22,11 +22,14 @@ namespace mahedav {
         {
             
             Collider2D[] monsters = Physics2D.OverlapCircleAll(colorPoint.position, colorRange, monsterLayer);
-            Debug.Log("hit"+ monsters[0]);
+            //Debug.Log("hit"+ monsters[0]);
             foreach(Collider2D monster in monsters)
             {
                
-               monster.GetComponent<SpriteRenderer>().color =  new Color(Random.Range(0, 255), Random.Range(0, 255), Random.Range(0, 255));
+               monster.GetComponent<SpriteRenderer>().color =  new Color( 
+                   Random.Range(0f, 1f), 
+                   Random.Range(0f, 1f), 
+                   Random.Range(0f, 1f));
             }
         }
         
