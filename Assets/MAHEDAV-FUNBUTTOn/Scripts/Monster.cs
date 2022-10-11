@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[RequireComponent(typeof(SpriteRenderer))]
-[RequireComponent(typeof(Rigidbody2D))]
 
 namespace HectorRodriguez
 {
+
+    [RequireComponent(typeof(SpriteRenderer))]
+    [RequireComponent(typeof(Rigidbody2D))]
 
     public class Monster : MonoBehaviour
     {
