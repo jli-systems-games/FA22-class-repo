@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SharedAssets
+namespace EkaterinaFunButton
 {
     [RequireComponent(typeof(AudioSource))]
     public class FunScript : MonoBehaviour

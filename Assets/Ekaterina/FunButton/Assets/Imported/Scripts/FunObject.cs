@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
-namespace SharedAssets
+namespace EkaterinaFunButton
 {
     public class FunObject : MonoBehaviour
     {
