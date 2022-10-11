@@ -26,7 +26,7 @@ namespace mahedav {
             foreach(Collider2D monster in monsters)
             {
                
-               monster.GetComponent<Image>().color =  new Color(Random.Range(0, 255), Random.Range(0, 255), Random.Range(0, 255));
+               monster.GetComponent<SpriteRenderer>().color =  new Color(Random.Range(0, 255), Random.Range(0, 255), Random.Range(0, 255));
             }
         }
         
