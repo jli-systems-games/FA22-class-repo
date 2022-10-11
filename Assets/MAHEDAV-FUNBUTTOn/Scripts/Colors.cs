@@ -10,8 +10,7 @@ namespace mahedav {
         public float colorRange;
         public Transform colorPoint;
         public LayerMask monsterLayer;
-        public Image monsterColor;
-        
+       
        
         // Start is called before the first frame update
         void Start()
