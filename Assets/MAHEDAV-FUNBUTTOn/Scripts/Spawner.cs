@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace mahedav{
 public class Spawner : MonoBehaviour
 {
 
-    public GameObject creature;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -18,4 +19,10 @@ public class Spawner : MonoBehaviour
     {
         
     }
+
+    public void buttonClick()
+    {
+      
+    }
+}
 }
