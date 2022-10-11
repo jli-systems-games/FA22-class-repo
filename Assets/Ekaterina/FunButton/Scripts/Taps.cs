@@ -15,24 +15,39 @@ namespace EkaterinaFunButton
         public AudioSource playSound;
         public Button button;
 
-        private void Start()
+        void Start () 
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                taps++;
-                playSound.Play();
-                PlayerPrefs.SetInt("Taps", taps);
-                textTaps.text = "Taps: " + taps.ToString();
-            }
-            if (PlayerPrefs.HasKey("Taps"))
-            {
-                taps = PlayerPrefs.GetInt("Coins");
-                textTaps.text = "Taps: " + taps.ToString();
-            }
-            else
-            {
-                PlayerPrefs.SetInt("Taps", 0);
-            }
+            Button btn = button.GetComponent<Button>();
+            btn.onClick.AddListener(TaskOnClick);
         }
+
+        void TaskOnClick()
+        {
+            Debug.Log ("You have clicked the button!");
+            taps++;
+            // playSound.Play();
+            PlayerPrefs.SetInt("Taps", taps);
+            textTaps.text = "Taps: " + taps.ToString();
+        }
+
+        // private void Start()
+        // {
+        //     if (Input.GetMouseButtonDown(0))
+        //     {
+        //         taps++;
+        //         playSound.Play();
+        //         PlayerPrefs.SetInt("Taps", taps);
+        //         textTaps.text = "Taps: " + taps.ToString();
+        //     }
+        //     if (PlayerPrefs.HasKey("Taps"))
+        //     {
+        //         taps = PlayerPrefs.GetInt("Coins");
+        //         textTaps.text = "Taps: " + taps.ToString();
+        //     }
+        //     else
+        //     {
+        //         PlayerPrefs.SetInt("Taps", 0);
+        //     }
     }
 }
+
