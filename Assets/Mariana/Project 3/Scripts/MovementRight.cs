@@ -6,8 +6,12 @@ namespace Mariana
 {
     public class MovementRight : MonoBehaviour
     {
-        private Rigidbody2D leftLeg;
+        //This script controls the right leg
+        private Rigidbody2D rightLeg;
+        public float speedLeft;
+        public float speedRight;
 
+        //Here are some things I tried that did not work:
         //[SerializeField] private float speed = 18f;
         //[SerializeField] private HingeJoint2D leftHinge;
         //[SerializeField] private HingeJoint2D rightHinge;
@@ -15,20 +19,28 @@ namespace Mariana
         // Start is called before the first frame update
         void Start()
         {
-            leftLeg = transform.GetComponent<Rigidbody2D>();
+            rightLeg = transform.GetComponent<Rigidbody2D>();
         }
 
         // Update is called once per frame
-        void Update()
+        void FixedUpdate()
         {
             if (Input.GetKey(KeyCode.O))
             {
-                leftLeg.MovePosition(transform.position + Vector3.left);
+                rightLeg.AddForce(new Vector2(speedLeft, 0), ForceMode2D.Impulse);
+                //leftLeg.MovePosition(transform.position + Vector3.left);
             }
+
+
+
             if (Input.GetKey(KeyCode.P))
             {
-                leftLeg.MovePosition(transform.position + Vector3.right);
+                rightLeg.AddForce(new Vector2(speedRight, 0), ForceMode2D.Impulse);
+                //    leftLeg.MovePosition(transform.position + Vector3.right);
             }
+
+
+            //Here are some things I tried that did not work:
             // if (Input.GetKeyDown(KeyCode.Space))
             // {
 
