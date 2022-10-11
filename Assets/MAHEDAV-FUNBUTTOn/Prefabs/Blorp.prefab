@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 961062970839942341}
   - component: {fileID: 961062970839942342}
   - component: {fileID: 3419669778076404368}
+  - component: {fileID: 5055455403224432739}
   m_Layer: 4
   m_Name: Blorp
   m_TagString: Untagged
@@ -86,7 +87,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.24, y: 10.24}
+    oldSize: {x: 1.024, y: 1.024}
     newSize: {x: 10.24, y: 10.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -147,3 +148,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5055455403224432739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961062970839942336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70166720ec0b448f8be58f6b695d0dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites: []
+  audioPlayer: {fileID: 0}
+  size: 1
+  minSize: 0.35
+  maxSize: 1.65
+  movementSpeed: 50
+  maxLifetime: 30
