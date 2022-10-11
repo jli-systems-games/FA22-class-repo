@@ -2,30 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FriendlyAi : MonoBehaviour
+namespace ReganFunButton
 {
-    Transform target;
-    public float speed = 3f;
-
-
-    // Use this for initialization
-    void Start()
+    public class FriendlyAi : MonoBehaviour
     {
-
-    }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
+        public Transform target;//set target from inspector instead of looking in Update
+        public float speed = 3f;
 
 
-        target = GameObject.FindWithTag("Enemy").transform;
+        void Start()
+        {
 
-        Vector3 forwardAxis = new Vector3(0, 0, -1);
+        }
 
-        transform.LookAt(target.position, forwardAxis);
-        Debug.DrawLine(transform.position, target.position);
-        transform.eulerAngles = new Vector3(0, 0, -transform.eulerAngles.z);
-        transform.position -= transform.TransformDirection(Vector2.up) * speed;
+        void Update()
+        {
+
+            //rotate to look at the player
+            transform.LookAt(target.position);
+            transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
+
+
+            //move towards the player
+            if (Vector3.Distance(transform.position, target.position) > 1f)
+            {//move if distance from target is greater than 1
+               transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
+            }
+
+        }
     }
 }
