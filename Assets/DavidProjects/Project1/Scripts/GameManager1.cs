@@ -6,8 +6,8 @@ namespace HectorRodriguez
 {
     public class GameManager1 : MonoBehaviour
     {
-        public ParticleSystem explosionEffect;
-        public GameObject gameOverUI;
+
+
 
         private void Start()
         {
@@ -21,30 +21,13 @@ namespace HectorRodriguez
 
         public void NewGame()
         {
-            Monster[] asteroids = FindObjectsOfType<Monster>();
+            Monster[] monsters = FindObjectsOfType<Monster>();
 
-            for (int i = 0; i < asteroids.Length; i++)
+            for (int i = 0; i <= monsters.Length; i++)
             {
-                Destroy(asteroids[i].gameObject);
+                Destroy(monsters[i].gameObject);
             }
 
-            gameOverUI.SetActive(false);
         }
-
-
-        public void MonsterDestroyed(Monster monster)
-        {
-            explosionEffect.transform.position = monster.transform.position;
-            explosionEffect.Play();
-
-        }
-
-
-        public void GameOver()
-        {
-            gameOverUI.SetActive(true);
-        }
-
-
     }
 }
