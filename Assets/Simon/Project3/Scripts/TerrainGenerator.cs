@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,12 @@ public class TerrainGenerator : MonoBehaviour
 
     public float offsetX = 0;
     public float offsetY = 0;
+
+    private void Start()
+    {
+        
+    }
+
     void Update()
     {
         Terrain terrain = GetComponent<Terrain>();
