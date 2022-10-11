@@ -1,18 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using TMPro;
+using UnityEngine.UI;
 
-public class Taps : MonoBehaviour
+namespace EkaterinaFunButton
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Taps : MonoBehaviour
     {
+        public static int taps = 0;
         
-    }
+        public TextMeshProUGUI textTaps;
+        public AudioSource playSound;
+        public Button button;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void Start()
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                taps++;
+                playSound.Play();
+                PlayerPrefs.SetInt("Taps", taps);
+                textTaps.text = "Taps: " + taps.ToString();
+            }
+            if (PlayerPrefs.HasKey("Taps"))
+            {
+                taps = PlayerPrefs.GetInt("Coins");
+                textTaps.text = "Taps: " + taps.ToString();
+            }
+            else
+            {
+                PlayerPrefs.SetInt("Taps", 0);
+            }
+        }
     }
 }
