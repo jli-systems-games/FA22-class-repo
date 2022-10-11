@@ -12,7 +12,6 @@ namespace EkaterinaFunButton
         public static int taps = 0;
         
         public TextMeshProUGUI textTaps;
-        public AudioSource playSound;
         public Button button;
 
         void Start () 
@@ -25,7 +24,6 @@ namespace EkaterinaFunButton
         {
             Debug.Log ("You have clicked the button!");
             taps++;
-            playSound.Play();
             PlayerPrefs.SetInt("Taps", taps);
             textTaps.text = "Taps: " + taps.ToString();
         }
