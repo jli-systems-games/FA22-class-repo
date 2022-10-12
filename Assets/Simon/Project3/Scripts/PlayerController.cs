@@ -32,7 +32,7 @@ namespace Simon.Project3.Scripts
             }
             
             private float nextActionTime = 0.0f;
-            public float period = .01f;
+            public float period = 10f;
 
         
             void Update()
