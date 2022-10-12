@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Destroy : MonoBehaviour
 {
+namespace Sam
+{
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Leaf"))
@@ -16,4 +18,5 @@ public class Destroy : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+}
 }
