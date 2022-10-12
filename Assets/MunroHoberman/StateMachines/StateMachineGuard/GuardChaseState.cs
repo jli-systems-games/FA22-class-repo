@@ -16,6 +16,10 @@ namespace MunroHoberman.StateMachine
             {
                 guard.SwitchState(guard.patrolState);
             }
+            if (Vector3.Distance(guard.transform.position,guard._player.position)>guard.sight/2)
+            {
+                guard.SwitchState(guard.growState);
+            }
         }
     }
 }

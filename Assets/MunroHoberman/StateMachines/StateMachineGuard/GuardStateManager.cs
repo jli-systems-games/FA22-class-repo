@@ -14,6 +14,7 @@ namespace MunroHoberman.StateMachine {
         public GuardBaseState currentState;
         public GuardPatrolState patrolState= new GuardPatrolState();
         public GuardChaseState chaseState= new GuardChaseState();
+        public GuardGrowState growState = new GuardGrowState();
 
         void Start()
         {
@@ -28,6 +29,7 @@ namespace MunroHoberman.StateMachine {
 
         public void SwitchState(GuardBaseState state)
         {
+            currentState.ExitState(this);
             currentState = state;
             state.EnterState(this);
         }

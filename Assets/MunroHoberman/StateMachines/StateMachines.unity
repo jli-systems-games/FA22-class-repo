@@ -540,7 +540,7 @@ Transform:
   m_GameObject: {fileID: 1827347643}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 2}
+  m_LocalScale: {x: 5, y: 1, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -620,6 +620,31 @@ PrefabInstance:
       objectReference: {fileID: 414595276}
     - target: {fileID: 3301399496967357205, guid: 61478fd86cf58964c8e5770a205ad0cf,
         type: 3}
+      propertyPath: waypoints.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301399496967357205, guid: 61478fd86cf58964c8e5770a205ad0cf,
+        type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1287639401}
+    - target: {fileID: 3301399496967357205, guid: 61478fd86cf58964c8e5770a205ad0cf,
+        type: 3}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1918602171}
+    - target: {fileID: 3301399496967357205, guid: 61478fd86cf58964c8e5770a205ad0cf,
+        type: 3}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 841696414}
+    - target: {fileID: 3301399496967357205, guid: 61478fd86cf58964c8e5770a205ad0cf,
+        type: 3}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1204243840}
+    - target: {fileID: 3301399496967357205, guid: 61478fd86cf58964c8e5770a205ad0cf,
+        type: 3}
       propertyPath: targetLocations.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -647,6 +672,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Guard
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301399496967357211, guid: 61478fd86cf58964c8e5770a205ad0cf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61478fd86cf58964c8e5770a205ad0cf, type: 3}
@@ -706,7 +736,7 @@ PrefabInstance:
     - target: {fileID: 5046624117729567948, guid: 16eb6a553ea34794f8884f1c0647a49e,
         type: 3}
       propertyPath: m_Speed
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5046624118657307916, guid: 16eb6a553ea34794f8884f1c0647a49e,
         type: 3}
@@ -928,6 +958,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c3aef11f87ce9418f197cc831c8710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _targetIndex: 0
+  _player: {fileID: 0}
+  waypoints:
+  - {fileID: 1287639401}
+  - {fileID: 1918602171}
+  - {fileID: 841696414}
+  - {fileID: 1204243840}
+  _agent: {fileID: 0}
+  sight: 10
 --- !u!4 &7710321461466440864
 Transform:
   m_ObjectHideFlags: 0

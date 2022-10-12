@@ -5,6 +5,8 @@ namespace MunroHoberman.StateMachine
     {
         public virtual void EnterState(GuardStateManager guard){}
 
-        public virtual void UpdateState(GuardStateManager guard){}
+        public virtual void UpdateState(GuardStateManager guard){
+            
+        public virtual void ExitState(GuardStateManager guard){}
     }
 }
