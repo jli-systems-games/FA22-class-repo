@@ -24,6 +24,10 @@ namespace MunroHoberman.StateMachine
             {
                 guard.SwitchState(guard.chaseState);
             }
+        
+        public override void ExitState(GuardStateManager guard)
+        {
+            
         }
     }
 }

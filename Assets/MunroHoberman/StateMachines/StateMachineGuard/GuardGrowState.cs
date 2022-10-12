@@ -20,6 +20,11 @@ namespace MunroHoberman.StateMachine
             Vector3 size = guard.transform.localScale;
             guard.transform.localScale = new Vector3(size.x-sizeSpeed,size.y-sizeSpeed,size.z-sizeSpeed);
         }
-        
+
+        public override void ExitState(GuardStateManager guard)
+        {
+            
+        }
     }
+    
 }

@@ -21,5 +21,10 @@ namespace MunroHoberman.StateMachine
                 guard.SwitchState(guard.growState);
             }
         }
+        
+        public override void ExitState(GuardStateManager guard)
+        {
+            
+        }
     }
 }

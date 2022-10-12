@@ -29,7 +29,7 @@ namespace MunroHoberman.StateMachine {
 
         public void SwitchState(GuardBaseState state)
         {
-            currentState.ExitState(this);
+            // currentState.ExitState(this);
             currentState = state;
             state.EnterState(this);
         }
