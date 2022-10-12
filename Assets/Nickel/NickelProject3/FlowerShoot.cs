@@ -23,7 +23,7 @@ namespace nickelLifelike
         // Update is called once per frame
         void Update()
         {
-            Debug.Log(shoot);
+            //Debug.Log(shoot);
             if (shoot)
             {
                 time += Time.deltaTime;

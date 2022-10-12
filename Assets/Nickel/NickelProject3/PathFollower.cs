@@ -7,10 +7,10 @@ namespace nickelLifelike
     public class PathFollower : MonoBehaviour
     {
         [SerializeField]
-        private Transform[] waypoints;
+        public Transform[] waypoints;
 
         [SerializeField]
-        public static float moveSpeed = 2f;
+        public static float moveSpeed = 10f;
 
         private int waypointIndex = 0;
 
@@ -34,7 +34,7 @@ namespace nickelLifelike
             {
                 transform.position = Vector2.MoveTowards(transform.position,
                     waypoints[waypointIndex].transform.position,
-                    moveSpeed * Time.deltaTime);
+                    moveSpeed);
 
                 if (transform.position == waypoints[waypointIndex].transform.position)
                 {
