@@ -18,6 +18,8 @@ public class RogueEnemy : MonoBehaviour
     public int[] carbs;
     
     public RogueHero hero;
+    public GameObject[] enemies;
+   
 
     public BodyManager bodyManager;
    // public GameObject[] enemies;
@@ -75,14 +77,18 @@ public class RogueEnemy : MonoBehaviour
 
     private void Die()
     {
+        enemies[number].SetActive(false);
         hero.limbReset();
         hero.health = hero.health + 10;
         number++;
+        enemies[number].SetActive(true);
         rage = rages[number];
         bones = boness[number];
         sugar = carbs[number];
         bodyManager.getBody();
-        
+        bodyManager.bodyCount++;
+        Debug.Log(bodyManager.bodyCount);
+
     }
 }
 }

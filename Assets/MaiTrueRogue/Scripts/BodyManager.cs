@@ -21,6 +21,8 @@ public class BodyManager : MonoBehaviour
     public  int rh;
     public  int lh;
 
+
+    public int bodyCount;
     public RogueHero hero;
 
     void Start()
@@ -45,10 +47,10 @@ public class BodyManager : MonoBehaviour
         lh ++;
         if (lh < 0)
         {
-            lh = (leftHands.Length-1);
+            lh = (bodyCount-1);
         }
 
-        if (lh > leftHands.Length-1)
+        if (lh > bodyCount-1)
         {
             lh = 0;
         }
@@ -66,10 +68,10 @@ public class BodyManager : MonoBehaviour
         h ++;
         if (h < 0)
         {
-            h = (heads.Length-1);
+            h = (bodyCount-1);
         }
 
-        if (h > heads.Length-1)
+        if (h > bodyCount-1)
         {
             h = 0;
         }
@@ -86,10 +88,10 @@ public class BodyManager : MonoBehaviour
         l ++;
         if (l < 0)
         {
-            l = (legs.Length-1);
+            l = (bodyCount-1);
         }
 
-        if (l > legs.Length-1)
+        if (l > bodyCount-1)
         {
             l = 0;
         }
@@ -106,10 +108,10 @@ public class BodyManager : MonoBehaviour
         rh ++;
         if (rh < 0)
         {
-            rh = (rightHands.Length-1);
+            rh = (bodyCount-1);
         }
 
-        if (rh > rightHands.Length-1)
+        if (rh > bodyCount-1)
         {
             rh = 0;
         }
@@ -126,10 +128,10 @@ public class BodyManager : MonoBehaviour
         b ++;
         if (b < 0)
         {
-            b = (bodies.Length-1);
+            b = (bodyCount-1);
         }
 
-        if (b > bodies.Length-1)
+        if (b > bodyCount-1)
         {
             b = 0;
         }
