@@ -15,16 +15,17 @@ namespace MunroHoberman.StateMachine
             if (!guard._agent.hasPath || guard._agent.velocity.sqrMagnitude == 0f)
             {
                 guard._agent.SetDestination(guard.waypoints[guard._targetIndex].position);
-                guard._targetIndex = (guard._targetIndex+ 1) % guard.waypoints.Length;
+                guard._targetIndex = (guard._targetIndex + 1) % guard.waypoints.Length;
             }
-            
+
             int layerMask = 1 << 3;
-            if (Vector3.Distance(guard.transform.position,guard._player.position)<guard.sight 
-                && !Physics.Linecast (guard.transform.position, guard._player.transform.position,layerMask))
+            if (Vector3.Distance(guard.transform.position, guard._player.position) < guard.sight
+                && !Physics.Linecast(guard.transform.position, guard._player.transform.position, layerMask))
             {
                 guard.SwitchState(guard.chaseState);
             }
-        
+        }
+
         public override void ExitState(GuardStateManager guard)
         {
             
