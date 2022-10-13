@@ -3,20 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyController : MonoBehaviour
+namespace HectorRodriguez
 {
-    public Transform playerObj;
-    protected NavMeshAgent enemyMesh;
-
-    // Start is called before the first frame update
-    void Start()
+    public class EnemyController : MonoBehaviour
     {
-        enemyMesh = GetComponent<NavMeshAgent>();
-    }
+        public Transform playerObj;
+        protected NavMeshAgent enemyMesh;
 
-    // Update is called once per frame
-    void Update()
-    {
-        enemyMesh.SetDestination(playerObj.position);
+        // Start is called before the first frame update
+        void Start()
+        {
+            enemyMesh = GetComponent<NavMeshAgent>();
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            enemyMesh.SetDestination(playerObj.position);
+        }
     }
 }
