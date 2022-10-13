@@ -13,29 +13,19 @@ namespace godzillabanana
         public SpriteRenderer unicorn;
         public Color uniColor;
         public Unicode currentUnicorn;
-        public GameObject canvas;
-       
-
-        private void Start()
+      
+       void Update()
         {
-            canvas = GameObject.Find("Canvas");
-        }
-        void Update()
-        {
-            // Debug.Log(Input.mousePosition.x);
-
-            if (currentUnicorn == null)
-            {
-                 
-                currentUnicorn = FindObjectOfType(typeof(Unicode)) as Unicode;
-                colorpick(currentUnicorn);
-
-            }
-            if (Input.mousePosition.x> 665 && currentUnicorn != null)
+            if (Input.mousePosition.x> 500)
             {
                 Draw();
                 //Debug.Log(Input.mousePosition);
-               
+                if (currentUnicorn == null)
+                {
+                    currentUnicorn = FindObjectOfType(typeof(Unicode)) as Unicode;
+                    colorpick(currentUnicorn);
+
+                }
             }
           
         }
@@ -43,7 +33,7 @@ namespace godzillabanana
         
         void Draw()
         {
-             
+            if (currentUnicorn != null) { 
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 createBrush();
@@ -56,29 +46,28 @@ namespace godzillabanana
             {
                 
 
-                Vector3 mousePos = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 500.0f));
-                  
+                Vector3 mousePos = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 500.0f)); 
                 if (mousePos != lastpos)
                 {
-                    
+                    //Debug.Log("aaa" + mousePos+" != "+lastpos);
                     AddAPoint(mousePos);
                     lastpos = mousePos;
                 }
-              
+                //else Debug.Log("ooo" + mousePos + " == " + lastpos);
+
             }
             else
             {
                 currentLineRenderer = null;
             }
 
-            
+            }
         }
 
         void createBrush()
         {
 
             GameObject brushInstance = Instantiate(brush);
-           brushInstance.transform.SetParent(canvas.transform, false);
             currentLineRenderer = brushInstance.GetComponent<LineRenderer>();
             Vector3 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             currentLineRenderer.SetPosition(0, mousePos);
@@ -94,7 +83,7 @@ namespace godzillabanana
             currentLineRenderer.SetPosition(positionIndex, pointPos);
             currentUnicorn.bleed();
 
-          
+            //Debug.Log("positionIndex:" + positionIndex + ", pointpos:" + pointPos);
             
 
         }
@@ -102,10 +91,9 @@ namespace godzillabanana
 
         public void colorpick(Unicode selectedUnicorn)
         {
+            uniColor = selectedUnicorn.color;
             currentUnicorn = selectedUnicorn;
-            uniColor = new Color(selectedUnicorn.color.r, selectedUnicorn.color.g, selectedUnicorn.color.b, 0.7f);
-            
-           
+            // Debug.Log(unicorn);
         }
 
 

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using Simon.Project2.Scripts;
 
 namespace Simon.Project2.Scripts
 {
@@ -14,16 +13,13 @@ namespace Simon.Project2.Scripts
         public bool startPlaying;
 
         public BeatScroller theBS;
-        public EnemyScroller theES;
         
         public static GameManager instance;
 
         public int currentScore;
-        public int scorePerNote = 80;
-        public int scorePerGoodNote = 120;
+        public int scorePerNote = 100;
+        public int scorePerGoodNote = 125;
         public int scorePerPerfectNote = 150;
-
-        public int maxScore = 70000;
 
         public int currentMultiplier;
         public int multiplierTracker;
@@ -34,16 +30,6 @@ namespace Simon.Project2.Scripts
         
         //retrieves the note holder to set it active upon game start
         public GameObject noteHolder;
-        public GameObject enemyHolder;
-        
-        //retrieves the start screen to set it inactive
-        public GameObject startScreen;
-
-        //retrieves the heel's parent game object
-        public GameObject heelParent;
-        
-
-        public GameObject meshParent;
         void Start()
         {
             instance = this;
@@ -54,30 +40,14 @@ namespace Simon.Project2.Scripts
         {
             if (!startPlaying)
             {
-                if (Input.GetKey("space") && Input.GetKey(KeyCode.RightShift))
+                if (Input.anyKeyDown)
                 {
                     startPlaying = true;
                     theBS.hasStarted = true;
-                    theES.hasStarted = true;
                     noteHolder.SetActive(true);
-                    startScreen.SetActive(false);
                     theMusic.Play();
                 }
-
-                
             }
-
-            float t = (float)currentScore / maxScore;
-            //float n = 2;
-            //t = (Mathf.Pow(n, t) - 1) / (n - 1);
-            
-            float heelScale = Mathf.Lerp(0.4f, 1.0f, t);
-            
-            heelParent.transform.localScale = new Vector3(heelScale, heelScale, heelScale);
-
-            float meshScale = Mathf.Lerp(1.0f, 0.01f, t);
-            
-            meshParent.transform.localScale = new Vector3(meshScale, meshScale, meshScale);
         }
 
         public void NoteHit()

@@ -17,7 +17,7 @@ namespace Max
             if (collision.gameObject.CompareTag("Shrink"))
             {
                 Destroy(collision.gameObject);
-                transform.localScale += new Vector3(-2, -2, 0);
+                transform.localScale += new Vector3(-2, -2, -2);
             }
         }
     }
