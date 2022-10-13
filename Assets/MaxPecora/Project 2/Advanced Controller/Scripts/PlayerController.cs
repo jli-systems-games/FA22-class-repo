@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 namespace Max
 {
@@ -107,6 +108,15 @@ namespace Max
                 Time.timeScale = 0;
             }
 
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                //do the following, specific named scene loading with SceneManager
+                string sceneName = SceneManager.GetActiveScene().name;
+                SceneManager.LoadScene(sceneName);
+                
+                // Do not do the below option, avoid the use of integer scenes, and avoid Application.
+                //Application.LoadLevel(0); //or whatever number your scene is
+            }
             GrappleManager();
             CrouchManager();
         }
@@ -282,6 +292,8 @@ namespace Max
                 StartCoroutine(camCorrection());
             }
         }
+
+
 
     }
 }
