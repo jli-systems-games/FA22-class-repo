@@ -77,7 +77,8 @@ public class RogueEnemy : MonoBehaviour
 
     private void Die()
     {
-        enemies[number].SetActive(false);
+        //enemies[number].SetActive(false);
+        enemies[number].GetComponent<RogueExplosion>().Explode();
         hero.limbReset();
         hero.health = hero.health + 10;
         number++;
