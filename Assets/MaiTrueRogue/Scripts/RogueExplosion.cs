@@ -13,7 +13,7 @@ namespace  Bananagodzilla{
     // Start is called before the first frame update
     void Start()
     {
-        fl = 20;
+        fl = 100;
     }
 
     // Update is called once per frame
