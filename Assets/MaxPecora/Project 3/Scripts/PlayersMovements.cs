@@ -61,9 +61,11 @@ namespace max
         private void MovePlayer()
         {
             // calculate movement direction
-            moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+            //moveDirection = orientation.forward * horizontalInput + orientation.right * verticalInput;
 
-            rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+            moveDirection = new Vector3(0, 0, 0);
+            moveDirection += Input.GetAxis("Vertical") * transform.right + Input.GetAxis("Horizontal") * transform.forward;
+            rb.AddForce(moveDirection.normalized * moveSpeed * 4f, ForceMode.Force);
         }
 
     }
