@@ -10,7 +10,7 @@ public class RogueHero : MonoBehaviour
     public int sugar;
     public float health = 100;
     public RogueEnemy enemy;
-    
+    public BodyManager bodyManager;
 
     public TMP_Text[] texts;
     // Start is called before the first frame update
@@ -31,7 +31,7 @@ public class RogueHero : MonoBehaviour
 
         if (health <= 0)
         {
-            deathScreen.SetActive(true);
+            Die();
         }
         
     }
@@ -72,6 +72,13 @@ public class RogueHero : MonoBehaviour
         sugar = 0;
         bones = 0;
 
+    }
+
+    public void Die()
+    {
+        
+        deathScreen.SetActive(true);
+        bodyManager.Explode();
     }
     
 }

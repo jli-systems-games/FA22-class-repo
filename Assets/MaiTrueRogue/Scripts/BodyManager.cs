@@ -140,7 +140,20 @@ public class BodyManager : MonoBehaviour
         hero.limbCheck(bodies[b]);
         //Debug.Log(b);
     }
-    
+
+    public void Explode()
+    {
+       heads[h].GetComponent<Rigidbody2D>().velocity =
+           new Vector2(Random.Range(-100, 100), Random.Range(-100, 100));
+       bodies[b].GetComponent<Rigidbody2D>().velocity =
+           new Vector2(Random.Range(-100, 100), Random.Range(-100, 100));
+       rightHands[rh].GetComponent<Rigidbody2D>().velocity =
+           new Vector2(Random.Range(-100, 100), Random.Range(-100, 100));
+      leftHands[lh].GetComponent<Rigidbody2D>().velocity =
+           new Vector2(Random.Range(-100, 100), Random.Range(-100, 100));
+      legs[l].GetComponent<Rigidbody2D>().velocity =
+          new Vector2(Random.Range(-100, 100), Random.Range(-100, 100));
+    }
     
     
     
