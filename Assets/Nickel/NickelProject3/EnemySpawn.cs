@@ -22,7 +22,7 @@ namespace nickelLifelike
         void Update()
         {
             time += Time.deltaTime;
-            nextTimeFire = 1 / 0.5f;
+            nextTimeFire = 1 / 0.2f;
             if (time >= nextTimeFire)
             {
                 GameObject enemy = Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);

@@ -15,16 +15,25 @@ namespace nickelLifelike
         private int waypointIndex = 0;
 
         private int damage = 0;
+        private float movementTime;
 
         // Start is called before the first frame update
         void Start()
         {
-            transform.position = waypoints[waypointIndex].transform.position;
+            if (waypoints.Length != 0)
+            {
+                transform.position = waypoints[waypointIndex].transform.position;
+
+            }
+            movementTime = 0f;
+            MoveForSeconds(3f);
+
         }
 
         // Update is called once per frame
         void Update()
         {
+
             Move();
         }
 
@@ -32,9 +41,15 @@ namespace nickelLifelike
         {
             if (waypointIndex <= waypoints.Length - 1)
             {
-                transform.position = Vector2.MoveTowards(transform.position,
-                    waypoints[waypointIndex].transform.position,
-                    moveSpeed);
+                if (Time.time < 1f)
+                {
+                    Vector2 direction = Vector2.MoveTowards(transform.position,
+                   waypoints[waypointIndex].transform.position,
+                   moveSpeed);
+                    direction -= (Vector2)transform.position;
+                    transform.GetComponent<Rigidbody2D>().velocity = direction;
+                }
+                
 
                 if (transform.position == waypoints[waypointIndex].transform.position)
                 {
@@ -42,6 +57,12 @@ namespace nickelLifelike
                 }
             }
 
+
+        }
+
+        void MoveForSecond(float second)
+        {
+            movementTime = Time.time + second;
         }
 
 
