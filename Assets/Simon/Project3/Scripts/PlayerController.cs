@@ -2,10 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
 using Vector3 = UnityEngine.Vector3;
+//using UnityStandardAssets.Characters.ThirdPerson;
 
 namespace Simon.Project3.Scripts
 {
@@ -16,6 +18,15 @@ namespace Simon.Project3.Scripts
             public Camera cam;
 
             public NavMeshAgent agent;
+
+            public ThirdPersonCharacter character;
+
+            public Animator anim;
+
+            private void Start()
+            {
+                agent.updateRotation = false;
+            }
 
             public Vector3 RandomNavmeshLocation(float radius)
             {
@@ -32,7 +43,7 @@ namespace Simon.Project3.Scripts
             }
             
             private float nextActionTime = 0.0f;
-            public float period = 10f;
+            //private float period = Random.Range(0.1f, 2f);
 
         
             void Update()
@@ -52,11 +63,24 @@ namespace Simon.Project3.Scripts
                 {
                     if (Time.time > nextActionTime)
                     {
-                        nextActionTime = Time.time + period;
-                        agent.SetDestination(RandomNavmeshLocation(5f));
+                        nextActionTime = Time.time + Random.Range(0.1f, 2f);
+                        agent.SetDestination(RandomNavmeshLocation(20f));
                         Debug.Log("new mark found");
                     }
                 }
+
+                if (agent.remainingDistance > agent.stoppingDistance)
+                {
+                    character.Move(agent.desiredVelocity, false, false);
+                    anim.Play("HumanoidWalk");
+                }
+                else
+                {
+                    character.Move(Vector3.zero, false, false);
+                    anim.Play("HumanoidIdle");
+                }
+             
+                
             }
         }
 
