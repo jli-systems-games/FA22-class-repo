@@ -6,22 +6,26 @@ using UnityEngine.SceneManagement;
 
 namespace AishaLifelike
 {
-    public class ChangeScene2 : MonoBehaviour
+        
+    public class ChangeScenetoNext : MonoBehaviour
     {
+        // void Update()
+        // {
+        // if (Input.anyKey)
+        //     {
+        //     SceneManager.LoadScene("Play");
+        //     }
+        // }
         private bool isLoading;
         public TMP_Text text;
-        public AudioSource playSound;
-        public string sceneName = "OpeningScene";
-        
-        //private void Start()
-        //{
-        //    Cursor.lockState = CursorLockMode.None;
-        //}
+
+        private void Start()
+        {
+           Cursor.lockState = CursorLockMode.None;
+        }
 
         public void restartScene()
         {
-            //CoinPicker.coin = "Coins: " + coin.ToString();
-            //playSound.Play();
             // Use a coroutine to load the Scene in the background
             StartCoroutine(LoadYourAsyncScene());
         }
@@ -34,7 +38,7 @@ namespace AishaLifelike
             // You could also load the Scene by using sceneBuildIndex. In this case Scene2 has
             // a sceneBuildIndex of 1 as shown in Build Settings.
 
-            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("OpeningScene");
 
             // Wait until the asynchronous scene fully loads
             while (!asyncLoad.isDone)
@@ -42,8 +46,8 @@ namespace AishaLifelike
                 if (isLoading == false)
                 {
                     Debug.Log("Loading");
-                    isLoading = true;
-                    text.enabled = true;
+                    // isLoading = true;
+                    // text.enabled = true;
                 }
 
                 yield return null;
@@ -51,4 +55,5 @@ namespace AishaLifelike
             }
         }
     }
+
 }
