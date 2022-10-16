@@ -37,7 +37,7 @@ namespace nickelLifelike
         public void Seek(Transform _target)
         {
             target = _target;
-            Debug.Log(target);
+            //Debug.Log(target);
         }
     }
 

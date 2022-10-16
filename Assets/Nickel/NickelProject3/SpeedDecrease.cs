@@ -23,7 +23,8 @@ namespace nickelLifelike
             Debug.Log("enter");
             if (collision.CompareTag("Enemy"))
             {
-                PathFollower.moveSpeed =1f;
+                collision.GetComponent<PathFollower>().moveSpeed = 0.5f;
+                
             }
         }
 
@@ -31,7 +32,7 @@ namespace nickelLifelike
         {
             if (collision.CompareTag("Enemy"))
             {
-                PathFollower.moveSpeed = 100f;
+                collision.GetComponent<PathFollower>().moveSpeed = 1f;
             }
         }
     }

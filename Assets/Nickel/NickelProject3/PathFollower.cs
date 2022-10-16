@@ -10,12 +10,12 @@ namespace nickelLifelike
         public Transform[] waypoints;
 
         [SerializeField]
-        public static float moveSpeed = 10f;
+        public float moveSpeed = 1f;
 
         private int waypointIndex = 0;
 
         private int damage = 0;
-        private float movementTime;
+        
 
         // Start is called before the first frame update
         void Start()
@@ -23,10 +23,9 @@ namespace nickelLifelike
             if (waypoints.Length != 0)
             {
                 transform.position = waypoints[waypointIndex].transform.position;
-
             }
-            movementTime = 0f;
-            MoveForSeconds(3f);
+                
+ 
 
         }
 
@@ -41,40 +40,44 @@ namespace nickelLifelike
         {
             if (waypointIndex <= waypoints.Length - 1)
             {
-                if (Time.time < 1f)
-                {
-                    Vector2 direction = Vector2.MoveTowards(transform.position,
-                   waypoints[waypointIndex].transform.position,
-                   moveSpeed);
-                    direction -= (Vector2)transform.position;
-                    transform.GetComponent<Rigidbody2D>().velocity = direction;
-                }
                 
+                    transform.position = Vector2.MoveTowards(transform.position,
+                   waypoints[waypointIndex].transform.position,
+                   moveSpeed*Time.deltaTime);
+                
+
+
 
                 if (transform.position == waypoints[waypointIndex].transform.position)
                 {
                     waypointIndex += 1;
+                    
                 }
             }
 
 
         }
 
-        void MoveForSecond(float second)
-        {
-            movementTime = Time.time + second;
-        }
+       
 
 
-        private void OnCollisionEnter2D(Collision2D collision)
+        private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.gameObject.CompareTag("bullet"))
             {
                 Destroy(collision.gameObject);
-                damage++;
+                this.GetComponent<EnemyHealth>().TakeDamage(1);
             }
-            
+            if (collision.gameObject.CompareTag("mine"))
+            {
+                Destroy(collision.gameObject);
+                this.GetComponent<EnemyHealth>().TakeDamage(10);
+            }
+
+
         }
+
+       
 
     }
 
