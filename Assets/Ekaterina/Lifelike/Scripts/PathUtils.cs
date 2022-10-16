@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-namespace MunroHoberman.Pathfinding {
+namespace Ekaterina {
 
 public class PathUtils : MonoBehaviour {
     private UnityEngine.AI.NavMeshAgent agent;

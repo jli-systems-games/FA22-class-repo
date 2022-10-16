@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace MunroHoberman.Pathfinding {
+namespace Ekaterina {
     public class Guard : MonoBehaviour
     {
         NavMeshAgent _agent;
