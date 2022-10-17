@@ -1,30 +1,24 @@
 fileFormatVersion: 2
-guid: c944f88da1cd9494db4430a1384f4648
+guid: 65c5aeb7c192e1648af41d57d62379ea
 ModelImporter:
   serializedVersion: 21300
-  internalIDToNameTable:
-  - first:
-      74: -1978303741906493279
-    second: HumanoidIdle
-  - first:
-      74: 1303299601406483602
-    second: HumanoidWalk
+  internalIDToNameTable: []
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: orange
-    second: {fileID: 2100000, guid: e20cd884fcdb3144e864532cd5acb6ae, type: 2}
+      name: blue
+    second: {fileID: 2100000, guid: c4c250b945953f1409f9ab0358535c03, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: white
-    second: {fileID: 2100000, guid: 30f0e93f8529f7646981dd0a3c7e9b3f, type: 2}
+      name: green
+    second: {fileID: 2100000, guid: d316af778cf9d094cbbd4e6c654a0ee1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: yellow
-    second: {fileID: 2100000, guid: 0621dea1ddad89b47b490fde574e3ff8, type: 2}
+      name: magenta
+    second: {fileID: 2100000, guid: fb92489b574901341a91457d7be9ed79, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -52,65 +46,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: HumanoidIdle
-      takeName: Armature|idle
-      internalID: 0
-      firstFrame: 0
-      lastFrame: 60
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: HumanoidWalk
-      takeName: Armature|run
-      internalID: 0
-      firstFrame: 0
-      lastFrame: 60
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 0
   meshes:
     lODScreenPercentages: []
