@@ -18,6 +18,16 @@ namespace Ekaterina
             {
                 SceneManager.LoadScene("Ekaterina.Lifelike.Lose");
             }
+            
+            if (collider.gameObject.name == "Slider")
+            {
+                SceneManager.LoadScene("Ekaterina.Lifelike.Lose");
+            }
+            
+            if (collider.gameObject.name == "Portal")
+            {
+                SceneManager.LoadScene("Ekaterina.Lifelike.Story_4");
+            }
         }
     }
 }
