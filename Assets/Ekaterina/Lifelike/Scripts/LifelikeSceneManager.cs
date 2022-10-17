@@ -9,7 +9,7 @@ namespace Ekaterina
     {
         private void OnTriggerEnter(Collider collider)
         {
-            if (collider.gameObject.name == "Alien 1")
+            if (collider.gameObject.name == "Crab")
             {
                 SceneManager.LoadScene("Ekaterina.Lifelike.Lose");
             }
