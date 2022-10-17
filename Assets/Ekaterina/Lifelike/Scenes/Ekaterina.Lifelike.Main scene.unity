@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.2952151, g: 0.051982313, b: 0.016416565, a: 1}
+  m_IndirectSpecularColor: {r: 0.2952115, g: 0.05198215, b: 0.016418558, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1230,6 +1230,7 @@ GameObject:
   - component: {fileID: 834179942}
   - component: {fileID: 834179944}
   - component: {fileID: 834179945}
+  - component: {fileID: 834179946}
   m_Layer: 0
   m_Name: First person player
   m_TagString: Untagged
@@ -1304,6 +1305,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff792ecd157a94e4cadaa28d3dc8390f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &834179946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834179941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a2d26a60f847fca4e4a78ddf4f4ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &863278228 stripped
@@ -1595,6 +1608,8 @@ MonoBehaviour:
   - {fileID: 756534829}
   playerTarget: {fileID: 834179943}
   sight: 50
+  lastActiveWayPoint: {fileID: 1510347843}
+  activeTargetLocation: {fileID: 1464548710}
 --- !u!195 &1339458710
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2202,6 +2217,8 @@ MonoBehaviour:
   - {fileID: 2100663148}
   playerTarget: {fileID: 834179943}
   sight: 30
+  lastActiveWayPoint: {fileID: 0}
+  activeTargetLocation: {fileID: 0}
 --- !u!114 &1820002706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2530,6 +2547,8 @@ MonoBehaviour:
   - {fileID: 826457021}
   playerTarget: {fileID: 834179943}
   sight: 50
+  lastActiveWayPoint: {fileID: 0}
+  activeTargetLocation: {fileID: 0}
 --- !u!114 &1930085402
 MonoBehaviour:
   m_ObjectHideFlags: 0
