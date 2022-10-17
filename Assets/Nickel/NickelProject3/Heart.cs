@@ -6,7 +6,7 @@ namespace nickelLifelike
 {
     public class Heart : MonoBehaviour
     {
-
+        public GameObject gameOverScene;
         private int maxEnemy = 0;
         private float timeLeft = 120;
         // Start is called before the first frame update
@@ -27,6 +27,7 @@ namespace nickelLifelike
             else if (maxEnemy > 5 && timeLeft > 0)
             {
                 Debug.Log("Game Over");
+                gameOverScene.SetActive(true);
             }
             else if (timeLeft < 0)
             {
