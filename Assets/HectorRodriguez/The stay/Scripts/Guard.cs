@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace HectorRodriguez.Pathfinding { 
+namespace HectorRodriguez { 
 public class Guard : MonoBehaviour
 {
         NavMeshAgent _agent;
@@ -30,7 +30,8 @@ public class Guard : MonoBehaviour
         void Update()
         {
             //if the player is suddenly shaded
-            if (playerTarget.GetComponent<Stephani>().IsShaded)
+            if (playerTarget.GetComponent<Stephanie>().IsShaded && lastActiveWayPoint)
+
             {
                 _agent.SetDestination(lastActiveWayPoint.position);
                 activeTargetLocation = lastActiveWayPoint;

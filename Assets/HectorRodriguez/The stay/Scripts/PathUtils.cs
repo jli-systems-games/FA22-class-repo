@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Hector.Rodriguez { 
+namespace HectorRodriguez { 
 public class PathUtils : MonoBehaviour
 {
         private UnityEngine.AI.NavMeshAgent agent;
