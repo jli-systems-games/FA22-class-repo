@@ -13,6 +13,11 @@ namespace Ekaterina
             {
                 SceneManager.LoadScene("Ekaterina.Lifelike.Lose");
             }
+            
+            if (collider.gameObject.name == "Mutant")
+            {
+                SceneManager.LoadScene("Ekaterina.Lifelike.Lose");
+            }
         }
     }
 }
