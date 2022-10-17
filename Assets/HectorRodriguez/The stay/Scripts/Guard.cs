@@ -30,7 +30,7 @@ public class Guard : MonoBehaviour
         void Update()
         {
             //if the player is suddenly shaded
-            if (playerTarget.GetComponent<FPSPlayer>().IsShaded)
+            if (playerTarget.GetComponent<Stephani>().IsShaded)
             {
                 _agent.SetDestination(lastActiveWayPoint.position);
                 activeTargetLocation = lastActiveWayPoint;
@@ -64,7 +64,7 @@ public class Guard : MonoBehaviour
         {
             return Vector3.Distance(transform.position, playerTarget.position) < sight
                 && !Physics.Linecast(transform.position, playerTarget.transform.position, layerMask)
-                && !playerTarget.GetComponent<MarsPlayer>().IsShaded;
+                && !playerTarget.GetComponent<Stephanie>().IsShaded;
 
         }
 
