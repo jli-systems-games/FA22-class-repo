@@ -32,7 +32,8 @@ public class Guard : MonoBehaviour
         {
             GoToNextLocation();
         }
-    }
+            _agent.SetDestination(_player.position);
+        }
 
     public void GoToNextLocation()
     {
