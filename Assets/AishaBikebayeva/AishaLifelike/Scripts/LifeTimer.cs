@@ -31,7 +31,7 @@ namespace AishaLifelike
             {
                 timer = timerDuration;
                 Debug.Log("Time has ended!");
-                // SceneManager.LoadScene("Win");
+                SceneManager.LoadScene("GameOver");
             }
 
         }
