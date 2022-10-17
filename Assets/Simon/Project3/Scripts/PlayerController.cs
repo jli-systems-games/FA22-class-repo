@@ -15,6 +15,9 @@ namespace Simon.Project3.Scripts
         public class PlayerController : MonoBehaviour
         {
 
+            public GameObject smunchface1;
+            public GameObject smunchface2;
+            
             public Camera cam;
 
             public NavMeshAgent agent;
@@ -48,6 +51,19 @@ namespace Simon.Project3.Scripts
         
             void Update()
             {
+
+                if (Input.GetMouseButtonDown(0))
+                {
+                    smunchface1.SetActive(false);
+                    smunchface2.SetActive(true);
+                }
+
+                if (Input.GetMouseButtonUp(0))
+                {
+                    smunchface1.SetActive(true);
+                    smunchface2.SetActive(false);
+                }
+                
                 if (Input.GetMouseButton(0))
                 {
                     Ray ray = cam.ScreenPointToRay(Input.mousePosition);
