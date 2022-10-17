@@ -8,7 +8,7 @@ namespace nickelLifelike
     public class PlaceTower : MonoBehaviour
     {
         public GameObject towerPrefab;
-        private int test;
+        
         // Start is called before the first frame update
         void Start()
         {
@@ -18,16 +18,17 @@ namespace nickelLifelike
         // Update is called once per frame
         void Update()
         {
-            Debug.Log(test);
+            //Debug.Log(test);
+            Place();
         }
 
-        private void OnMouseOver()
+        private void Place()
         {
             
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(1))
             {
                 PlaceATower();
-                test++;
+                
             }
         }
 
@@ -42,8 +43,12 @@ namespace nickelLifelike
             }
             
 
-            
+
+
+
         }
+
+       
     }
 
 }
