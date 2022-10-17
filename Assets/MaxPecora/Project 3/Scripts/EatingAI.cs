@@ -17,7 +17,7 @@ namespace max
         {
             if (collision.gameObject.tag == "Enemy")
             {
-                Debug.Log("collision detected");
+                Debug.Log("Ai eaten");
                 Destroy(collision.gameObject);
             }
         }

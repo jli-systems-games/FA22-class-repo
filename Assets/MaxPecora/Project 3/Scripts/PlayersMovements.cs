@@ -36,15 +36,21 @@ namespace max
         private void Update()
         {
             //ground check
-            grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+            if (tag == "Player")
+            {
+                grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+                Debug.Log("Is Grounded");
+            }
 
             MyInput();
 
             //handle drag
-            if (grounded)
+            if (grounded) {
                 rb.drag = groundDrag;
-            else
+            }
+            else {
                 rb.drag = 0;
+            }
         }
 
         private void FixedUpdate()
