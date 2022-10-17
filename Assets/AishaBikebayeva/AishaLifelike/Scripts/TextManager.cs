@@ -22,6 +22,10 @@ namespace AishaLifelike
             yield return new WaitForSeconds(3);
             NewText("Hello? We lost you", 2);
             yield return new WaitForSeconds(3);
+            NewText("We landed on Mars", 2);
+            yield return new WaitForSeconds(3);
+            NewText("it's different...", 2);
+            yield return new WaitForSeconds(3);
             NewText("Are you alive?", 2);
             yield return new WaitForSeconds(5);
             SceneManager.LoadScene("Mars");
