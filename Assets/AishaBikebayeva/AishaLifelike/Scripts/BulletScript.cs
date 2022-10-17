@@ -34,7 +34,7 @@ namespace AishaLifelike
 						Instantiate(bloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
 					
 						AishaLifelike.LifeScore.score = AishaLifelike.LifeScore.score + 1;
-						Destroy(gameObject);
+						Destroy(GameObject.FindWithTag("Dummie"));
 					}
 				}		
 				Destroy(gameObject);
