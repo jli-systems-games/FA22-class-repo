@@ -3,12 +3,13 @@ using UnityEngine.UI;
 using System.Collections;
 using System;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 namespace AishaLifelike
 {
     public class LifeScore : MonoBehaviour
     {
-        public TextMesh scoreText; 
+        public TMP_Text scoreText; 
 
         //public Sprite explosion;
         //private SpriteRenderer sr;
