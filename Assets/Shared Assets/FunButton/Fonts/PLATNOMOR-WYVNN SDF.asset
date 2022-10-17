@@ -64,7 +64,8 @@ MonoBehaviour:
   materialHashCode: -1162481220
   m_Version: 1.1.0
   m_SourceFontFileGUID: 7922280bbff3d6e4092c8b3d163b1f42
-  m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 7922280bbff3d6e4092c8b3d163b1f42, type: 3}
+  m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 7922280bbff3d6e4092c8b3d163b1f42,
+    type: 3}
   m_SourceFontFile: {fileID: 12800000, guid: 7922280bbff3d6e4092c8b3d163b1f42, type: 3}
   m_AtlasPopulationMode: 1
   m_FaceInfo:
@@ -285,6 +286,20 @@ MonoBehaviour:
       m_Height: 67
     m_Scale: 1
     m_AtlasIndex: 0
+  - m_Index: 37
+    m_Metrics:
+      m_Width: 35.5
+      m_Height: 66.09375
+      m_HorizontalBearingX: 5.1875
+      m_HorizontalBearingY: 66.09375
+      m_HorizontalAdvance: 44.734375
+    m_GlyphRect:
+      m_X: 226
+      m_Y: 357
+      m_Width: 36
+      m_Height: 67
+    m_Scale: 1
+    m_AtlasIndex: 0
   - m_Index: 40
     m_Metrics:
       m_Width: 31.90625
@@ -295,6 +310,20 @@ MonoBehaviour:
     m_GlyphRect:
       m_X: 10
       m_Y: 764
+      m_Width: 33
+      m_Height: 67
+    m_Scale: 1
+    m_AtlasIndex: 0
+  - m_Index: 41
+    m_Metrics:
+      m_Width: 31.90625
+      m_Height: 66.09375
+      m_HorizontalBearingX: 5.1875
+      m_HorizontalBearingY: 66.09375
+      m_HorizontalAdvance: 40.6875
+    m_GlyphRect:
+      m_X: 170
+      m_Y: 726
       m_Width: 33
       m_Height: 67
     m_Scale: 1
@@ -579,6 +608,20 @@ MonoBehaviour:
       m_Height: 67
     m_Scale: 1
     m_AtlasIndex: 0
+  - m_Index: 81
+    m_Metrics:
+      m_Width: 33.65625
+      m_Height: 66.09375
+      m_HorizontalBearingX: 5.1875
+      m_HorizontalBearingY: 66.09375
+      m_HorizontalAdvance: 44.390625
+    m_GlyphRect:
+      m_X: 123
+      m_Y: 814
+      m_Width: 34
+      m_Height: 67
+    m_Scale: 1
+    m_AtlasIndex: 0
   - m_Index: 82
     m_Metrics:
       m_Width: 33.671875
@@ -705,48 +748,6 @@ MonoBehaviour:
       m_Height: 67
     m_Scale: 1
     m_AtlasIndex: 0
-  - m_Index: 37
-    m_Metrics:
-      m_Width: 35.5
-      m_Height: 66.09375
-      m_HorizontalBearingX: 5.1875
-      m_HorizontalBearingY: 66.09375
-      m_HorizontalAdvance: 44.734375
-    m_GlyphRect:
-      m_X: 226
-      m_Y: 357
-      m_Width: 36
-      m_Height: 67
-    m_Scale: 1
-    m_AtlasIndex: 0
-  - m_Index: 81
-    m_Metrics:
-      m_Width: 33.65625
-      m_Height: 66.09375
-      m_HorizontalBearingX: 5.1875
-      m_HorizontalBearingY: 66.09375
-      m_HorizontalAdvance: 44.390625
-    m_GlyphRect:
-      m_X: 123
-      m_Y: 814
-      m_Width: 34
-      m_Height: 67
-    m_Scale: 1
-    m_AtlasIndex: 0
-  - m_Index: 41
-    m_Metrics:
-      m_Width: 31.90625
-      m_Height: 66.09375
-      m_HorizontalBearingX: 5.1875
-      m_HorizontalBearingY: 66.09375
-      m_HorizontalAdvance: 40.6875
-    m_GlyphRect:
-      m_X: 170
-      m_Y: 726
-      m_Width: 33
-      m_Height: 67
-    m_Scale: 1
-    m_AtlasIndex: 0
   m_CharacterTable:
   - m_ElementType: 1
     m_Unicode: 32
@@ -805,8 +806,16 @@ MonoBehaviour:
     m_GlyphIndex: 36
     m_Scale: 1
   - m_ElementType: 1
+    m_Unicode: 66
+    m_GlyphIndex: 37
+    m_Scale: 1
+  - m_ElementType: 1
     m_Unicode: 69
     m_GlyphIndex: 40
+    m_Scale: 1
+  - m_ElementType: 1
+    m_Unicode: 70
+    m_GlyphIndex: 41
     m_Scale: 1
   - m_ElementType: 1
     m_Unicode: 71
@@ -889,6 +898,10 @@ MonoBehaviour:
     m_GlyphIndex: 80
     m_Scale: 1
   - m_ElementType: 1
+    m_Unicode: 110
+    m_GlyphIndex: 81
+    m_Scale: 1
+  - m_ElementType: 1
     m_Unicode: 111
     m_GlyphIndex: 82
     m_Scale: 1
@@ -923,18 +936,6 @@ MonoBehaviour:
   - m_ElementType: 1
     m_Unicode: 121
     m_GlyphIndex: 92
-    m_Scale: 1
-  - m_ElementType: 1
-    m_Unicode: 66
-    m_GlyphIndex: 37
-    m_Scale: 1
-  - m_ElementType: 1
-    m_Unicode: 110
-    m_GlyphIndex: 81
-    m_Scale: 1
-  - m_ElementType: 1
-    m_Unicode: 70
-    m_GlyphIndex: 41
     m_Scale: 1
   m_AtlasTextures:
   - {fileID: -3710272354277264212}
@@ -1320,14 +1321,15 @@ MonoBehaviour:
   tabSize: 10
 --- !u!21 &1273297418428308366
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: PLATNOMOR-WYVNN Atlas Material
   m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
-  m_ShaderKeywords: 
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -1357,6 +1359,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _Ambient: 0.5
     - _Bevel: 0.5
@@ -1415,7 +1418,7 @@ Material:
     - _FaceColor: {r: 0.9607843, g: 0.9492534, b: 0.7921569, a: 1}
     - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
     - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 0.8631574, g: 0.33245158, b: 0.03433981, a: 1}
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
