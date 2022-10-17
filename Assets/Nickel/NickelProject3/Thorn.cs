@@ -1,0 +1,29 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace nickelLifelike
+{
+    public class Thorn : MonoBehaviour
+    {
+        // Start is called before the first frame update
+        void Start()
+        {
+
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            Debug.Log("1");
+            collision.GetComponent<EnemyHealth>().ThornDamage();
+        }
+    }
+
+}
+

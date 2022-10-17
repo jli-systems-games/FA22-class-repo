@@ -73,6 +73,7 @@ namespace nickelLifelike
                 Destroy(collision.gameObject);
                 this.GetComponent<EnemyHealth>().TakeDamage(10);
             }
+            
 
 
         }

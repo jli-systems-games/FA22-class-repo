@@ -34,6 +34,21 @@ namespace nickelLifelike
                 Destroy(gameObject);
             }
         }
+
+        public void ThornDamage()
+        {
+            StartCoroutine(dotDamage());
+        }
+
+        IEnumerator dotDamage()
+        {
+            health -= 1;
+            yield return new WaitForSeconds(2);
+            health -= 1;
+            
+            
+        }
+        
     }
 
 }

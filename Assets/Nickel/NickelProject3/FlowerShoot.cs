@@ -62,7 +62,7 @@ namespace nickelLifelike
 
         public float range = 2.35f;
         public GameObject bulletPrefab;
-        public float fireRate = 1f;
+        public float fireRate = 0.7f;
         private float fireCountdown = 0f;
 
         public string enemyTag = "Enemy";
