@@ -4,7 +4,7 @@ using System.Collections;
 using System;
 using UnityEngine.SceneManagement;
 using TMPro;
-
+// using PlayerMovementScript;
 namespace AishaLifelike
 {
     public class LifeScore : MonoBehaviour
@@ -27,10 +27,12 @@ namespace AishaLifelike
         // Update is called once per frame
         void Update()
         {
-            scoreText.text = "Score: " + score; 
-            //score += Time.deltaTime;                                         
-            score += 1;                                                             
-                                                                      
+            // if (AishaLifelike.PlayerMovementScript.hitInfo.transform.tag=="Dummie") {
+                scoreText.text = "Score: " + score; 
+                //score += Time.deltaTime;                                         
+                // score += 1;  
+                // Destroy(GameObject.tag=="Dummie")                                                           
+            // }                                                       
         }
     }
 }

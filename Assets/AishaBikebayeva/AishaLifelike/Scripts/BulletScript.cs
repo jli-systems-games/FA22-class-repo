@@ -32,6 +32,8 @@ namespace AishaLifelike
 					}
 					if(hit.transform.tag == "Dummie"){
 						Instantiate(bloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
+					
+						AishaLifelike.LifeScore.score = AishaLifelike.LifeScore.score + 1;
 						Destroy(gameObject);
 					}
 				}		

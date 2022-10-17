@@ -312,8 +312,10 @@ namespace AishaLifelike
 				//Debug.DrawRay (bulletSpawn.position, bulletSpawn.forward + (bulletSpawn.right*0.2f), Color.green, 0.0f);
 				if (hitInfo.transform.tag=="Dummie") {
 					Transform _other = hitInfo.transform.root.transform;
+					AishaLifelike.LifeScore.score = AishaLifelike.LifeScore.score + 1;
 					if (_other.transform.tag == "Dummie") {
 						print ("hit a dummie");
+						AishaLifelike.LifeScore.score = AishaLifelike.LifeScore.score + 1;
 					}
 					InstantiateBlood(hitInfo,false);
 				}
@@ -342,6 +344,7 @@ namespace AishaLifelike
 				// if (!swordHitWithGunOrNot) {
 					if (bloodEffect)
 						Instantiate (bloodEffect, _hitPos.point, Quaternion.identity);
+						// LifeScore.score = score + 1;
 					else
 						Debug.Log("Missing blood effect prefab in the inspector.");
 				// }
