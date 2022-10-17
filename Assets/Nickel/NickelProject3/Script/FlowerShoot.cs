@@ -60,7 +60,7 @@ namespace nickelLifelike
         private Transform target;
         private PathFollower targetEnemy;
 
-        public float range = 2.35f;
+        public float range = 2f;
         public GameObject bulletPrefab;
         public float fireRate = 0.7f;
         private float fireCountdown = 0f;
