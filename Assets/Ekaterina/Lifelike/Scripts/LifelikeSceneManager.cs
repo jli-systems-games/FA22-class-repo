@@ -11,7 +11,7 @@ namespace Ekaterina
         {
             if (collider.gameObject.name == "Alien 1")
             {
-                SceneManager.LoadScene("Ekaterina.Lifelike.Start");
+                SceneManager.LoadScene("Ekaterina.Lifelike.Lose");
             }
         }
     }
