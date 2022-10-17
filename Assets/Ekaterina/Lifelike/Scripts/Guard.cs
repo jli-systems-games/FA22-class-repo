@@ -33,7 +33,8 @@ namespace Ekaterina {
         void Update()
         {
             //if the player is suddenly shaded
-            if (playerTarget.GetComponent<MarsPlayer>().IsShaded)
+            if (playerTarget.GetComponent<MarsPlayer>().IsShaded &&
+                activeTargetLocation != lastActiveWayPoint)
             {
                 _agent.SetDestination(lastActiveWayPoint.position);
                 activeTargetLocation = lastActiveWayPoint;
