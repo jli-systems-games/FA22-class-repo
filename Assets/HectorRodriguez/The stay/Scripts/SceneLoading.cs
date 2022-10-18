@@ -33,7 +33,7 @@ namespace HectorRodriguez
             {
                 LoadScene("MainGame");
             }
-            if(SceneManager.GetActiveScene().name == "GameOver")
+            if (SceneManager.GetActiveScene().name == "DeathScene")
             {
                 LoadScene("LoadingScreen");
             }
@@ -41,7 +41,6 @@ namespace HectorRodriguez
             {
                 SceneManager.LoadScene(name);
             }
-
+        }
         }
     }
-}
