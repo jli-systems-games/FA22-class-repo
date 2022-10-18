@@ -16,19 +16,25 @@ namespace AishaLifelike
             curHealth = maxHealth;
         }
 
-        void Update()
+        // void Update(){
+        //     OnCollisionEnter();
+        // }
+        
+        void OnCollisionEnter(Collision collision)
         {
-            if( Input.GetKeyDown( KeyCode.Space ) )
+        if (collision.gameObject.tag == "Projectile")
             {
-                DamagePlayer(10);
+                curHealth = maxHealth - 20;
+                healthBar.SetHealth( curHealth );
+                Debug.Log("Player was hit");
             }
         }
 
-        public void DamagePlayer( int damage )
-        {
-            curHealth -= damage;
+        // public void DamagePlayer( int damage )
+        // {
+        //     curHealth -= damage;
 
-            healthBar.SetHealth( curHealth );
-        }
+        //     healthBar.SetHealth( curHealth );
+        // }
     }
 }

@@ -103,14 +103,14 @@ namespace AishaLifelike
         alreadyAttacked = false;
     }
 
-    // public  static void TakeDamage(int damage)
+    // public void TakeDamage(int damage)
     // {
-    //     AishaLifelike.Health.curHealth -= 1;
+    //     AishaLifelike.Health.DamagePlayer();
 
     //     if (AishaLifelike.Health.curHealth <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
     // }
 
-    // public  void DestroyEnemy()
+    // public void DestroyEnemy()
     // {
     //     Destroy(gameObject);
     //     //load scene game over
