@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 namespace Ekaterina {
 
 
-public class Story_3_SceneManager : MonoBehaviour
+public class Instructions_SceneManager : MonoBehaviour
 {
  void Update ()
     {
     if (Input.GetKeyDown("space")) {
-        SceneManager.LoadScene("Ekaterina.Lifelike.Instructions");
+        SceneManager.LoadScene("Ekaterina.Lifelike.Main scene");
     }
 }
 }
