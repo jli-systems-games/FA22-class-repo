@@ -31,7 +31,7 @@ namespace Mariana
 
             if (attacking)
             {
-                timer += Time.deltaTime;
+                //timer += Time.deltaTime;
                 if(timer >= timeToAttack)
                 {
                     timer = 0;
