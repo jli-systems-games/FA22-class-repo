@@ -91,6 +91,7 @@ namespace AishaLifelike
             Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+
             ///End of attack code
 
             alreadyAttacked = true;
@@ -102,16 +103,17 @@ namespace AishaLifelike
         alreadyAttacked = false;
     }
 
-    // public static void TakeDamage(int damage)
+    // public  static void TakeDamage(int damage)
     // {
-    //     AishaLifelike.HealthBarAisha.CurrentHealth -= damage;
+    //     AishaLifelike.Health.curHealth -= 1;
 
-    //     if (AishaLifelike.HealthBarAisha.CurrentHealth <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
+    //     if (AishaLifelike.Health.curHealth <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
     // }
 
     // public  void DestroyEnemy()
     // {
     //     Destroy(gameObject);
+    //     //load scene game over
     // }
 
     private void OnDrawGizmosSelected()
