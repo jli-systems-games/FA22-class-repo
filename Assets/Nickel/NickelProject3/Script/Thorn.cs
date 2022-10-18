@@ -20,8 +20,13 @@ namespace nickelLifelike
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            Debug.Log("1");
-            collision.GetComponent<EnemyHealth>().ThornDamage();
+            //Debug.Log("1");
+            if (collision.CompareTag("Enemy"))
+            {
+                //Debug.Log("enter");
+                collision.GetComponent<EnemyHealth>().ThornDamage();
+            }
+            
         }
     }
 

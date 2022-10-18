@@ -19,7 +19,7 @@ namespace nickelLifelike {
 
         void Update()
         {
-            Debug.Log(isDragging);
+            //Debug.Log(isDragging);
             if (isDragging)
             {
                 Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
