@@ -411,6 +411,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   speed: 100
+  player: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 128
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 5
+  timeBetweenAttacks: 0.5
+  projectile: {fileID: 2142984306}
+  sightRange: 15
+  attackRange: 12
+  playerInSightRange: 0
+  playerInAttackRange: 0
 --- !u!195 &165110316
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -611,6 +626,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   speed: 100
+  player: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 128
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 5
+  timeBetweenAttacks: 0.5
+  projectile: {fileID: 2142984306}
+  sightRange: 15
+  attackRange: 12
+  playerInSightRange: 0
+  playerInAttackRange: 0
 --- !u!195 &279543531
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -995,6 +1025,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   speed: 100
+  player: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 128
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 5
+  timeBetweenAttacks: 0.5
+  projectile: {fileID: 2142984306}
+  sightRange: 15
+  attackRange: 12
+  playerInSightRange: 0
+  playerInAttackRange: 0
 --- !u!195 &368587095
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1304,6 +1349,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   speed: 100
+  player: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 128
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 5
+  timeBetweenAttacks: 0.5
+  projectile: {fileID: 2142984306}
+  sightRange: 15
+  attackRange: 12
+  playerInSightRange: 0
+  playerInAttackRange: 0
 --- !u!195 &514770703
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1513,6 +1573,7 @@ RectTransform:
   - {fileID: 1824776624}
   - {fileID: 982515542}
   - {fileID: 1077133923}
+  - {fileID: 620827502}
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1677,6 +1738,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   speed: 100
+  player: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 128
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 5
+  timeBetweenAttacks: 0.5
+  projectile: {fileID: 2142984306}
+  sightRange: 15
+  attackRange: 12
+  playerInSightRange: 0
+  playerInAttackRange: 0
 --- !u!195 &584120002
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1791,6 +1867,82 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.9343338
   m_Center: {x: -0.034128826, y: -0.045297384, z: 0.0052506914}
+--- !u!1 &620827501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 620827502}
+  - component: {fileID: 620827504}
+  - component: {fileID: 620827503}
+  m_Layer: 5
+  m_Name: Healthbar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &620827502
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620827501}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.02, y: 0.2541584, z: 0.74752474}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 540343025}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 169, y: 183}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &620827503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620827501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: f9302937f52a1d94e8aad0ed74567214, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 1
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &620827504
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620827501}
+  m_CullTransparentMesh: 1
 --- !u!4 &654272133 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0286600edbf12446ebe34c3e3de6c81d,
@@ -1813,7 +1965,7 @@ GameObject:
   m_Component:
   - component: {fileID: 715935498}
   - component: {fileID: 715935497}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6974,6 +7126,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   speed: 100
+  player: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 128
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 5
+  timeBetweenAttacks: 0.5
+  projectile: {fileID: 2142984306}
+  sightRange: 15
+  attackRange: 12
+  playerInSightRange: 0
+  playerInAttackRange: 0
 --- !u!195 &969222923
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7174,7 +7341,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1000370757}
   - component: {fileID: 1000370756}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CM vcam1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7775,6 +7942,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   speed: 100
+  player: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 128
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 5
+  timeBetweenAttacks: 0.5
+  projectile: {fileID: 2142984306}
+  sightRange: 15
+  attackRange: 12
+  playerInSightRange: 0
+  playerInAttackRange: 0
 --- !u!195 &1242235224
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7906,7 +8088,8 @@ GameObject:
   - component: {fileID: 1275105712}
   - component: {fileID: 1275105711}
   - component: {fileID: 1275105713}
-  m_Layer: 0
+  - component: {fileID: 1275105714}
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -8110,6 +8293,21 @@ MonoBehaviour:
   _hitSound: {fileID: 0}
   _walkSound: {fileID: 0}
   _runSound: {fileID: 0}
+--- !u!114 &1275105714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275105704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ffead1e34a9b41068969aed57c33c68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthBar: {fileID: 620827503}
+  CurrentHealth: 0
+  MaxHealth: 100
 --- !u!1001 &1303646021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8252,6 +8450,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   speed: 100
+  player: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 128
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 5
+  timeBetweenAttacks: 0.5
+  projectile: {fileID: 2142984306}
+  sightRange: 15
+  attackRange: 12
+  playerInSightRange: 0
+  playerInAttackRange: 0
 --- !u!195 &1321353419
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -8377,9 +8590,9 @@ GameObject:
   - component: {fileID: 1328898110}
   - component: {fileID: 1328898109}
   - component: {fileID: 1328898108}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: whatIsGround
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8497,6 +8710,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   speed: 100
+  player: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 128
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 5
+  timeBetweenAttacks: 0.5
+  projectile: {fileID: 2142984306}
+  sightRange: 15
+  attackRange: 12
+  playerInSightRange: 0
+  playerInAttackRange: 0
 --- !u!195 &1337502787
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -8812,7 +9040,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1639179535}
   - component: {fileID: 1639179534}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DollyTrack1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9778,7 +10006,7 @@ GameObject:
   - component: {fileID: 2099537521}
   - component: {fileID: 2099537518}
   - component: {fileID: 2099537520}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9894,6 +10122,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   speed: 100
+  player: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 128
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 5
+  timeBetweenAttacks: 0.5
+  projectile: {fileID: 2142984306}
+  sightRange: 15
+  attackRange: 12
+  playerInSightRange: 0
+  playerInAttackRange: 0
 --- !u!195 &2118659521
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -10018,7 +10261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2137635879}
   - component: {fileID: 2137635880}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Camera
   m_TagString: SecondCamera
   m_Icon: {fileID: 0}
@@ -10085,6 +10328,120 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &2142984306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2142984310}
+  - component: {fileID: 2142984309}
+  - component: {fileID: 2142984308}
+  - component: {fileID: 2142984307}
+  - component: {fileID: 2142984311}
+  m_Layer: 0
+  m_Name: Projectile
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &2142984307
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142984306}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &2142984308
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142984306}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10756, guid: 0000000000000000e000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2142984309
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142984306}
+  m_Mesh: {fileID: -7445099610986950344, guid: 72debea2db0fd714bb62822e91adfe1b, type: 3}
+--- !u!4 &2142984310
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142984306}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 142.5, y: 35.962395, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &2142984311
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142984306}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!20 &2015120296944762193
 Camera:
   m_ObjectHideFlags: 0
@@ -10137,7 +10494,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6759958535720945404}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BulletSpawn
   m_TagString: BulletSpawn
   m_Icon: {fileID: 0}
@@ -10227,7 +10584,7 @@ GameObject:
   - component: {fileID: 7260467067449207800}
   - component: {fileID: 2850571245261665531}
   - component: {fileID: 3711974632169520988}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HUD_bullets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10293,7 +10650,7 @@ GameObject:
   - component: {fileID: 7840231050976419022}
   - component: {fileID: 2015120296944762193}
   - component: {fileID: 5625656687279216494}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
