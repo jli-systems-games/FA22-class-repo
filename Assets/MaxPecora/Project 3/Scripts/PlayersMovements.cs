@@ -36,15 +36,21 @@ namespace max
         private void Update()
         {
             //ground check
-            grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+            if (tag == "Player")
+            {
+                grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+                Debug.Log("Is Grounded");
+            }
 
             MyInput();
 
             //handle drag
-            if (grounded)
+            if (grounded) {
                 rb.drag = groundDrag;
-            else
+            }
+            else {
                 rb.drag = 0;
+            }
         }
 
         private void FixedUpdate()
@@ -61,9 +67,11 @@ namespace max
         private void MovePlayer()
         {
             // calculate movement direction
-            moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+            //moveDirection = orientation.forward * horizontalInput + orientation.right * verticalInput;
 
-            rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+            moveDirection = new Vector3(0, 0, 0);
+            moveDirection += Input.GetAxis("Vertical") * transform.right + Input.GetAxis("Horizontal") * transform.forward;
+            rb.AddForce(moveDirection.normalized * moveSpeed * 4f, ForceMode.Force);
         }
 
     }
