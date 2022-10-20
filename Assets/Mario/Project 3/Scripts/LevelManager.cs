@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace MarioLifelike
 {
@@ -87,7 +88,7 @@ namespace MarioLifelike
 
                     if (totalHiddenObjectsFound >= maxActiveHiddenObjectsCount)
                     {
-                        Debug.Log("Level Complete");
+                        SceneManager.LoadScene("MarioLifelikeWinScene");
                     }
                 }
             }
