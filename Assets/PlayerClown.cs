@@ -39,7 +39,6 @@ namespace AishasCircus{
         {
             rb = GetComponent<Rigidbody2D>();
             clownsheet = GetComponentInChildren<Animator>();
-            animation = GetComponent<Animation>();
             direction = 1;
             jumpsound = GetComponent<AudioSource>();
         }
