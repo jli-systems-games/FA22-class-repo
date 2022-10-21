@@ -17,7 +17,12 @@ namespace AishaLifelike
 		public float jumpForce = 500;
 		[Tooltip("Position of the camera inside the player")]
 		[HideInInspector]public Vector3 cameraPosition;
-
+// [Tooltip("Furthest distance bullet will look for target")]
+// 	public float maxDistance = 1000000;
+	// [Tooltip("Prefab of wall damange hit. The object needs 'LevelPart' tag to create decal on it.")]
+	// public GameObject decalHitWall;
+	// [Tooltip("Decal will need to be sligtly infront of the wall so it doesnt cause rendeing problems so for best feel put from 0.01-0.1.")]
+	// public float floatInfrontOfWall;
 		/*
 		* Getting the Players rigidbody component.
 		* And grabbing the mainCamera from Players child transform.
@@ -99,10 +104,24 @@ namespace AishaLifelike
 
 			// Jumping ();
 
-			Crouching();
+			// Crouching();
 
-			WalkingSound ();
+			// WalkingSound ();
 
+			// if(Physics.Raycast(transform.position, transform.forward,out hit, maxDistance, ~ignoreLayer)){
+			// if(decalHitWall){
+				// if(hit.transform.tag == "LevelPart"){
+				// 	Instantiate(decalHitWall, hit.point + hit.normal * floatInfrontOfWall, Quaternion.LookRotation(hit.normal));
+				// 	Destroy(gameObject);
+				// }
+			// 	if(hit.transform.tag == "Dummie"){
+			// 		Instantiate(bloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
+			// 		Destroy(gameObject);
+			// 	}
+			// // }		
+			// Destroy(gameObject);
+		// }
+		// Destroy(gameObject, 0.1f);
 
 		}//end update
 
@@ -293,8 +312,10 @@ namespace AishaLifelike
 				//Debug.DrawRay (bulletSpawn.position, bulletSpawn.forward + (bulletSpawn.right*0.2f), Color.green, 0.0f);
 				if (hitInfo.transform.tag=="Dummie") {
 					Transform _other = hitInfo.transform.root.transform;
+					AishaLifelike.LifeScore.score = AishaLifelike.LifeScore.score + 1;
 					if (_other.transform.tag == "Dummie") {
 						print ("hit a dummie");
+						AishaLifelike.LifeScore.score = AishaLifelike.LifeScore.score + 1;
 					}
 					InstantiateBlood(hitInfo,false);
 				}
@@ -312,21 +333,22 @@ namespace AishaLifelike
 		*/
 		void InstantiateBlood (RaycastHit _hitPos,bool swordHitWithGunOrNot) {		
 
-			if (currentWeapo == "gun") {
-				GunScript.HitMarkerSound ();
+			// if (currentWeapo == "gun") {
+				// GunScript.HitMarkerSound ();
 
-				if (_hitSound)
-					_hitSound.Play ();
-				else
-					print ("Missing hit sound");
+				// if (_hitSound)
+				// 	_hitSound.Play ();
+				// else
+				// 	print ("Missing hit sound");
 				
-				if (!swordHitWithGunOrNot) {
+				// if (!swordHitWithGunOrNot) {
 					if (bloodEffect)
 						Instantiate (bloodEffect, _hitPos.point, Quaternion.identity);
+						// LifeScore.score = score + 1;
 					else
-						print ("Missing blood effect prefab in the inspector.");
-				}
-			} 
+						Debug.Log("Missing blood effect prefab in the inspector.");
+				// }
+			// } 
 		}
 		private GameObject myBloodEffect;
 

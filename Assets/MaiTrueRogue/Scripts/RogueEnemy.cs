@@ -8,6 +8,8 @@ namespace Bananagodzilla
 
 public class RogueEnemy : MonoBehaviour
 {
+    public AudioSource ugh;
+    public RogueBGmanager bGmanager;
     public TMP_Text[] texts;
     public int rage;
     public int bones;
@@ -77,7 +79,10 @@ public class RogueEnemy : MonoBehaviour
 
     private void Die()
     {
-        enemies[number].SetActive(false);
+        ugh.Play();
+        bGmanager.SwitchImage();
+        //enemies[number].SetActive(false);
+        enemies[number].GetComponent<RogueExplosion>().Explode();
         hero.limbReset();
         hero.health = hero.health + 10;
         number++;

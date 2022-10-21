@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using AishaLifelike;
+using TheFirstPerson;
 
 //A dynamic footstep system. due to how the terrain texture is retrieved this will not function in versions earlier than 2018.3
 //this should be placed on the same object as FPSController.cs
