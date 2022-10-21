@@ -31,14 +31,15 @@ namespace AishasCircus{
 
 
         Rigidbody2D rb;
-        [HideInInspector] public Animator anim;
+        [HideInInspector] public Animator clownsheet;
 
 
         // Start is called before the first frame update
         void Start()
         {
             rb = GetComponent<Rigidbody2D>();
-            anim = GetComponentInChildren<Animator>();
+            clownsheet = GetComponentInChildren<Animator>();
+            animation = GetComponent<Animation>();
             direction = 1;
             jumpsound = GetComponent<AudioSource>();
         }
@@ -104,7 +105,7 @@ namespace AishasCircus{
 
             CharacterDirectionCheck(hor);
 
-            Attack();
+            // Attack();
 
 
             //anim.SetFloat("velocityX", Mathf.Abs(rb.velocity.x));
@@ -166,13 +167,13 @@ namespace AishasCircus{
             }
         }
 
-        private void Attack()
-        {
-            if (Input.GetMouseButtonDown(1))
-            {
-                anim.SetTrigger("Attack");
-            }
-        }
+        // private void Attack()
+        // {
+        //     if (Input.GetMouseButtonDown(1))
+        //     {
+        //         clownsheet.SetTrigger("Attack");
+        //     }
+        // }
 
         private void CharacterDirectionCheck(float xSpeed)
         {
