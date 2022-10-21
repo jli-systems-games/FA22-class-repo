@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace AishaLifelike
+namespace TheFirstPerson
 {
     public struct TFPData
     {
