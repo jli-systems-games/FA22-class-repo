@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using AishaLifelike;
+using TheFirstPerson;
 using UnityEngine.UI;
 
 //A simple jetpack script, useful for testing vertical level design or just having a jetpack in a game
