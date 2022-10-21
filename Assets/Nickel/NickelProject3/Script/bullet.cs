@@ -11,6 +11,8 @@ namespace nickelLifelike
         // Start is called before the first frame update
         private GameObject enemy;
 
+        private Transform target;
+
         public float bulletSpeed = 1;
 
 
@@ -24,12 +26,18 @@ namespace nickelLifelike
         // Update is called once per frame
         void Update()
         {
-            enemy = GameObject.FindGameObjectWithTag("Enemy");
+            
             rb = transform.GetComponent<Rigidbody2D>();
-            Vector2 direction = Vector2.MoveTowards(transform.position, enemy.transform.position, bulletSpeed);
+            Vector2 direction = Vector2.MoveTowards(transform.position, target.transform.position, bulletSpeed);
             direction -= (Vector2)transform.position;
             rb.velocity = direction * 5;
 
+        }
+
+        public void Seek(Transform _target)
+        {
+            target = _target;
+            //Debug.Log(target);
         }
     }
 

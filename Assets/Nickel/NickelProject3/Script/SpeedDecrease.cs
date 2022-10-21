@@ -15,14 +15,16 @@ namespace nickelLifelike
         // Update is called once per frame
         void Update()
         {
-            Debug.Log(PathFollower.moveSpeed);
+            //Debug.Log(PathFollower.moveSpeed);
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
+            Debug.Log("enter");
             if (collision.CompareTag("Enemy"))
             {
-                PathFollower.moveSpeed =1f;
+                collision.GetComponent<PathFollower>().moveSpeed = 0.5f;
+                
             }
         }
 
@@ -30,7 +32,7 @@ namespace nickelLifelike
         {
             if (collision.CompareTag("Enemy"))
             {
-                PathFollower.moveSpeed = 2f;
+                collision.GetComponent<PathFollower>().moveSpeed = 1f;
             }
         }
     }
