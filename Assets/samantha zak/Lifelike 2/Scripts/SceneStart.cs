@@ -2,24 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class SceneStart : MonoBehaviour
+
+namespace Sam
 {
-
-    public void PlayGame()
+    public class SceneStart : MonoBehaviour
     {
-        SceneManager.LoadScene("Main");
+
+        public void PlayGame()
+        {
+            SceneManager.LoadScene("Main");
+        }
+
+        public void Exit()
+        {
+            SceneManager.LoadScene("Menu");
+        }
+
+        /*public void Controls()
+        {
+            SceneManager.LoadScene("Controls Page");
+        }
+        */
+
+
     }
-
-    public void Exit()
-    {
-        SceneManager.LoadScene("Menu");
-    }
-
-    /*public void Controls()
-    {
-        SceneManager.LoadScene("Controls Page");
-    }
-    */
-
-
 }

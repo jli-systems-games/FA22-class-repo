@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TheFirstPerson
+namespace Sam
 {
     public struct TFPInfo
     {
