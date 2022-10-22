@@ -1,6 +1,9 @@
 name: Build and Deploy for WebGL
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   #  testRunner:
