@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace Ekaterina {
 
-public class BalancePlayerMovement : MonoBehaviour {
+public class PlayerMovementBalance : MonoBehaviour {
 
-	public BalanceCharacterController2D controller;
+	public CharacterController2DBalance controller;
 
 	public float runSpeed = 40f;
 
