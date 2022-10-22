@@ -5,6 +5,8 @@ namespace Ekaterina {
 
 public class CharacterController2DBalance : MonoBehaviour
 {
+	public ParticleSystem particles;
+	
 	[SerializeField] private float m_JumpForce = 400f;							// Amount of force added when the player jumps.
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;	// How much to smooth out the movement
 	[SerializeField] private bool m_AirControl = false;							// Whether or not a player can steer while jumping;
@@ -37,6 +39,7 @@ public class CharacterController2DBalance : MonoBehaviour
 
 	private void FixedUpdate()
 	{
+	
 		bool wasGrounded = m_Grounded;
 		m_Grounded = false;
 
@@ -83,13 +86,16 @@ public class CharacterController2DBalance : MonoBehaviour
 		// If the player should jump...
 		if (m_Grounded && jump)
 		{
+					    CreateParticles();
+
+		
 			// Add a vertical force to the player.
 			m_Grounded = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 		}
 	}
 
-
+	
 	private void Flip()
 	{
 		// Switch the way the player is labelled as facing.
@@ -100,5 +106,11 @@ public class CharacterController2DBalance : MonoBehaviour
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
+
+	void CreateParticles()
+	{
+		particles.Play();
+	}
+	
 }
 }
