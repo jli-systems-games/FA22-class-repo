@@ -264,7 +264,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_JumpForce: 400
-  m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
   m_AirControl: 1
   m_WhatIsGround:
@@ -272,11 +271,7 @@ MonoBehaviour:
     m_Bits: 895
   m_GroundCheck: {fileID: 2104962284}
   m_CeilingCheck: {fileID: 1549293301}
-  m_CrouchDisableCollider: {fileID: 0}
   OnLandEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &67343874
@@ -370,7 +365,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 805359564}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01, y: 0, z: -2.57}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
