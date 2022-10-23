@@ -109,15 +109,7 @@ jobs:
       #- name: Display structure of root files
       #  run: ls -R
       #  working-directory: build/WebGL
-
-      - name: Deploy GH Pages
-        id: gh-deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.4
-        with:
-          branch: gh-pages
-          folder: build/WebGL
-
-      - name: Deploy to Itch
+     - name: Deploy to Itch
         id: itch-deploy
         uses: manleydev/butler-publish-itchio-action@master
         env:
@@ -126,3 +118,12 @@ jobs:
           ITCH_GAME: FA22-DEMOSCENE-SHOWCASE
           ITCH_USER: ovenfresh
           PACKAGE: build
+          
+      - name: Deploy GH Pages
+        id: gh-deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: build/WebGL
+
+ 
