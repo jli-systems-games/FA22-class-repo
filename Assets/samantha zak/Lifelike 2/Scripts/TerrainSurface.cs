@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 // helper class to get texture at point on a terrain for FootstepSounds extension
 // based on https://answers.unity.com/questions/34328/terrain-with-multiple-splat-textures-how-can-i-det.html
 // modified to work in unity 2018.3 onward. Will not work in earlier versions
 
-namespace Sam
+namespace samantha_zak.Lifelike_2.Scripts
 {
     public class TerrainSurface
     {

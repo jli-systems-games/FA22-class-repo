@@ -1,8 +1,8 @@
-﻿using UnityEngine;
+﻿using AishaBikebayeva.AishaLifelike.Scripts.TextFx.Scripts;
 using UnityEditor;
-using System.Collections;
+using UnityEngine;
 
-namespace TextFx
+namespace AishaBikebayeva.AishaLifelike.Scripts.TextFx.Editor
 {
 	public static class TextFxBaseInspector {
 

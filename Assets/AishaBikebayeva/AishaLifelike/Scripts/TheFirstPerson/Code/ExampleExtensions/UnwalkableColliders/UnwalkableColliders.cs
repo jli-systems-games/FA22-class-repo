@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Linq;
+using AishaBikebayeva.AishaLifelike.Scripts.TheFirstPerson.Code.Player;
 using UnityEngine;
-using TheFirstPerson;
-using System.Linq;
 
 /*
 UnwalkableTags
@@ -12,39 +10,42 @@ collisionResolution is the distance away that the script checks points for walka
 collisionAngle is the angle by which it rotates this checked point in iterations until it finds walkable ground
  */
 
-public class UnwalkableColliders : TFPExtension
+namespace AishaBikebayeva.AishaLifelike.Scripts.TheFirstPerson.Code.ExampleExtensions.UnwalkableColliders
 {
-    RaycastHit hit;
-    public string[] Unwalkable;
-    public float collisionResolution = 0.1f;
-    public int collisionStepAngle = 5;
-    public override void ExPreMove(ref TFPData data, TFPInfo info)
+    public class UnwalkableColliders : TFPExtension
     {
-        Vector3 dir = data.currentMove * Time.deltaTime;
-        Vector3 checkPos = transform.position + dir;
-        if (Physics.Raycast(checkPos + Vector3.up, Vector3.down, out hit))
+        RaycastHit hit;
+        public string[] Unwalkable;
+        public float collisionResolution = 0.1f;
+        public int collisionStepAngle = 5;
+        public override void ExPreMove(ref TFPData data, TFPInfo info)
         {
-            string tag = hit.collider.tag;
-            Vector3 step = -dir.normalized * collisionResolution;
-            Vector3 nonTaggedPos = transform.position;
-            if (Unwalkable.Contains(tag))
+            Vector3 dir = data.currentMove * Time.deltaTime;
+            Vector3 checkPos = transform.position + dir;
+            if (Physics.Raycast(checkPos + Vector3.up, Vector3.down, out hit))
             {
-                for (int a = -90; a < 90; a += collisionStepAngle)
+                string tag = hit.collider.tag;
+                Vector3 step = -dir.normalized * collisionResolution;
+                Vector3 nonTaggedPos = transform.position;
+                if (Unwalkable.Contains(tag))
                 {
-                    checkPos = (Quaternion.Euler(0, a, 0) * dir) + transform.position;
-                    Physics.Raycast(checkPos + Vector3.up, Vector3.down, out hit);
-                    tag = hit.collider.tag;
-                    if (!Unwalkable.Contains(tag))
+                    for (int a = -90; a < 90; a += collisionStepAngle)
                     {
-                        nonTaggedPos = checkPos;
-                        if (a > 0)
+                        checkPos = (Quaternion.Euler(0, a, 0) * dir) + transform.position;
+                        Physics.Raycast(checkPos + Vector3.up, Vector3.down, out hit);
+                        tag = hit.collider.tag;
+                        if (!Unwalkable.Contains(tag))
                         {
-                            break;
+                            nonTaggedPos = checkPos;
+                            if (a > 0)
+                            {
+                                break;
+                            }
                         }
                     }
+                    data.currentMove = nonTaggedPos - transform.position;
+                    data.currentMove *= 1 / Time.deltaTime;
                 }
-                data.currentMove = nonTaggedPos - transform.position;
-                data.currentMove *= 1 / Time.deltaTime;
             }
         }
     }

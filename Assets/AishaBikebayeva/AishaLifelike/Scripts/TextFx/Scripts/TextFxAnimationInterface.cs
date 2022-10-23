@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TextFx
+namespace AishaBikebayeva.AishaLifelike.Scripts.TextFx.Scripts
 {
 	public interface TextFxAnimationInterface
 	{

@@ -1,13 +1,9 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using Boomlagoon.TextFx.JSON;
-
-#if UNITY_EDITOR
+﻿using System.Collections.Generic;
+using AishaBikebayeva.AishaLifelike.Scripts.TextFx.Utilities.Boomlagoon.JSON;
 using UnityEditor;
-#endif
+using UnityEngine;
 
-namespace TextFx
+namespace AishaBikebayeva.AishaLifelike.Scripts.TextFx.Scripts
 {
 	[System.Serializable]
 	public class PresetEffectSetting

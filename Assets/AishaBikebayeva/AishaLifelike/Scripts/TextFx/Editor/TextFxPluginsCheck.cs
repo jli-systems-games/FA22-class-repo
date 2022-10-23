@@ -1,11 +1,10 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor;
-using System;
 using System.Linq;
+using UnityEditor;
+using UnityEngine;
 
-namespace TextFx
+namespace AishaBikebayeva.AishaLifelike.Scripts.TextFx.Editor
 {
 	[InitializeOnLoad]
 	public class TextFxPluginsCheck

@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-namespace AishaLifelike
+namespace AishaBikebayeva.AishaLifelike.Scripts
 {
 	public class BulletScript : MonoBehaviour {
 
@@ -33,7 +32,7 @@ namespace AishaLifelike
 					if(hit.transform.tag == "Dummie"){
 						Instantiate(bloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
 					
-						AishaLifelike.LifeScore.score = AishaLifelike.LifeScore.score + 1;
+						LifeScore.score = LifeScore.score + 1;
 						Destroy(GameObject.FindWithTag("Dummie"));
 					}
 				}		

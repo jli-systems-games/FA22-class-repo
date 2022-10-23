@@ -1,18 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace AishaLifelike
+namespace AishaBikebayeva.AishaLifelike.Scripts
 {
     public class HealthBar : MonoBehaviour
     {
         public Slider healthBar;
-        public AishaLifelike.Health playerHealth;
+        public Health playerHealth;
 
         private void Start()
         {
-            playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<AishaLifelike.Health>();
+            playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
             healthBar = GetComponent<Slider>();
             healthBar.maxValue = playerHealth.maxHealth;
             healthBar.value = playerHealth.maxHealth;
