@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Sam;
+using TheFirstPerson.Sam;
 using UnityEngine;
 
 
