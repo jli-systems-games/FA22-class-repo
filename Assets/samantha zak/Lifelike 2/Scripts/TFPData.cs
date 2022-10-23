@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Sam
+namespace samantha_zak.Lifelike_2.Scripts
 {
     public struct TFPData
     {

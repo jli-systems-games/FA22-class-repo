@@ -3,16 +3,13 @@
 	Used in animation Actions to define either a constant value, or an ordered or random sequence of values within a given range.
 **/
 
-using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using Boomlagoon.TextFx.JSON;
-#if UNITY_EDITOR
-using UnityEditor;
 using System;
-#endif
+using System.Collections.Generic;
+using AishaBikebayeva.AishaLifelike.Scripts.TextFx.Utilities.Boomlagoon.JSON;
+using UnityEditor;
+using UnityEngine;
 
-namespace TextFx
+namespace AishaBikebayeva.AishaLifelike.Scripts.TextFx.Scripts
 {
 	public enum ValueProgression
 	{

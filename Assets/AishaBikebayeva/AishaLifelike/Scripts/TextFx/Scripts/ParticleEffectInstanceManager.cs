@@ -1,8 +1,8 @@
 // A class to store all necessary information to handle the start, end and transitions of a particle effect within a TextFx animation
+
 using UnityEngine;
 
-
-namespace TextFx
+namespace AishaBikebayeva.AishaLifelike.Scripts.TextFx.Scripts
 {
 	[System.Serializable]
 	public class ParticleEffectInstanceManager

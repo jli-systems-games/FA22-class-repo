@@ -1,11 +1,8 @@
-using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
-using System;
-using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine;
+
 // using PlayerMovementScript;
-namespace AishaLifelike
+namespace AishaBikebayeva.AishaLifelike.Scripts
 {
     public class LifeScore : MonoBehaviour
     {

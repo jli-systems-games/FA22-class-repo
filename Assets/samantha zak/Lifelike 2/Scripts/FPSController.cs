@@ -1,11 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Sam;
-using TheFirstPerson.Sam;
+﻿using samantha_zak.Lifelike_2.Scripts.Sam;
 using UnityEngine;
 
-
-namespace TheFirstPerson
+namespace samantha_zak.Lifelike_2.Scripts
 {
     public enum ExtFunc
     {

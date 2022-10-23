@@ -1,17 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
-using System.Text.RegularExpressions;
-#if UNITY_EDITOR
-using UnityEditor;
-using System.Reflection;
-#endif
-using System.IO;
 using System;
-using Boomlagoon.TextFx.JSON;
+using System.Collections.Generic;
+using System.Reflection;
+using System.Text.RegularExpressions;
+using AishaBikebayeva.AishaLifelike.Scripts.TextFx.Utilities.Boomlagoon.JSON;
+using UnityEditor;
+using UnityEngine;
 
-namespace TextFx
+namespace AishaBikebayeva.AishaLifelike.Scripts.TextFx.Scripts
 {
 	public enum OBJ_POS
 	{

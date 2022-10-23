@@ -1,8 +1,8 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
-namespace AishaLifelike
+namespace AishaBikebayeva.AishaLifelike.Scripts
 {
 	public enum MenuStyle{
 		horizontal,vertical
@@ -171,7 +171,7 @@ namespace AishaLifelike
 		*/
 		void AssignHandsAnimator(GameObject _currentGun){
 			if(_currentGun.name.Contains("Gun")){
-				currentHAndsAnimator = currentGun.GetComponent<AishaLifelike.GunScript>().handsAnimator;
+				currentHAndsAnimator = currentGun.GetComponent<GunScript>().handsAnimator;
 			}
 		}
 

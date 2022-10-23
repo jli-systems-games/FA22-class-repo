@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace TheFirstPerson
+namespace AishaBikebayeva.AishaLifelike.Scripts.TheFirstPerson.Code.Player
 {
     /*
     The base Extension class

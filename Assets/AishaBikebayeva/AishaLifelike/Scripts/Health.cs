@@ -1,15 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace AishaLifelike
+namespace AishaBikebayeva.AishaLifelike.Scripts
 {
     public class Health : MonoBehaviour
     {
         public int curHealth = 0;
         public int maxHealth = 100;
 
-        public AishaLifelike.HealthBar healthBar;
+        public HealthBar healthBar;
 
         void Start()
         {

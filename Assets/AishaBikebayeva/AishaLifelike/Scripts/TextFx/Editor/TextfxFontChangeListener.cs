@@ -1,11 +1,9 @@
-using UnityEngine;
-using UnityEditor;
-using System.Collections;
+
 
 /* 	Class to listen for reimported Font files (caused by font size change, font type change and other setting changes).
 	Calls to all EffectManager instances in scene to let them know the font that's changed. */
 
-namespace TextFx
+namespace AishaBikebayeva.AishaLifelike.Scripts.TextFx.Editor
 {
 #if UNITY_4_6 || UNITY_4_5 || UNITY_4_3 || UNITY_4_2 || UNITY_4_1 || UNITY_4_0_1 || UNITY_4_0
 	class TextfxFontChangeListener : AssetPostprocessor

@@ -1,10 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
+using AishaBikebayeva.AishaLifelike.Scripts.TextFx.Scripts;
 using UnityEngine;
-using TextFx;
 using UnityEngine.SceneManagement;
 
-namespace AishaLifelike
+namespace AishaBikebayeva.AishaLifelike.Scripts
 {
     public class TextManager : MonoBehaviour
     {

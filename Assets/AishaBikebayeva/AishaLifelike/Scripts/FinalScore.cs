@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
 
-namespace AishaLifelike{
+namespace AishaBikebayeva.AishaLifelike.Scripts{
     public class FinalScore : MonoBehaviour
     {
         public static float endscore;
@@ -20,9 +17,9 @@ namespace AishaLifelike{
         // Update is called once per frame
         void Update()
         {
-            endscore = AishaLifelike.LifeScore.score;
+            endscore = LifeScore.score;
 
-            scoreText.text = "Final Score: " + AishaLifelike.LifeScore.score;
+            scoreText.text = "Final Score: " + LifeScore.score;
         }
     }
 }

@@ -1,8 +1,7 @@
-using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
-namespace TextFx
+namespace AishaBikebayeva.AishaLifelike.Scripts.TextFx.Scripts
 {
 	[System.Serializable]
 	public struct AnimationStateVariables
@@ -1165,7 +1164,7 @@ namespace TextFx
 
 						if(m_continueType == ContinueType.EndOfLoop
 						   && m_anim_state_vars.m_action_index == m_continueActionIndexTrigger
-						   && (ActiveLoopCycles.Count == 0 || ((ActiveLoopCycles[0].m_loop_type == TextFx.LOOP_TYPE.LOOP || m_anim_state_vars.m_reverse) && ActiveLoopCycles[0].m_number_of_loops <= 1) ))
+						   && (ActiveLoopCycles.Count == 0 || ((ActiveLoopCycles[0].m_loop_type == LOOP_TYPE.LOOP || m_anim_state_vars.m_reverse) && ActiveLoopCycles[0].m_number_of_loops <= 1) ))
 						{
 							// Draw this end state
 							SetupMesh(m_current_letter_action,

@@ -1,12 +1,11 @@
 //#define ANIM_DESIGN_DEV_TOOLS
 
-using UnityEngine;
-using UnityEditor;
-using System.IO;
 using System.Collections.Generic;
-using TFXBoomlagoon.JSON;
+using AishaBikebayeva.AishaLifelike.Scripts.TextFx.Scripts;
+using UnityEditor;
+using UnityEngine;
 
-namespace TextFx
+namespace AishaBikebayeva.AishaLifelike.Scripts.TextFx.Editor
 {
 	public class TextEffectsManager : EditorWindow
 	{

@@ -1,12 +1,10 @@
-using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-#if UNITY_EDITOR
+using AishaBikebayeva.AishaLifelike.Scripts.TextFx.Utilities.Boomlagoon.JSON;
 using UnityEditor;
+using UnityEngine;
+#if UNITY_EDITOR
 #endif
-using Boomlagoon.TextFx.JSON;
 
-namespace TextFx
+namespace AishaBikebayeva.AishaLifelike.Scripts.TextFx.Scripts
 {
 	[System.Serializable]
 	public struct BezierCurvePoint
