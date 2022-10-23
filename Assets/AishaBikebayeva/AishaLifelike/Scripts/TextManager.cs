@@ -1,5 +1,5 @@
 using System.Collections;
-using AishaBikebayeva.AishaLifelike.Scripts.TextFx.Scripts;
+using Shared_Assets.TextFx.Scripts;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
