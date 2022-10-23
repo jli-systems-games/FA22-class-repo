@@ -1,10 +1,8 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Globalization;
+using UnityEngine;
 using UnityEngine.UI;
-using System.Text;
-using System.Globalization;
 
-namespace HSVPickerDemo
+namespace AishaBikebayeva.AishaLifelike.Scripts.TextFx.Demo.Scripts.HSVPicker
 {
 	public class HexRGB : MonoBehaviour {
 

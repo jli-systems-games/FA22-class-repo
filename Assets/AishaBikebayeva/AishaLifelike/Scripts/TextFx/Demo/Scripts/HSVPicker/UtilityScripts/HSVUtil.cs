@@ -1,10 +1,8 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
-using System;
+using UnityEngine;
 
-
-namespace HSVPickerDemo
+namespace AishaBikebayeva.AishaLifelike.Scripts.TextFx.Demo.Scripts.HSVPicker.UtilityScripts
 {
     #region ColorUtilities
 

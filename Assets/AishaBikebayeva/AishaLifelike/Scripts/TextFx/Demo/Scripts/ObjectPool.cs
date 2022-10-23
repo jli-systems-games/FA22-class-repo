@@ -1,9 +1,7 @@
-﻿using UnityEngine;
-using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
-namespace TextFx
+namespace AishaBikebayeva.AishaLifelike.Scripts.TextFx.Demo.Scripts
 {
 public class ObjectPool<T> where T : UnityEngine.Component
 {

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace HSVPickerDemo
+namespace AishaBikebayeva.AishaLifelike.Scripts.TextFx.Demo.Scripts.HSVPicker.UtilityScripts
 {
 	public class TiltWindow : MonoBehaviour
 	{

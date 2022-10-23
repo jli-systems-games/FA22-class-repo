@@ -1,35 +1,36 @@
-﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.EventSystems;
+﻿using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ColorScrollRect : ScrollRect 
+namespace AishaBikebayeva.AishaLifelike.Scripts.TextFx.Demo.Scripts.HSVPicker.UtilityScripts
 {
-
-    public bool Dragging { get; private set; }
-
-
-    public override void OnInitializePotentialDrag(PointerEventData eventData)
+    public class ColorScrollRect : ScrollRect 
     {
-        Dragging = true;
-        base.OnInitializePotentialDrag(eventData);
-    }
 
-    public override void OnBeginDrag(PointerEventData eventData)
-    {
-        Dragging = true;
-        base.OnBeginDrag(eventData);
-    }
+        public bool Dragging { get; private set; }
 
-    public override void OnDrag(PointerEventData eventData)
-    {
-        Dragging = true;
-        base.OnDrag(eventData);
-    }
 
-    public override void OnEndDrag(PointerEventData eventData)
-    {
-        Dragging = false;
-        base.OnEndDrag(eventData);
+        public override void OnInitializePotentialDrag(PointerEventData eventData)
+        {
+            Dragging = true;
+            base.OnInitializePotentialDrag(eventData);
+        }
+
+        public override void OnBeginDrag(PointerEventData eventData)
+        {
+            Dragging = true;
+            base.OnBeginDrag(eventData);
+        }
+
+        public override void OnDrag(PointerEventData eventData)
+        {
+            Dragging = true;
+            base.OnDrag(eventData);
+        }
+
+        public override void OnEndDrag(PointerEventData eventData)
+        {
+            Dragging = false;
+            base.OnEndDrag(eventData);
+        }
     }
 }
