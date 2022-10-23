@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Destroy : MonoBehaviour
-{
-    private void OnTriggerEnter2D(Collider2D collision)
+namespace MarioGrowth{
+    public class Destroy : MonoBehaviour
     {
-        if (collision.gameObject.tag == "Prey")
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-            Destroy(collision.gameObject);
+            if (collision.gameObject.tag == "Prey")
+            {
+                Destroy(collision.gameObject);
+            }
         }
     }
 }

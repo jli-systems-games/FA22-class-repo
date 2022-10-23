@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Run : MonoBehaviour
+namespace MarioGrowth
 {
-    public float speed = 10.0f;
-
-    // Update is called once per frame
-    void Update()
+    public class Run : MonoBehaviour
     {
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
+        public float speed = 10.0f;
+
+        // Update is called once per frame
+        void Update()
+        {
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
+        }
     }
 }

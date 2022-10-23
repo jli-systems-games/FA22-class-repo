@@ -1,0 +1,103 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Numerics;
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.AI;
+using Random = UnityEngine.Random;
+using Vector3 = UnityEngine.Vector3;
+//using UnityStandardAssets.Characters.ThirdPerson;
+
+namespace Simon.Project3.Scripts
+{
+        
+        public class PlayerController : MonoBehaviour
+        {
+
+            public GameObject smunchface1;
+            public GameObject smunchface2;
+            
+            public Camera cam;
+
+            public NavMeshAgent agent;
+
+            public ThirdPersonCharacter character;
+
+            public Animator anim;
+
+            private void Start()
+            {
+                agent.updateRotation = false;
+            }
+
+            public Vector3 RandomNavmeshLocation(float radius)
+            {
+                Vector3 randomDirection = Random.insideUnitSphere * radius;
+                randomDirection += transform.position;
+                NavMeshHit hit;
+                Vector3 finalPosition = Vector3.zero;
+                if (NavMesh.SamplePosition(randomDirection, out hit, radius, 1))
+                {
+                    finalPosition = hit.position;
+                }
+
+                return finalPosition;
+            }
+            
+            private float nextActionTime = 0.0f;
+            //private float period = Random.Range(0.1f, 2f);
+
+        
+            void Update()
+            {
+
+                if (Input.GetMouseButtonDown(0))
+                {
+                    smunchface1.SetActive(false);
+                    smunchface2.SetActive(true);
+                }
+
+                if (Input.GetMouseButtonUp(0))
+                {
+                    smunchface1.SetActive(true);
+                    smunchface2.SetActive(false);
+                }
+                
+                if (Input.GetMouseButton(0))
+                {
+                    Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+                    RaycastHit hit;
+
+                    if (Physics.Raycast(ray, out hit))
+                    {
+                        //move our agent to ray
+                        agent.SetDestination(hit.point);
+                    }
+                }
+                else
+                {
+                    if (Time.time > nextActionTime)
+                    {
+                        nextActionTime = Time.time + Random.Range(0.1f, 2f);
+                        agent.SetDestination(RandomNavmeshLocation(20f));
+                        Debug.Log("new mark found");
+                    }
+                }
+
+                if (agent.remainingDistance > agent.stoppingDistance)
+                {
+                    character.Move(agent.desiredVelocity, false, false);
+                    anim.Play("HumanoidWalk");
+                }
+                else
+                {
+                    character.Move(Vector3.zero, false, false);
+                    anim.Play("HumanoidIdle");
+                }
+             
+                
+            }
+        }
+
+}

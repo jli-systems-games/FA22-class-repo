@@ -24,7 +24,7 @@ namespace Mariana
         // Update is called once per frame
         void Update()
         {
-            timer -= Time.deltaTime;
+            //timer -= Time.deltaTime;
             timerSeconds.text = timer.ToString("f2");
             if (timer <= 0)
             {

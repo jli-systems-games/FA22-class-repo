@@ -8,7 +8,7 @@ namespace Mariana
     {
         //This script controls the right leg
         private Rigidbody2D rightLeg;
-        public float speedLeft;
+        public float speedLeft ;
         public float speedRight;
 
         //Here are some things I tried that did not work:
