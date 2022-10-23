@@ -52,10 +52,10 @@ namespace Shared_Assets.TextFx.Utilities.Boomlagoon.JSON {
 		}
 #else
 		public static void Log(string str) {
-			UnityEngine.Debug.WriteLine(str);
+			System.Diagnostics.Debug.WriteLine(str);
 		}
 		public static void Error(string str) {
-			UnityEngine.Debug.WriteLine(str);
+			System.Diagnostics.Debug.WriteLine(str);
 		}
 #endif
 	}
