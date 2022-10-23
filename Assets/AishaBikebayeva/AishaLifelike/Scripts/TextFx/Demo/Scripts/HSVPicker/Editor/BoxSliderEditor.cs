@@ -1,8 +1,7 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEditor;
+using UnityEditor.UI;
 
-namespace UnityEditor.UI
+namespace AishaBikebayeva.AishaLifelike.Scripts.TextFx.Demo.Scripts.HSVPicker.Editor
 {
 	[CustomEditor(typeof(BoxSlider), true)]
 	[CanEditMultipleObjects]

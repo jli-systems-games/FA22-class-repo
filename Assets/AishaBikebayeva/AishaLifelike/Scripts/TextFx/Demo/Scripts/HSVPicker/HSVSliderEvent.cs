@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.Events;
 
-namespace HSVPickerDemo
+namespace AishaBikebayeva.AishaLifelike.Scripts.TextFx.Demo.Scripts.HSVPicker
 {
 	public class HSVSliderEvent : UnityEvent<Color>
 	{

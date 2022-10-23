@@ -1,9 +1,8 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using AishaBikebayeva.AishaLifelike.Scripts.TextFx.Demo.Scripts.HSVPicker.UtilityScripts;
+using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events;
 
-namespace HSVPickerDemo
+namespace AishaBikebayeva.AishaLifelike.Scripts.TextFx.Demo.Scripts.HSVPicker
 {
 	public class HSVPicker : MonoBehaviour {
 
