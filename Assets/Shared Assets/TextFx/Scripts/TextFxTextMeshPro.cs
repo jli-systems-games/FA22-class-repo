@@ -1,9 +1,7 @@
 ﻿#if TMP
-#if UNITY_EDITOR
 using TMPro;
 using UnityEditor;
 using UnityEngine;
-#endif
 
 namespace Shared_Assets.TextFx.Scripts
 {

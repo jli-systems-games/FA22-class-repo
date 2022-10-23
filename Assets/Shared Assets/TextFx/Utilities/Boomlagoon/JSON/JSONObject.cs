@@ -45,17 +45,17 @@ namespace Shared_Assets.TextFx.Utilities.Boomlagoon.JSON {
 	static class JSONLogger {
 #if USE_UNITY_DEBUGGING
 		public static void Log(string str) {
-			Debug.Log(str);
+			UnityEngine.Debug.Log(str);
 		}
 		public static void Error(string str) {
-			Debug.LogError(str);
+			UnityEngine.Debug.LogError(str);
 		}
 #else
 		public static void Log(string str) {
-			Debug.WriteLine(str);
+			UnityEngine.Debug.WriteLine(str);
 		}
 		public static void Error(string str) {
-			Debug.WriteLine(str);
+			UnityEngine.Debug.WriteLine(str);
 		}
 #endif
 	}
