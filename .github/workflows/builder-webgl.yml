@@ -120,7 +120,7 @@ jobs:
       - name: Deploy to Itch
         id: itch-deploy
         if: ${{ steps.dh-deploy.outputs.failed }}
-        uses: manleydev/butler-public-itchio-action@master
+        uses: manleydev/butler-publish-itchio-action@master
         env:
           BUTLER_CREDENTIALS: ${{ secrets.JASON_ITCH_BUTLER_CREDENTIALS }}
           CHANNEL: web
