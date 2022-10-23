@@ -1,9 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-
-namespace Sam
+namespace samantha_zak.Lifelike_2.Scripts
 {
 
 

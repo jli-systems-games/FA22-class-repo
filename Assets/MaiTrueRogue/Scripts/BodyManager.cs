@@ -1,5 +1,4 @@
 
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Bananagodzilla{
@@ -43,7 +42,7 @@ public class BodyManager : MonoBehaviour
     public void SwitchLeftArm()
     {
         hero.limbRemove(leftHands[lh]);
-        leftHands[lh].GameObject().SetActive(false);
+        leftHands[lh].gameObject.SetActive(false);
         lh ++;
         if (lh < 0)
         {
@@ -54,7 +53,7 @@ public class BodyManager : MonoBehaviour
         {
             lh = 0;
         }
-        leftHands[lh].GameObject().SetActive(true);
+        leftHands[lh].gameObject.SetActive(true);
         hero.limbCheck(leftHands[lh]);
 
 
@@ -64,7 +63,7 @@ public class BodyManager : MonoBehaviour
     public void SwitchHead()
     {
         hero.limbRemove(heads[h]);
-        heads[h].GameObject().SetActive(false);
+        heads[h].gameObject.SetActive(false);
         h ++;
         if (h < 0)
         {
@@ -75,7 +74,7 @@ public class BodyManager : MonoBehaviour
         {
             h = 0;
         }
-        heads[h].GameObject().SetActive(true);
+        heads[h].gameObject.SetActive(true);
         hero.limbCheck(heads[h]);
 
         //Debug.Log(h);
@@ -84,7 +83,7 @@ public class BodyManager : MonoBehaviour
     public void SwitchLegs()
     {
         hero.limbRemove(legs[l]);
-        legs[l].GameObject().SetActive(false);
+        legs[l].gameObject.SetActive(false);
         l ++;
         if (l < 0)
         {
@@ -95,7 +94,7 @@ public class BodyManager : MonoBehaviour
         {
             l = 0;
         }
-        legs[l].GameObject().SetActive(true);
+        legs[l].gameObject.SetActive(true);
 
         hero.limbCheck(legs[l]);
         //Debug.Log(l);
@@ -104,7 +103,7 @@ public class BodyManager : MonoBehaviour
     public void SwitchRightArm()
     {
         hero.limbRemove(rightHands[rh]);
-        rightHands[rh].GameObject().SetActive(false);
+        rightHands[rh].gameObject.SetActive(false);
         rh ++;
         if (rh < 0)
         {
@@ -115,7 +114,7 @@ public class BodyManager : MonoBehaviour
         {
             rh = 0;
         }
-        rightHands[rh].GameObject().SetActive(true);
+        rightHands[rh].gameObject.SetActive(true);
         hero.limbCheck(rightHands[rh]);
 
         // Debug.Log(rh);
@@ -124,7 +123,7 @@ public class BodyManager : MonoBehaviour
     public void SwitchBody()
     {
         hero.limbRemove(bodies[b]);
-        bodies[b].GameObject().SetActive(false);
+        bodies[b].gameObject.SetActive(false);
         b ++;
         if (b < 0)
         {
@@ -135,7 +134,7 @@ public class BodyManager : MonoBehaviour
         {
             b = 0;
         }
-        bodies[b].GameObject().SetActive(true);
+        bodies[b].gameObject.SetActive(true);
 
         hero.limbCheck(bodies[b]);
         //Debug.Log(b);

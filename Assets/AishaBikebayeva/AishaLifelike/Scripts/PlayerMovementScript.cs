@@ -1,8 +1,7 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
+using UnityEngine;
 
-namespace AishaLifelike
+namespace AishaBikebayeva.AishaLifelike.Scripts
 {
 	[RequireComponent(typeof(Rigidbody))]
 
@@ -312,10 +311,10 @@ namespace AishaLifelike
 				//Debug.DrawRay (bulletSpawn.position, bulletSpawn.forward + (bulletSpawn.right*0.2f), Color.green, 0.0f);
 				if (hitInfo.transform.tag=="Dummie") {
 					Transform _other = hitInfo.transform.root.transform;
-					AishaLifelike.LifeScore.score = AishaLifelike.LifeScore.score + 1;
+					LifeScore.score = LifeScore.score + 1;
 					if (_other.transform.tag == "Dummie") {
 						print ("hit a dummie");
-						AishaLifelike.LifeScore.score = AishaLifelike.LifeScore.score + 1;
+						LifeScore.score = LifeScore.score + 1;
 					}
 					InstantiateBlood(hitInfo,false);
 				}

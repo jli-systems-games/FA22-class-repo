@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace TheFirstPerson
+namespace samantha_zak.Lifelike_2.Scripts
 {
     /*
     The base Extension class

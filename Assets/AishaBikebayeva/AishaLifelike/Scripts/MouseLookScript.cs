@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-namespace AishaLifelike
+namespace AishaBikebayeva.AishaLifelike.Scripts
 {
 	public class MouseLookScript : MonoBehaviour {
 

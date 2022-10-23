@@ -1,8 +1,9 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
+
 //using UnityStandardAssets.ImageEffects;
 
-namespace AishaLifelike
+namespace AishaBikebayeva.AishaLifelike.Scripts
 {
 	public enum GunStyles{
 		nonautomatic,automatic

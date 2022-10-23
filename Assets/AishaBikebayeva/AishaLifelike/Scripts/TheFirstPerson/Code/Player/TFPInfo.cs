@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TheFirstPerson
+namespace AishaBikebayeva.AishaLifelike.Scripts.TheFirstPerson.Code.Player
 {
     public struct TFPInfo
     {
