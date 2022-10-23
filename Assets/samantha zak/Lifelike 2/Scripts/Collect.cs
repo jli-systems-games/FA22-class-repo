@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-namespace Sam
+namespace samantha_zak.Lifelike_2.Scripts
 {
     public class Collect : MonoBehaviour
     {

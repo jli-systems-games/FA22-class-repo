@@ -1,12 +1,11 @@
-using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
+using AishaBikebayeva.AishaLifelike.Scripts.TextFx.Scripts;
 using UnityEditor;
+using UnityEngine;
 
-namespace TextFx
+namespace AishaBikebayeva.AishaLifelike.Scripts.TextFx.Editor
 {
 	[CustomEditor(typeof(TextFxNative))]
-	public class TextFxNative_Inspector : Editor
+	public class TextFxNative_Inspector : UnityEditor.Editor
 	{
 		TextFxNative textfx_instance;
 		

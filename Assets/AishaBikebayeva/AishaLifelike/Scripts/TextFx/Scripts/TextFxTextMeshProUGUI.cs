@@ -1,12 +1,11 @@
 ﻿#if TMP
-using UnityEngine;
-using System.Collections;
-using TMPro;
 #if UNITY_EDITOR
+using TMPro;
 using UnityEditor;
+using UnityEngine;
 #endif
 
-namespace TextFx
+namespace AishaBikebayeva.AishaLifelike.Scripts.TextFx.Scripts
 {
 	[AddComponentMenu("UI/TextMeshPro TextFx", 12)]
 	public class TextFxTextMeshProUGUI : TextMeshProUGUI, TextFxAnimationInterface

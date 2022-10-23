@@ -16,22 +16,21 @@
 #define USE_UNITY_DEBUGGING
 #endif
 
-using System.Collections;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Text;
-
 #if PARSE_ESCAPED_UNICODE
 using System.Text.RegularExpressions;
 #endif
 
-#if USE_UNITY_DEBUGGING
+using System.Collections;
+using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
+#if USE_UNITY_DEBUGGING
+
 #else
 using System.Diagnostics;
 #endif
 
-namespace Boomlagoon.TextFx.JSON {
+namespace AishaBikebayeva.AishaLifelike.Scripts.TextFx.Utilities.Boomlagoon.JSON {
 
 	public static class BoomlagoonExtensions
 	{

@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace AishaLifelike
+namespace AishaBikebayeva.AishaLifelike.Scripts
 {
 	public class DestroyAfterTimeParticle : MonoBehaviour {
 		[Tooltip("Time to destroy")]

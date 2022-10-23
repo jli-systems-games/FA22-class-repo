@@ -8,17 +8,18 @@
 
 #endif
 
+using AishaBikebayeva.AishaLifelike.Scripts.TextFx.Scripts;
+using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using UnityEditor;
-using TMPro;
 
 /// <summary>
 /// This script adds the UI menu options to the Unity Editor.
 /// </summary>
 	
-namespace TextFx
+namespace AishaBikebayeva.AishaLifelike.Scripts.TextFx.Editor
 {
 	public static class MenuOptionsTextFxTMP
 	{

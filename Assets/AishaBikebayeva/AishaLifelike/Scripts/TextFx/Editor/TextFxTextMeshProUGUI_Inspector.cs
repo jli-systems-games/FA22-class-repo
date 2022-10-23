@@ -1,10 +1,10 @@
 ﻿#if TMP
-using UnityEngine;
-using UnityEditor;
-using System.Collections;
+using AishaBikebayeva.AishaLifelike.Scripts.TextFx.Scripts;
 using TMPro.EditorUtilities;
+using UnityEditor;
+using UnityEngine;
 
-namespace TextFx
+namespace AishaBikebayeva.AishaLifelike.Scripts.TextFx.Editor
 {
 	[CustomEditor(typeof(TextFxTextMeshProUGUI)), CanEditMultipleObjects]
 #if TMP_1_5_1_OR_NEWER

@@ -1,8 +1,8 @@
-using UnityEngine;
 using System.Collections.Generic;
-using Boomlagoon.TextFx.JSON;
+using AishaBikebayeva.AishaLifelike.Scripts.TextFx.Utilities.Boomlagoon.JSON;
+using UnityEngine;
 
-namespace TextFx
+namespace AishaBikebayeva.AishaLifelike.Scripts.TextFx.Scripts
 {
 	public enum LOOP_TYPE
 	{

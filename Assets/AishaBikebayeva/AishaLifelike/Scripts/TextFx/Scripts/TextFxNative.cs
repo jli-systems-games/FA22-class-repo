@@ -1,18 +1,16 @@
-using UnityEngine;
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-#if !UNITY_WINRT
+using System.IO;
 using System.Xml;
+using UnityEditor;
+using UnityEngine;
+#if !UNITY_WINRT
 #endif
 #if UNITY_EDITOR
-using UnityEditor;
 #endif
-using Boomlagoon.TextFx.JSON;
 
 
-namespace TextFx
+namespace AishaBikebayeva.AishaLifelike.Scripts.TextFx.Scripts
 {
 
 	[RequireComponent (typeof (MeshFilter))]
