@@ -1,4 +1,5 @@
-﻿#if TMP
+﻿#if UNITY_EDITOR
+#if TMP
 using Shared_Assets.TextFx.Scripts;
 using TMPro.EditorUtilities;
 using UnityEditor;
@@ -77,4 +78,5 @@ namespace Shared_Assets.TextFx.Editor
 		}
 	}
 }
+#endif
 #endif

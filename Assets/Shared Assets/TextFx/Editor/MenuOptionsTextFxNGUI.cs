@@ -1,4 +1,5 @@
-﻿#if NGUI
+﻿#if UNITY_EDITOR
+#if NGUI
 using UnityEngine;
 using UnityEditor;
 
@@ -51,4 +52,6 @@ namespace TextFx
 		}
 	}
 }
+#endif
+
 #endif

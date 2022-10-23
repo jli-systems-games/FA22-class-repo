@@ -4,17 +4,16 @@
 
 #if !UNITY_3_5 && !UNITY_4_0 && !UNITY_4_0_1 && !UNITY_4_1 && !UNITY_4_2 && !UNITY_4_3 && !UNITY_4_5 && !UNITY_4_6 && !UNITY_4_7 && !UNITY_5_0 && !UNITY_5_1 && !UNITY_5_2_0 && !UNITY_5_2_1
 
-#if UNITY_EDITOR
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
-#endif
 
 namespace Shared_Assets.TextFx.Scripts
 {
-	
+#if UNITY_EDITOR
 	[AddComponentMenu("UI/TextFx Text", 12)]
+	#endif
 	public class TextFxUGUI : Text , TextFxAnimationInterface
 	{
 

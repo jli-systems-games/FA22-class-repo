@@ -1,4 +1,5 @@
-﻿using Shared_Assets.TextFx.Scripts;
+﻿#if UNITY_EDITOR
+using Shared_Assets.TextFx.Scripts;
 using UnityEditor;
 using UnityEngine;
 
@@ -189,3 +190,4 @@ namespace Shared_Assets.TextFx.Editor
 		}
 	}
 }
+#endif

@@ -2,7 +2,7 @@
 
 /* 	Class to listen for reimported Font files (caused by font size change, font type change and other setting changes).
 	Calls to all EffectManager instances in scene to let them know the font that's changed. */
-
+#if UNITY_EDITOR
 namespace Shared_Assets.TextFx.Editor
 {
 #if UNITY_4_6 || UNITY_4_5 || UNITY_4_3 || UNITY_4_2 || UNITY_4_1 || UNITY_4_0_1 || UNITY_4_0
@@ -43,3 +43,4 @@ namespace Shared_Assets.TextFx.Editor
 	}
 #endif
 }
+#endif

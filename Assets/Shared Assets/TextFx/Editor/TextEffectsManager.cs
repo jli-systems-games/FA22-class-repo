@@ -1,5 +1,5 @@
 //#define ANIM_DESIGN_DEV_TOOLS
-
+#if UNITY_EDITOR
 using System.Collections.Generic;
 using Shared_Assets.TextFx.Scripts;
 using UnityEditor;
@@ -2121,3 +2121,4 @@ namespace Shared_Assets.TextFx.Editor
 		}
 	}
 }
+#endif

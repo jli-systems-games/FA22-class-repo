@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 #if NGUI
 using UnityEngine;
 using System.Collections;
@@ -74,4 +75,5 @@ namespace TextFx
 		}
 	}
 }
+#endif
 #endif
