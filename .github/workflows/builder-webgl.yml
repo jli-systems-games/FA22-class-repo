@@ -110,8 +110,19 @@ jobs:
       #  run: ls -R
       #  working-directory: build/WebGL
 
-      - name: Deploy
+      - name: Deploy GH Pages
+        id: gh-deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
           folder: build/WebGL
+
+      - name: Deploy to Itch
+        if: ${{ steps.dh-deploy.outputs.success }}
+        uses: manleydev/butler-public-itchio-action@master
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.JASON_ITCH_BUTLER_CREDENTIALS }}
+          CHANNEL: web
+          ITCH_GAME: FA22-DEMOSCENE-SHOWCASE
+          ITCH_USER: ovenfresh
+          PACKAGE: build
