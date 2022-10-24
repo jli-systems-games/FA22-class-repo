@@ -54,7 +54,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      #          lfs: true
+      #        lfs: true
       #      - name: Create LFS files
       #        run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
       #      - name: Restore LFS cache
@@ -98,6 +98,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          lfs: true
 
       - uses: actions/download-artifact@v2
         with:
@@ -107,8 +109,18 @@ jobs:
       #- name: Display structure of root files
       #  run: ls -R
       #  working-directory: build/WebGL
+      - name: Deploy to Itch
+        id: itch-deploy
+        uses: manleydev/butler-publish-itchio-action@master
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.JASON_ITCH_BUTLER_CREDENTIALS }}
+          CHANNEL: web
+          ITCH_GAME: FA22-DEMOSCENE-SHOWCASE
+          ITCH_USER: ovenfresh
+          PACKAGE: build
 
-      - name: Deploy
+      - name: Deploy GH Pages
+        id: gh-deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
