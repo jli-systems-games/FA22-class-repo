@@ -35,6 +35,12 @@ public class AnimationControls : MonoBehaviour
         {
             gameObject.GetComponent<Transform>().localScale = new Vector3(1, 1, 0);
         }
+        
+    }
+
+    public void WinState()
+    {
+        anim.SetTrigger("Won");
     }
 }
     
