@@ -12,6 +12,9 @@ namespace Bananagodzilla
         public AnimationControls beetle2;
         public GameObject winScreen;
 
+        public MaiMove beetle1Mov;
+
+        public MaiMove beetle2Mov;
         // Start is called before the first frame update
         void Start()
         {
@@ -29,6 +32,9 @@ namespace Bananagodzilla
             beetle1.WinState();
             beetle2.WinState();
             winScreen.SetActive(true);
+            beetle1Mov.IfMoves();
+            beetle2Mov.IfMoves();
+            
         }
     }
 }
