@@ -31,14 +31,14 @@ namespace AishasCircus{
 
 
         Rigidbody2D rb;
-        [HideInInspector] public Animator clownsheet;
+        public Animator clownsheet;
 
 
         // Start is called before the first frame update
         void Start()
         {
             rb = GetComponent<Rigidbody2D>();
-            clownsheet = GetComponentInChildren<Animator>();
+            clownsheet = gameObject.GetComponent<Animator>();
             direction = 1;
             jumpsound = GetComponent<AudioSource>();
         }
@@ -58,6 +58,7 @@ namespace AishasCircus{
                 {
                     rb.velocity = new Vector2(0, rb.velocity.y);
 
+                    clownsheet.Play("ClownPlayerWalk");
                 }
             }
 
@@ -67,6 +68,7 @@ namespace AishasCircus{
                 {
                     rb.velocity = new Vector2(0, rb.velocity.y);
 
+                    clownsheet.Play("ClownPlayerWalk");
                 }
             }
 
@@ -120,7 +122,7 @@ namespace AishasCircus{
 
         public void Move()
         {
-            rb.velocity = new Vector2(hor * speed, rb.velocity.y);
+            rb.velocity = new Vector2(hor * -speed, rb.velocity.y);
             //rb.AddForce(new Vector2(hor * speed, 0));
         }
 
@@ -144,6 +146,7 @@ namespace AishasCircus{
             {
 
                 return true;
+                clownsheet.Play("ClownPlayerWalk");
             }
             else
             {
@@ -158,6 +161,7 @@ namespace AishasCircus{
             {
 
                 return true;
+                clownsheet.Play("ClownPlayerWalk");
             }
             else
             {
