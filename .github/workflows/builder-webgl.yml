@@ -105,10 +105,10 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        channel:
-          - StandaloneWindows
-          - StandaloneOSX
-          - WebGL
+        target-platform-channel:
+          - {platform: StandaloneWindows64, channel: windows}
+          - {platform: StandaloneOSX, channel: osx}
+          - {platform: WebGL, channel: web} 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -117,7 +117,7 @@ jobs:
 
       - uses: actions/download-artifact@v2
         with:
-          name: build-${{ matrix.channel }}
+          name: build-${{ matrix.target-platform-channel.platform }}
           path: build
 
       #- name: Display structure of root files
@@ -128,13 +128,13 @@ jobs:
         uses: manleydev/butler-publish-itchio-action@master
         env:
           BUTLER_CREDENTIALS: ${{ secrets.JASON_ITCH_BUTLER_CREDENTIALS }}
-          CHANNEL: ${{ matrix.channel }}
+          CHANNEL: ${{ matrix.target-platform-channel.channel }}
           ITCH_GAME: FA22-DEMOSCENE-SHOWCASE
           ITCH_USER: ovenfresh
           PACKAGE: build
 
       - name: Deploy GH Pages
-        if: ${{ matrix.channel == 'WebGL' }}
+        if: ${{ matrix.target-platform-channel.channel == 'web' }}
         id: gh-deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
