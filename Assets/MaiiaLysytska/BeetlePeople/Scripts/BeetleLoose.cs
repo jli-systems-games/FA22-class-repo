@@ -12,7 +12,7 @@ public class BeetleLoose : MonoBehaviour
 {
     public GameObject Lost;
     public GameObject leaf;
-
+    public TMP_Text timerr;
     public GameObject timer;
 
 
@@ -22,7 +22,7 @@ public class BeetleLoose : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        timerr = timer.GetComponent<TMP_Text>();
     }
 
     // Update is called once per frame
@@ -30,7 +30,10 @@ public class BeetleLoose : MonoBehaviour
     {
         if (Dropped == true)
         {
+            
             targetTime -= Time.deltaTime;
+            timerr.SetText( MathF.Round(targetTime, 2, MidpointRounding.AwayFromZero).ToString() + "s");
+            
     Debug.Log(targetTime);
         }
 
@@ -48,6 +51,7 @@ public class BeetleLoose : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("bullet")){
+            timer.SetActive(true);
         Dropped = true;
         Debug.Log("Dropped");
         }
@@ -58,6 +62,7 @@ public class BeetleLoose : MonoBehaviour
 
         if (other.gameObject.CompareTag("bullet"))
         {
+            timer.SetActive(false);
             Dropped = false;
             Debug.Log("PickedUp");
         }
