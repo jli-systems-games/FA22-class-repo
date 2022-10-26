@@ -26,7 +26,7 @@ public class CameraFollow : MonoBehaviour
         beetpos1 = beetle1.GetComponent<Transform>().position;
     beetpos2 = beetle2.GetComponent<Transform>().position;
         // How many units should we keep from the players
-        float zoomFactor = 1.5f;
+        float zoomFactor = 1.2f;
         float followTimeDelta = 0.8f;
  
         // Midpoint we're after
