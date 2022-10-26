@@ -14,7 +14,7 @@ public class BeetleLoose : MonoBehaviour
     public GameObject leaf;
     public TMP_Text timerr;
     public GameObject timer;
-
+    public bool canFall = true;
 
     public float targetTime = 5f;
 
@@ -28,24 +28,29 @@ public class BeetleLoose : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Dropped == true)
+
+        if (canFall)
         {
-            
-            targetTime -= Time.deltaTime;
-            timerr.SetText( MathF.Round(targetTime, 2, MidpointRounding.AwayFromZero).ToString() + "s");
-            
-    Debug.Log(targetTime);
+            if (Dropped == true)
+            {
+
+                targetTime -= Time.deltaTime;
+                timerr.SetText(MathF.Round(targetTime, 2, MidpointRounding.AwayFromZero).ToString() + "s");
+
+                Debug.Log(targetTime);
+            }
+
+            if (Dropped == false)
+            {
+                targetTime = 5f;
+            }
+
+            if (targetTime <= 0)
+            {
+                Lose();
+            }
         }
 
-        if (Dropped == false)
-        {
-            targetTime = 5f;
-        }
-
-        if (targetTime <= 0)
-        {
-            Lose();
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D col)

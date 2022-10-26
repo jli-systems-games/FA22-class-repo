@@ -11,7 +11,8 @@ namespace Bananagodzilla
         public AnimationControls beetle1;
         public AnimationControls beetle2;
         public GameObject winScreen;
-
+       public GameObject[] deadGrass;
+        public BeetleLoose loose;
         public MaiMove beetle1Mov;
 
         public MaiMove beetle2Mov;
@@ -34,7 +35,14 @@ namespace Bananagodzilla
             winScreen.SetActive(true);
             beetle1Mov.IfMoves();
             beetle2Mov.IfMoves();
-            
+
+            loose.canFall = false;
+            for (int i = 0; i < deadGrass.Length; i++)
+            {
+                deadGrass[i].SetActive(false); 
+            }
+           // 
+
         }
     }
 }

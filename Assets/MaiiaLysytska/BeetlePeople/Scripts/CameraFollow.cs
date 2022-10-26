@@ -42,7 +42,7 @@ public class CameraFollow : MonoBehaviour
         if (cam.orthographic)
         {
             // The camera's forward vector is irrelevant, only this size will matter
-            cam.orthographicSize = distance/0.5f;
+            cam.orthographicSize = distance/0.3f;
         }
         // You specified to use MoveTowards instead of Slerp
         cam.transform.position = Vector3.Slerp(cam.transform.position, cameraDestination, followTimeDelta);
