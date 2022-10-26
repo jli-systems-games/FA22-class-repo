@@ -33,11 +33,9 @@ namespace Regan.Balance
         private void UpdatePaddleRotation()
         {
             float clampedMouseDelta = Mathf.Clamp(_mouseDeltaX, -1, 1);
-
-            _rigidbody.rotation =
-                Mathf.Clamp(_rigidbody.rotation - clampedMouseDelta * _mouseSensitivity * Time.deltaTime,
-                -_paddleClampAngle,
-                _paddleClampAngle);
+            float zRotation = Mathf.Clamp(_rigidbody.rotation - clampedMouseDelta * _mouseSensitivity * Time.deltaTime, -_paddleClampAngle, _paddleClampAngle);
+            transform.rotation = Quaternion.Euler(0, 0, zRotation);
+                
         }
 
         private void HandleInput()
