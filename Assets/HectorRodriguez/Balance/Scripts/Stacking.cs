@@ -69,6 +69,7 @@ namespace HectorRodriguez
                 }
                 else if (_conchaList.Count > 1)
                 {
+                    IncreaseScore();
                     collision.gameObject.transform.position = _currentConchaPos;
                     _currentConchaPos = new Vector3(collision.transform.position.x, collision.gameObject.transform.position.y + 0.3f, collision.transform.position.z);
                     collision.gameObject.GetComponent<Concha>().UpdateConchaPosition(_conchaList[_conchaListIndexCounter].transform, true);
