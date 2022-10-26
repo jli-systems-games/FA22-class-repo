@@ -6,23 +6,23 @@ public class Rotation : MonoBehaviour
 {
 
     public Animator anim;
-    bool EffectAnim = false;
+    
 
 
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
 
  void OnTriggerEnter(Collider other)
     {
-       if(other.gameObject.CompareTag("Ground"))
+       if(other.gameObject.CompareTag("Player"))
         {
-            EffectAnim = true;
-            anim.Play("rotatingside", -1, 0f);
+            Debug.Log("Test");
+            anim.SetTrigger("Rotate");
         }
     }
 }
