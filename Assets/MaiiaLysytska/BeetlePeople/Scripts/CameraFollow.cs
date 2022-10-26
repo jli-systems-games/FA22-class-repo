@@ -17,14 +17,39 @@ public class CameraFollow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        beetpos1 = beetle1.GetComponent<Transform>().position;
-        beetpos2 = beetle2.GetComponent<Transform>().position;
+       
     }
 
-    // Update is called once per frame
-    void Update()
+    
+    public void Update()
     {
-        cam.transform.position = new Vector3((beetpos1.x+beetpos2.x)/2, (beetpos1.y+beetpos2.y)/2, -10);
+        beetpos1 = beetle1.GetComponent<Transform>().position;
+    beetpos2 = beetle2.GetComponent<Transform>().position;
+        // How many units should we keep from the players
+        float zoomFactor = 1.2f;
+        float followTimeDelta = 0.8f;
+ 
+        // Midpoint we're after
+        Vector3 midpoint = ( beetpos1 +  beetpos2) / 2f;
+ 
+        // Distance between objects
+        float distance = ( beetpos1 -  beetpos2).magnitude;
+ 
+        // Move camera a certain distance
+        Vector3 cameraDestination = midpoint - cam.transform.forward * distance * zoomFactor;
+ 
+        // Adjust ortho size if we're using one of those
+        if (cam.orthographic)
+        {
+            // The camera's forward vector is irrelevant, only this size will matter
+            cam.orthographicSize = distance;
+        }
+        // You specified to use MoveTowards instead of Slerp
+        cam.transform.position = Vector3.Slerp(cam.transform.position, cameraDestination, followTimeDelta);
+       
+        // Snap when close enough to prevent annoying slerp behavior
+        if ((cameraDestination - cam.transform.position).magnitude <= 0.05f)
+            cam.transform.position = cameraDestination;
     }
 }
 }
