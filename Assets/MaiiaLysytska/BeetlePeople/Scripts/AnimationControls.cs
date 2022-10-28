@@ -23,7 +23,7 @@ public class AnimationControls : MonoBehaviour
         if (rb.velocity.y > 1 || rb.velocity.y < -1 || rb.velocity.x < -1 || rb.velocity.x > 1)
         {
             anim.SetBool("IsWalking", true);
-            pop.Play();
+            pop.UnPause();
         }
         else{ anim.SetBool("IsWalking", false);}
 
@@ -39,7 +39,7 @@ public class AnimationControls : MonoBehaviour
 
         if (rb.velocity.y < 1 || rb.velocity.y > -1 || rb.velocity.x > -1 || rb.velocity.x < 1)
         {
-            pop.Stop();
+            pop.Pause();
         }
         
     }
