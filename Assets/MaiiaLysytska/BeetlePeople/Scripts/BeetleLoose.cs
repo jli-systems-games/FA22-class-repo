@@ -10,8 +10,10 @@ namespace Bananagodzilla
 
 public class BeetleLoose : MonoBehaviour
 {
+
+    public MaiMove[] beetles;
     public GameObject Lost;
-    public GameObject leaf;
+    //public GameObject leaf;
     public TMP_Text timerr;
     public GameObject timer;
     public bool canFall = true;
@@ -29,10 +31,11 @@ public class BeetleLoose : MonoBehaviour
     void Update()
     {
 
-        if (canFall)
+        if (canFall == true)
         {
+            
             if (Dropped == true)
-            {
+            { 
 
                 targetTime -= Time.deltaTime;
                 timerr.SetText(MathF.Round(targetTime, 2, MidpointRounding.AwayFromZero).ToString() + "s");
@@ -58,10 +61,21 @@ public class BeetleLoose : MonoBehaviour
         if (col.gameObject.CompareTag("bullet")){
             timer.SetActive(true);
         Dropped = true;
-        Debug.Log("Dropped");
+       
         }
     }
 
+    
+    private void OnTriggerStay2D(Collider2D other)
+    {
+
+        if (other.gameObject.CompareTag("bullet"))
+        {
+            timer.SetActive(true);
+       
+          
+        }
+    }
     private void OnTriggerExit2D(Collider2D other)
     {
 
@@ -69,13 +83,18 @@ public class BeetleLoose : MonoBehaviour
         {
             timer.SetActive(false);
             Dropped = false;
-            Debug.Log("PickedUp");
+           
         }
     }
 
     void Lose()
     {
-        Debug.Log("Lost");
+       Lost.SetActive(true);
+       for (int i = 0; i < beetles.Length; i++)
+       {
+           beetles[i].IfMoves();
+       }
+       
     }
 }
 }

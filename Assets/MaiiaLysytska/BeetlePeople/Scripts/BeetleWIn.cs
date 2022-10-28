@@ -35,7 +35,6 @@ namespace Bananagodzilla
             winScreen.SetActive(true);
             beetle1Mov.IfMoves();
             beetle2Mov.IfMoves();
-
             loose.canFall = false;
             for (int i = 0; i < deadGrass.Length; i++)
             {
