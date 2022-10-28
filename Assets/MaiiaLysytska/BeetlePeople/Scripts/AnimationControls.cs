@@ -8,7 +8,7 @@ namespace Bananagodzilla
 public class AnimationControls : MonoBehaviour
 {
     public Animator anim;
-
+    public AudioSource pop;
     public Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,7 @@ public class AnimationControls : MonoBehaviour
         if (rb.velocity.y > 1 || rb.velocity.y < -1 || rb.velocity.x < -1 || rb.velocity.x > 1)
         {
             anim.SetBool("IsWalking", true);
+            pop.Play();
         }
         else{ anim.SetBool("IsWalking", false);}
 
@@ -34,6 +35,11 @@ public class AnimationControls : MonoBehaviour
         if (rb.velocity.x > 1)
         {
             gameObject.GetComponent<Transform>().localScale = new Vector3(1, 1, 0);
+        }
+
+        if (rb.velocity.y < 1 || rb.velocity.y > -1 || rb.velocity.x > -1 || rb.velocity.x < 1)
+        {
+            pop.Stop();
         }
         
     }

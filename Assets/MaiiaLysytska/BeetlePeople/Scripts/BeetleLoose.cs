@@ -10,7 +10,7 @@ namespace Bananagodzilla
 
 public class BeetleLoose : MonoBehaviour
 {
-
+    public GameObject[] deadGrass;
     public MaiMove[] beetles;
     public GameObject Lost;
     //public GameObject leaf;
@@ -89,6 +89,10 @@ public class BeetleLoose : MonoBehaviour
 
     void Lose()
     {
+        for (int i = 0; i < deadGrass.Length; i++)
+        {
+            deadGrass[i].SetActive(false);
+        }
        Lost.SetActive(true);
        for (int i = 0; i < beetles.Length; i++)
        {
