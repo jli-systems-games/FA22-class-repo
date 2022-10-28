@@ -10,6 +10,7 @@ namespace Bananagodzilla
 
 public class BeetleLoose : MonoBehaviour
 {
+    public AudioSource thud;
     public GameObject[] deadGrass;
     public MaiMove[] beetles;
     public GameObject Lost;
@@ -58,6 +59,7 @@ public class BeetleLoose : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        thud.Play();
         if (col.gameObject.CompareTag("bullet")){
             timer.SetActive(true);
         Dropped = true;
