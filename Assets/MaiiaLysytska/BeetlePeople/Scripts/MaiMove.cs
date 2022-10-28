@@ -16,7 +16,7 @@ namespace Bananagodzilla
         public float speed;
         public Rigidbody2D rb;
         public Animator anim;
-
+        public AudioSource audioSource;
         public bool IsMoving = false;
 
         private void Start()
@@ -37,23 +37,39 @@ namespace Bananagodzilla
 
                     rb.velocity = new Vector2(speed, 0);
 
+                    if (!audioSource.isPlaying)
+                    {
+                        audioSource.Play(0);
+                    }
+
                 }
 
-                if (Input.GetKey(keycodes[1]))
+
+
+                else if (Input.GetKey(keycodes[1]))
                 {
 
 
                     rb.velocity = new Vector2(-speed, 0);
+                    
+                    if (!audioSource.isPlaying)
+                    {
+                        audioSource.Play(0);
+                    }
 
-                }
+                }  else
+                    audioSource.Stop();
 
             }
-
 
         }
 
 
-        public void IfMoves()
+    
+
+
+
+public void IfMoves()
         {
             if (IsMoving)
             {
@@ -66,6 +82,7 @@ namespace Bananagodzilla
             }
         }
     }
-    
-    
 }
+    
+    
+
