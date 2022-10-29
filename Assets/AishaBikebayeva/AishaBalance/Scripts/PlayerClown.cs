@@ -41,6 +41,7 @@ namespace AishasCircus{
             clownsheet = gameObject.GetComponent<Animator>();
             direction = 1;
             jumpsound = GetComponent<AudioSource>();
+            clownsheet.enabled = false;
         }
 
         private void Update()
@@ -59,6 +60,7 @@ namespace AishasCircus{
                     rb.velocity = new Vector2(0, rb.velocity.y);
 
                     clownsheet.Play("ClownPlayerWalk");
+                    clownsheet.enabled = true;
                 }
             }
 
@@ -69,6 +71,7 @@ namespace AishasCircus{
                     rb.velocity = new Vector2(0, rb.velocity.y);
 
                     clownsheet.Play("ClownPlayerWalk");
+                    clownsheet.enabled = true;
                 }
             }
 
@@ -106,7 +109,7 @@ namespace AishasCircus{
 
             CharacterDirectionCheck(hor);
 
-            // Attack();
+            Attack();
 
 
             //anim.SetFloat("velocityX", Mathf.Abs(rb.velocity.x));
@@ -147,6 +150,7 @@ namespace AishasCircus{
 
                 return true;
                 clownsheet.Play("ClownPlayerWalk");
+                clownsheet.enabled = true;
             }
             else
             {
@@ -162,6 +166,7 @@ namespace AishasCircus{
 
                 return true;
                 clownsheet.Play("ClownPlayerWalk");
+                clownsheet.enabled = true;
             }
             else
             {
@@ -170,13 +175,13 @@ namespace AishasCircus{
             }
         }
 
-        // private void Attack()
-        // {
-        //     if (Input.GetMouseButtonDown(1))
-        //     {
-        //         clownsheet.SetTrigger("Attack");
-        //     }
-        // }
+        private void Attack()
+        {
+            if (Input.GetMouseButtonDown(1))
+            {
+                clownsheet.SetTrigger("Attack");
+            }
+        }
 
         private void CharacterDirectionCheck(float xSpeed)
         {
