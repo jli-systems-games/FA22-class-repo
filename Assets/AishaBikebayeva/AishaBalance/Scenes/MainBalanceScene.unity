@@ -1525,6 +1525,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hoop Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 7290110153498605168, guid: 0dc37ede1f3374ecb984b68a3050648d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dc37ede1f3374ecb984b68a3050648d, type: 3}
 --- !u!1 &2045568554 stripped
@@ -1666,9 +1671,10 @@ GameObject:
   - component: {fileID: 2137105060}
   - component: {fileID: 2137105059}
   - component: {fileID: 2137105058}
+  - component: {fileID: 2137105061}
   m_Layer: 0
   m_Name: Clown
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1852,3 +1858,15 @@ MonoBehaviour:
   stopped: 0
   groundDistance: 0.01
   clownsheet: {fileID: 2137105055}
+--- !u!114 &2137105061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137105053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e06abdc694974a698e99751f8b5077f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
