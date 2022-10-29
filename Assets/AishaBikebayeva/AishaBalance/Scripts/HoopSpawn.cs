@@ -14,7 +14,7 @@ namespace AishasCircus
         public float xSpawnPos; //width of spawn
         public float spawnInterval = 1;
         public float currentSpawnTime = 0;
-        public float bigCountdown = 30; 
+        public float bigCountdown = 100; 
         public float currentBigTime = 0;
         // public float difficultyModifier = .5f;
 
