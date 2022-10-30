@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace HectorRodriguez
 {
@@ -15,6 +16,8 @@ namespace HectorRodriguez
         {
             // Starts the timer automatically
             timerIsRunning = true;
+
+
         }
         void Update()
         {
@@ -25,11 +28,13 @@ namespace HectorRodriguez
                     timeRemaining -= Time.deltaTime;
                     DisplayTime(timeRemaining);
                 }
-                else
+                else 
                 {
+                   
                     Debug.Log("Time has run out!");
                     timeRemaining = 0;
                     timerIsRunning = false;
+                    SceneManager.LoadScene("EndGame");
                 }
             }
         }
