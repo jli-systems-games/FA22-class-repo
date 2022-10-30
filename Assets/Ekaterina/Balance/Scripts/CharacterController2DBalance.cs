@@ -93,7 +93,7 @@ public class CharacterController2DBalance : MonoBehaviour
 		// If the player should jump...
 		if (m_Grounded && jump)
 		{
-			jumpSound.Play();
+			//jumpSound.Play();
 			CreateParticles();
 
 			// Add a vertical force to the player.

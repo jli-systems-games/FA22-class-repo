@@ -18,7 +18,6 @@ namespace Ekaterina
 
         void OnCollisionEnter2D(Collision2D exitFloor)
         {
-
             if (exitFloor.gameObject.name == "Player")
             {
                 exitSound.Play();

@@ -24,7 +24,7 @@ namespace Ekaterina
  
         if(dist < minDist)
         {
-            audioSource.volume = 1;
+            audioSource.volume = 0.5f;
         }
         else if(dist > maxDist)
         {
@@ -32,7 +32,7 @@ namespace Ekaterina
         }
         else
         {
-            audioSource.volume = 1 - ((dist - minDist) / (maxDist - minDist));
+            audioSource.volume = 0.5f - ((dist - minDist) / (maxDist - minDist));
         }
     }
 }

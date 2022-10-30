@@ -29,6 +29,9 @@ namespace Ekaterina
         private void Start()
         {
             winSound = GetComponent<AudioSource>();
+            
+   
+    
         }
 
         private void Awake()
