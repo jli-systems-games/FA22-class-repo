@@ -1845,6 +1845,7 @@ GameObject:
   - component: {fileID: 2137105059}
   - component: {fileID: 2137105058}
   - component: {fileID: 2137105061}
+  - component: {fileID: 2137105062}
   m_Layer: 0
   m_Name: Clown
   m_TagString: Player
@@ -2043,6 +2044,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e06abdc694974a698e99751f8b5077f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2137105062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137105053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e25c94ffcb14ae38a2ca412d17fe93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 2137105058}
+  jumpAmount: 90
+  gravityScale: 10
+  fallingGravityScale: 20
 --- !u!1001 &2519726447159673526
 PrefabInstance:
   m_ObjectHideFlags: 0
