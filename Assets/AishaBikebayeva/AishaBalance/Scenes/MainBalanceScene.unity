@@ -1534,16 +1534,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 7290110152566132825}
-  timeBetweenSpawns: 10
+  timeBetweenSpawns: 5
   ySpawnPosMin: 120
   ySpawnPosMax: 124
-  xSpawnPos: 900
+  xSpawnPos: 800
   spawnInterval: 3
-  currentSpawnTime: 10
-  bigCountdown: 100
+  currentSpawnTime: 1
+  bigCountdown: 80
   currentBigTime: 0
-  spawnTime: 1
-  spawnDelay: 15
 --- !u!4 &1356667791
 Transform:
   m_ObjectHideFlags: 0
@@ -2059,13 +2057,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3578799866153271889, guid: a8a5788c6010f47d497e6ae9eb6b1d9f,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 17.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578799866153271889, guid: a8a5788c6010f47d497e6ae9eb6b1d9f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 17.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578799866153271889, guid: a8a5788c6010f47d497e6ae9eb6b1d9f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 17.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578799866153271889, guid: a8a5788c6010f47d497e6ae9eb6b1d9f,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 1256
       objectReference: {fileID: 0}
     - target: {fileID: 3578799866153271889, guid: a8a5788c6010f47d497e6ae9eb6b1d9f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 124
+      value: 897
       objectReference: {fileID: 0}
     - target: {fileID: 3578799866153271889, guid: a8a5788c6010f47d497e6ae9eb6b1d9f,
         type: 3}

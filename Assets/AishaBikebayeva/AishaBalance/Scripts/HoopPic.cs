@@ -12,7 +12,7 @@ namespace AishasCircus
         //gameOverScreen gameOverScreen;
 
         private SpriteRenderer sr;
-        private float fallSpeed = 5; //f;
+        private float fallSpeed = 200; //f;
         //private Image customImage;
 
         void Start()

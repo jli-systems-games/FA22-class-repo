@@ -16,8 +16,8 @@ namespace AishasCircus
         public float currentSpawnTime = 0;
         public float bigCountdown = 100; 
         public float currentBigTime = 0;
-        public float spawnTime;
-        public float spawnDelay;
+        // public float spawnTime;
+        // public float spawnDelay;
         
         // public float difficultyModifier = .5f;
 
@@ -28,14 +28,14 @@ namespace AishasCircus
         public void Start()
         {
             timeUntilSpawn = 1;
-            InvokeRepeating("Spawn", spawnTime, spawnDelay);
+            // InvokeRepeating("Spawn", spawnTime, spawnDelay);
         }
 
         public void Update()
         {
             //Time.deltaTime is how much time has occured since the last update. 
             //If we decrease the timer by Time.deltaTime every time Update() runs, the timer will decrease by 1.0 every second.
-            timeUntilSpawn += Time.deltaTime;
+            timeUntilSpawn -= Time.deltaTime;
             //Once timeUntilSpawn is less than 0, we spawn a new hat
             if (timeUntilSpawn <= 0)
             {
