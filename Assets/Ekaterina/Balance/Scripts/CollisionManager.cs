@@ -16,13 +16,18 @@ namespace Ekaterina
         public BoxCollider2D exit_right;
         
         BoxCollider2D player;
+        
+        public Rigidbody2D player2;
+
+        private void Start()
+        {
+        }
 
         private void Awake()
         {
             exit_top.enabled = false;
             exit_left.enabled = false;
             exit_right.enabled = false;
-
         }
 
         void OnCollisionEnter2D(Collision2D player)
@@ -37,8 +42,9 @@ namespace Ekaterina
             
             if (player.gameObject.name == "Exit_floor")
             {
-                Debug.Log("Collision2!");
-                
+                player2.constraints = RigidbodyConstraints2D.None;
+                //player2.constraints = RigidbodyConstraints2D.FreezeAll;
+
                 exit_top.enabled = true;
                 exit_left.enabled = true;
                 exit_right.enabled = true;
@@ -46,7 +52,6 @@ namespace Ekaterina
                 gameObject.GetComponent<Renderer> ().material.color = Color.black;
                 trail.GetComponent<TrailRenderer> ().enabled = false;
                 particles.GetComponent<ParticleSystemRenderer> ().enabled = false;
-
             }
 
 
