@@ -47,7 +47,7 @@ namespace AishasCircus{
         private void Update()
         {
             hor = Input.GetAxis("Horizontal");
-
+            // ver = Input.GetAxis("Vertical");
 
             isGrounded = CheckIfGrounded();
 
@@ -77,30 +77,30 @@ namespace AishasCircus{
 
             if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
             {
-                isJumping = true;
-                jumpTimeCounter = jumpTime;
+                // isJumping = true;
+                // jumpTimeCounter = jumpTime;
                 //anim.SetTrigger("jump");
                 rb.velocity = Vector2.up * jumpPower;
             }
 
-            if (Input.GetKey(KeyCode.Space) && isJumping == true)
-            {
+            // if (Input.GetKey(KeyCode.Space) && isJumping == true)
+            // {
 
 
-                if (jumpTimeCounter > 0)
-                {
-                    rb.velocity = Vector2.up * jumpPower;
-                    //rb.AddForce(Vector2.up * jumpPower);
+            //     if (jumpTimeCounter > 0)
+            //     {
+            //         rb.velocity = Vector2.up * jumpPower;
+            //         //rb.AddForce(Vector2.up * jumpPower);
 
-                    jumpTimeCounter -= Time.deltaTime;
-                    jumpsound.Play();
-                }
-                else
-                {
-                    isJumping = false;
-                }
+            //         jumpTimeCounter -= Time.deltaTime;
+            //         jumpsound.Play();
+            //     }
+            //     else
+            //     {
+            //         isJumping = false;
+            //     }
 
-            }
+            // }
 
             if (Input.GetKeyUp(KeyCode.Space))
             {
@@ -109,7 +109,7 @@ namespace AishasCircus{
 
             CharacterDirectionCheck(hor);
 
-            Attack();
+            // Attack();
 
 
             //anim.SetFloat("velocityX", Mathf.Abs(rb.velocity.x));
@@ -175,13 +175,13 @@ namespace AishasCircus{
             }
         }
 
-        private void Attack()
-        {
-            if (Input.GetMouseButtonDown(1))
-            {
-                clownsheet.SetTrigger("Attack");
-            }
-        }
+        // private void Attack()
+        // {
+        //     if (Input.GetMouseButtonDown(1))
+        //     {
+        //         clownsheet.SetTrigger("Attack");
+        //     }
+        // }
 
         private void CharacterDirectionCheck(float xSpeed)
         {
