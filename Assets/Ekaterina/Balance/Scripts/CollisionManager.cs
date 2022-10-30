@@ -9,7 +9,13 @@ namespace Ekaterina
     {
         public TrailRenderer trail;
         public ParticleSystemRenderer particles;
-        public BoxCollider2D objectA;
+        
+        public BoxCollider2D block1;
+        public BoxCollider2D block2;
+        public BoxCollider2D block3;
+        public BoxCollider2D block4;
+        public BoxCollider2D block5;
+
         
         public BoxCollider2D exit_top;
         public BoxCollider2D exit_left;
@@ -33,11 +39,22 @@ namespace Ekaterina
         void OnCollisionEnter2D(Collision2D player)
         {
 
-            if (player.gameObject.name == "Object B")
+            if (player.gameObject.name == "Enemy_1")
             {
-                objectA.enabled = false;
-                Debug.Log("Collision!");
-
+                block1.enabled = false;
+                block2.enabled = false;
+                block3.enabled = false;
+                block4.enabled = false;
+                block5.enabled = false;
+            }
+            
+            if (player.gameObject.name == "Floor")
+            {
+                block1.enabled = true;
+                block2.enabled = true;
+                block3.enabled = true;
+                block4.enabled = true;
+                block5.enabled = true;
             }
             
             if (player.gameObject.name == "Exit_floor")
