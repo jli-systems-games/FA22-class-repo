@@ -28,7 +28,7 @@ namespace HectorRodriguez
 
         private void Start()
         {
-            MyText.text = "Score:";
+            MyText.text = "";
         }
 
         private void Awake()
@@ -44,7 +44,7 @@ namespace HectorRodriguez
             Vector3 horizontalMove = Vector3.right * _xMove * _speed * Time.deltaTime;
             _playerRigidbody.MovePosition(transform.position + forwardMove + horizontalMove);
 
-            MyText.text = "" + Score;
+            MyText.text = "Score:" + Score;
         }
 
         private void IncreaseScore()
