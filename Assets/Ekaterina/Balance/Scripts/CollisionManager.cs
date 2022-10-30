@@ -5,18 +5,24 @@ using UnityEngine;
 
 namespace Ekaterina
 {
-    public class ColliderDisabled : MonoBehaviour
+    public class CollisionManager : MonoBehaviour
     {
         public TrailRenderer trail;
         public ParticleSystemRenderer particles;
         public BoxCollider2D objectA;
-        public BoxCollider2D exit;
+        
+        public BoxCollider2D exit_top;
+        public BoxCollider2D exit_left;
+        public BoxCollider2D exit_right;
         
         BoxCollider2D player;
 
         private void Awake()
         {
-            exit.enabled = false;
+            exit_top.enabled = false;
+            exit_left.enabled = false;
+            exit_right.enabled = false;
+
         }
 
         void OnCollisionEnter2D(Collision2D player)
@@ -33,7 +39,9 @@ namespace Ekaterina
             {
                 Debug.Log("Collision2!");
                 
-                exit.enabled = true;
+                exit_top.enabled = true;
+                exit_left.enabled = true;
+                exit_right.enabled = true;
                 
                 gameObject.GetComponent<Renderer> ().material.color = Color.black;
                 trail.GetComponent<TrailRenderer> ().enabled = false;
