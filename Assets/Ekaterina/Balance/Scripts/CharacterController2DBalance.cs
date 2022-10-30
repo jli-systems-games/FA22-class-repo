@@ -5,6 +5,8 @@ namespace Ekaterina {
 
 public class CharacterController2DBalance : MonoBehaviour
 {
+	private AudioSource jumpSound;
+
 	public ParticleSystem particles;
 	
 	[SerializeField] private float m_JumpForce = 400f;							// Amount of force added when the player jumps.
@@ -28,6 +30,11 @@ public class CharacterController2DBalance : MonoBehaviour
 
 	[System.Serializable]
 	public class BoolEvent : UnityEvent<bool> { }
+	
+	private void Start()
+	{
+		jumpSound = GetComponent<AudioSource>();
+	}
 
 	private void Awake()
 	{
@@ -86,7 +93,8 @@ public class CharacterController2DBalance : MonoBehaviour
 		// If the player should jump...
 		if (m_Grounded && jump)
 		{
-		    CreateParticles();
+			jumpSound.Play();
+			CreateParticles();
 
 			// Add a vertical force to the player.
 			m_Grounded = false;

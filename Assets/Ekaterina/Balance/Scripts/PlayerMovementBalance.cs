@@ -1,17 +1,21 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Ekaterina {
 	
-	public class PlayerMovementBalance : MonoBehaviour {
-
-	public CharacterController2DBalance controller;
+	public class PlayerMovementBalance : MonoBehaviour
+	{
+		public CharacterController2DBalance controller;
 
 	public float runSpeed = 40f;
 
 	float horizontalMove = 0f;
 	bool jump = false;
+
+
+
 	void Update () {
 		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 		if (Input.GetButtonDown("Jump"))

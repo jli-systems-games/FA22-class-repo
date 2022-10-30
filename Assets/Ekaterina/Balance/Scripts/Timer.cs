@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 namespace Ekaterina {
     
-
     public class Timer : MonoBehaviour
     {
         public float timeRemaining = 10;
