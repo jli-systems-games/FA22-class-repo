@@ -18,6 +18,9 @@ namespace HectorRodriguez
         public TextMeshProUGUI MyText;
         public float  Score = 0f;
 
+
+        public AudioSource audioSource;
+public float delay=4;
         //
         [SerializeField] private float _speed;
         //
@@ -50,6 +53,7 @@ namespace HectorRodriguez
         private void IncreaseScore()
         {
             Score++;
+            audioSource.Play();
         }
 
         private void OnTriggerEnter(Collider collision)
@@ -74,7 +78,8 @@ namespace HectorRodriguez
                     _currentConchaPos = new Vector3(collision.transform.position.x, collision.gameObject.transform.position.y + 0.3f, collision.transform.position.z);
                     collision.gameObject.GetComponent<Concha>().UpdateConchaPosition(_conchaList[_conchaListIndexCounter].transform, true);
                     _conchaListIndexCounter++;
-                   
+                    
+
                 }
             }
         }
