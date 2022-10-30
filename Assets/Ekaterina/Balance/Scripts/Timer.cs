@@ -2,41 +2,45 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 namespace Ekaterina {
-public class Timer : MonoBehaviour
-{
-    [Header("Component")]
-    public TextMeshProUGUI timerText;
-
-    [Header("Timer Settings")]
-    public float currentTime;
-    public bool countUp;
-
-    [Header("Format Settings")]
-    public bool hasFormat;
-    public TimerFormats format;
-    private Dictionary<TimerFormats, string> timeFormats = new Dictionary<TimerFormats, string>();
     
-    void Start()
+
+    public class Timer : MonoBehaviour
     {
-        timeFormats.Add(TimerFormats.Primary, "00:00");
+        public float timeRemaining = 10;
+        public bool timerIsRunning = false;
+        public TextMeshProUGUI timeText;
+        private void Start()
+        {
+            // Starts the timer automatically
+            timerIsRunning = true;
+        }
+        void Update()
+        {
+            if (timerIsRunning)
+            {
+                if (timeRemaining > 0)
+                {
+                    timeRemaining -= Time.deltaTime;
+                    DisplayTime(timeRemaining);
+                }
+                else
+                {
+                    Debug.Log("Time has run out!");
+                    timeRemaining = 0;
+                    timerIsRunning = false;
+                }
+            }
+        }
+        void DisplayTime(float timeToDisplay)
+        {
+            timeToDisplay += 1;
+            float minutes = Mathf.FloorToInt(timeToDisplay / 60); 
+            float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+            timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        }
     }
 
-    void Update()
-    {
-        currentTime = countUp ? currentTime -= Time.deltaTime : currentTime += Time.deltaTime;
-        SetTimerText();
-    }
-
-    private void SetTimerText()
-    {
-        timerText.text = hasFormat ? currentTime.ToString(timeFormats[format]) : currentTime.ToString();
-    }
-}
-
-public enum TimerFormats
-{
-    Primary
-}
 }

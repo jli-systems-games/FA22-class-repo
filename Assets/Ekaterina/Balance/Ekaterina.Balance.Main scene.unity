@@ -16677,7 +16677,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 1f5267294a0424724bde97557bcd3bb0, type: 3}
-  m_Color: {r: 1, g: 0.6079833, b: 0, a: 1}
+  m_Color: {r: 0.15178585, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -19006,11 +19006,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da3085d6f86f24f9d9a661a527bb8101, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerText: {fileID: 1128180750}
-  currentTime: 0
-  countUp: 0
-  hasFormat: 1
-  format: 0
+  timeRemaining: 100
+  timerIsRunning: 1
+  timeText: {fileID: 1128180750}
 --- !u!4 &1914542910
 Transform:
   m_ObjectHideFlags: 0

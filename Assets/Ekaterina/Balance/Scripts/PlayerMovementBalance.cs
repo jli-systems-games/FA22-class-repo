@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Ekaterina {
-
-public class PlayerMovementBalance : MonoBehaviour {
+	
+	public class PlayerMovementBalance : MonoBehaviour {
 
 	public CharacterController2DBalance controller;
 
@@ -12,19 +12,13 @@ public class PlayerMovementBalance : MonoBehaviour {
 
 	float horizontalMove = 0f;
 	bool jump = false;
-
-	// Update is called once per frame
 	void Update () {
-
 		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-
 		if (Input.GetButtonDown("Jump"))
 		{
 			jump = true;
 		}
-
 	}
-
 	void FixedUpdate ()
 	{
 		// Move our character

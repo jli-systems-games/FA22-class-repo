@@ -16,7 +16,6 @@ namespace Ekaterina
         public BoxCollider2D block4;
         public BoxCollider2D block5;
 
-        
         public BoxCollider2D exit_top;
         public BoxCollider2D exit_left;
         public BoxCollider2D exit_right;
@@ -24,10 +23,6 @@ namespace Ekaterina
         BoxCollider2D player;
         
         public Rigidbody2D player2;
-
-        private void Start()
-        {
-        }
 
         private void Awake()
         {
@@ -70,9 +65,6 @@ namespace Ekaterina
                 trail.GetComponent<TrailRenderer> ().enabled = false;
                 particles.GetComponent<ParticleSystemRenderer> ().enabled = false;
             }
-
-
-
         }
     }
 }
