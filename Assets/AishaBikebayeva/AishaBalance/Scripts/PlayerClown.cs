@@ -18,7 +18,7 @@ namespace AishasCircus{
         public Transform body;
         public Transform leftSide;
         public Transform rightSide;
-        public Collider2D playerCollider;
+        public BoxCollider2D playerCollider;
         [HideInInspector] public bool stopped;
 
 
@@ -76,9 +76,12 @@ namespace AishasCircus{
                         clownsheet.Play("newAnimWalk");
                         clownsheet.enabled = true;
                     // }
+            
                 }
             }
-
+            if(isGrounded == false){
+                clownsheet.Play("JumpAnim");
+            }
             if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
             {
                 // isJumping = true;
@@ -135,9 +138,9 @@ namespace AishasCircus{
 
         private bool CheckIfGrounded()
         {
-            if (Physics2D.Raycast(playerCollider.bounds.min, Vector2.down, groundDistance, ground) /*&& Mathf.Abs(rb.velocity.y) < .1f*/)
+            if (Physics2D.Raycast(playerCollider.bounds.center, Vector2.down, playerCollider.bounds.extents.y+groundDistance, ground) /*&& Mathf.Abs(rb.velocity.y) < .1f*/)
             {
-
+                Debug.Log("Hit");
                 return true;
             }
             else
