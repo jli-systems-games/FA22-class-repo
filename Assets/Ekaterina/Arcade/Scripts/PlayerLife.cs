@@ -34,7 +34,7 @@ public class PlayerLife : MonoBehaviour
     
     private void RestartLevel() 
     {
-        SceneManager.LoadScene("Lose");
+        SceneManager.LoadScene("Arcade.Ekaterina.Lose");
     }
 
 }
