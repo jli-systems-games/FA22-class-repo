@@ -9,7 +9,7 @@ namespace AishasCircus
     public class CircusScore : MonoBehaviour
     {
         public TextMesh scoreText; 
-
+        public GameObject gameOverScene;
         //public Sprite explosion;
         //private SpriteRenderer sr;
 
@@ -21,15 +21,17 @@ namespace AishasCircus
         void Start()
         {
             score = 0;
+
         }
 
         // Update is called once per frame
         void Update()
         {
-            scoreText.text = "Score: " + score; 
-            //score += Time.deltaTime;                                         
-            score += 1;                                                             
-                                                                      
+            if (!gameOverScene.activeSelf){
+                scoreText.text = "Score: " + score; 
+                //score += Time.deltaTime;                                         
+                score += 1;                                                             
+            }                                                        
         }
     }
 }
