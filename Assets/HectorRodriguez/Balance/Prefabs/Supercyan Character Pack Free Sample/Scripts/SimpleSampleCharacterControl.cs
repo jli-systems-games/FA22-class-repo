@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 namespace HectorRodriguez
 {
@@ -17,7 +18,10 @@ namespace HectorRodriguez
             Direct
         }
 
+        public bool speedUp = false;
         [SerializeField] private float m_moveSpeed = 2;
+        [SerializeField] private int speedBoost = 5;
+        
         [SerializeField] private float m_turnSpeed = 200;
         [SerializeField] private float m_jumpForce = 4;
 
@@ -106,12 +110,22 @@ namespace HectorRodriguez
             if (m_collisions.Count == 0) { m_isGrounded = false; }
         }
 
-        private void Update()
+      
+
+      void Update()
         {
+           /// float horizontalInput = Input.GetAxis("Horizontal");
+           /// float verticalInput = Input.GetAxis("Vertical");
+
+          ///  Vector3 direction = new Vector3(horizontalInput, 0, verticalInput);
+
+          ///  transform.Translate(direction * m_moveSpeed * Time.deltaTime);
+
             if (!m_jumpInput && Input.GetKey(KeyCode.Space))
             {
                 m_jumpInput = true;
             }
+         
         }
 
         private void FixedUpdate()
@@ -219,6 +233,20 @@ namespace HectorRodriguez
             {
                 m_animator.SetTrigger("Jump");
             }
+        }
+
+        public void SpeedUpEnabled()
+        {
+            speedUp = true;
+            m_moveSpeed *= speedBoost;
+            StartCoroutine(SpeedUpDisableRoutine());
+        }
+
+        IEnumerator SpeedUpDisableRoutine()
+        {
+            yield return new WaitForSeconds(3.0f);
+
+            m_moveSpeed /= speedBoost;
         }
     }
 }

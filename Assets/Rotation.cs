@@ -24,5 +24,10 @@ public class Rotation : MonoBehaviour
             Debug.Log("Test");
             anim.SetTrigger("Rotate");
         }
+       else if(other.gameObject.CompareTag("Player"))
+        {
+            anim.SetTrigger("Rotate2");
+        }
+   
     }
 }
