@@ -3,12 +3,13 @@ using UnityEngine.UI;
 using System.Collections;
 using System;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 namespace AishasCircus
 {
     public class CircusScore : MonoBehaviour
     {
-        public TextMesh scoreText; 
+        public TMP_Text scoreText; 
         public GameObject gameOverScene;
         //public Sprite explosion;
         //private SpriteRenderer sr;
