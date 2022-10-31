@@ -8,11 +8,11 @@ namespace AishasCircus{
         public float jumpAmount = 35;
         public float gravityScale = 10;
         public float fallingGravityScale = 40;
-        public SpriteRenderer spriteRenderer;
-        public Sprite newSprite;
+        // public SpriteRenderer spriteRenderer;
+        // public Sprite newSprite;
 
         void Start(){
-            spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+            // spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         }
       
         void Update()
@@ -20,7 +20,7 @@ namespace AishasCircus{
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 rb.AddForce(Vector2.up * jumpAmount, ForceMode2D.Impulse);
-                ChangeSprite(newSprite); 
+                // ChangeSprite(newSprite); 
             }
             if(rb.velocity.y >= 0)
             {
@@ -31,9 +31,9 @@ namespace AishasCircus{
                 rb.gravityScale = fallingGravityScale;
             }
         }
-            void ChangeSprite(Sprite newSprite)
-            {
-            spriteRenderer.sprite = newSprite; 
-            } 
+            // void ChangeSprite(Sprite newSprite)
+            // {
+            // spriteRenderer.sprite = newSprite; 
+            // } 
     }
 }

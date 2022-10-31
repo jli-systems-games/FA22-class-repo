@@ -50,7 +50,8 @@ namespace AishasCircus{
             // ver = Input.GetAxis("Vertical");
 
             isGrounded = CheckIfGrounded();
-
+            //  if (isGrounded == false){
+                
 
 
             if (CheckLeft())
@@ -58,9 +59,11 @@ namespace AishasCircus{
                 if (rb.velocity.x < 0)
                 {
                     rb.velocity = new Vector2(0, rb.velocity.y);
+                    // if (isGrounded == true){
 
-                    clownsheet.Play("ClownPlayerWalk");
-                    clownsheet.enabled = true;
+                        clownsheet.Play("newAnimWalk");
+                        clownsheet.enabled = true;
+                    // }
                 }
             }
 
@@ -69,9 +72,10 @@ namespace AishasCircus{
                 if (rb.velocity.x > 0)
                 {
                     rb.velocity = new Vector2(0, rb.velocity.y);
-
-                    clownsheet.Play("ClownPlayerWalk");
-                    clownsheet.enabled = true;
+                    // if (isGrounded == true){
+                        clownsheet.Play("newAnimWalk");
+                        clownsheet.enabled = true;
+                    // }
                 }
             }
 
@@ -149,7 +153,7 @@ namespace AishasCircus{
             {
 
                 return true;
-                clownsheet.Play("ClownPlayerWalk");
+                clownsheet.Play("newAnimWalk");
                 clownsheet.enabled = true;
             }
             else
@@ -165,7 +169,7 @@ namespace AishasCircus{
             {
 
                 return true;
-                clownsheet.Play("ClownPlayerWalk");
+                clownsheet.Play("newAnimWalk");
                 clownsheet.enabled = true;
             }
             else

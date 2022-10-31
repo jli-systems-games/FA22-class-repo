@@ -2667,13 +2667,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2137105054}
   - component: {fileID: 2137105056}
-  - component: {fileID: 2137105055}
-  - component: {fileID: 2137105057}
   - component: {fileID: 2137105060}
   - component: {fileID: 2137105059}
   - component: {fileID: 2137105058}
   - component: {fileID: 2137105061}
   - component: {fileID: 2137105062}
+  - component: {fileID: 2137105063}
   m_Layer: 0
   m_Name: Clown
   m_TagString: Player
@@ -2697,26 +2696,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &2137105055
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2137105053}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 178ee7d08b3934f4d9f6afe15f625b0a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &2137105056
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2769,22 +2748,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!111 &2137105057
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2137105053}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: c1e0d537095b947b1bb4148e82e29c8a, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: c1e0d537095b947b1bb4148e82e29c8a, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!50 &2137105058
 Rigidbody2D:
   serializedVersion: 4
@@ -2861,7 +2824,7 @@ MonoBehaviour:
   playerCollider: {fileID: 2137105059}
   stopped: 0
   groundDistance: 1.1
-  clownsheet: {fileID: 2137105055}
+  clownsheet: {fileID: 0}
 --- !u!114 &2137105061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2891,8 +2854,26 @@ MonoBehaviour:
   jumpAmount: 90
   gravityScale: 10
   fallingGravityScale: 20
-  spriteRenderer: {fileID: 2137105056}
-  newSprite: {fileID: 21300000, guid: c06e0153241404e24825ec2575023316, type: 3}
+--- !u!95 &2137105063
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137105053}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6b047060d2c944358985b82eb60c90dd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2249180910293047492
 PrefabInstance:
   m_ObjectHideFlags: 0
