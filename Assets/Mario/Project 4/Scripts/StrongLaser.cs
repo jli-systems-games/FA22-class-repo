@@ -34,7 +34,7 @@ namespace MarioBalance
             {
                 EnableLaser();
                 canShoot = false;
-                StartCoroutine(ShootCooldown(2f));
+                StartCoroutine(ShootCooldown(5f));
             }
 
             if (Input.GetButton("Fire3"))
