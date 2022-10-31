@@ -11,6 +11,9 @@ namespace AishasCircus{
         public SpriteRenderer spriteRenderer;
         public Sprite newSprite;
 
+        void Start(){
+            spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        }
         void ChangeSprite(Sprite newSprite)
         {
             spriteRenderer.sprite = newSprite; 
