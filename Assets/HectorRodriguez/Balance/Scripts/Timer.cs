@@ -34,7 +34,7 @@ namespace HectorRodriguez
                     Debug.Log("Time has run out!");
                     timeRemaining = 0;
                     timerIsRunning = false;
-                    SceneManager.LoadScene("EndGame");
+                    SceneManager.LoadScene("EndGameBAL");
                 }
             }
         }
