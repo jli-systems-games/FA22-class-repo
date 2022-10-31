@@ -6113,7 +6113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 383021412}
   m_Layer: 0
-  m_Name: Exit (1)
+  m_Name: Exit2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11550,7 +11550,7 @@ GameObject:
   - component: {fileID: 456331453}
   - component: {fileID: 456331452}
   m_Layer: 0
-  m_Name: Main Camera (1)
+  m_Name: Main Camera2
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11564,7 +11564,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 456331450}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30.282612, y: -12.806268, z: -14.345753}
+  m_LocalPosition: {x: -27.08237, y: 163.94443, z: -14.345753}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11671,9 +11671,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.5
     y: 0
-    width: 0.5
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -14041,7 +14041,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.60784316, b: 0, a: 1}
+      maxColor: {r: 0.03127098, g: 0, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -18803,7 +18803,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679003533}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -34.38936, y: 73.910866, z: -15.689995}
+  m_LocalPosition: {x: -34.38936, y: -102.03768, z: -15.689995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19920,9 +19920,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.5
+    x: 0
     y: 0
-    width: 1
+    width: 0.5
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -22479,7 +22479,7 @@ GameObject:
   - component: {fileID: 972225980}
   - component: {fileID: 972225979}
   m_Layer: 3
-  m_Name: Floor (1)
+  m_Name: Floor
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28432,6 +28432,7 @@ GameObject:
   - component: {fileID: 1086343073}
   - component: {fileID: 1086343072}
   - component: {fileID: 1086343071}
+  - component: {fileID: 1086343077}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Untagged
@@ -28584,7 +28585,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1086343070}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30.28261, y: -12.80627, z: -13.345753}
+  m_LocalPosition: {x: -27.082367, y: 163.94443, z: -13.345753}
   m_LocalScale: {x: 0.22, y: 0.22, z: 0.22}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -28595,6 +28596,24 @@ Transform:
   m_Father: {fileID: 2090112203}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1086343077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086343070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25c429fa5984c41b6877addd92b1b456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trail: {fileID: 1737530046}
+  particles: {fileID: 623826226}
+  player: {fileID: 67343872}
+  exit_top: {fileID: 1115280261}
+  exit_left: {fileID: 587496935}
+  exit_right: {fileID: 1124209013}
 --- !u!1 &1099539212
 GameObject:
   m_ObjectHideFlags: 0
@@ -28931,7 +28950,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a235b31edf39147d19d80d427e0d8092, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e910c4d99dbbc471a9dddeb3db753f34, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -30459,7 +30478,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a235b31edf39147d19d80d427e0d8092, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 289e5cce9ca9741fbbfac9f7b11df833, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -37423,10 +37442,10 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0.67256117, b: 0, a: 1}
-      key1: {r: 1, g: 0.22297573, b: 0, a: 0}
+      key0: {r: 0.006026745, g: 0, b: 1, a: 1}
+      key1: {r: 0.7587352, g: 0, b: 1, a: 0}
       key2: {r: 1, g: 0.6745098, b: 0, a: 0}
-      key3: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 1, g: 0.6745098, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
@@ -37434,7 +37453,7 @@ TrailRenderer:
       ctime0: 0
       ctime1: 30262
       ctime2: 65535
-      ctime3: 0
+      ctime3: 65535
       ctime4: 0
       ctime5: 0
       ctime6: 0
