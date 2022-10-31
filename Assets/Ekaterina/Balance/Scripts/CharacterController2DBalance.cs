@@ -44,19 +44,13 @@ public class CharacterController2DBalance : MonoBehaviour
 
 		if (OnLandEvent == null)
 			OnLandEvent = new UnityEvent();
+		
 	}
 
-	void OnCollisionEnter2D(Collision2D player)
-	{
-		if (player.gameObject.name == "Exit_floor")
-		{
-			jumpSound.Stop();
-		}
-	}
+
 
 	private void FixedUpdate()
 	{
-	
 		bool wasGrounded = m_Grounded;
 		m_Grounded = false;
 
@@ -73,6 +67,7 @@ public class CharacterController2DBalance : MonoBehaviour
 			}
 		}
 	}
+	
 
 
 	public void Move(float move, bool jump)
@@ -81,7 +76,7 @@ public class CharacterController2DBalance : MonoBehaviour
 		//only control the player if grounded or airControl is turned on
 		if (m_Grounded || m_AirControl)
 		{
-			
+
 			// Move the character by finding the target velocity
 			Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
 			// And then smoothing it out and applying it to the character

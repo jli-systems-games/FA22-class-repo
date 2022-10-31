@@ -12,6 +12,8 @@ namespace Ekaterina
         
         BoxCollider2D player2;
         public Rigidbody2D player;
+        public BoxCollider2D playerCollider;
+
         
         public BoxCollider2D exit_top;
         public BoxCollider2D exit_left;
@@ -26,9 +28,16 @@ namespace Ekaterina
 
         void OnCollisionEnter2D(Collision2D player2)
         {
+            if (player2.gameObject.name == "Enemy_1" || player2.gameObject.name == "Enemy_2" ||
+                player2.gameObject.name == "Enemy_3")
+            {
+                Physics2D.gravity = new Vector2(0, 9.8f);
+            }
+
             if (player2.gameObject.name == "Floor")
             {
                 player.constraints = RigidbodyConstraints2D.FreezeAll;
+                playerCollider.enabled = false;
             }
             
             if (player2.gameObject.name == "Exit_floor")
