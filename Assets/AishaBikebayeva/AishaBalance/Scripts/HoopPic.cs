@@ -35,7 +35,7 @@ namespace AishasCircus
                 Destroy(this.gameObject);
                 this.gameObject.SetActive(false);
                 Debug.Log("Oh no! Objects collided");
-                SceneManager.LoadScene("GameOverCircus");
+                // SceneManager.LoadScene("GameOverCircus");
             }
         }
         public void StoneHit()
