@@ -70,41 +70,7 @@ namespace Ekaterina
         
         public BoxCollider2D block41;
         public BoxCollider2D block42;
-        public BoxCollider2D block43;
-        public BoxCollider2D block44;
-        public BoxCollider2D block45;
-        
-        public BoxCollider2D block46;
-        public BoxCollider2D block47;
-        public BoxCollider2D block48;
-        public BoxCollider2D block49;
-        public BoxCollider2D block50;
-        
-        public BoxCollider2D block51;
-        public BoxCollider2D block52;
-        public BoxCollider2D block53;
-        public BoxCollider2D block54;
-        public BoxCollider2D block55;
-        
-        public BoxCollider2D block56;
-        public BoxCollider2D block57;
-        public BoxCollider2D block58;
-        public BoxCollider2D block59;
-        public BoxCollider2D block60;
-        
-        public BoxCollider2D block61;
-        public BoxCollider2D block62;
-        public BoxCollider2D block63;
-        public BoxCollider2D block64;
-        public BoxCollider2D block65;
 
-        public BoxCollider2D block66;
-        public BoxCollider2D block67;
-        public BoxCollider2D block68;
-        public BoxCollider2D block69;
-        public BoxCollider2D block70;
-        public BoxCollider2D block71;
-        
         private void Awake()
         {
             exit_top.enabled = false;
@@ -169,41 +135,6 @@ namespace Ekaterina
                     
                     block41.enabled = false;
                     block42.enabled = false;
-                    block43.enabled = false;
-                    block44.enabled = false;
-                    block45.enabled = false;
-                    
-                    block46.enabled = false;
-                    block47.enabled = false;
-                    block48.enabled = false;
-                    block49.enabled = false;
-                    block50.enabled = false;
-                    
-                    block51.enabled = false;
-                    block52.enabled = false;
-                    block53.enabled = false;
-                    block54.enabled = false;
-                    block55.enabled = false;
-                    
-                    block56.enabled = false;
-                    block57.enabled = false;
-                    block58.enabled = false;
-                    block59.enabled = false;
-                    block60.enabled = false;
-                    
-                    block61.enabled = false;
-                    block62.enabled = false;
-                    block63.enabled = false;
-                    block64.enabled = false;
-                    block65.enabled = false;
-                    
-                    block66.enabled = false;
-                    block67.enabled = false;
-                    block68.enabled = false;
-                    block69.enabled = false;
-                    block70.enabled = false;
-                    block71.enabled = false;
-
             }
 
             if (player2.gameObject.name == "Block 2")
@@ -266,41 +197,6 @@ namespace Ekaterina
                 
                 block41.enabled = true;
                 block42.enabled = true;
-                block43.enabled = true;
-                block44.enabled = true;
-                block45.enabled = true;
-                
-                block46.enabled = true;
-                block47.enabled = true;
-                block48.enabled = true;
-                block49.enabled = true;
-                block50.enabled = true;
-                
-                block51.enabled = true;
-                block52.enabled = true;
-                block53.enabled = true;
-                block54.enabled = true;
-                block55.enabled = true;
-                
-                block56.enabled = true;
-                block57.enabled = true;
-                block58.enabled = true;
-                block59.enabled = true;
-                block60.enabled = true;
-                
-                block61.enabled = true;
-                block62.enabled = true;
-                block63.enabled = true;
-                block64.enabled = true;
-                block65.enabled = true;
-
-                block66.enabled = true;
-                block67.enabled = true;
-                block68.enabled = true;
-                block69.enabled = true;
-                block70.enabled = true;
-
-                block71.enabled = true;
             }
 
             if (player2.gameObject.name == "Exit_floor")
