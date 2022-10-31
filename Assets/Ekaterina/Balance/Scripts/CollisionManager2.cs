@@ -305,9 +305,6 @@ namespace Ekaterina
 
             if (player2.gameObject.name == "Exit_floor")
             {
-                
-                SceneManager.LoadScene("Ekaterina.Balance.Win");
-
                 exit_top.enabled = true;
                 exit_left.enabled = true;
                 exit_right.enabled = true;
@@ -315,6 +312,11 @@ namespace Ekaterina
                 gameObject.GetComponent<Renderer> ().material.color = Color.black;
                 trail.GetComponent<TrailRenderer> ().enabled = false;
                 particles.GetComponent<ParticleSystemRenderer> ().enabled = false;
+            }
+            
+            if (player2.gameObject.name == "Exit_right")
+            {
+                SceneManager.LoadScene("Ekaterina.Balance.Win");
             }
         }
     }
