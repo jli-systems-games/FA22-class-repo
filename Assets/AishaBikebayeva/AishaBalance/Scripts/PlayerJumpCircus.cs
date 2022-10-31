@@ -14,10 +14,7 @@ namespace AishasCircus{
         void Start(){
             spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         }
-        void ChangeSprite(Sprite newSprite)
-        {
-            spriteRenderer.sprite = newSprite; 
-        }       
+      
         void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -34,5 +31,9 @@ namespace AishasCircus{
                 rb.gravityScale = fallingGravityScale;
             }
         }
+            void ChangeSprite(Sprite newSprite)
+            {
+            spriteRenderer.sprite = newSprite; 
+            } 
     }
 }
