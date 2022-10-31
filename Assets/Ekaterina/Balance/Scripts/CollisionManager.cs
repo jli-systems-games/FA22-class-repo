@@ -7,8 +7,6 @@ namespace Ekaterina
 {
     public class CollisionManager : MonoBehaviour
     {
-        AudioSource winSound;
-        
         public TrailRenderer trail;
         public ParticleSystemRenderer particles;
         
@@ -93,12 +91,6 @@ namespace Ekaterina
         BoxCollider2D player;
         
         public Rigidbody2D player2;
-        
-        private void Start()
-        {
-            winSound = GetComponent<AudioSource>();
-
-        }
 
         private void Awake()
         {
@@ -266,8 +258,6 @@ namespace Ekaterina
             
             if (player.gameObject.name == "Exit_floor")
             {
-                winSound.Play();
-                
                 player2.constraints = RigidbodyConstraints2D.None;
 
                 exit_top.enabled = true;

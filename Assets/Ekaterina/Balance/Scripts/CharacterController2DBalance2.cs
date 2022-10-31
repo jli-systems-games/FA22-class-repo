@@ -3,10 +3,8 @@ using UnityEngine.Events;
 
 namespace Ekaterina {
 
-public class CharacterController2DBalance : MonoBehaviour
+public class CharacterController2DBalance2 : MonoBehaviour
 {
-	BoxCollider2D player;
-	
 	private AudioSource jumpSound;
 
 	public ParticleSystem particles;
@@ -44,14 +42,6 @@ public class CharacterController2DBalance : MonoBehaviour
 
 		if (OnLandEvent == null)
 			OnLandEvent = new UnityEvent();
-	}
-
-	void OnCollisionEnter2D(Collision2D player)
-	{
-		if (player.gameObject.name == "Exit_floor")
-		{
-			jumpSound.Stop();
-		}
 	}
 
 	private void FixedUpdate()
