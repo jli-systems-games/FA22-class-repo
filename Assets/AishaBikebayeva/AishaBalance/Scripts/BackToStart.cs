@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace AishaBikebayeva.AishaBalance.Scripts
+namespace AishasCircus
 {
     public class BackToStart : MonoBehaviour
     {
