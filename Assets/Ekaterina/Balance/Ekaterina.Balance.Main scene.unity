@@ -455,6 +455,62 @@ MonoBehaviour:
   block3: {fileID: 81480379}
   block4: {fileID: 1298953473}
   block5: {fileID: 1507923580}
+  block6: {fileID: 1689720831}
+  block7: {fileID: 1320169810}
+  block8: {fileID: 1344440356}
+  block9: {fileID: 1117483956}
+  block10: {fileID: 2029669115}
+  block11: {fileID: 1781469325}
+  block12: {fileID: 200680891}
+  block13: {fileID: 1559570713}
+  block14: {fileID: 851097625}
+  block15: {fileID: 366906562}
+  block16: {fileID: 218848245}
+  block17: {fileID: 1599483635}
+  block18: {fileID: 1262692747}
+  block19: {fileID: 1449643686}
+  block20: {fileID: 224870680}
+  block21: {fileID: 281494081}
+  block22: {fileID: 1721970630}
+  block23: {fileID: 2139968723}
+  block24: {fileID: 115888360}
+  block25: {fileID: 1195152767}
+  block26: {fileID: 374666823}
+  block27: {fileID: 277694538}
+  block28: {fileID: 1633722736}
+  block29: {fileID: 1585770237}
+  block30: {fileID: 1200656285}
+  block31: {fileID: 768689917}
+  block32: {fileID: 1873724520}
+  block33: {fileID: 829392352}
+  block34: {fileID: 224416645}
+  block35: {fileID: 528861578}
+  block36: {fileID: 896760251}
+  block37: {fileID: 1926928243}
+  block38: {fileID: 114975201}
+  block39: {fileID: 352015059}
+  block40: {fileID: 373529532}
+  block41: {fileID: 222620390}
+  block42: {fileID: 1951201342}
+  block43: {fileID: 1247474650}
+  block44: {fileID: 955376545}
+  block45: {fileID: 1054583042}
+  block46: {fileID: 1580991111}
+  block47: {fileID: 426604185}
+  block48: {fileID: 744835367}
+  block49: {fileID: 553132023}
+  block50: {fileID: 119017952}
+  block51: {fileID: 323276603}
+  block52: {fileID: 1099539214}
+  block53: {fileID: 1506787587}
+  block54: {fileID: 1445481501}
+  block55: {fileID: 1384121345}
+  block56: {fileID: 690368261}
+  block57: {fileID: 546697138}
+  block58: {fileID: 180984677}
+  block59: {fileID: 1558038306}
+  block60: {fileID: 794663088}
+  block61: {fileID: 85819715}
   exit_top: {fileID: 1623102409}
   exit_left: {fileID: 1943583150}
   exit_right: {fileID: 659267973}
@@ -754,7 +810,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &81480381
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -836,7 +892,7 @@ GameObject:
   - component: {fileID: 85819716}
   - component: {fileID: 85819715}
   m_Layer: 3
-  m_Name: Block 3 (37)
+  m_Name: Block 61
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -903,7 +959,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &85819717
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -974,7 +1030,7 @@ GameObject:
   - component: {fileID: 95474823}
   - component: {fileID: 95474822}
   m_Layer: 0
-  m_Name: Enemy_1
+  m_Name: Enemy_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -989,7 +1045,7 @@ Transform:
   m_GameObject: {fileID: 95474820}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -18.913593, y: 0.014825821, z: 0.29698065}
-  m_LocalScale: {x: 1.8309, y: 1.8309, z: 1.8309}
+  m_LocalScale: {x: 3.6544764, y: 3.6544764, z: 3.6544764}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 928652312}
@@ -1159,7 +1215,8 @@ MonoBehaviour:
   - {fileID: 1581044036}
   - {fileID: 804959434}
   - {fileID: 1794822902}
-  moveSpeed: 5
+  - {fileID: 470271860}
+  moveSpeed: 15
 --- !u!95 &95474827
 Animator:
   serializedVersion: 4
@@ -1170,7 +1227,7 @@ Animator:
   m_GameObject: {fileID: 95474820}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: dcbb2860d13c74990bbd7bf72a6467b1, type: 2}
+  m_Controller: {fileID: 9100000, guid: f25b9ed04d3df4625ba79f82f332c375, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1221,7 +1278,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -270721065, guid: 04079e8cd9ae541c7abdb5399bb5dc12, type: 3}
+  m_Sprite: {fileID: 1484997938, guid: 76d915baaa64a4818830d3e2eb81ad90, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1245,7 +1302,7 @@ GameObject:
   - component: {fileID: 114975202}
   - component: {fileID: 114975201}
   m_Layer: 3
-  m_Name: Block 3 (18)
+  m_Name: Block 38
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1312,7 +1369,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &114975203
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1379,7 +1436,7 @@ GameObject:
   - component: {fileID: 115888361}
   - component: {fileID: 115888360}
   m_Layer: 3
-  m_Name: Block 3 (6)
+  m_Name: Block 24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1446,7 +1503,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &115888362
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1513,7 +1570,7 @@ GameObject:
   - component: {fileID: 119017953}
   - component: {fileID: 119017952}
   m_Layer: 3
-  m_Name: Block 3 (26)
+  m_Name: Block 50
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1580,7 +1637,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &119017954
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1647,7 +1704,7 @@ GameObject:
   - component: {fileID: 180984678}
   - component: {fileID: 180984677}
   m_Layer: 3
-  m_Name: Block 3 (34)
+  m_Name: Block 58
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1714,7 +1771,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &180984679
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1781,7 +1838,7 @@ GameObject:
   - component: {fileID: 200680892}
   - component: {fileID: 200680891}
   m_Layer: 3
-  m_Name: Block 3 (2)
+  m_Name: Block 12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1848,7 +1905,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &200680893
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1915,7 +1972,7 @@ GameObject:
   - component: {fileID: 218848246}
   - component: {fileID: 218848245}
   m_Layer: 3
-  m_Name: Block 2 (3)
+  m_Name: Block 16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1982,7 +2039,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &218848247
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2049,7 +2106,7 @@ GameObject:
   - component: {fileID: 222620391}
   - component: {fileID: 222620390}
   m_Layer: 3
-  m_Name: Block 3 (20)
+  m_Name: Block 41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2116,7 +2173,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &222620392
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2170,6 +2227,91 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &222787399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 222787400}
+  - component: {fileID: 222787401}
+  m_Layer: 0
+  m_Name: Waypoint (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &222787400
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222787399}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -13.76, y: 8.31, z: 0.12466149}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2042022853}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &222787401
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222787399}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &224416643
 GameObject:
   m_ObjectHideFlags: 0
@@ -2183,7 +2325,7 @@ GameObject:
   - component: {fileID: 224416646}
   - component: {fileID: 224416645}
   m_Layer: 3
-  m_Name: Block 3 (12)
+  m_Name: Block 34
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2250,7 +2392,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &224416647
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2317,7 +2459,7 @@ GameObject:
   - component: {fileID: 224870681}
   - component: {fileID: 224870680}
   m_Layer: 3
-  m_Name: Block 5 (4)
+  m_Name: Block 20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2384,7 +2526,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &224870682
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2451,7 +2593,7 @@ GameObject:
   - component: {fileID: 277694539}
   - component: {fileID: 277694538}
   m_Layer: 3
-  m_Name: Block 3 (8)
+  m_Name: Block 27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2518,7 +2660,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &277694540
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2585,7 +2727,7 @@ GameObject:
   - component: {fileID: 281494082}
   - component: {fileID: 281494081}
   m_Layer: 3
-  m_Name: Block 1 (5)
+  m_Name: Block 21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2652,7 +2794,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &281494083
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2719,7 +2861,7 @@ GameObject:
   - component: {fileID: 323276604}
   - component: {fileID: 323276603}
   m_Layer: 3
-  m_Name: Block 3 (27)
+  m_Name: Block 51
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2786,7 +2928,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &323276605
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3097,7 +3239,7 @@ GameObject:
   - component: {fileID: 352015060}
   - component: {fileID: 352015059}
   m_Layer: 3
-  m_Name: Block 3 (19)
+  m_Name: Block 39
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3164,7 +3306,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &352015061
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3231,7 +3373,7 @@ GameObject:
   - component: {fileID: 366906563}
   - component: {fileID: 366906562}
   m_Layer: 3
-  m_Name: Block 1 (3)
+  m_Name: Block 15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3298,7 +3440,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &366906564
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3396,7 +3538,7 @@ GameObject:
   - component: {fileID: 373529533}
   - component: {fileID: 373529532}
   m_Layer: 3
-  m_Name: Block 5 (13)
+  m_Name: Block 40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3463,7 +3605,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &373529534
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3530,7 +3672,7 @@ GameObject:
   - component: {fileID: 374666824}
   - component: {fileID: 374666823}
   m_Layer: 3
-  m_Name: Block 3 (7)
+  m_Name: Block 26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3597,7 +3739,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &374666825
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3798,7 +3940,7 @@ GameObject:
   - component: {fileID: 426604186}
   - component: {fileID: 426604185}
   m_Layer: 3
-  m_Name: Block 3 (24)
+  m_Name: Block 47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3865,7 +4007,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &426604187
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8780,6 +8922,91 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &470271859
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 470271860}
+  - component: {fileID: 470271861}
+  m_Layer: 0
+  m_Name: Waypoint (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &470271860
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470271859}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -18.45, y: 10.15, z: 0.12466149}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 971101240}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &470271861
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470271859}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &495600265
 GameObject:
   m_ObjectHideFlags: 0
@@ -8992,7 +9219,7 @@ GameObject:
   - component: {fileID: 528861579}
   - component: {fileID: 528861578}
   m_Layer: 3
-  m_Name: Block 3 (13)
+  m_Name: Block 35
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9059,7 +9286,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &528861580
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9191,7 +9418,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 541340996}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.79122, y: 1.9651046, z: 0.12466149}
+  m_LocalPosition: {x: -17.61, y: 3.76, z: 0.12466149}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9211,7 +9438,7 @@ GameObject:
   - component: {fileID: 546697139}
   - component: {fileID: 546697138}
   m_Layer: 3
-  m_Name: Block 3 (33)
+  m_Name: Block 57
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9278,7 +9505,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &546697140
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9345,7 +9572,7 @@ GameObject:
   - component: {fileID: 553132024}
   - component: {fileID: 553132023}
   m_Layer: 3
-  m_Name: Block 3 (17)
+  m_Name: Block 49
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9412,7 +9639,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &553132025
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14529,7 +14756,7 @@ GameObject:
   - component: {fileID: 690368262}
   - component: {fileID: 690368261}
   m_Layer: 3
-  m_Name: Block 3 (32)
+  m_Name: Block 56
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14596,7 +14823,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &690368263
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14663,7 +14890,7 @@ GameObject:
   - component: {fileID: 744835368}
   - component: {fileID: 744835367}
   m_Layer: 3
-  m_Name: Block 3 (25)
+  m_Name: Block 48
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14730,7 +14957,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &744835369
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14797,7 +15024,7 @@ GameObject:
   - component: {fileID: 768689918}
   - component: {fileID: 768689917}
   m_Layer: 3
-  m_Name: Block 3 (10)
+  m_Name: Block 31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14864,7 +15091,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &768689919
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14931,7 +15158,7 @@ GameObject:
   - component: {fileID: 794663089}
   - component: {fileID: 794663088}
   m_Layer: 3
-  m_Name: Block 3 (36)
+  m_Name: Block 60
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14998,7 +15225,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &794663090
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15077,7 +15304,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804959433}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.88122, y: -2.734882, z: 0.12466149}
+  m_LocalPosition: {x: -18.21, y: 0.71, z: 0.12466149}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15309,7 +15536,7 @@ GameObject:
   - component: {fileID: 829392353}
   - component: {fileID: 829392352}
   m_Layer: 3
-  m_Name: Block 5 (9)
+  m_Name: Block 33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15376,7 +15603,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &829392354
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15556,6 +15783,7 @@ MonoBehaviour:
   - {fileID: 1400438166}
   - {fileID: 1451391059}
   - {fileID: 541340998}
+  - {fileID: 222787400}
   moveSpeed: 5
 --- !u!50 &845336829
 Rigidbody2D:
@@ -15718,7 +15946,7 @@ GameObject:
   - component: {fileID: 851097626}
   - component: {fileID: 851097625}
   m_Layer: 3
-  m_Name: Block 5 (2)
+  m_Name: Block 14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15785,7 +16013,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &851097627
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15904,7 +16132,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &866307127
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15986,7 +16214,7 @@ GameObject:
   - component: {fileID: 896760252}
   - component: {fileID: 896760251}
   m_Layer: 3
-  m_Name: Block 3 (15)
+  m_Name: Block 36
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16053,7 +16281,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &896760253
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16131,7 +16359,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928652311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.783594, y: 78.63551, z: -0.29698065}
+  m_LocalPosition: {x: 18.783594, y: 143, z: -0.29698065}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16157,7 +16385,7 @@ GameObject:
   - component: {fileID: 943651568}
   - component: {fileID: 943651567}
   m_Layer: 0
-  m_Name: Enemy_1
+  m_Name: Enemy_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16172,7 +16400,7 @@ Transform:
   m_GameObject: {fileID: 943651565}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -18.913593, y: 0.014825821, z: 0.29698065}
-  m_LocalScale: {x: 1.8309, y: 1.8309, z: 1.8309}
+  m_LocalScale: {x: 2.7697854, y: 2.7697854, z: 2.7697854}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2140562440}
@@ -16342,7 +16570,8 @@ MonoBehaviour:
   - {fileID: 1945689771}
   - {fileID: 1894723784}
   - {fileID: 1192756352}
-  moveSpeed: 5
+  - {fileID: 1332136496}
+  moveSpeed: 10
 --- !u!95 &943651572
 Animator:
   serializedVersion: 4
@@ -16428,7 +16657,7 @@ GameObject:
   - component: {fileID: 955376546}
   - component: {fileID: 955376545}
   m_Layer: 3
-  m_Name: Block 3 (21)
+  m_Name: Block 44
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16495,7 +16724,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &955376547
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16559,7 +16788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 971101240}
   m_Layer: 0
-  m_Name: Waypoints_enemy 1
+  m_Name: Waypoints_enemy 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16580,6 +16809,7 @@ Transform:
   - {fileID: 1581044036}
   - {fileID: 804959434}
   - {fileID: 1794822902}
+  - {fileID: 470271860}
   m_Father: {fileID: 928652312}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16596,7 +16826,7 @@ GameObject:
   - component: {fileID: 1054583043}
   - component: {fileID: 1054583042}
   m_Layer: 3
-  m_Name: Block 3 (22)
+  m_Name: Block 45
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16663,7 +16893,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1054583044
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16727,7 +16957,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1057110671}
   m_Layer: 0
-  m_Name: Waypoints_enemy 1
+  m_Name: Waypoints_enemy 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16748,6 +16978,7 @@ Transform:
   - {fileID: 1945689771}
   - {fileID: 1894723784}
   - {fileID: 1192756352}
+  - {fileID: 1332136496}
   m_Father: {fileID: 2140562440}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21753,7 +21984,7 @@ GameObject:
   - component: {fileID: 1099539215}
   - component: {fileID: 1099539214}
   m_Layer: 3
-  m_Name: Block 3 (28)
+  m_Name: Block 52
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21820,7 +22051,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1099539216
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22027,7 +22258,7 @@ GameObject:
   - component: {fileID: 1117483957}
   - component: {fileID: 1117483956}
   m_Layer: 3
-  m_Name: Block 4 (1)
+  m_Name: Block 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22094,7 +22325,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1117483958
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22450,7 +22681,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1192756351}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.79122, y: 1.9651046, z: 0.12466149}
+  m_LocalPosition: {x: -10, y: 5.35, z: 0.12466149}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22523,7 +22754,7 @@ GameObject:
   - component: {fileID: 1195152768}
   - component: {fileID: 1195152767}
   m_Layer: 3
-  m_Name: Block 5 (7)
+  m_Name: Block 25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22590,7 +22821,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1195152769
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22657,7 +22888,7 @@ GameObject:
   - component: {fileID: 1200656286}
   - component: {fileID: 1200656285}
   m_Layer: 3
-  m_Name: Block 1 (7)
+  m_Name: Block 30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22724,7 +22955,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1200656287
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22791,7 +23022,7 @@ GameObject:
   - component: {fileID: 1247474651}
   - component: {fileID: 1247474650}
   m_Layer: 3
-  m_Name: Block 1 (11)
+  m_Name: Block 43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22858,7 +23089,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1247474652
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22925,7 +23156,7 @@ GameObject:
   - component: {fileID: 1262692748}
   - component: {fileID: 1262692747}
   m_Layer: 3
-  m_Name: Block 1 (4)
+  m_Name: Block 18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22992,7 +23223,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1262692749
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23111,7 +23342,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1298953475
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23293,7 +23524,7 @@ GameObject:
   - component: {fileID: 1320169811}
   - component: {fileID: 1320169810}
   m_Layer: 3
-  m_Name: Block 2 (1)
+  m_Name: Block 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23360,7 +23591,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1320169812
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23405,6 +23636,91 @@ SpriteRenderer:
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &1332136495
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1332136496}
+  - component: {fileID: 1332136497}
+  m_Layer: 0
+  m_Name: Waypoint (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1332136496
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332136495}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -17.12, y: 10.85, z: 0.12466149}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1057110671}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1332136497
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332136495}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -23561,7 +23877,7 @@ GameObject:
   - component: {fileID: 1344440357}
   - component: {fileID: 1344440356}
   m_Layer: 3
-  m_Name: Block 3 (1)
+  m_Name: Block 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23628,7 +23944,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1344440358
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23695,7 +24011,7 @@ GameObject:
   - component: {fileID: 1384121346}
   - component: {fileID: 1384121345}
   m_Layer: 3
-  m_Name: Block 3 (31)
+  m_Name: Block 55
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23762,7 +24078,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1384121347
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23986,7 +24302,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400438164}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.31122, y: -2.723294, z: 0.12466149}
+  m_LocalPosition: {x: -15.89, y: -2.41, z: 0.12466149}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24006,7 +24322,7 @@ GameObject:
   - component: {fileID: 1445481502}
   - component: {fileID: 1445481501}
   m_Layer: 3
-  m_Name: Block 3 (30)
+  m_Name: Block 54
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24073,7 +24389,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1445481503
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24140,7 +24456,7 @@ GameObject:
   - component: {fileID: 1449643687}
   - component: {fileID: 1449643686}
   m_Layer: 3
-  m_Name: Block 3 (4)
+  m_Name: Block 19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24207,7 +24523,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1449643688
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24339,7 +24655,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1451391057}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.88122, y: -2.734882, z: 0.12466149}
+  m_LocalPosition: {x: -9.43, y: 2.38, z: 0.12466149}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24359,7 +24675,7 @@ GameObject:
   - component: {fileID: 1506787588}
   - component: {fileID: 1506787587}
   m_Layer: 3
-  m_Name: Block 3 (29)
+  m_Name: Block 53
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24426,7 +24742,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1506787589
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24545,7 +24861,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1507923582
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24658,7 +24974,7 @@ GameObject:
   - component: {fileID: 1558038307}
   - component: {fileID: 1558038306}
   m_Layer: 3
-  m_Name: Block 3 (35)
+  m_Name: Block 59
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24725,7 +25041,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1558038308
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24792,7 +25108,7 @@ GameObject:
   - component: {fileID: 1559570714}
   - component: {fileID: 1559570713}
   m_Layer: 3
-  m_Name: Block 4 (2)
+  m_Name: Block 13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24859,7 +25175,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1559570715
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25060,7 +25376,7 @@ GameObject:
   - component: {fileID: 1580991112}
   - component: {fileID: 1580991111}
   m_Layer: 3
-  m_Name: Block 3 (23)
+  m_Name: Block 46
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25127,7 +25443,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1580991113
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25206,7 +25522,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581044035}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.31122, y: -2.723294, z: 0.12466149}
+  m_LocalPosition: {x: -16.95, y: -14.84, z: 0.12466149}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25279,7 +25595,7 @@ GameObject:
   - component: {fileID: 1585770238}
   - component: {fileID: 1585770237}
   m_Layer: 3
-  m_Name: Block 5 (6)
+  m_Name: Block 29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25346,7 +25662,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1585770239
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25547,7 +25863,7 @@ GameObject:
   - component: {fileID: 1599483636}
   - component: {fileID: 1599483635}
   m_Layer: 3
-  m_Name: Block 3 (3)
+  m_Name: Block 17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25614,7 +25930,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1599483637
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25677,6 +25993,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1610098556}
+  - component: {fileID: 1610098557}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Untagged
@@ -25692,7 +26009,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1610098555}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.783594, y: 18.385265, z: -0.29698065}
+  m_LocalPosition: {x: 18.783594, y: 34.7, z: -0.29698065}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25701,6 +26018,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1610098557
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610098555}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a2c9d2781d857c642afcfde4a3711c60, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1623102408
 GameObject:
   m_ObjectHideFlags: 0
@@ -25848,7 +26261,7 @@ GameObject:
   - component: {fileID: 1633722737}
   - component: {fileID: 1633722736}
   m_Layer: 3
-  m_Name: Block 3 (9)
+  m_Name: Block 28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25915,7 +26328,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1633722738
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -26013,7 +26426,7 @@ GameObject:
   - component: {fileID: 1689720832}
   - component: {fileID: 1689720831}
   m_Layer: 3
-  m_Name: Block 1 (1)
+  m_Name: Block 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26080,7 +26493,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1689720833
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -26147,7 +26560,7 @@ GameObject:
   - component: {fileID: 1721970631}
   - component: {fileID: 1721970630}
   m_Layer: 3
-  m_Name: Block 5 (5)
+  m_Name: Block 22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26214,7 +26627,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1721970632
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -26421,7 +26834,7 @@ GameObject:
   - component: {fileID: 1781469326}
   - component: {fileID: 1781469325}
   m_Layer: 3
-  m_Name: Block 2 (2)
+  m_Name: Block 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26435,7 +26848,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1781469323}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.13144898, y: 23.424774, z: 0.06542471}
+  m_LocalPosition: {x: -0.75, y: 23.424774, z: 0.06542471}
   m_LocalScale: {x: 4.95, y: 0.4125, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26488,7 +26901,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1781469327
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -26703,7 +27116,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1794822901}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.79122, y: 1.9651046, z: 0.12466149}
+  m_LocalPosition: {x: -9.65, y: 6.71, z: 0.12466149}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26776,7 +27189,7 @@ GameObject:
   - component: {fileID: 1873724521}
   - component: {fileID: 1873724520}
   m_Layer: 3
-  m_Name: Block 1 (8)
+  m_Name: Block 32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26843,7 +27256,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1873724522
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -26922,7 +27335,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1894723783}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.88122, y: -2.734882, z: 0.12466149}
+  m_LocalPosition: {x: -14.76, y: 1.47, z: 0.12466149}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27042,7 +27455,7 @@ GameObject:
   - component: {fileID: 1926928244}
   - component: {fileID: 1926928243}
   m_Layer: 3
-  m_Name: Block 3 (16)
+  m_Name: Block 37
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27109,7 +27522,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1926928245
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -27322,7 +27735,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1945689770}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.31122, y: -2.723294, z: 0.12466149}
+  m_LocalPosition: {x: -18.8, y: -7.5, z: 0.12466149}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27395,7 +27808,7 @@ GameObject:
   - component: {fileID: 1951201343}
   - component: {fileID: 1951201342}
   m_Layer: 3
-  m_Name: Block 5 (14)
+  m_Name: Block 42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27462,7 +27875,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &1951201344
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -27581,7 +27994,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &2021290350
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -27663,7 +28076,7 @@ GameObject:
   - component: {fileID: 2029669116}
   - component: {fileID: 2029669115}
   m_Layer: 3
-  m_Name: Block 5 (1)
+  m_Name: Block 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27730,7 +28143,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &2029669117
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -27815,6 +28228,7 @@ Transform:
   - {fileID: 1400438166}
   - {fileID: 1451391059}
   - {fileID: 541340998}
+  - {fileID: 222787400}
   m_Father: {fileID: 1610098556}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27996,7 +28410,7 @@ GameObject:
   - component: {fileID: 2139968724}
   - component: {fileID: 2139968723}
   m_Layer: 3
-  m_Name: Block 1 (6)
+  m_Name: Block 23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28063,7 +28477,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 3
+  m_Constraints: 7
 --- !u!212 &2139968725
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -28141,7 +28555,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2140562439}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.783594, y: 51.385395, z: -0.29698065}
+  m_LocalPosition: {x: 18.783594, y: 88.3, z: -0.29698065}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
