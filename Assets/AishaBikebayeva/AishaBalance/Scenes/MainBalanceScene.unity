@@ -2782,7 +2782,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06549376, y: -0.08070898}
+  m_Offset: {x: 0, y: -0.009960771}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2793,7 +2793,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.68724203, y: 4.2192993}
+  m_Size: {x: 0.68724203, y: 4.3587484}
   m_EdgeRadius: 0
 --- !u!114 &2137105060
 MonoBehaviour:
@@ -2823,6 +2823,8 @@ MonoBehaviour:
   rightSide: {fileID: 2137105054}
   playerCollider: {fileID: 2137105059}
   stopped: 0
+  standingCollider: {x: 0.687242, y: 4.219299}
+  jumpingCollider: {x: 0.687242, y: 3.183384}
   groundDistance: 1.1
   clownsheet: {fileID: 0}
 --- !u!114 &2137105061

@@ -21,6 +21,8 @@ namespace AishasCircus{
         public BoxCollider2D playerCollider;
         [HideInInspector] public bool stopped;
 
+        public Vector2 standingCollider;
+        public Vector2 jumpingCollider;
 
         private float hor;
         public float groundDistance = .01f;
@@ -42,6 +44,8 @@ namespace AishasCircus{
             direction = 1;
             jumpsound = GetComponent<AudioSource>();
             clownsheet.enabled = false;
+
+            playerCollider.size = standingCollider;
         }
 
         private void Update()
@@ -52,6 +56,7 @@ namespace AishasCircus{
             isGrounded = CheckIfGrounded();
             //  if (isGrounded == false){
                 
+            
 
 
             if (CheckLeft())
@@ -63,6 +68,7 @@ namespace AishasCircus{
 
                         clownsheet.Play("newAnimWalk");
                         clownsheet.enabled = true;
+                        playerCollider.size = standingCollider;
                     // }
                 }
             }
@@ -75,12 +81,14 @@ namespace AishasCircus{
                     // if (isGrounded == true){
                         clownsheet.Play("newAnimWalk");
                         clownsheet.enabled = true;
+                        playerCollider.size = standingCollider;
                     // }
             
                 }
             }
             if(isGrounded == false){
                 clownsheet.Play("JumpAnim");
+                playerCollider.size = jumpingCollider;
             }
             if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
             {
@@ -158,6 +166,7 @@ namespace AishasCircus{
                 return true;
                 clownsheet.Play("newAnimWalk");
                 clownsheet.enabled = true;
+                playerCollider.size = standingCollider;
             }
             else
             {
@@ -174,6 +183,7 @@ namespace AishasCircus{
                 return true;
                 clownsheet.Play("newAnimWalk");
                 clownsheet.enabled = true;
+                playerCollider.size = standingCollider;
             }
             else
             {
