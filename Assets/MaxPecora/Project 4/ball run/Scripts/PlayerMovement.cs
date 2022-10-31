@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,6 +8,7 @@ namespace max
 
 	public class PlayerMovement : MonoBehaviour
 	{
+
 		public GameObject scoreUI;
 		public GameObject bestScoreUI;
 

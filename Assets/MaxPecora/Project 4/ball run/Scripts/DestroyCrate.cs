@@ -1,12 +1,13 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace max
 {
 
-	public class DestroyFallingObject : MonoBehaviour
+	public class DestroyCrate : MonoBehaviour
 	{
+
 		public GameObject explosion;
 
 		void OnTriggerEnter2D(Collider2D col)
@@ -25,6 +26,9 @@ namespace max
 			}
 			else
 			{
+				explosion.transform.parent = null;
+				explosion.SetActive(true);
+				GameObject.Find("crateHit").GetComponent<AudioSource>().Play();
 				Destroy(this.gameObject);
 			}
 		}
