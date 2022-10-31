@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 namespace Ekaterina {
     
@@ -31,6 +33,11 @@ namespace Ekaterina {
                     timeRemaining = 0;
                     timerIsRunning = false;
                 }
+            }
+            
+            if (timeRemaining == 0)
+            {
+                SceneManager.LoadScene("Ekaterina.Balance.Lose");
             }
         }
         void DisplayTime(float timeToDisplay)

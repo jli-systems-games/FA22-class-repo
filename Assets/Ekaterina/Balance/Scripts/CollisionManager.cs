@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Ekaterina
 {
@@ -267,7 +268,9 @@ namespace Ekaterina
             if (player.gameObject.name == "Exit_floor")
             {
                 winSound.Play();
-                    
+                
+                SceneManager.LoadScene("Ekaterina.Balance.Win");
+
                 player2.constraints = RigidbodyConstraints2D.None;
                 //player2.constraints = RigidbodyConstraints2D.FreezeAll;
 

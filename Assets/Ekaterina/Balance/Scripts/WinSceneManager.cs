@@ -20,7 +20,6 @@ namespace Ekaterina
         void TaskOnClick()
         {
             SceneManager.LoadScene("Ekaterina.Balance.Start");
-            Debug.Log("Clicked");
         }
     }
 }
