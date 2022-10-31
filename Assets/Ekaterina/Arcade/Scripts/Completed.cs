@@ -11,7 +11,7 @@ public class Completed : MonoBehaviour
  void Update ()
     {
     if (Input.GetKeyDown("space")) {
-        SceneManager.LoadScene("Start");
+        SceneManager.LoadScene("Arcade.Ekaterina.Start");
     }
 }
 }

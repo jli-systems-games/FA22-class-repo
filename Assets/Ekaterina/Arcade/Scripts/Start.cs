@@ -11,7 +11,7 @@ public class Start : MonoBehaviour
  void Update ()
     {
     if (Input.GetKeyDown("space")) {
-        SceneManager.LoadScene("Foxy Adventures_level 1");
+        SceneManager.LoadScene("Arcade.Ekaterina.Main scene");
     }
 }
 }
