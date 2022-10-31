@@ -5,9 +5,11 @@ using UnityEngine;
 namespace Ekaterina
 {
     public class TempCanvas : MonoBehaviour
-    {
+    {/*
         public GameObject TempCanvas;
+
         public BoxCollider2D player2;
+        
 
         void OnCollisionEnter2D(Collision2D player2)
         {
@@ -16,5 +18,7 @@ namespace Ekaterina
                 TempCanvas.SetActive(!TempCanvas.activeSelf);
             }
         }
+    }
+    */
     }
 }
