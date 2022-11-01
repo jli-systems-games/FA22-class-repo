@@ -10,7 +10,7 @@ public class MovePlayer2D : MonoBehaviour
     public float moveSpeed = 1;
     void Start()
     {
-        //Rigidbody2D = GetComponent<Rigidbody2D>();
+      
         
     }
 
