@@ -2,16 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraFollow : MonoBehaviour
+namespace SamBalance
 {
-    public Transform followTransform;
-    
-
-    //once per frame
-    void FixedUpdate()
+    public class CameraFollow : MonoBehaviour
     {
-        this.transform.position = new Vector3(followTransform.position.x, followTransform.position.y, this.transform.position.z);
-        
-        
+        public Transform followTransform;
+
+
+        //once per frame
+        void FixedUpdate()
+        {
+            this.transform.position = new Vector3(followTransform.position.x, followTransform.position.y,
+                this.transform.position.z);
+
+
+        }
     }
 }
