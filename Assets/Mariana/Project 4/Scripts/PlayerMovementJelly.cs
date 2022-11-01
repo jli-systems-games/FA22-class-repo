@@ -21,7 +21,7 @@ public class PlayerMovementJelly : MonoBehaviour
         // Update is called once per frame
         void Update()
         {
-           _rb.velocity = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * speed;
+           _rb.velocity = new Vector2(Input.GetAxis("Horizontal")* - speed, Input.GetAxis("Vertical")* speed);
         }
     }
 }
