@@ -10,6 +10,8 @@ namespace Bananagodzilla
 
 public class BeetleLoose : MonoBehaviour
 {
+    
+ 
     public AudioSource thud;
     public GameObject[] deadGrass;
     public MaiMove[] beetles;

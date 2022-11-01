@@ -14,6 +14,8 @@ public class CameraFollow : MonoBehaviour
     private Vector2 beetpos1;
     private Vector2 beetpos2;
     public GameObject beetle2;
+
+    public float camScale = 0.3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +44,7 @@ public class CameraFollow : MonoBehaviour
         if (cam.orthographic)
         {
             // The camera's forward vector is irrelevant, only this size will matter
-            cam.orthographicSize = distance/0.3f;
+            cam.orthographicSize = distance/camScale;
         }
         // You specified to use MoveTowards instead of Slerp
         cam.transform.position = Vector3.Slerp(cam.transform.position, cameraDestination, followTimeDelta);
