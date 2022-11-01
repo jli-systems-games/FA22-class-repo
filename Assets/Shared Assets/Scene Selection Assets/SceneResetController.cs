@@ -36,6 +36,11 @@ namespace SharedAssets
             {
                 ResetToOriginScene();
             }
+            
+            if (Input.GetKey(KeyCode.Escape))
+            {
+                Application.Quit();
+            }
         }
     }
 }
