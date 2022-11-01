@@ -9,9 +9,13 @@ public class FirePoint : MonoBehaviour
 
     private float timer;
 
-    public GameObject bullet;
+    public GameObject[] bullets;
 
     public Transform firepoint;
+
+    public bool hasStarted;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,12 +26,38 @@ public class FirePoint : MonoBehaviour
     void Update()
     {
 
-        timer += Time.deltaTime;
-        if (timer >= interval)
+        if (!hasStarted)
         {
-            timer = 0;
-            Instantiate(bullet, firepoint.position, Quaternion.identity);
+            /*  if(Input.anyKeyDown)
+              {
+                  hasStarted = true;
+              } */
         }
+        else
+        {
+            timer += Time.deltaTime;
+            if (timer >= interval)
+            {
+
+                int bulletsIndex = Random.Range(0, bullets.Length);
+
+                timer = 0;
+                Instantiate(bullets[bulletsIndex], firepoint.position, Quaternion.identity);
+            }
+
+            Destroy(gameObject, 120f);
+        }
+
+        
+
+
+
+
+
+
+
+
+
 
 
 

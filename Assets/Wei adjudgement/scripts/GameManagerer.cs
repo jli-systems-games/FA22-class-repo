@@ -9,7 +9,12 @@ public class GameManagerer : MonoBehaviour
 
     public bool startPlaying;
 
-    public NoteHolder theNH;
+    public FirePoint theFPA;
+    public FirePoint theFPS;
+    public FirePoint theFPD;
+    public FirePoint theFPJ;
+    public FirePoint theFPK;
+    public FirePoint theFPL;
 
     public static GameManagerer instance;
 
@@ -27,8 +32,16 @@ public class GameManagerer : MonoBehaviour
         {
             if(Input.anyKeyDown)
             {
+               
+
+
                 startPlaying = true;
-                theNH.hasStarted = true;
+                theFPA.hasStarted = true;
+                theFPS.hasStarted = true;
+                theFPD.hasStarted = true;
+                theFPJ.hasStarted = true;
+                theFPK.hasStarted = true;
+                theFPL.hasStarted = true;
 
                 theMusic.Play();
             }
