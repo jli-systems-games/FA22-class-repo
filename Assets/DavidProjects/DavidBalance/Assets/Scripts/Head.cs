@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+namespace DavidBalance{
+
 public class Head : MonoBehaviour {
     public Sprite blinkSprite;
 
@@ -34,4 +36,5 @@ public class Head : MonoBehaviour {
             }
         }
     }
+}
 }

@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+namespace DavidBalance{
+
 public class PlayerControl : MonoBehaviour {
     public Transform hammerHead;
     public Transform body;
@@ -45,4 +47,5 @@ public class PlayerControl : MonoBehaviour {
         hammerHead.rotation = Quaternion.FromToRotation(
             Vector3.right, newHammerPos - body.position);
     }
+}
 }

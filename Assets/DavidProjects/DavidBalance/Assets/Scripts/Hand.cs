@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+namespace DavidBalance{
+
 public class Hand : MonoBehaviour {
     public Transform hammerHandle;
     public Sprite[] sprites;
@@ -17,4 +19,5 @@ public class Hand : MonoBehaviour {
             Mathf.Clamp((int)(handDir.magnitude * 8), 0, sprites.Length - 1);
         GetComponent<SpriteRenderer>().sprite = sprites[spriteIndex];
     }
+}
 }

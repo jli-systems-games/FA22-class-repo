@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+namespace DavidBalance {
+
 public class CameraFollowObject : MonoBehaviour {
     public Transform target;
 
@@ -15,4 +17,5 @@ public class CameraFollowObject : MonoBehaviour {
         GetComponent<Camera>().transform.position +=
             moveVec * Time.fixedDeltaTime * 4.0f;
     }
+}
 }
