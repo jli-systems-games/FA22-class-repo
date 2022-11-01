@@ -35,18 +35,6 @@ namespace HectorRodriguez
                     timeRemaining = 0;
                     SceneManager.LoadScene("MainGame2BAL");
                 }
-                if(timeRemaining > 0)
-                {
-                    timeRemaining -= Time.deltaTime;
-                    DisplayTime(timeRemaining);
-                }
-                else
-                {
-
-                    Debug.Log("Time has run out!");
-                    timeRemaining = 0;
-                    SceneManager.LoadScene("EndGameBAL");
-                }
            
             }
         }
