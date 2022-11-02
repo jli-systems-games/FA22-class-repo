@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameManagerer : MonoBehaviour
 {
@@ -22,6 +24,12 @@ public class GameManagerer : MonoBehaviour
     public int hillScore;
     public int heavenScore;
     public int scorePerNote = 100;
+
+    public GameObject hitted;
+    public GameObject missed;
+
+    public TextMeshProUGUI hellText;
+    public TextMeshProUGUI heavenText;
 
 
     // Start is called before the first frame update
@@ -58,6 +66,10 @@ public class GameManagerer : MonoBehaviour
         Debug.Log("Hit On Time");
 
         hillScore += scorePerNote;
+
+        Instantiate(hitted, new Vector3(0, 0, 0), Quaternion.identity);
+
+        hellText.text = "0" + hillScore;
     }
 
     public void NoteHit2()
@@ -65,17 +77,23 @@ public class GameManagerer : MonoBehaviour
         Debug.Log("Hit On Time");
 
         heavenScore += scorePerNote;
+
+        Instantiate(hitted, new Vector3(0, 0, 0), Quaternion.identity);
+
+        heavenText.text = "0" + heavenScore;
     }
 
     public void NoteMissed()
     {
         Debug.Log("Missed");
 
+       // Instantiate(missed, new Vector3(0, 0, 0), Quaternion.identity);
     }
 
     public void NoteMissed2()
     {
         Debug.Log("Missed");
 
+        //Instantiate(missed, new Vector3(0, 0, 0), Quaternion.identity);
     }
 }

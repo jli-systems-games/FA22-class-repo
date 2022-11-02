@@ -9,8 +9,10 @@ public class Notes2 : MonoBehaviour
 public KeyCode keyToPress;
 
 public float beatTempo;
-// Start is called before the first frame update
-void Start()
+
+    public GameObject effctive;
+    // Start is called before the first frame update
+    void Start()
 {
     beatTempo = beatTempo / 60f;
 }
@@ -25,6 +27,8 @@ void Update()
             gameObject.SetActive(false);
 
             GameManagerer.instance.NoteHit2();
+
+                Instantiate(effctive, transform.position, Quaternion.identity);
         }
     }
 
