@@ -24,12 +24,26 @@ namespace Regan.Balance
             {
                 _obstacles.Add(obstacle.transform);
             }
+
+            GameObject[] collectables = GameObject.FindGameObjectsWithTag("Regan.balance.collectable");
+            foreach (GameObject collectable in collectables)
+            {
+                _obstacles.Add(collectable.transform);
+            }
+
+            GameObject[] finishLines = GameObject.FindGameObjectsWithTag("Regan.balance.finish");
+            foreach (GameObject finish in finishLines)
+            {
+                _obstacles.Add(finish.transform);
+            }
         }
 
         void Update()
         {
             foreach (Transform obstacle in _obstacles)
             {
+                if (obstacle == null) continue;
+
                 obstacle.position = new Vector3(obstacle.position.x, obstacle.position.y - Time.deltaTime * _obstacleSpeed, 10);
             }
         }
