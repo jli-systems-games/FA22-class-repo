@@ -9,6 +9,7 @@ public class GameManagerer : MonoBehaviour
 
     public bool startPlaying;
 
+    //·¢ÉäÆ÷
     public FirePoint theFPA;
     public FirePoint theFPS;
     public FirePoint theFPD;
@@ -17,6 +18,10 @@ public class GameManagerer : MonoBehaviour
     public FirePoint theFPL;
 
     public static GameManagerer instance;
+
+    public int hillScore;
+    public int heavenScore;
+    public int scorePerNote = 100;
 
 
     // Start is called before the first frame update
@@ -52,9 +57,23 @@ public class GameManagerer : MonoBehaviour
     {
         Debug.Log("Hit On Time");
 
+        hillScore += scorePerNote;
+    }
+
+    public void NoteHit2()
+    {
+        Debug.Log("Hit On Time");
+
+        heavenScore += scorePerNote;
     }
 
     public void NoteMissed()
+    {
+        Debug.Log("Missed");
+
+    }
+
+    public void NoteMissed2()
     {
         Debug.Log("Missed");
 
