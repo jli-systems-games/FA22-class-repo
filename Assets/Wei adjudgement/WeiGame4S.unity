@@ -616,6 +616,7 @@ GameObject:
   - component: {fileID: 1335215857}
   - component: {fileID: 1335215856}
   - component: {fileID: 1335215855}
+  - component: {fileID: 1335215859}
   m_Layer: 5
   m_Name: next
   m_TagString: Untagged
@@ -706,7 +707,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1335215857}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1335215859}
+        m_TargetAssemblyTypeName: Weigame4tran1, Assembly-CSharp
+        m_MethodName: tran1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1335215857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -745,6 +758,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335215853}
   m_CullTransparentMesh: 1
+--- !u!114 &1335215859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335215853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f03baa27885d874cbe479fa34420f65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1520051281
 GameObject:
   m_ObjectHideFlags: 0

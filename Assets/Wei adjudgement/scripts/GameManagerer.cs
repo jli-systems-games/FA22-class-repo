@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class GameManagerer : MonoBehaviour
 {
@@ -31,6 +33,9 @@ public class GameManagerer : MonoBehaviour
     public TextMeshProUGUI hellText;
     public TextMeshProUGUI heavenText;
 
+    public float endgame;
+
+    private float timer;
 
     // Start is called before the first frame update
     void Start()
@@ -59,6 +64,26 @@ public class GameManagerer : MonoBehaviour
                 theMusic.Play();
             }
         }
+
+
+
+        timer += Time.deltaTime;
+        if (timer >= endgame)
+        {
+            if(heavenScore>= hillScore)
+            {
+                SceneManager.LoadScene("Wei game 4 End2");
+            }
+
+            else
+            {
+                SceneManager.LoadScene("Wei game 4 End1");
+            }
+
+        }
+
+
+
     }
 
     public void NoteHit()
