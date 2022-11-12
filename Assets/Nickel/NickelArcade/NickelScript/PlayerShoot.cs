@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace NickelArcade
+namespace Nickel.NickelArcade.NickelScript
 {
     public class PlayerShoot : MonoBehaviour
     {
@@ -11,14 +9,14 @@ namespace NickelArcade
         public GameObject bulletPrefab;
 
         float timeUnitFire;
-        NickelArcade.Player pm;
+        Player pm;
 
         public AudioSource shootSound;
 
         // Start is called before the first frame update
         void Start()
         {
-            pm = gameObject.GetComponent<NickelArcade.Player>();
+            pm = gameObject.GetComponent<Player>();
         }
 
         // Update is called once per frame

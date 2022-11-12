@@ -1,9 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
-namespace nickelLifelike
+namespace Nickel.NickelLifelike.Script
 {
     public class Prepare : MonoBehaviour
     {

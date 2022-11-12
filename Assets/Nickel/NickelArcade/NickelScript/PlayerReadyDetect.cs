@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace NickelArcade
+namespace Nickel.NickelArcade.NickelScript
 {
     public class PlayerReadyDetect : MonoBehaviour
     {

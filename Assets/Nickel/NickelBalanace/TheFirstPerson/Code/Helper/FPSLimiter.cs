@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace TheFirstPerson.Helper
+namespace Nickel.NickelBalanace.TheFirstPerson.Code.Helper
 {
     public class FPSLimiter : MonoBehaviour
     {

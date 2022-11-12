@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace nickelBalance
+namespace Nickel.NickelBalanace.script
 {
     public class test : MonoBehaviour
     {

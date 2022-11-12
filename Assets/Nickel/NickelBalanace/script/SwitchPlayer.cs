@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
+using Nickel.NickelBalanace.TheFirstPerson.Code.Player;
 using UnityEngine;
 
-namespace nickelBalance
+namespace Nickel.NickelBalanace.script
 {
     public class SwitchPlayer : MonoBehaviour
     {
@@ -25,12 +24,12 @@ namespace nickelBalance
 
         public void stopMove()
         {
-            controller.GetComponent<TheFirstPerson.FPSController>().enabled = false;
+            controller.GetComponent<FPSController>().enabled = false;
         }
 
         public void startMove()
         {
-            controller.GetComponent<TheFirstPerson.FPSController>().enabled = true;
+            controller.GetComponent<FPSController>().enabled = true;
         }
     }
 

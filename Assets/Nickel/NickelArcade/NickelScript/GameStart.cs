@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
-namespace NickelArcade
+namespace Nickel.NickelArcade.NickelScript
 {
     public class GameStart : MonoBehaviour
     {
@@ -24,8 +24,8 @@ namespace NickelArcade
         {
             this.GetComponent<TMP_Text>().text = " ";
             StartCoroutine(LoadSubtitles());
-            player1Controller.GetComponent<NickelArcade.Player>().enabled = false;
-            player2Controller.GetComponent<NickelArcade.Player>().enabled = false;
+            player1Controller.GetComponent<Player>().enabled = false;
+            player2Controller.GetComponent<Player>().enabled = false;
 
         }
 
@@ -52,8 +52,8 @@ namespace NickelArcade
                 subtBox.SetActive(false);
 
             }
-            player1Controller.GetComponent<NickelArcade.Player>().enabled = true;
-            player2Controller.GetComponent<NickelArcade.Player>().enabled = true;
+            player1Controller.GetComponent<Player>().enabled = true;
+            player2Controller.GetComponent<Player>().enabled = true;
             startTiming.SetActive(true);
 
             yield return new WaitForSeconds(60);

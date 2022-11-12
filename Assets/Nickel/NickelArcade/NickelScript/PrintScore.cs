@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
-namespace NickelArcade
+namespace Nickel.NickelArcade.NickelScript
 {
     public class PrintScore : MonoBehaviour
     {

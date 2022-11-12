@@ -1,14 +1,18 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace nickelBalance
+namespace Nickel.NickelBalanace.script
 {
     public class Collect : MonoBehaviour
     {
-        public int cd=3;
+        public int cd=6;
         public GameObject prefab;
         public Transform hand;
+
+        public GameObject[] keyInstructions;
+
+        public GameObject process;
+
 
         private bool canCollect=false;
         // Start is called before the first frame update
@@ -22,12 +26,15 @@ namespace nickelBalance
         {
             if (canCollect && Input.GetKeyDown("q"))
             {
+                process.SetActive(true);
                 startProcessing();
             }
         }
 
         private void startProcessing()
         {
+
+            process.GetComponent<Animator>().Play("processing",0,0.0f);
             StartCoroutine(processing(cd));
         }
 
@@ -40,11 +47,19 @@ namespace nickelBalance
         private void OnTriggerEnter(Collider other)
         {
             canCollect = true;
+            for(int i = 0; i < keyInstructions.Length; i++)
+            {
+                keyInstructions[i].SetActive(true);
+            }
         }
 
         private void OnTriggerExit(Collider other)
         {
             canCollect = false;
+            for (int i = 0; i < keyInstructions.Length; i++)
+            {
+                keyInstructions[i].SetActive(false);
+            }
         }
 
         

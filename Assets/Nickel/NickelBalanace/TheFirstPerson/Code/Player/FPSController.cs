@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Nickel.NickelBalanace.TheFirstPerson.Code.Helper;
 using UnityEngine;
-using TheFirstPerson.Helper;
 
-namespace TheFirstPerson
+namespace Nickel.NickelBalanace.TheFirstPerson.Code.Player
 {
     public enum ExtFunc
     {

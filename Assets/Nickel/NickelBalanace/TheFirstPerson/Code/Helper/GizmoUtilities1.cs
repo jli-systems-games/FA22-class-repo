@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 
-namespace TheFirstPerson.Helper
+namespace Nickel.NickelBalanace.TheFirstPerson.Code.Helper
 {
     public static class GizmoUtilities
     {

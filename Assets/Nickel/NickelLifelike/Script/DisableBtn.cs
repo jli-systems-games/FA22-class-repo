@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace nickelLifelike
+namespace Nickel.NickelLifelike.Script
 {
     public class DisableBtn : MonoBehaviour
     {

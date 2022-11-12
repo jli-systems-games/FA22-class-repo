@@ -1,10 +1,9 @@
-﻿using UnityEngine;
-using System;
-using System.Collections;
+﻿using System;
+using UnityEngine;
 
 //Original version of the ConditionalHideAttribute created by Brecht Lecluyse (www.brechtos.com)
 //Modified by: - BreoganHackett
-namespace TheFirstPerson.Helper
+namespace Nickel.NickelBalanace.TheFirstPerson.Code.Helper
 {
     [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property |
         AttributeTargets.Class | AttributeTargets.Struct, Inherited = true)]

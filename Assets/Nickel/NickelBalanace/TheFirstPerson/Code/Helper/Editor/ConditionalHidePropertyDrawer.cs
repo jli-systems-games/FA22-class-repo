@@ -1,10 +1,9 @@
-﻿using UnityEngine;
-using UnityEditor;
-using System.Collections.Generic;
+﻿using UnityEditor;
+using UnityEngine;
 
 //Original version of the ConditionalHideAttribute created by Brecht Lecluyse (www.brechtos.com)
 //Modified by: -
-namespace TheFirstPerson.Helper
+namespace Nickel.NickelBalanace.TheFirstPerson.Code.Helper.Editor
 {
     [CustomPropertyDrawer(typeof(ConditionalHideAttribute))]
     public class ConditionalHidePropertyDrawer : PropertyDrawer

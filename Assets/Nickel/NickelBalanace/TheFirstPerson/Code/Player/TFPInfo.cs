@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TheFirstPerson
+namespace Nickel.NickelBalanace.TheFirstPerson.Code.Player
 {
     public struct TFPInfo
     {

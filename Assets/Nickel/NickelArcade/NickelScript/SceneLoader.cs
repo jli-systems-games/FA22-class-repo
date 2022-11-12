@@ -1,9 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace NickelArcade
+namespace Nickel.NickelArcade.NickelScript
 {
     public class SceneLoader : MonoBehaviour
     {
@@ -23,8 +22,8 @@ namespace NickelArcade
         // Update is called once per frame
         void Update()
         {
-            Debug.Log(NickelArcade.PlayerReadyDetect.player1Ready);
-            if (NickelArcade.PlayerReadyDetect.player1Ready && NickelArcade.PlayerReadyDetect.player2Ready)
+            Debug.Log(PlayerReadyDetect.player1Ready);
+            if (PlayerReadyDetect.player1Ready && PlayerReadyDetect.player2Ready)
             {
                 blackout.SetActive(true);
                 StartCoroutine(LoadLevelAfterDelay(time));

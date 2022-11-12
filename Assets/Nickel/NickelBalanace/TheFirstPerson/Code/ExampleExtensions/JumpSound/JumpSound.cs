@@ -1,22 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Nickel.NickelBalanace.TheFirstPerson.Code.Player;
 using UnityEngine;
-using TheFirstPerson;
 
 //plays a sound when you jump. the simplest example plugin.
 
-public class JumpSound : TFPExtension
+namespace Nickel.NickelBalanace.TheFirstPerson.Code.ExampleExtensions.JumpSound
 {
-
-    public AudioSource src;
-    public AudioClip sound;
-
-    public override void ExPostUpdate(ref TFPData data, TFPInfo info)
+    public class JumpSound : TFPExtension
     {
-        if (data.timeSinceGrounded <= Time.deltaTime && data.jumping)
-        {
-            src.PlayOneShot(sound);
-        }
-    }
 
+        public AudioSource src;
+        public AudioClip sound;
+
+        public override void ExPostUpdate(ref TFPData data, TFPInfo info)
+        {
+            if (data.timeSinceGrounded <= Time.deltaTime && data.jumping)
+            {
+                src.PlayOneShot(sound);
+            }
+        }
+
+    }
 }
