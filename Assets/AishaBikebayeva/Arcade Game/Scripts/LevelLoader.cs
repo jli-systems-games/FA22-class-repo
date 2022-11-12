@@ -1,9 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Aisha
+namespace AishaBikebayeva.Arcade_Game.Scripts
 {
     public class LevelLoader : MonoBehaviour
     {

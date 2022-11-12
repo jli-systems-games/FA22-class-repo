@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
 
-namespace Aisha
+namespace AishaBikebayeva.Arcade_Game.Scripts
 {
     public class ScoreScript : MonoBehaviour
     {
@@ -31,7 +28,7 @@ namespace Aisha
         void Update()
         {
             // GameObject.Find("Score").GetComponent<Score>().score = scoreFinal;
-            scoreFinal = Aisha.Score.score;
+            scoreFinal = Score.score;
             WinScore.text = "Score: " + scoreFinal;
         }
     }

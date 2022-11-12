@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace AishaGrowth
+namespace AishaBikebayeva.GrowthAisha.Scripts
 {
     public class NeedsControl : MonoBehaviour
     {
@@ -28,7 +26,7 @@ namespace AishaGrowth
             this.foodTickRate=foodTickRate;
             this.happinessTickRate=happinessTickRate;
             this.energyTickRate=energyTickRate;
-            AishaGrowth.PetUIController.instance.UpdateImages(food,happiness,energy);
+            PetUIController.instance.UpdateImages(food,happiness,energy);
         }
 
         public void Initialize(int food, int happiness, int energy)
@@ -39,7 +37,7 @@ namespace AishaGrowth
             this.foodTickRate=foodTickRate;
             this.happinessTickRate=happinessTickRate;
             this.energyTickRate=energyTickRate;
-            AishaGrowth.PetUIController.instance.UpdateImages(food,happiness,energy);
+            PetUIController.instance.UpdateImages(food,happiness,energy);
         }
         // Start is called before the first frame update
         void Start()
@@ -55,7 +53,7 @@ namespace AishaGrowth
                 ChangeFood(-foodTickRate);
                 ChangeEnergy(-energyTickRate);
                 ChangeHappiness(-happinessTickRate);
-                AishaGrowth.PetUIController.instance.UpdateImages(food,happiness,energy);
+                PetUIController.instance.UpdateImages(food,happiness,energy);
             }
         }
 

@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.SceneManagement;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace Aisha
+namespace AishaBikebayeva.Arcade_Game.Scripts
 {
     public class Timer : MonoBehaviour
     {

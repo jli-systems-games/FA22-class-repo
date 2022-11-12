@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace AishaGrowth
+namespace AishaBikebayeva.GrowthAisha.Scripts
 {
     // public float petMoveTimer
     public class PetManager : MonoBehaviour

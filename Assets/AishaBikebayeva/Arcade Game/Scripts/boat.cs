@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace Aisha
+namespace AishaBikebayeva.Arcade_Game.Scripts
 {
 
     public class boat : MonoBehaviour
