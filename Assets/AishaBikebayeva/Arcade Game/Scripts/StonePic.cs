@@ -1,9 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections;
-using UnityEngine.UI;
 
-namespace Aisha
+namespace AishaBikebayeva.Arcade_Game.Scripts
 {
     public class StonePic : MonoBehaviour
     {

@@ -1,10 +1,6 @@
 using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
-using System;
-using UnityEngine.SceneManagement;
 
-namespace Aisha
+namespace AishaBikebayeva.Arcade_Game.Scripts
 {
     public class Score : MonoBehaviour
     {

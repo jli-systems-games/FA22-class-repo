@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 using UnityEngine.SceneManagement;
 
-namespace Aisha
+namespace AishaBikebayeva.Arcade_Game.Scripts
 {
         
     public class ChangeScene : MonoBehaviour

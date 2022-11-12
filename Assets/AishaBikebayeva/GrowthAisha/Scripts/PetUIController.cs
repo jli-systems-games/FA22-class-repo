@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace AishaGrowth
+namespace AishaBikebayeva.GrowthAisha.Scripts
 {
     public class PetUIController : MonoBehaviour
     {
