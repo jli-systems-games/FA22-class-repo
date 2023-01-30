@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Mariana
+{
 public class CameraMovement : MonoBehaviour
 
 {
@@ -19,4 +21,5 @@ public class CameraMovement : MonoBehaviour
         transform.position = new Vector3(transform.position.x, target.position.y, -10);
 
     }
+}
 }
